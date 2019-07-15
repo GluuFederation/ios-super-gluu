@@ -1,0 +1,119 @@
+/* 
+  Localizable.strings
+  oxPush2-IOS
+
+  Created by Nazar Yavornytskyy on 2/2/16.
+  Copyright © 2016 Nazar Yavornytskyy. All rights reserved.
+*/
+
+"AppName" = "oxPush2-ios";
+
+//Strings for License Agreement View
+"LicenseAgreementTitle" = "License Agreement";
+"AcceptButtonTitle" = "Accept and Continue";
+
+"Home" = "Home";
+"Logs" = "Logs";
+"Keys" = "Keys";
+
+"LoggedIn" = "Logged in to %@";
+"LoggedInFailed" = "Failed to log in to %@";
+"EnrollIn" = "Enroll to %@";
+"EnrollInFailed" = "Failed enroll to %@";
+"LoginDeclined" = "Declined login to %@";
+"EnrollDeclined" = "Declined enrol to %@";
+
+"Enrol" = "Enrol";
+"Authentication" = "Authentication";
+
+"ScanText" = "You may be presented with a QR code for enrollment or authentication. Tap the button below to open your QR scanner.";
+"Welcome" = "Welcome to Super Gluu!";
+
+"PressApprove" = "To continue, press Approve";
+
+"OneStep" = "1 step: ";
+"TwoStep" = "2 step: ";
+
+"OneStepMode" = "One step";
+"TwoStepMode" = "Two step";
+
+"ScanButtonTitle" = "Scannez le code QR";
+
+//AlertView
+"AlertTitle" = "Info";
+"AlertTitleSuccess" = "Le succès";
+"AlertTitleFailed" = "Échoué";
+"AlertMessageNoQRScanning" = "Votre appareil ne fonctionne pas QR Numérisation";
+"WrongQRImage" = "Semble mal l'image Code QR vous scène!";
+"OK" = "D'accord";
+"Cancel" = "Annuler";
+"Approve" = "Approve";
+"Decline" = "Decline";
+
+"QRCodeScanning" = "QR Code Scanning...";
+"QRCodeCalceled" = "QR Numérisation annulée!";
+
+"UnsupportedU2FV2Version" = "Ancienne version de U2F_V2!";
+
+//Statuses
+"StartAuthentication" = "Authentication...";
+"SuccessAuthentication" = "Félicitations, vous avez le succès authentifiés!";
+"FailedAuthentication" = "Échec, l'authentification!";
+"SuccessEnrollment" = "Félicitations, vous avez le succès inscrire!";
+"FailedEnrollment" = "Échec, inscrivez-vous!";
+
+"DenyFailed" = "Decline Failed";
+"DenySuccess" = "Authentication declined";
+
+"AvailableKeyHandles" = "Poignées clés disponibles";
+
+"Delete" = "Delete";
+"YES" = "YES";
+"NO" = "NO";
+
+"keyHandleFor" = "Key for";
+"keyHandle" = "Key handle";
+"ChangeKeyHandleName" = "Do you want to change this Key's display name?";
+"RenameKeyNameInfo" = "To change name of key hold down on name for 3 seconds";
+"DeleteKeyHandle" = "Do you want to delete this key?";
+
+"FailedKeyHandle" = "Failed keyHandles, please try again to generate new one";
+
+"PushTimeOver" = "Timeover for push notification authentication";
+
+"ClearLog" = "Do you want to delete this log?";
+"ClearLogs" = "Do you want to delete all logs?";
+
+"ApproveDeclineTitle" = "To continue press %@, to stop %@";
+
+"FaiedGetLocation" = "Failed to get location";
+
+"Information" = "Information";
+"UserName" = "User name";
+"Created" = "Created";
+"Application" = "Application";
+"Issuer" = "Issuer";
+"AuthenticationMode" = "Authentication mode";
+"AuthenticationType" = "Authentication type";
+"CloseButton" = "Close";
+
+"SecondsLeft" = "seconds left";
+
+"UniqueKeyLabel" = "A unique key is generated for each Gluu Server  you log into with %@. You can manage keys here:";
+
+"SetPinCode" = "Set passcode";
+"ChangePinCode" = "Change passcode";
+"SetPinCodeTitle" = "Do you want to set your passcode?";
+"ChangePinCodeTitle" = "Do you want to your change current passcode?";
+
+"ReEnterPinCode" = "To continue, please enter your passcode";
+"EnterPinCode" = "Enter passcode";
+"FailedPinCode" = "Application is locked, you've entered the wrong passcode %i times, please wait.";
+"LastAttempts" = "Last 2 attempts before the app is locked for 10 minutes";
+"AttemptsText" = "App will be locked for 10 minutes after this many failed attempts";
+
+"UnKnownError" = "Unknown error";
+
+
+
+

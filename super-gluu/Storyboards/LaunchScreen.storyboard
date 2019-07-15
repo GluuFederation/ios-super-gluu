@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kza-Dn-QhU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="YDx-y5-fDt">
+            <objects>
+                <viewController id="kza-Dn-QhU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4rp-fT-cbG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gluu_logo" translatesAutoresizingMaskIntoConstraints="NO" id="72o-SU-1Ir">
+                                <rect key="frame" x="107.5" y="137" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="EAn-10-Vzk"/>
+                                    <constraint firstAttribute="height" constant="160" id="Yhj-Ma-nlt"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="72o-SU-1Ir" firstAttribute="top" secondItem="dnn-o9-gWA" secondAttribute="top" constant="117" id="83H-YU-5Lb"/>
+                            <constraint firstItem="72o-SU-1Ir" firstAttribute="centerX" secondItem="dnn-o9-gWA" secondAttribute="centerX" id="Url-rz-wOK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dnn-o9-gWA"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pas-eF-dRq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="38" y="125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gluu_logo" width="122" height="140"/>
+    </resources>
+</document>

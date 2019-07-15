@@ -1,0 +1,1393 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		26E1DCDB21B9D5EF00F8C843 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E1DCDA21B9D4F200F8C843 /* Constants.swift */; };
+		26E1DCE721B9F3F500F8C843 /* AdHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E1DCE121B9F3F200F8C843 /* AdHelper.swift */; };
+		26E1DCE821B9F3F500F8C843 /* AuthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E1DCE221B9F3F200F8C843 /* AuthHelper.swift */; };
+		26E1DCE921B9F3F500F8C843 /* ConnectionCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E1DCE321B9F3F200F8C843 /* ConnectionCheck.swift */; };
+		26E1DCEA21B9F3F500F8C843 /* GluuUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E1DCE421B9F3F200F8C843 /* GluuUserDefaults.swift */; };
+		26E1DCEB21B9F3F500F8C843 /* PushNotificationsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E1DCE521B9F3F300F8C843 /* PushNotificationsHelper.swift */; };
+		26E1DCEC21B9F3F500F8C843 /* PurchaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E1DCE621B9F3F400F8C843 /* PurchaseHandler.swift */; };
+		26E1DCEE21B9F40700F8C843 /* TouchIDAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E1DCED21B9F40700F8C843 /* TouchIDAuth.swift */; };
+		6A858E7909FD7D0E999EE1BC /* Pods_Super_Gluu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA0B4AB7F1B002A0FF2049D /* Pods_Super_Gluu.framework */; };
+		6E84DA101B88BBA743C31E97 /* Pods_Super_Gluu___Ad_Free.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F48E163E0B27CBECE9164F /* Pods_Super_Gluu___Ad_Free.framework */; };
+		BB128D931E8903DA0041BD21 /* U2FMessageCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB128D921E8903DA0041BD21 /* U2FMessageCoder.swift */; };
+		BB13D8121EE8413A00F3C41F /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13D8111EE8413A00F3C41F /* String+Extension.swift */; };
+		BB37DE561C7E08320016D422 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB37DE551C7E08320016D422 /* main.m */; };
+		BB37DE641C7E08320016D422 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB37DE631C7E08320016D422 /* Assets.xcassets */; };
+		BB37DE721C7E08320016D422 /* super_gluuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB37DE711C7E08320016D422 /* super_gluuTests.m */; };
+		BB37DE7D1C7E08320016D422 /* super_gluuUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BB37DE7C1C7E08320016D422 /* super_gluuUITests.m */; };
+		BB37DF241C7E0B8E0016D422 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB37DEDB1C7E0B8E0016D422 /* Localizable.strings */; };
+		BB37DF421C7E0CBC0016D422 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB37DF411C7E0CBC0016D422 /* CoreData.framework */; };
+		BB50AE1C1E5F0978003AEC78 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB50AE1B1E5F0978003AEC78 /* LocalAuthentication.framework */; };
+		BB58C16A1EDDB32800FEEC78 /* PeripheralScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB79FA251E78309000AEAE58 /* PeripheralScanner.swift */; };
+		BB58C1711EDDB32800FEEC78 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB79FA371E7A8B6400AEAE58 /* Data+Extension.swift */; };
+		BB58C1731EDDB32800FEEC78 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB37DE551C7E08320016D422 /* main.m */; };
+		BB58C1741EDDB32800FEEC78 /* CharacteristicScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB79FA271E78309000AEAE58 /* CharacteristicScanner.swift */; };
+		BB58C1781EDDB32800FEEC78 /* U2FMessageCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB128D921E8903DA0041BD21 /* U2FMessageCoder.swift */; };
+		BB58C17B1EDDB32800FEEC78 /* ServiceScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB79FA261E78309000AEAE58 /* ServiceScanner.swift */; };
+		BB58C17D1EDDB32800FEEC78 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBE83B9D1E69D1DD0099F83A /* CoreBluetooth.framework */; };
+		BB58C17E1EDDB32800FEEC78 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB50AE1B1E5F0978003AEC78 /* LocalAuthentication.framework */; };
+		BB58C17F1EDDB32800FEEC78 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBDE9B921DA788C1003B6673 /* CoreVideo.framework */; };
+		BB58C1801EDDB32800FEEC78 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BBDE9B901DA788B8003B6673 /* libz.tbd */; };
+		BB58C1811EDDB32800FEEC78 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BBDE9B8E1DA788B0003B6673 /* libsqlite3.tbd */; };
+		BB58C1821EDDB32800FEEC78 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBDE9B8C1DA788A3003B6673 /* AVFoundation.framework */; };
+		BB58C1831EDDB32800FEEC78 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBDE9B8A1DA78895003B6673 /* CoreMedia.framework */; };
+		BB58C1841EDDB32800FEEC78 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7927E11ED4837400414EAC /* StoreKit.framework */; };
+		BB58C1851EDDB32800FEEC78 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBDE9B881DA7888A003B6673 /* MediaPlayer.framework */; };
+		BB58C1861EDDB32800FEEC78 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9B65AA1CB7C5E400784AEF /* CoreMotion.framework */; };
+		BB58C1871EDDB32800FEEC78 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9B65A81CB7C5DA00784AEF /* OpenGLES.framework */; };
+		BB58C1881EDDB32800FEEC78 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9B65A61CB7C5D100784AEF /* AudioToolbox.framework */; };
+		BB58C1891EDDB32800FEEC78 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB7C0F71C88933100833B12 /* CoreLocation.framework */; };
+		BB58C18A1EDDB32800FEEC78 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBFCB3091C98164F00F66417 /* CoreTelephony.framework */; };
+		BB58C18B1EDDB32800FEEC78 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9B65A41CB7C5B900784AEF /* SystemConfiguration.framework */; };
+		BB58C18C1EDDB32800FEEC78 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9B65A21CB7C5AE00784AEF /* CoreImage.framework */; };
+		BB58C18D1EDDB32800FEEC78 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9B659E1CB7C59800784AEF /* AdSupport.framework */; };
+		BB58C18E1EDDB32800FEEC78 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9B65A01CB7C5A300784AEF /* QuartzCore.framework */; };
+		BB58C18F1EDDB32800FEEC78 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB37DF411C7E0CBC0016D422 /* CoreData.framework */; };
+		BB58C1901EDDB32800FEEC78 /* Pods_Super_Gluu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA0B4AB7F1B002A0FF2049D /* Pods_Super_Gluu.framework */; };
+		BB58C1941EDDB32800FEEC78 /* www.gluu.org.cer in Resources */ = {isa = PBXBuildFile; fileRef = BBEC91FF1E293179000D522F /* www.gluu.org.cer */; };
+		BB58C19C1EDDB32800FEEC78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB37DEDB1C7E0B8E0016D422 /* Localizable.strings */; };
+		BB58C1A11EDDB32800FEEC78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB37DE631C7E08320016D422 /* Assets.xcassets */; };
+		BB58C1A91EDDB32800FEEC78 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BBE787261C99954600E9E0D7 /* Settings.bundle */; };
+		BB6041691F978E540051F38D /* PinCodeDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = BB6041681F978DCB0051F38D /* PinCodeDelegate.h */; };
+		BB7927E21ED4837400414EAC /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7927E11ED4837400414EAC /* StoreKit.framework */; };
+		BB79FA2A1E78309000AEAE58 /* PeripheralScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB79FA251E78309000AEAE58 /* PeripheralScanner.swift */; };
+		BB79FA2B1E78309000AEAE58 /* ServiceScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB79FA261E78309000AEAE58 /* ServiceScanner.swift */; };
+		BB79FA2C1E78309000AEAE58 /* CharacteristicScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB79FA271E78309000AEAE58 /* CharacteristicScanner.swift */; };
+		BB79FA381E7A8B6400AEAE58 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB79FA371E7A8B6400AEAE58 /* Data+Extension.swift */; };
+		BB97CDE41F1E4FB90033C2A5 /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB97CDDF1F1E4FB90033C2A5 /* ProximaNova-Bold.otf */; };
+		BB97CDE51F1E4FB90033C2A5 /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB97CDDF1F1E4FB90033C2A5 /* ProximaNova-Bold.otf */; };
+		BB97CDE61F1E4FB90033C2A5 /* ProximaNova-Extrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB97CDE01F1E4FB90033C2A5 /* ProximaNova-Extrabold.otf */; };
+		BB97CDE71F1E4FB90033C2A5 /* ProximaNova-Extrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB97CDE01F1E4FB90033C2A5 /* ProximaNova-Extrabold.otf */; };
+		BB97CDE81F1E4FB90033C2A5 /* ProximaNova-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB97CDE11F1E4FB90033C2A5 /* ProximaNova-Light.otf */; };
+		BB97CDE91F1E4FB90033C2A5 /* ProximaNova-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB97CDE11F1E4FB90033C2A5 /* ProximaNova-Light.otf */; };
+		BB97CDEA1F1E4FB90033C2A5 /* ProximaNova-Reg.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB97CDE21F1E4FB90033C2A5 /* ProximaNova-Reg.otf */; };
+		BB97CDEB1F1E4FB90033C2A5 /* ProximaNova-Reg.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB97CDE21F1E4FB90033C2A5 /* ProximaNova-Reg.otf */; };
+		BB97CDEC1F1E4FB90033C2A5 /* ProximaNova-Sbold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB97CDE31F1E4FB90033C2A5 /* ProximaNova-Sbold.otf */; };
+		BB97CDED1F1E4FB90033C2A5 /* ProximaNova-Sbold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB97CDE31F1E4FB90033C2A5 /* ProximaNova-Sbold.otf */; };
+		BB9B65A11CB7C5A300784AEF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9B65A01CB7C5A300784AEF /* QuartzCore.framework */; };
+		BBB511491EF2E5B700E19D8E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB37DE681C7E08320016D422 /* Info.plist */; };
+		BBB5114B1EF2EF9500E19D8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBB5114A1EF2EF9500E19D8E /* Main.storyboard */; };
+		BBB5114C1EF2EF9500E19D8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBB5114A1EF2EF9500E19D8E /* Main.storyboard */; };
+		BBDE9B801DA78835003B6673 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9B659E1CB7C59800784AEF /* AdSupport.framework */; };
+		BBDE9B811DA78847003B6673 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9B65A21CB7C5AE00784AEF /* CoreImage.framework */; };
+		BBDE9B821DA78851003B6673 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9B65A41CB7C5B900784AEF /* SystemConfiguration.framework */; };
+		BBDE9B831DA7885B003B6673 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBFCB3091C98164F00F66417 /* CoreTelephony.framework */; };
+		BBDE9B841DA78861003B6673 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB7C0F71C88933100833B12 /* CoreLocation.framework */; };
+		BBDE9B851DA7886F003B6673 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9B65A61CB7C5D100784AEF /* AudioToolbox.framework */; };
+		BBDE9B861DA78878003B6673 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9B65A81CB7C5DA00784AEF /* OpenGLES.framework */; };
+		BBDE9B871DA78880003B6673 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9B65AA1CB7C5E400784AEF /* CoreMotion.framework */; };
+		BBDE9B891DA7888A003B6673 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBDE9B881DA7888A003B6673 /* MediaPlayer.framework */; };
+		BBDE9B8B1DA78895003B6673 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBDE9B8A1DA78895003B6673 /* CoreMedia.framework */; };
+		BBDE9B8D1DA788A3003B6673 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBDE9B8C1DA788A3003B6673 /* AVFoundation.framework */; };
+		BBDE9B8F1DA788B0003B6673 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BBDE9B8E1DA788B0003B6673 /* libsqlite3.tbd */; };
+		BBDE9B911DA788B8003B6673 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BBDE9B901DA788B8003B6673 /* libz.tbd */; };
+		BBDE9B931DA788C1003B6673 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBDE9B921DA788C1003B6673 /* CoreVideo.framework */; };
+		BBE787271C99954600E9E0D7 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BBE787261C99954600E9E0D7 /* Settings.bundle */; };
+		BBE83B9E1E69D1DD0099F83A /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBE83B9D1E69D1DD0099F83A /* CoreBluetooth.framework */; };
+		BBEC92001E293179000D522F /* www.gluu.org.cer in Resources */ = {isa = PBXBuildFile; fileRef = BBEC91FF1E293179000D522F /* www.gluu.org.cer */; };
+		C3F0A0B51B9FA04756D6CF64 /* Pods_Super_Gluu__ad_free_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58B47C39617C4CC79EB94B57 /* Pods_Super_Gluu__ad_free_.framework */; };
+		C828ACDC21895CDF006EEF1D /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C828ACDB21895CDE006EEF1D /* AppInfo.swift */; };
+		C82967621FE9C2C1008FEBE8 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82967611FE9C2C1008FEBE8 /* WebViewController.swift */; };
+		C83123012191466500C6963B /* PAPasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83123002191466500C6963B /* PAPasscodeViewController.swift */; };
+		C83D2B051FE2F18B00F9455E /* SecurityPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83D2B041FE2F18B00F9455E /* SecurityPromptViewController.swift */; };
+		C83D2B061FE2F18B00F9455E /* SecurityPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83D2B041FE2F18B00F9455E /* SecurityPromptViewController.swift */; };
+		C84157061FD9F695008BCF0B /* TouchIdSettingsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84157051FD9F695008BCF0B /* TouchIdSettingsDetailViewController.swift */; };
+		C84157071FD9F695008BCF0B /* TouchIdSettingsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84157051FD9F695008BCF0B /* TouchIdSettingsDetailViewController.swift */; };
+		C84157091FDA0226008BCF0B /* SingleCellSettingsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84157081FDA0226008BCF0B /* SingleCellSettingsDetailViewController.swift */; };
+		C841570A1FDA0226008BCF0B /* SingleCellSettingsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84157081FDA0226008BCF0B /* SingleCellSettingsDetailViewController.swift */; };
+		C8419627201A4F05005A4ACC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8419626201A4F05005A4ACC /* LaunchScreen.storyboard */; };
+		C8494D0B1FD5E67600CD5FA8 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8494D0A1FD5E67600CD5FA8 /* SettingsTableViewCell.swift */; };
+		C8494D0D1FD5FCB800CD5FA8 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8494D0C1FD5FCB800CD5FA8 /* Font+Extension.swift */; };
+		C858D67820E37930000E449E /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8494D0A1FD5E67600CD5FA8 /* SettingsTableViewCell.swift */; };
+		C8643FBE217008AA000D771A /* NSDate+NVTimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8643FBD217008AA000D771A /* NSDate+NVTimeAgo.swift */; };
+		C86A3CA0215495D900DDBA6F /* ApproveDenyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86A3C9F215495D700DDBA6F /* ApproveDenyViewController.swift */; };
+		C86B05A72076A037008875D3 /* SubscriptionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86B05A62076A037008875D3 /* SubscriptionDetailsViewController.swift */; };
+		C86B05A92076A9CA008875D3 /* UIButton+SuperGluu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86B05A82076A9CA008875D3 /* UIButton+SuperGluu.swift */; };
+		C86B1351215D89F400961DE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C872CB61215B9EA900735A3F /* AppDelegate.swift */; };
+		C872CB4D215AB53400735A3F /* KeysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C872CB4B215AB53000735A3F /* KeysViewController.swift */; };
+		C872CB4E215AB53400735A3F /* LogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C872CB4C215AB53200735A3F /* LogsViewController.swift */; };
+		C872CB50215ABF1900735A3F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C872CB4F215ABF1900735A3F /* BaseViewController.swift */; };
+		C872CB54215AD60900735A3F /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C872CB51215AD20A00735A3F /* AppConfiguration.swift */; };
+		C872CB58215ADCE500735A3F /* LogsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C872CB57215ADCE500735A3F /* LogsTableCell.swift */; };
+		C872CB59215AF32F00735A3F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86A3C9E2154674500DDBA6F /* HomeViewController.swift */; };
+		C872CB5B215B49CD00735A3F /* UIViewController+SuperGluu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C872CB5A215B49CD00735A3F /* UIViewController+SuperGluu.swift */; };
+		C872CB5E215B51B100735A3F /* AproveDenyDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C872CB5D215B51B100735A3F /* AproveDenyDelegate.swift */; };
+		C872CB60215B9ADE00735A3F /* SuperGluuBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C872CB5F215B9ADE00735A3F /* SuperGluuBannerView.swift */; };
+		C872CB62215B9EA900735A3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C872CB61215B9EA900735A3F /* AppDelegate.swift */; };
+		C872CB64215BB4BE00735A3F /* PinCodeSettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C872CB63215BB4BE00735A3F /* PinCodeSettingsTableViewController.swift */; };
+		C8735EAD2001D07E00722BD5 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8735EAC2001D07E00722BD5 /* BaseNavigationController.swift */; };
+		C87B2115215EC967004A997A /* KeyHandleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87B2114215EC967004A997A /* KeyHandleCell.swift */; };
+		C87B2119215ECB14004A997A /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87B2118215ECB13004A997A /* InformationViewController.swift */; };
+		C87B211B2163F253004A997A /* SCLAlert+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87B211A2163F252004A997A /* SCLAlert+Extension.swift */; };
+		C887B3F720DC4C3300D99A21 /* Landing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C887B3F620DC4C3300D99A21 /* Landing.storyboard */; };
+		C887B3F920DC4C9E00D99A21 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C887B3F820DC4C9E00D99A21 /* LandingViewController.swift */; };
+		C8B402B61FE9F28C00202A4B /* LaunchSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B402B51FE9F28C00202A4B /* LaunchSetupViewController.swift */; };
+		C8F0E2DC1FD21C3800FF9342 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F0E2DB1FD21C3800FF9342 /* Color+Extension.swift */; };
+		C8F0E2DD1FD21C3800FF9342 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F0E2DB1FD21C3800FF9342 /* Color+Extension.swift */; };
+		C8F0E2E21FD227CE00FF9342 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F0E2E11FD227CE00FF9342 /* SettingsViewController.swift */; };
+		C8F0E2E31FD227CE00FF9342 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F0E2E11FD227CE00FF9342 /* SettingsViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BB37DE6E1C7E08320016D422 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB37DE491C7E08320016D422 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB37DE501C7E08320016D422;
+			remoteInfo = "super-gluu";
+		};
+		BB37DE791C7E08320016D422 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB37DE491C7E08320016D422 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB37DE501C7E08320016D422;
+			remoteInfo = "super-gluu";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		21C62C7E2E6093747FE1D418 /* Pods-Super Gluu (ad free).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Super Gluu (ad free).debug.xcconfig"; path = "Pods/Target Support Files/Pods-Super Gluu (ad free)/Pods-Super Gluu (ad free).debug.xcconfig"; sourceTree = "<group>"; };
+		244ED1E8112E194E698C753B /* Pods-Super Gluu - Ad Free.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Super Gluu - Ad Free.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Super Gluu - Ad Free/Pods-Super Gluu - Ad Free.debug.xcconfig"; sourceTree = "<group>"; };
+		26E1DCDA21B9D4F200F8C843 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Configuration/Constants.swift; sourceTree = "<group>"; };
+		26E1DCE121B9F3F200F8C843 /* AdHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdHelper.swift; path = "super-gluu/Helpers/AdHelper.swift"; sourceTree = SOURCE_ROOT; };
+		26E1DCE221B9F3F200F8C843 /* AuthHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthHelper.swift; path = "super-gluu/Helpers/AuthHelper.swift"; sourceTree = SOURCE_ROOT; };
+		26E1DCE321B9F3F200F8C843 /* ConnectionCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConnectionCheck.swift; path = "super-gluu/Helpers/ConnectionCheck.swift"; sourceTree = SOURCE_ROOT; };
+		26E1DCE421B9F3F200F8C843 /* GluuUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GluuUserDefaults.swift; path = "super-gluu/Helpers/GluuUserDefaults.swift"; sourceTree = SOURCE_ROOT; };
+		26E1DCE521B9F3F300F8C843 /* PushNotificationsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PushNotificationsHelper.swift; path = "super-gluu/Helpers/PushNotificationsHelper.swift"; sourceTree = SOURCE_ROOT; };
+		26E1DCE621B9F3F400F8C843 /* PurchaseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PurchaseHandler.swift; path = "super-gluu/Helpers/PurchaseHandler.swift"; sourceTree = SOURCE_ROOT; };
+		26E1DCED21B9F40700F8C843 /* TouchIDAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TouchIDAuth.swift; path = "super-gluu/Helpers/TouchIDAuth.swift"; sourceTree = SOURCE_ROOT; };
+		4516151003C18420B94BE1ED /* Pods-Super Gluu - Ad Free.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Super Gluu - Ad Free.release.xcconfig"; path = "Pods/Target Support Files/Pods-Super Gluu - Ad Free/Pods-Super Gluu - Ad Free.release.xcconfig"; sourceTree = "<group>"; };
+		58B47C39617C4CC79EB94B57 /* Pods_Super_Gluu__ad_free_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Super_Gluu__ad_free_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BA0B4AB7F1B002A0FF2049D /* Pods_Super_Gluu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Super_Gluu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EB98658935DC37AA97BA494 /* Pods-Super Gluu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Super Gluu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Super Gluu/Pods-Super Gluu.debug.xcconfig"; sourceTree = "<group>"; };
+		A2C1F7760B8ADC2A6085B78A /* Pods-Super Gluu (ad free).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Super Gluu (ad free).release.xcconfig"; path = "Pods/Target Support Files/Pods-Super Gluu (ad free)/Pods-Super Gluu (ad free).release.xcconfig"; sourceTree = "<group>"; };
+		B84F8928A16117787C96522F /* Pods-Super Gluu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Super Gluu.release.xcconfig"; path = "Pods/Target Support Files/Pods-Super Gluu/Pods-Super Gluu.release.xcconfig"; sourceTree = "<group>"; };
+		BB128D921E8903DA0041BD21 /* U2FMessageCoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = U2FMessageCoder.swift; path = "super-gluu/BLEManager/U2FMessageCoder/U2FMessageCoder.swift"; sourceTree = SOURCE_ROOT; };
+		BB13D8111EE8413A00F3C41F /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+Extension.swift"; path = "Extensions/String+Extension.swift"; sourceTree = "<group>"; };
+		BB37DE511C7E08320016D422 /* Super Gluu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Super Gluu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB37DE551C7E08320016D422 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BB37DE631C7E08320016D422 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BB37DE681C7E08320016D422 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB37DE6D1C7E08320016D422 /* Super Gluu.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Super Gluu.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB37DE711C7E08320016D422 /* super_gluuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = super_gluuTests.m; sourceTree = "<group>"; };
+		BB37DE731C7E08320016D422 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB37DE781C7E08320016D422 /* Super Gluu.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Super Gluu.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB37DE7C1C7E08320016D422 /* super_gluuUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = super_gluuUITests.m; sourceTree = "<group>"; };
+		BB37DE7E1C7E08320016D422 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB37DEDC1C7E0B8E0016D422 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BB37DEDD1C7E0B8E0016D422 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BB37DEDE1C7E0B8E0016D422 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BB37DEE11C7E0B8E0016D422 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BB37DEF51C7E0B8E0016D422 /* uk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = uk; path = uk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BB37DF411C7E0CBC0016D422 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		BB50AE1B1E5F0978003AEC78 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		BB58C1B11EDDB32800FEEC78 /* Super Gluu - Ad Free.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Super Gluu - Ad Free.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB58C1B21EDDB32E00FEEC78 /* Super Gluu (ad free)-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Super Gluu (ad free)-Info.plist"; path = "/Users/nazaryavornytskyy/super-gluu/IOS/Super Gluu (ad free)-Info.plist"; sourceTree = "<absolute>"; };
+		BB58C1B31EDDB36600FEEC78 /* Super Gluu Ad free.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Super Gluu Ad free.entitlements"; sourceTree = "<group>"; };
+		BB6041681F978DCB0051F38D /* PinCodeDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PinCodeDelegate.h; sourceTree = "<group>"; };
+		BB7927E11ED4837400414EAC /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		BB79FA251E78309000AEAE58 /* PeripheralScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PeripheralScanner.swift; path = ../../BLEManager/PeripheralScanner.swift; sourceTree = "<group>"; };
+		BB79FA261E78309000AEAE58 /* ServiceScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceScanner.swift; path = ../../BLEManager/ServiceScanner.swift; sourceTree = "<group>"; };
+		BB79FA271E78309000AEAE58 /* CharacteristicScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CharacteristicScanner.swift; path = ../../BLEManager/CharacteristicScanner.swift; sourceTree = "<group>"; };
+		BB79FA371E7A8B6400AEAE58 /* Data+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Data+Extension.swift"; path = "Extensions/Data+Extension.swift"; sourceTree = "<group>"; };
+		BB97CDDF1F1E4FB90033C2A5 /* ProximaNova-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Bold.otf"; path = "Fonts/ProximaNova-Bold.otf"; sourceTree = "<group>"; };
+		BB97CDE01F1E4FB90033C2A5 /* ProximaNova-Extrabold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Extrabold.otf"; path = "Fonts/ProximaNova-Extrabold.otf"; sourceTree = "<group>"; };
+		BB97CDE11F1E4FB90033C2A5 /* ProximaNova-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Light.otf"; path = "Fonts/ProximaNova-Light.otf"; sourceTree = "<group>"; };
+		BB97CDE21F1E4FB90033C2A5 /* ProximaNova-Reg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Reg.otf"; path = "Fonts/ProximaNova-Reg.otf"; sourceTree = "<group>"; };
+		BB97CDE31F1E4FB90033C2A5 /* ProximaNova-Sbold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ProximaNova-Sbold.otf"; path = "Fonts/ProximaNova-Sbold.otf"; sourceTree = "<group>"; };
+		BB9B659C1CB7C57800784AEF /* UbertestersSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UbertestersSDK.framework; sourceTree = "<group>"; };
+		BB9B659E1CB7C59800784AEF /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		BB9B65A01CB7C5A300784AEF /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		BB9B65A21CB7C5AE00784AEF /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		BB9B65A41CB7C5B900784AEF /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BB9B65A61CB7C5D100784AEF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		BB9B65A81CB7C5DA00784AEF /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		BB9B65AA1CB7C5E400784AEF /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		BBB5114A1EF2EF9500E19D8E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		BBB7C0F71C88933100833B12 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		BBC643CB1EF16176009FEDD1 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		BBDE9B881DA7888A003B6673 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		BBDE9B8A1DA78895003B6673 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		BBDE9B8C1DA788A3003B6673 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BBDE9B8E1DA788B0003B6673 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		BBDE9B901DA788B8003B6673 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		BBDE9B921DA788C1003B6673 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		BBE787261C99954600E9E0D7 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = ../Settings.bundle; sourceTree = "<group>"; };
+		BBE83B9D1E69D1DD0099F83A /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		BBEC91F21E28CE25000D522F /* Super Gluu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Super Gluu.entitlements"; sourceTree = "<group>"; };
+		BBEC91FF1E293179000D522F /* www.gluu.org.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = www.gluu.org.cer; sourceTree = "<group>"; };
+		BBFCB3091C98164F00F66417 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		C828ACDB21895CDE006EEF1D /* AppInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
+		C82967611FE9C2C1008FEBE8 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WebViewController.swift; path = Settings/WebViewController.swift; sourceTree = "<group>"; };
+		C83123002191466500C6963B /* PAPasscodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PAPasscodeViewController.swift; path = PAPasscode/PAPasscodeViewController.swift; sourceTree = "<group>"; };
+		C83D2B041FE2F18B00F9455E /* SecurityPromptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityPromptViewController.swift; sourceTree = "<group>"; };
+		C84157051FD9F695008BCF0B /* TouchIdSettingsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TouchIdSettingsDetailViewController.swift; path = Settings/TouchIdSettingsDetailViewController.swift; sourceTree = "<group>"; };
+		C84157081FDA0226008BCF0B /* SingleCellSettingsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SingleCellSettingsDetailViewController.swift; path = Settings/SingleCellSettingsDetailViewController.swift; sourceTree = "<group>"; };
+		C8419626201A4F05005A4ACC /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "super-gluu/Storyboards/LaunchScreen.storyboard"; sourceTree = SOURCE_ROOT; };
+		C8494D0A1FD5E67600CD5FA8 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsTableViewCell.swift; path = ../../Views/TableViewCells/SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		C8494D0C1FD5FCB800CD5FA8 /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Font+Extension.swift"; path = "Extensions/Font+Extension.swift"; sourceTree = "<group>"; };
+		C8643FBD217008AA000D771A /* NSDate+NVTimeAgo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+NVTimeAgo.swift"; sourceTree = "<group>"; };
+		C86A3C9E2154674500DDBA6F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C86A3C9F215495D700DDBA6F /* ApproveDenyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApproveDenyViewController.swift; sourceTree = "<group>"; };
+		C86B05A62076A037008875D3 /* SubscriptionDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionDetailsViewController.swift; sourceTree = "<group>"; };
+		C86B05A82076A9CA008875D3 /* UIButton+SuperGluu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIButton+SuperGluu.swift"; path = "Extensions/UIButton+SuperGluu.swift"; sourceTree = "<group>"; };
+		C872CB4B215AB53000735A3F /* KeysViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeysViewController.swift; sourceTree = "<group>"; };
+		C872CB4C215AB53200735A3F /* LogsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogsViewController.swift; sourceTree = "<group>"; };
+		C872CB4F215ABF1900735A3F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		C872CB51215AD20A00735A3F /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppConfiguration.swift; path = Configuration/AppConfiguration.swift; sourceTree = "<group>"; };
+		C872CB57215ADCE500735A3F /* LogsTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogsTableCell.swift; path = ../../Views/TableViewCells/LogsTableCell.swift; sourceTree = "<group>"; };
+		C872CB5A215B49CD00735A3F /* UIViewController+SuperGluu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIViewController+SuperGluu.swift"; path = "Extensions/UIViewController+SuperGluu.swift"; sourceTree = "<group>"; };
+		C872CB5D215B51B100735A3F /* AproveDenyDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AproveDenyDelegate.swift; sourceTree = "<group>"; };
+		C872CB5F215B9ADE00735A3F /* SuperGluuBannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SuperGluuBannerView.swift; path = ../Views/SuperGluuBannerView.swift; sourceTree = "<group>"; };
+		C872CB61215B9EA900735A3F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C872CB63215BB4BE00735A3F /* PinCodeSettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PinCodeSettingsTableViewController.swift; path = Settings/PinCodeSettingsTableViewController.swift; sourceTree = "<group>"; };
+		C8735EAC2001D07E00722BD5 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		C87B2114215EC967004A997A /* KeyHandleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyHandleCell.swift; path = ../../Views/TableViewCells/KeyHandleCell.swift; sourceTree = "<group>"; };
+		C87B2118215ECB13004A997A /* InformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InformationViewController.swift; path = Settings/InformationViewController.swift; sourceTree = "<group>"; };
+		C87B211A2163F252004A997A /* SCLAlert+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SCLAlert+Extension.swift"; path = "Extensions/SCLAlert+Extension.swift"; sourceTree = "<group>"; };
+		C887B3F620DC4C3300D99A21 /* Landing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Landing.storyboard; sourceTree = "<group>"; };
+		C887B3F820DC4C9E00D99A21 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		C8B402B51FE9F28C00202A4B /* LaunchSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchSetupViewController.swift; sourceTree = "<group>"; };
+		C8F0E2DB1FD21C3800FF9342 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Color+Extension.swift"; path = "Extensions/Color+Extension.swift"; sourceTree = "<group>"; };
+		C8F0E2E11FD227CE00FF9342 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Settings/SettingsViewController.swift; sourceTree = "<group>"; };
+		F9F48E163E0B27CBECE9164F /* Pods_Super_Gluu___Ad_Free.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Super_Gluu___Ad_Free.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BB37DE4E1C7E08320016D422 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBE83B9E1E69D1DD0099F83A /* CoreBluetooth.framework in Frameworks */,
+				BB50AE1C1E5F0978003AEC78 /* LocalAuthentication.framework in Frameworks */,
+				BBDE9B931DA788C1003B6673 /* CoreVideo.framework in Frameworks */,
+				BBDE9B911DA788B8003B6673 /* libz.tbd in Frameworks */,
+				BBDE9B8F1DA788B0003B6673 /* libsqlite3.tbd in Frameworks */,
+				BBDE9B8D1DA788A3003B6673 /* AVFoundation.framework in Frameworks */,
+				BBDE9B8B1DA78895003B6673 /* CoreMedia.framework in Frameworks */,
+				BB7927E21ED4837400414EAC /* StoreKit.framework in Frameworks */,
+				BBDE9B891DA7888A003B6673 /* MediaPlayer.framework in Frameworks */,
+				BBDE9B871DA78880003B6673 /* CoreMotion.framework in Frameworks */,
+				BBDE9B861DA78878003B6673 /* OpenGLES.framework in Frameworks */,
+				BBDE9B851DA7886F003B6673 /* AudioToolbox.framework in Frameworks */,
+				BBDE9B841DA78861003B6673 /* CoreLocation.framework in Frameworks */,
+				BBDE9B831DA7885B003B6673 /* CoreTelephony.framework in Frameworks */,
+				BBDE9B821DA78851003B6673 /* SystemConfiguration.framework in Frameworks */,
+				BBDE9B811DA78847003B6673 /* CoreImage.framework in Frameworks */,
+				BBDE9B801DA78835003B6673 /* AdSupport.framework in Frameworks */,
+				BB9B65A11CB7C5A300784AEF /* QuartzCore.framework in Frameworks */,
+				BB37DF421C7E0CBC0016D422 /* CoreData.framework in Frameworks */,
+				6A858E7909FD7D0E999EE1BC /* Pods_Super_Gluu.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB37DE6A1C7E08320016D422 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB37DE751C7E08320016D422 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB58C17C1EDDB32800FEEC78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB58C17D1EDDB32800FEEC78 /* CoreBluetooth.framework in Frameworks */,
+				BB58C17E1EDDB32800FEEC78 /* LocalAuthentication.framework in Frameworks */,
+				BB58C17F1EDDB32800FEEC78 /* CoreVideo.framework in Frameworks */,
+				BB58C1801EDDB32800FEEC78 /* libz.tbd in Frameworks */,
+				BB58C1811EDDB32800FEEC78 /* libsqlite3.tbd in Frameworks */,
+				BB58C1821EDDB32800FEEC78 /* AVFoundation.framework in Frameworks */,
+				BB58C1831EDDB32800FEEC78 /* CoreMedia.framework in Frameworks */,
+				BB58C1841EDDB32800FEEC78 /* StoreKit.framework in Frameworks */,
+				BB58C1851EDDB32800FEEC78 /* MediaPlayer.framework in Frameworks */,
+				BB58C1861EDDB32800FEEC78 /* CoreMotion.framework in Frameworks */,
+				BB58C1871EDDB32800FEEC78 /* OpenGLES.framework in Frameworks */,
+				BB58C1881EDDB32800FEEC78 /* AudioToolbox.framework in Frameworks */,
+				BB58C1891EDDB32800FEEC78 /* CoreLocation.framework in Frameworks */,
+				BB58C18A1EDDB32800FEEC78 /* CoreTelephony.framework in Frameworks */,
+				BB58C18B1EDDB32800FEEC78 /* SystemConfiguration.framework in Frameworks */,
+				BB58C18C1EDDB32800FEEC78 /* CoreImage.framework in Frameworks */,
+				BB58C18D1EDDB32800FEEC78 /* AdSupport.framework in Frameworks */,
+				BB58C18E1EDDB32800FEEC78 /* QuartzCore.framework in Frameworks */,
+				BB58C18F1EDDB32800FEEC78 /* CoreData.framework in Frameworks */,
+				BB58C1901EDDB32800FEEC78 /* Pods_Super_Gluu.framework in Frameworks */,
+				C3F0A0B51B9FA04756D6CF64 /* Pods_Super_Gluu__ad_free_.framework in Frameworks */,
+				6E84DA101B88BBA743C31E97 /* Pods_Super_Gluu___Ad_Free.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F430CE55ADBDA89388FF131 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BB7927E11ED4837400414EAC /* StoreKit.framework */,
+				BBE83B9D1E69D1DD0099F83A /* CoreBluetooth.framework */,
+				BB50AE1B1E5F0978003AEC78 /* LocalAuthentication.framework */,
+				BBDE9B921DA788C1003B6673 /* CoreVideo.framework */,
+				BBDE9B901DA788B8003B6673 /* libz.tbd */,
+				BBDE9B8E1DA788B0003B6673 /* libsqlite3.tbd */,
+				BBDE9B8C1DA788A3003B6673 /* AVFoundation.framework */,
+				BBDE9B8A1DA78895003B6673 /* CoreMedia.framework */,
+				BBDE9B881DA7888A003B6673 /* MediaPlayer.framework */,
+				BB9B65AA1CB7C5E400784AEF /* CoreMotion.framework */,
+				BB9B65A81CB7C5DA00784AEF /* OpenGLES.framework */,
+				BB9B65A61CB7C5D100784AEF /* AudioToolbox.framework */,
+				BB9B65A41CB7C5B900784AEF /* SystemConfiguration.framework */,
+				BB9B65A21CB7C5AE00784AEF /* CoreImage.framework */,
+				BB9B65A01CB7C5A300784AEF /* QuartzCore.framework */,
+				BB9B659E1CB7C59800784AEF /* AdSupport.framework */,
+				BB9B659C1CB7C57800784AEF /* UbertestersSDK.framework */,
+				BBFCB3091C98164F00F66417 /* CoreTelephony.framework */,
+				BBB7C0F71C88933100833B12 /* CoreLocation.framework */,
+				BB37DF411C7E0CBC0016D422 /* CoreData.framework */,
+				5BA0B4AB7F1B002A0FF2049D /* Pods_Super_Gluu.framework */,
+				58B47C39617C4CC79EB94B57 /* Pods_Super_Gluu__ad_free_.framework */,
+				F9F48E163E0B27CBECE9164F /* Pods_Super_Gluu___Ad_Free.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA72D7AD8C815449C5038A71 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9EB98658935DC37AA97BA494 /* Pods-Super Gluu.debug.xcconfig */,
+				B84F8928A16117787C96522F /* Pods-Super Gluu.release.xcconfig */,
+				21C62C7E2E6093747FE1D418 /* Pods-Super Gluu (ad free).debug.xcconfig */,
+				A2C1F7760B8ADC2A6085B78A /* Pods-Super Gluu (ad free).release.xcconfig */,
+				244ED1E8112E194E698C753B /* Pods-Super Gluu - Ad Free.debug.xcconfig */,
+				4516151003C18420B94BE1ED /* Pods-Super Gluu - Ad Free.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BB128D7F1E8000790041BD21 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C87B2118215ECB13004A997A /* InformationViewController.swift */,
+				C872CB4B215AB53000735A3F /* KeysViewController.swift */,
+				C872CB4C215AB53200735A3F /* LogsViewController.swift */,
+				C872CB63215BB4BE00735A3F /* PinCodeSettingsTableViewController.swift */,
+				C84157081FDA0226008BCF0B /* SingleCellSettingsDetailViewController.swift */,
+				C84157051FD9F695008BCF0B /* TouchIdSettingsDetailViewController.swift */,
+				C8F0E2E11FD227CE00FF9342 /* SettingsViewController.swift */,
+				C82967611FE9C2C1008FEBE8 /* WebViewController.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		BB128D911E8903950041BD21 /* U2FMessageCoder */ = {
+			isa = PBXGroup;
+			children = (
+				BB128D921E8903DA0041BD21 /* U2FMessageCoder.swift */,
+			);
+			name = U2FMessageCoder;
+			sourceTree = "<group>";
+		};
+		BB18D0591CBCFF9600A73733 /* PAPasscode */ = {
+			isa = PBXGroup;
+			children = (
+				C83123002191466500C6963B /* PAPasscodeViewController.swift */,
+			);
+			name = PAPasscode;
+			sourceTree = "<group>";
+		};
+		BB37DE481C7E08320016D422 = {
+			isa = PBXGroup;
+			children = (
+				C828ACDB21895CDE006EEF1D /* AppInfo.swift */,
+				BB58C1B31EDDB36600FEEC78 /* Super Gluu Ad free.entitlements */,
+				BBEC91F21E28CE25000D522F /* Super Gluu.entitlements */,
+				BB37DE531C7E08320016D422 /* super-gluu */,
+				BB37DE701C7E08320016D422 /* super-gluuTests */,
+				BB37DE7B1C7E08320016D422 /* super-gluuUITests */,
+				BB37DE521C7E08320016D422 /* Products */,
+				3F430CE55ADBDA89388FF131 /* Frameworks */,
+				AA72D7AD8C815449C5038A71 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		BB37DE521C7E08320016D422 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB37DE511C7E08320016D422 /* Super Gluu.app */,
+				BB37DE6D1C7E08320016D422 /* Super Gluu.xctest */,
+				BB37DE781C7E08320016D422 /* Super Gluu.xctest */,
+				BB58C1B11EDDB32800FEEC78 /* Super Gluu - Ad Free.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BB37DE531C7E08320016D422 /* super-gluu */ = {
+			isa = PBXGroup;
+			children = (
+				C872CB61215B9EA900735A3F /* AppDelegate.swift */,
+				C86B1350215D899300961DE5 /* Views */,
+				C872CB5C215B4A1D00735A3F /* Helpers */,
+				BB79FA361E7A8B2C00AEAE58 /* Extensions */,
+				BB37DF071C7E0B8E0016D422 /* ViewControllers */,
+				BBFCC6D71E5D98CB0015A256 /* Protocols */,
+				BB9B65AF1CBCDA8400784AEF /* Configuration */,
+				BB37DEF61C7E0B8E0016D422 /* Vendors */,
+				C89E1EF9215D88EE00355756 /* Storyboards */,
+				BB58C1B21EDDB32E00FEEC78 /* Super Gluu (ad free)-Info.plist */,
+				BB37DE541C7E08320016D422 /* Supporting Files */,
+			);
+			path = "super-gluu";
+			sourceTree = "<group>";
+		};
+		BB37DE541C7E08320016D422 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BB37DEDA1C7E0B8E0016D422 /* Resources */,
+				BB37DE631C7E08320016D422 /* Assets.xcassets */,
+				BBEC91FF1E293179000D522F /* www.gluu.org.cer */,
+				BBC643CB1EF16176009FEDD1 /* PrefixHeader.pch */,
+				BB37DE681C7E08320016D422 /* Info.plist */,
+				BB37DE551C7E08320016D422 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BB37DE701C7E08320016D422 /* super-gluuTests */ = {
+			isa = PBXGroup;
+			children = (
+				BB37DE711C7E08320016D422 /* super_gluuTests.m */,
+				BB37DE731C7E08320016D422 /* Info.plist */,
+			);
+			path = "super-gluuTests";
+			sourceTree = "<group>";
+		};
+		BB37DE7B1C7E08320016D422 /* super-gluuUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BB37DE7C1C7E08320016D422 /* super_gluuUITests.m */,
+				BB37DE7E1C7E08320016D422 /* Info.plist */,
+			);
+			path = "super-gluuUITests";
+			sourceTree = "<group>";
+		};
+		BB37DEDA1C7E0B8E0016D422 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BB97CDDE1F1E4E530033C2A5 /* Fonts */,
+				BBE787261C99954600E9E0D7 /* Settings.bundle */,
+				BB37DEDB1C7E0B8E0016D422 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BB37DEF61C7E0B8E0016D422 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				BB79FA291E78309000AEAE58 /* BLEManager */,
+				BB18D0591CBCFF9600A73733 /* PAPasscode */,
+				BBB7C0FF1C9042A000833B12 /* NSDate-Time-Ago */,
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		BB37DF071C7E0B8E0016D422 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C887B3F820DC4C9E00D99A21 /* LandingViewController.swift */,
+				C89E1EF8215D88C800355756 /* Base */,
+				C86A3C9E2154674500DDBA6F /* HomeViewController.swift */,
+				C8B402B51FE9F28C00202A4B /* LaunchSetupViewController.swift */,
+				C86B05A62076A037008875D3 /* SubscriptionDetailsViewController.swift */,
+				C86A3C9F215495D700DDBA6F /* ApproveDenyViewController.swift */,
+				C83D2B041FE2F18B00F9455E /* SecurityPromptViewController.swift */,
+				BB128D7F1E8000790041BD21 /* Settings */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BB37DF0C1C7E0B8E0016D422 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				C87B2114215EC967004A997A /* KeyHandleCell.swift */,
+				C872CB57215ADCE500735A3F /* LogsTableCell.swift */,
+				C8494D0A1FD5E67600CD5FA8 /* SettingsTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		BB79FA291E78309000AEAE58 /* BLEManager */ = {
+			isa = PBXGroup;
+			children = (
+				BB128D911E8903950041BD21 /* U2FMessageCoder */,
+				BB79FA251E78309000AEAE58 /* PeripheralScanner.swift */,
+				BB79FA261E78309000AEAE58 /* ServiceScanner.swift */,
+				BB79FA271E78309000AEAE58 /* CharacteristicScanner.swift */,
+			);
+			name = BLEManager;
+			path = "ox-push3";
+			sourceTree = "<group>";
+		};
+		BB79FA361E7A8B2C00AEAE58 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C87B211A2163F252004A997A /* SCLAlert+Extension.swift */,
+				C872CB5A215B49CD00735A3F /* UIViewController+SuperGluu.swift */,
+				C86B05A82076A9CA008875D3 /* UIButton+SuperGluu.swift */,
+				C8494D0C1FD5FCB800CD5FA8 /* Font+Extension.swift */,
+				C8F0E2DB1FD21C3800FF9342 /* Color+Extension.swift */,
+				BB79FA371E7A8B6400AEAE58 /* Data+Extension.swift */,
+				BB13D8111EE8413A00F3C41F /* String+Extension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		BB97CDDE1F1E4E530033C2A5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BB97CDDF1F1E4FB90033C2A5 /* ProximaNova-Bold.otf */,
+				BB97CDE01F1E4FB90033C2A5 /* ProximaNova-Extrabold.otf */,
+				BB97CDE11F1E4FB90033C2A5 /* ProximaNova-Light.otf */,
+				BB97CDE21F1E4FB90033C2A5 /* ProximaNova-Reg.otf */,
+				BB97CDE31F1E4FB90033C2A5 /* ProximaNova-Sbold.otf */,
+			);
+			name = Fonts;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		BB9B65AF1CBCDA8400784AEF /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				26E1DCDA21B9D4F200F8C843 /* Constants.swift */,
+				C872CB51215AD20A00735A3F /* AppConfiguration.swift */,
+			);
+			name = Configuration;
+			sourceTree = "<group>";
+		};
+		BBB7C0FF1C9042A000833B12 /* NSDate-Time-Ago */ = {
+			isa = PBXGroup;
+			children = (
+				C8643FBD217008AA000D771A /* NSDate+NVTimeAgo.swift */,
+			);
+			name = "NSDate-Time-Ago";
+			sourceTree = "<group>";
+		};
+		BBFCC6D71E5D98CB0015A256 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C872CB5D215B51B100735A3F /* AproveDenyDelegate.swift */,
+				BB6041681F978DCB0051F38D /* PinCodeDelegate.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C86B1350215D899300961DE5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C872CB5F215B9ADE00735A3F /* SuperGluuBannerView.swift */,
+				BB37DF0C1C7E0B8E0016D422 /* TableViewCells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C872CB5C215B4A1D00735A3F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				26E1DCE121B9F3F200F8C843 /* AdHelper.swift */,
+				26E1DCE221B9F3F200F8C843 /* AuthHelper.swift */,
+				26E1DCE321B9F3F200F8C843 /* ConnectionCheck.swift */,
+				26E1DCE421B9F3F200F8C843 /* GluuUserDefaults.swift */,
+				26E1DCE621B9F3F400F8C843 /* PurchaseHandler.swift */,
+				26E1DCE521B9F3F300F8C843 /* PushNotificationsHelper.swift */,
+				26E1DCED21B9F40700F8C843 /* TouchIDAuth.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C89E1EF8215D88C800355756 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C8735EAC2001D07E00722BD5 /* BaseNavigationController.swift */,
+				C872CB4F215ABF1900735A3F /* BaseViewController.swift */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		C89E1EF9215D88EE00355756 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				C8419626201A4F05005A4ACC /* LaunchScreen.storyboard */,
+				C887B3F620DC4C3300D99A21 /* Landing.storyboard */,
+				BBB5114A1EF2EF9500E19D8E /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BB37DE501C7E08320016D422 /* Super Gluu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB37DE811C7E08320016D422 /* Build configuration list for PBXNativeTarget "Super Gluu" */;
+			buildPhases = (
+				62C9AC37CB2BC89A10FB685F /* [CP] Check Pods Manifest.lock */,
+				BB37DE4D1C7E08320016D422 /* Sources */,
+				BB37DE4E1C7E08320016D422 /* Frameworks */,
+				BB37DE4F1C7E08320016D422 /* Resources */,
+				5CBF63D57883072BF50E5181 /* [CP] Embed Pods Frameworks */,
+				C828ACDA21894D8C006EEF1D /* Run Script - Generate App Info (Git Commit Hash for Versioning) */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Super Gluu";
+			productName = "super-gluu";
+			productReference = BB37DE511C7E08320016D422 /* Super Gluu.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BB37DE6C1C7E08320016D422 /* Super GluuTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB37DE841C7E08320016D422 /* Build configuration list for PBXNativeTarget "Super GluuTests" */;
+			buildPhases = (
+				BB37DE691C7E08320016D422 /* Sources */,
+				BB37DE6A1C7E08320016D422 /* Frameworks */,
+				BB37DE6B1C7E08320016D422 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB37DE6F1C7E08320016D422 /* PBXTargetDependency */,
+			);
+			name = "Super GluuTests";
+			productName = "super-gluuTests";
+			productReference = BB37DE6D1C7E08320016D422 /* Super Gluu.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BB37DE771C7E08320016D422 /* Super GluuUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB37DE871C7E08320016D422 /* Build configuration list for PBXNativeTarget "Super GluuUITests" */;
+			buildPhases = (
+				BB37DE741C7E08320016D422 /* Sources */,
+				BB37DE751C7E08320016D422 /* Frameworks */,
+				BB37DE761C7E08320016D422 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB37DE7A1C7E08320016D422 /* PBXTargetDependency */,
+			);
+			name = "Super GluuUITests";
+			productName = "super-gluuUITests";
+			productReference = BB37DE781C7E08320016D422 /* Super Gluu.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		BB58C15E1EDDB32800FEEC78 /* Super Gluu - Ad Free */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB58C1AE1EDDB32800FEEC78 /* Build configuration list for PBXNativeTarget "Super Gluu - Ad Free" */;
+			buildPhases = (
+				BB58C15F1EDDB32800FEEC78 /* [CP] Check Pods Manifest.lock */,
+				BB58C1601EDDB32800FEEC78 /* Sources */,
+				BB58C17C1EDDB32800FEEC78 /* Frameworks */,
+				BB58C1911EDDB32800FEEC78 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Super Gluu - Ad Free";
+			productName = "super-gluu";
+			productReference = BB58C1B11EDDB32800FEEC78 /* Super Gluu - Ad Free.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BB37DE491C7E08320016D422 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Gluu;
+				TargetAttributes = {
+					BB37DE501C7E08320016D422 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = FLRS8NH8Y9;
+						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+					BB37DE6C1C7E08320016D422 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = BB37DE501C7E08320016D422;
+					};
+					BB37DE771C7E08320016D422 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = BB37DE501C7E08320016D422;
+					};
+					BB58C15E1EDDB32800FEEC78 = {
+						DevelopmentTeam = FLRS8NH8Y9;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = BB37DE4C1C7E08320016D422 /* Build configuration list for PBXProject "Super Gluu" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				de,
+				fr,
+				uk,
+			);
+			mainGroup = BB37DE481C7E08320016D422;
+			productRefGroup = BB37DE521C7E08320016D422 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BB37DE501C7E08320016D422 /* Super Gluu */,
+				BB37DE6C1C7E08320016D422 /* Super GluuTests */,
+				BB37DE771C7E08320016D422 /* Super GluuUITests */,
+				BB58C15E1EDDB32800FEEC78 /* Super Gluu - Ad Free */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BB37DE4F1C7E08320016D422 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBEC92001E293179000D522F /* www.gluu.org.cer in Resources */,
+				BBB5114B1EF2EF9500E19D8E /* Main.storyboard in Resources */,
+				C8419627201A4F05005A4ACC /* LaunchScreen.storyboard in Resources */,
+				C887B3F720DC4C3300D99A21 /* Landing.storyboard in Resources */,
+				BB97CDEA1F1E4FB90033C2A5 /* ProximaNova-Reg.otf in Resources */,
+				BB37DF241C7E0B8E0016D422 /* Localizable.strings in Resources */,
+				BB97CDE61F1E4FB90033C2A5 /* ProximaNova-Extrabold.otf in Resources */,
+				BB97CDE81F1E4FB90033C2A5 /* ProximaNova-Light.otf in Resources */,
+				BB37DE641C7E08320016D422 /* Assets.xcassets in Resources */,
+				BB97CDE41F1E4FB90033C2A5 /* ProximaNova-Bold.otf in Resources */,
+				BB97CDEC1F1E4FB90033C2A5 /* ProximaNova-Sbold.otf in Resources */,
+				BBE787271C99954600E9E0D7 /* Settings.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB37DE6B1C7E08320016D422 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB37DE761C7E08320016D422 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB58C1911EDDB32800FEEC78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB58C1941EDDB32800FEEC78 /* www.gluu.org.cer in Resources */,
+				BBB5114C1EF2EF9500E19D8E /* Main.storyboard in Resources */,
+				BB97CDEB1F1E4FB90033C2A5 /* ProximaNova-Reg.otf in Resources */,
+				BB58C19C1EDDB32800FEEC78 /* Localizable.strings in Resources */,
+				BB97CDE71F1E4FB90033C2A5 /* ProximaNova-Extrabold.otf in Resources */,
+				BB97CDE91F1E4FB90033C2A5 /* ProximaNova-Light.otf in Resources */,
+				BB58C1A11EDDB32800FEEC78 /* Assets.xcassets in Resources */,
+				BBB511491EF2E5B700E19D8E /* Info.plist in Resources */,
+				BB97CDE51F1E4FB90033C2A5 /* ProximaNova-Bold.otf in Resources */,
+				BB97CDED1F1E4FB90033C2A5 /* ProximaNova-Sbold.otf in Resources */,
+				BB58C1A91EDDB32800FEEC78 /* Settings.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5CBF63D57883072BF50E5181 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Super Gluu/Pods-Super Gluu-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/CATCurveProgressView/CATCurveProgressView.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/IAPHelper/IAPHelper.framework",
+				"${BUILT_PRODUCTS_DIR}/JTMaterialSwitch/JTMaterialSwitch.framework",
+				"${BUILT_PRODUCTS_DIR}/NHNetworkTime/NHNetworkTime.framework",
+				"${BUILT_PRODUCTS_DIR}/NSHash/NSHash.framework",
+				"${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework",
+				"${BUILT_PRODUCTS_DIR}/SCLAlertView/SCLAlertView.framework",
+				"${BUILT_PRODUCTS_DIR}/SWTableViewCell/SWTableViewCell.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/ox-push3/ox_push3.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CATCurveProgressView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IAPHelper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTMaterialSwitch.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NHNetworkTime.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSHash.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReader.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCLAlertView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWTableViewCell.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyStoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ox_push3.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Super Gluu/Pods-Super Gluu-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62C9AC37CB2BC89A10FB685F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Super Gluu-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB58C15F1EDDB32800FEEC78 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Super Gluu - Ad Free-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C828ACDA21894D8C006EEF1D /* Run Script - Generate App Info (Git Commit Hash for Versioning) */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script - Generate App Info (Git Commit Hash for Versioning)";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#/bin/sh\n\nversion=$(git rev-parse --verify HEAD | cut -c 1-7)\n\nfileContent=\"// DO NOT EDIT, // IT IS A MACHINE GENERATED FILE\n\n    // AppInfo.swift //\nimport Foundation\nclass AppInfo {\n    let version: String\n    let build: String\n    let gitCommitSHA: String = \\\"$version\\\"\n    \n    init?() {\n        guard let version = Bundle.main.infoDictionary?[\\\"CFBundleShortVersionString\\\"] as? String,\n        let build = Bundle.main.infoDictionary?[\\\"CFBundleVersion\\\"] as? String else {\n        return nil\n    }\n    \n    self.version = version\n    self.build = build\n}\n}\"\n\necho \"$fileContent\" > AppInfo.swift";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BB37DE4D1C7E08320016D422 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB6041691F978E540051F38D /* PinCodeDelegate.h in Sources */,
+				C8494D0B1FD5E67600CD5FA8 /* SettingsTableViewCell.swift in Sources */,
+				26E1DCEE21B9F40700F8C843 /* TouchIDAuth.swift in Sources */,
+				BB13D8121EE8413A00F3C41F /* String+Extension.swift in Sources */,
+				C83123012191466500C6963B /* PAPasscodeViewController.swift in Sources */,
+				C872CB60215B9ADE00735A3F /* SuperGluuBannerView.swift in Sources */,
+				26E1DCE821B9F3F500F8C843 /* AuthHelper.swift in Sources */,
+				BB79FA2A1E78309000AEAE58 /* PeripheralScanner.swift in Sources */,
+				C872CB58215ADCE500735A3F /* LogsTableCell.swift in Sources */,
+				C872CB4E215AB53400735A3F /* LogsViewController.swift in Sources */,
+				C8735EAD2001D07E00722BD5 /* BaseNavigationController.swift in Sources */,
+				C872CB54215AD60900735A3F /* AppConfiguration.swift in Sources */,
+				C86B05A92076A9CA008875D3 /* UIButton+SuperGluu.swift in Sources */,
+				C872CB5E215B51B100735A3F /* AproveDenyDelegate.swift in Sources */,
+				26E1DCEA21B9F3F500F8C843 /* GluuUserDefaults.swift in Sources */,
+				C87B2119215ECB14004A997A /* InformationViewController.swift in Sources */,
+				C86B05A72076A037008875D3 /* SubscriptionDetailsViewController.swift in Sources */,
+				C872CB64215BB4BE00735A3F /* PinCodeSettingsTableViewController.swift in Sources */,
+				C86A3CA0215495D900DDBA6F /* ApproveDenyViewController.swift in Sources */,
+				C82967621FE9C2C1008FEBE8 /* WebViewController.swift in Sources */,
+				BB79FA381E7A8B6400AEAE58 /* Data+Extension.swift in Sources */,
+				26E1DCE921B9F3F500F8C843 /* ConnectionCheck.swift in Sources */,
+				26E1DCEB21B9F3F500F8C843 /* PushNotificationsHelper.swift in Sources */,
+				26E1DCDB21B9D5EF00F8C843 /* Constants.swift in Sources */,
+				BB37DE561C7E08320016D422 /* main.m in Sources */,
+				26E1DCE721B9F3F500F8C843 /* AdHelper.swift in Sources */,
+				BB79FA2C1E78309000AEAE58 /* CharacteristicScanner.swift in Sources */,
+				C8F0E2DC1FD21C3800FF9342 /* Color+Extension.swift in Sources */,
+				C887B3F920DC4C9E00D99A21 /* LandingViewController.swift in Sources */,
+				C872CB62215B9EA900735A3F /* AppDelegate.swift in Sources */,
+				26E1DCEC21B9F3F500F8C843 /* PurchaseHandler.swift in Sources */,
+				C87B211B2163F253004A997A /* SCLAlert+Extension.swift in Sources */,
+				C83D2B051FE2F18B00F9455E /* SecurityPromptViewController.swift in Sources */,
+				C872CB50215ABF1900735A3F /* BaseViewController.swift in Sources */,
+				C8F0E2E21FD227CE00FF9342 /* SettingsViewController.swift in Sources */,
+				C872CB4D215AB53400735A3F /* KeysViewController.swift in Sources */,
+				C84157061FD9F695008BCF0B /* TouchIdSettingsDetailViewController.swift in Sources */,
+				C872CB59215AF32F00735A3F /* HomeViewController.swift in Sources */,
+				BB128D931E8903DA0041BD21 /* U2FMessageCoder.swift in Sources */,
+				C87B2115215EC967004A997A /* KeyHandleCell.swift in Sources */,
+				C872CB5B215B49CD00735A3F /* UIViewController+SuperGluu.swift in Sources */,
+				C8B402B61FE9F28C00202A4B /* LaunchSetupViewController.swift in Sources */,
+				C8494D0D1FD5FCB800CD5FA8 /* Font+Extension.swift in Sources */,
+				C84157091FDA0226008BCF0B /* SingleCellSettingsDetailViewController.swift in Sources */,
+				C828ACDC21895CDF006EEF1D /* AppInfo.swift in Sources */,
+				C8643FBE217008AA000D771A /* NSDate+NVTimeAgo.swift in Sources */,
+				BB79FA2B1E78309000AEAE58 /* ServiceScanner.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB37DE691C7E08320016D422 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB37DE721C7E08320016D422 /* super_gluuTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB37DE741C7E08320016D422 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB37DE7D1C7E08320016D422 /* super_gluuUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB58C1601EDDB32800FEEC78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8F0E2E31FD227CE00FF9342 /* SettingsViewController.swift in Sources */,
+				C84157071FD9F695008BCF0B /* TouchIdSettingsDetailViewController.swift in Sources */,
+				C858D67820E37930000E449E /* SettingsTableViewCell.swift in Sources */,
+				BB58C16A1EDDB32800FEEC78 /* PeripheralScanner.swift in Sources */,
+				C86B1351215D89F400961DE5 /* AppDelegate.swift in Sources */,
+				C841570A1FDA0226008BCF0B /* SingleCellSettingsDetailViewController.swift in Sources */,
+				BB58C1711EDDB32800FEEC78 /* Data+Extension.swift in Sources */,
+				BB58C1731EDDB32800FEEC78 /* main.m in Sources */,
+				BB58C1741EDDB32800FEEC78 /* CharacteristicScanner.swift in Sources */,
+				C8F0E2DD1FD21C3800FF9342 /* Color+Extension.swift in Sources */,
+				C83D2B061FE2F18B00F9455E /* SecurityPromptViewController.swift in Sources */,
+				BB58C1781EDDB32800FEEC78 /* U2FMessageCoder.swift in Sources */,
+				BB58C17B1EDDB32800FEEC78 /* ServiceScanner.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BB37DE6F1C7E08320016D422 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB37DE501C7E08320016D422 /* Super Gluu */;
+			targetProxy = BB37DE6E1C7E08320016D422 /* PBXContainerItemProxy */;
+		};
+		BB37DE7A1C7E08320016D422 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB37DE501C7E08320016D422 /* Super Gluu */;
+			targetProxy = BB37DE791C7E08320016D422 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BB37DEDB1C7E0B8E0016D422 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB37DEDC1C7E0B8E0016D422 /* Base */,
+				BB37DEDD1C7E0B8E0016D422 /* de */,
+				BB37DEDE1C7E0B8E0016D422 /* en */,
+				BB37DEE11C7E0B8E0016D422 /* fr */,
+				BB37DEF51C7E0B8E0016D422 /* uk */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BB37DE7F1C7E08320016D422 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BB37DE801C7E08320016D422 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BB37DE821C7E08320016D422 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EB98658935DC37AA97BA494 /* Pods-Super Gluu.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Super Gluu.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = FLRS8NH8Y9;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/ericwebb/Dropbox/Clients/Super_Gluu/super-gluu/IOS/super-gluu/PrefixHeader.pch";
+				INFOPLIST_FILE = "super-gluu/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios.gluu;
+				PRODUCT_NAME = "Super Gluu";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "super-gluu/Super Gluu-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BB37DE831C7E08320016D422 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B84F8928A16117787C96522F /* Pods-Super Gluu.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Super Gluu.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = FLRS8NH8Y9;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/ericwebb/Dropbox/Clients/Super_Gluu/super-gluu/IOS/super-gluu/PrefixHeader.pch";
+				INFOPLIST_FILE = "super-gluu/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios.gluu;
+				PRODUCT_NAME = "Super Gluu";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "super-gluu/Super Gluu-Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BB37DE851C7E08320016D422 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "super-gluuTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gluu.ios.super-gluuTests";
+				PRODUCT_NAME = "Super Gluu";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Super Gluu.app/Super Gluu";
+			};
+			name = Debug;
+		};
+		BB37DE861C7E08320016D422 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "super-gluuTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gluu.ios.super-gluuTests";
+				PRODUCT_NAME = "Super Gluu";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Super Gluu.app/Super Gluu";
+			};
+			name = Release;
+		};
+		BB37DE881C7E08320016D422 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "super-gluuUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gluu.ios.super-gluuUITests";
+				PRODUCT_NAME = "Super Gluu";
+				TEST_TARGET_NAME = "super-gluu";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		BB37DE891C7E08320016D422 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = "super-gluuUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gluu.ios.super-gluuUITests";
+				PRODUCT_NAME = "Super Gluu";
+				TEST_TARGET_NAME = "super-gluu";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+		BB58C1AF1EDDB32800FEEC78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 244ED1E8112E194E698C753B /* Pods-Super Gluu - Ad Free.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Super Gluu Ad free.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = FLRS8NH8Y9;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/soulfoodz/Dropbox/Clients/Super_Gluu/super-gluu/IOS/super-gluu/PrefixHeader.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"ADFREE=1",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Super Gluu (ad free)-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios.gluu.ad.free;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "super-gluu/Super Gluu-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BB58C1B01EDDB32800FEEC78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4516151003C18420B94BE1ED /* Pods-Super Gluu - Ad Free.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Super Gluu Ad free.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = FLRS8NH8Y9;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "/Users/soulfoodz/Dropbox/Clients/Super_Gluu/super-gluu/IOS/super-gluu/PrefixHeader.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"ADFREE=1",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Super Gluu (ad free)-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios.gluu.ad.free;
+				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "super-gluu/Super Gluu-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BB37DE4C1C7E08320016D422 /* Build configuration list for PBXProject "Super Gluu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB37DE7F1C7E08320016D422 /* Debug */,
+				BB37DE801C7E08320016D422 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB37DE811C7E08320016D422 /* Build configuration list for PBXNativeTarget "Super Gluu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB37DE821C7E08320016D422 /* Debug */,
+				BB37DE831C7E08320016D422 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB37DE841C7E08320016D422 /* Build configuration list for PBXNativeTarget "Super GluuTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB37DE851C7E08320016D422 /* Debug */,
+				BB37DE861C7E08320016D422 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB37DE871C7E08320016D422 /* Build configuration list for PBXNativeTarget "Super GluuUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB37DE881C7E08320016D422 /* Debug */,
+				BB37DE891C7E08320016D422 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB58C1AE1EDDB32800FEEC78 /* Build configuration list for PBXNativeTarget "Super Gluu - Ad Free" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB58C1AF1EDDB32800FEEC78 /* Debug */,
+				BB58C1B01EDDB32800FEEC78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BB37DE491C7E08320016D422 /* Project object */;
+}

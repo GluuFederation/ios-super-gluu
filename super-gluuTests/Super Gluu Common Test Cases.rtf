@@ -1,0 +1,86 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf460
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww21260\viewh11660\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Test Cases:\
+\
+1) Run app on device(s) (iPhone&iPad) with minimal IOS 8 version.\
+\
+License (EULA) screen:\
+\
+2) If app is running for the first time you should see the EULA screen.\
+	2.1) You can scroll up/down to read all text of license\
+	2.2) License text shouldn\'92t be editable. Tap, two (or more) taps or long press on text shouldn\'92t enable editing of the EULA. \
+	2.3) If rotate device to landscape - all text must be visible.\
+	2.4) If click \'93Accept\'94 button (you accepted Super Gluu EULA) you go to next screen and license screen shouldn\'92t be visible in next times.\
+\
+Pin code screen:\
+\
+3) If app is running for first time you will see screen with question \'93Do you want to protect your app using PIN code?\'94 with two buttons \'93YES\'94 and \'93NO\'94.\
+	3.1) Click  \'93NO\'94 button, you don\'92t want to use PIN code, you skip this screen and go to next (main) screen.\
+	3.2) Click \'93YES\'94 - new Pin code screen will appear. You need enter new PIN code twice. \
+	3.3) If two entered PIN codes are equal each other then this PIN code will be use for PIN protection.\
+	3.4) If two entered PIN codes aren\'92t equal you will get message \'93Passcodes did not match,try again\'94.\
+	3.5) Click \'93YES\'94, PIN code screen will appear, click \'93Cancel\'94 button on top-right, Pin code screen will hide and previous screen with question and two buttons should be visible, now you can again make your decision - protect your app using PIN code or not.\
+	3.6) If run app and is already protected by PIN code - PIN code screen will appear and ask you to enter PIN code. \
+	3.7) If enter valid code you can go to next screen. \
+	3.8) If enter incorrect PIN code you will see message \'93Failed Passcode attempt\'94 with count of failed attempts. \
+	3.9) If count of attempts equals 5 by default (you can set count in settings of app) when app will be locked on 10 minutes (10 minutes is static and can\'92t be changed). In this case you can\'92t use app till 10 minutes.\
+	3.10) If app is locked - remove app from memory. Run app again - all should be the same as before deleting app from memory, timer should show correct time.\
+	3.11) When time is over - you will be able to enter PIN code again, on screen will be able button \'93Enter PIN code\'94.\
+	3.12) When time is over - enter wrong PIN again, app should be locked again in second time. \
+\
+Main view:\
+	4) Main view contains four tabs - Home, Logs, Keys and Settings.\
+	4.1) Main view also supports landscape mode\
+\
+Home screen:\
+	5) Home screen contains few labels with welcome text and button \'93Scan QR code\'94\
+	5.1) On top is status view, but in normal this view is hidden, will be visible only during Enroll/Authentication process to show different process statuses.\
+\
+Enroll/Authentication\
+\
+6) Go to web site \'93https://ce-release.gluu.com\'94 and enter your credentials - user name/password, after that on web page you will see QR code, open Super Gluu application and click \'93Scan QR code\'94 button on Home screen. Using QR reader camera scan code. After scanning new screen will appear, new screen contains information about request which will be send to server: Gluu server, user name, location, time and type. Also there are two buttons - Approve and Deny. It\'92s logically - if click Approve then application will send approve request on server, if click Deny button - deny request.\
+	6.1) On Approve/Deny screen if click Approve Super Glue will continue process. If you do scanning at first time on Approve/Deny screen as type must be Enrol, server doesn\'92t know about your device and will register new token for you. If you do scanning next time then application will send Authentication request and server will know about it and will do login instead Enrol. Click \'93Approve\'94, Approve/Deny screen hides and you may see Home screen, on top from time to time you will see status view which show you statuses - Enroll/Authentication starting, success, failed and so on. If Enroll/Authentication success or failed you will see message about it. On web page you may see corresponding result - success/failed.\
+\
+Logs screen:\
+7) Click Logs tab - if you didn\'92t do Enroll/Authentication process no logs label will be visible.\
+	7.1) Do Enroll/Authentication - after each Enroll/Authentication app saves logs about it. If you click Approve or Decline your decision will be save to logs too.\
+	7.2) If application doesn\'92t have any logs NO LOGS text should be visible.\
+	7.3) If application has one or more logs then this logs will be in table. In this case on top-right will be available button \'93Clean\'94. If click on this button ALL logs will be deleted.\
+	7.4) Each log has logo - if Enrol/Authentication success then logo in green, if failed in red. On bottom of server name is created label with shows time in TIME AGO type - Just now, 2 minutes ago, 4 days ago and so on.\
+	7.5) If log is success logo and server name label in green, on right side will be available button with arrow, if click on this button new screen will be shown with information about request.\
+	7.6) If log is failed logo and server name label in red, on right side will be available INFO button , if click on this button message should show you short text about error.\
+\
+Keys screen:\
+8) When you did Enrol application generated unique keyHandle file and store to local device database, this file will be used each time for authentication. All keys are available in table, if no keys you will see text about it.\
+	8.1) Each key name\'92s can be changed, for that just hold down on key\'92s name for 3 seconds, after you will see message \'93Do you want to change key\'92s name?\'94 if approve you will be able to enter new name.\
+	8.2) You can delete key via two ways - swipe left on key row, delete button will be shown on right side, click delete, confirm deleting. Second way - click on key, new screen with information about selected key will be visible, on top-right is button \'93delete\'94, click on it and approve deleting. Be aware, after deleting key you should again do enrol on server.\
+	8.3) You can see information about some key just clicking on it.\
+\
+Settings screen:\
+9) Click on Setting tab - you will see few settings for PIN code.\
+	9.1) First you can switch on/off PIN code protection. If you skip PIN code protection during first running application you can switch on there.\
+	9.2) If you didn\'92t setup PIN code before you can do it now clicking on button \'93Setup pin code\'94, if you\'92re using PIN code than this button will have title \'93Change PIN code\'94 and you can change current PIN code.\
+	9.3) If you want setup PIN code you can select type of PIN code - 4-digit code or custom.\
+	9.4) On bottom you can setup count of failed attempts of entering PIN code. Range is from 5 till 10 attempts. \
+\
+Push notifications:\
+\
+10) Super Gluu can receive push notifications from gluu servers. To make it available you should approve receiving Push notification during first start application or in Settings of device. Also when you do enrol to pair your account with device, application send to server unique device token, this token is saved on server side and is using to send Push notification exactly to this device. It means before receiving Push notification you should do enrol.\
+	10.1) After Enrol Super Gluu will receive Push from gluu servers. Please close app (you can also remove application from memory, but in this case Notification Actions shouldn\'92t work), login to server on web page, when you get QR code on screen wait on Push Notification, after 10-15 seconds you should get Push if not please try again or scan QR code directly from application.\
+	10.2) When you get Push please swipe to right in case your device screen is locked or click on Push in case screen isn\'92t locked, Super Gluu should open and you will see Approve/Deny screen, make your decision Approve or Deny.\
+	10.3) You get Push swipe to left (if screen of device is locked) or scroll down (if screen isn\'92t locked) you will see two buttons Approve&Deny - it\'92s actionable menu,   please make your decision Approve or Deny, after application will open but you don\'92t see Approve/Deny screen, Approve or Deny process should run automatically depends on your previous decision. \
+\pard\pardeftab720\partightenfactor0
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+ \
+\
+\
+\
+\
+}
