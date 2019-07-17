@@ -29,7 +29,7 @@ enum OxRequestType: String {
         
         handleRequest(isDecline: false) { (success, errorMessage) in
             if success {
-                completion(true, "Success!")
+                completion(true, LocalString.Success.localized)
             } else {
                 completion(false, errorMessage)
             }
@@ -40,7 +40,7 @@ enum OxRequestType: String {
         
         handleRequest(isDecline: true) { (success, errorMessage) in
             if success {
-                completion(true, "Success!")
+                completion(true, LocalString.Success.localized)
             } else {
                 completion(false, errorMessage)
             }
@@ -50,7 +50,7 @@ enum OxRequestType: String {
     fileprivate func handleRequest(isDecline: Bool, completion: @escaping (Bool, String?) -> Void) {
         
         guard let requestDictionary = self.requestDictionary else {
-            completion(false, "Missing request info")
+            completion(false, LocalString.Missing_Request_Info.localized)
             return
         }
         

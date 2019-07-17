@@ -106,13 +106,13 @@ class PurchaseHandler: NSObject {
                 switch error.code {
                     
                 case .paymentCancelled:                    break
-                case .unknown:                             msg = "Unknown error. It looks like something may have gone wrong."
-                case .clientInvalid:                       msg = "Not allowed to make the payment"
-                case .paymentInvalid:                      msg = "The purchase identifier was invalid"
-                case .paymentNotAllowed:                   msg = "The device is not allowed to make the payment"
-                case .storeProductNotAvailable:            msg = "The product is not available in the current storefront"
-                case .cloudServicePermissionDenied:        msg = "Access to cloud service information is not allowed"
-                case .cloudServiceNetworkConnectionFailed: msg = "Could not connect to the network"
+                case .unknown:                             msg = LocalString.Unknown_Error_Something.localized
+                case .clientInvalid:                       msg = LocalString.Not_Allowed_Payment.localized
+                case .paymentInvalid:                      msg = LocalString.Invalid_Purchase_Id.localized
+                case .paymentNotAllowed:                   msg = LocalString.Unallowed_Device.localized
+                case .storeProductNotAvailable:            msg = LocalString.Unavailable_Product.localized
+                case .cloudServicePermissionDenied:        msg = LocalString.Unallowed_Cloud_Access.localized
+                case .cloudServiceNetworkConnectionFailed: msg = LocalString.No_Network_Connection.localized
                 default:
                     break
                 }
@@ -122,7 +122,7 @@ class PurchaseHandler: NSObject {
                 if let message = msg {
                     let alert = SCLAlertView(autoDismiss: true, horizontalButtons: false)
                     
-                    alert.showCustom("Oops!",
+                    alert.showCustom(LocalString.Oops.localized,
                                      subTitle: message,
                                      color: AppConfiguration.systemColor,
                                      closeButtonTitle: "OK",
