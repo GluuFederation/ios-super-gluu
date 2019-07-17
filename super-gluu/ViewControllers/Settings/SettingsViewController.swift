@@ -38,6 +38,7 @@ enum SettingsTableSections {
         }
     }
     
+    // ** Local Text
     var title: String {
         switch self {
         case .history:  return "HISTORY"
@@ -68,14 +69,13 @@ enum SettingsTableItem {
         }
     }
     
-    // ** Local Text
     var title: String? {
         switch self {
         case .logs: return LocalString.Menu_Logs.localized
         case .keys: return LocalString.Menu_Keys.localized
         case .pinCodes: return LocalString.Menu_Passcode.localized
-        case .touchId: return  "" //LocalString.Men.
-        case .ssl: return "Trust SSL" // LocalString.MenuS
+        case .touchId: return  LocalString.Security_TouchId.localized
+        case .ssl: return LocalString.SSL_Trust.localized
         case .userGuide: return LocalString.Menu_User_Guide.localized
         case .privacyPolicy: return LocalString.Menu_Privacy_Policy.localized
         }

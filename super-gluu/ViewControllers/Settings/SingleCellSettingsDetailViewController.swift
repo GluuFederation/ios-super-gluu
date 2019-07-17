@@ -16,17 +16,17 @@ class SingleCellSettingsDetailViewController: UITableViewController {
         
         var titleAndIcon: (String, UIImage?) {
             switch self {
-            case .touchId: return ("Touch ID", #imageLiteral(resourceName: "icon_settings_touchid"))
-            case .ssl:     return ("Trust all SSL", #imageLiteral(resourceName: "icon_settings_ssl"))
+            case .touchId: return (LocalString.Passcode_Touch.localized, #imageLiteral(resourceName: "icon_settings_touchid"))
+            case .ssl:     return (LocalString.SSL_Trust.localized, #imageLiteral(resourceName: "icon_settings_ssl"))
             }
         }
         
         var footerText: String {
             switch self {
             case .touchId:
-                return "When enabled, access to your Super Gluu app will be protected by touch ID."
+                return LocalString.Passcode_Enabled_Info.localized
             case .ssl:
-                return "Enable this option only during devlopment. When enabled, Super Gluu will trust self-signed certificates. \n\n If the certificate is signed by a certificate authority (CA) trust all should be disabled."
+                return LocalString.SSL_Info.localized
             }
         }
         
@@ -70,11 +70,11 @@ class SingleCellSettingsDetailViewController: UITableViewController {
         switch display {
         case .ssl:
             authSwitch.isOn = GluuUserDefaults.isSSLEnabled()
-            navigationItem.title = "Trust SSL"
+            navigationItem.title = LocalString.SSL_Trust.localized
         
         case .touchId:
             authSwitch.isOn = GluuUserDefaults.hasTouchAuthEnabled()
-            navigationItem.title = "Touch Security"
+            navigationItem.title = LocalString.Passcode_Touch_Security.localized
         
         }
         

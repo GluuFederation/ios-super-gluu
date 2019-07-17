@@ -186,10 +186,10 @@
                                                     <rect key="frame" x="47" y="30" width="281" height="160"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hJI-oU-xSL">
-                                                            <rect key="frame" x="93.5" y="0.0" width="94" height="128"/>
+                                                            <rect key="frame" x="93.5" y="0.0" width="94" height="130.5"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_logs_header" translatesAutoresizingMaskIntoConstraints="NO" id="yx2-5z-NZw">
-                                                                    <rect key="frame" x="0.0" y="17" width="94" height="94"/>
+                                                                    <rect key="frame" x="0.0" y="18" width="94" height="94"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="94" id="2tC-eQ-Gbx"/>
                                                                         <constraint firstAttribute="height" constant="94" id="Way-a6-VJ8"/>
@@ -205,7 +205,7 @@
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="755" text="Logs_Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CiG-6f-UzQ" customClass="LocalizedLabel" customModule="Super_Gluu" customModuleProvider="target">
-                                                            <rect key="frame" x="87" y="143" width="107" height="17"/>
+                                                            <rect key="frame" x="87" y="145.5" width="107" height="14.5"/>
                                                             <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="14"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -1183,9 +1183,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="UDI-gd-DhS"/>
                     <connections>
+                        <outlet property="applicationTitleLabel" destination="dm4-4b-VNo" id="52S-Ex-5Vp"/>
                         <outlet property="applicationValueLabel" destination="pCR-Ud-15Q" id="0GB-ba-D4I"/>
+                        <outlet property="createdTitleLabel" destination="GuS-cl-N5B" id="uzX-kb-yMU"/>
                         <outlet property="createdValueLabel" destination="oi4-69-4c2" id="MH4-gT-qaE"/>
+                        <outlet property="keyHandleTitleLabel" destination="1h0-ZB-Ipz" id="yXO-2k-VhX"/>
                         <outlet property="keyHandleValueLabel" destination="taG-dX-qnh" id="328-zx-EWJ"/>
+                        <outlet property="userNameTitleLabel" destination="8O3-cC-MJk" id="3dd-tg-Ms0"/>
                         <outlet property="userNameValueLabel" destination="s9k-2d-fXn" id="IPi-vU-pLN"/>
                         <outletCollection property="valueLabels" destination="s9k-2d-fXn" collectionClass="NSMutableArray" id="o6f-Ss-gr5"/>
                         <outletCollection property="valueLabels" destination="oi4-69-4c2" collectionClass="NSMutableArray" id="zZ8-ei-vth"/>

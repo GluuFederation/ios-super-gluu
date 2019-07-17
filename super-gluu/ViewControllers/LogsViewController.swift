@@ -34,10 +34,6 @@ class LogsViewController: BaseViewController, UITableViewDataSource, UITableView
         navigationItem.title = LocalString.Menu_Logs.localized
         view.backgroundColor = UIColor.Gluu.tableBackground
 
-        //    if ([[ADSubsriber sharedInstance] isSubscribed]){
-        //        [selectAllView setCenter:CGPointMake(selectAllView.center.x, selectAllView.center.y+50)];
-        //    }
-
         logsTableView.tableFooterView = UIView()
         logsTableView.allowsMultipleSelectionDuringEditing = true
         logsTableView.separatorColor = UIColor.Gluu.separator

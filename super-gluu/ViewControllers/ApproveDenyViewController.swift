@@ -278,7 +278,7 @@ class ApproveDenyViewController: UIViewController {
         })
         
         alert.showCustom(AlertConstants.delete,
-                         subTitle: AlertConstants.clearLog,
+                         subTitle: LocalString.Clear_Log.localized,
                          color: AppConfiguration.systemColor,
                          closeButtonTitle: AlertConstants.no,
                          circleIconImage: UIImage(named: "icon_trashcan_large")!)

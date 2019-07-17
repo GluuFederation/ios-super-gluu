@@ -18,6 +18,12 @@ class InformationViewController: BaseViewController, UIScrollViewDelegate {
     @IBOutlet var createdValueLabel: UILabel!
     @IBOutlet var applicationValueLabel: UILabel!
     @IBOutlet var keyHandleValueLabel: UILabel!
+    
+    @IBOutlet var userNameTitleLabel: UILabel!
+    @IBOutlet var createdTitleLabel: UILabel!
+    @IBOutlet var applicationTitleLabel: UILabel!
+    @IBOutlet var keyHandleTitleLabel: UILabel!
+    
     @IBOutlet var valueLabels: [UILabel]!
     @IBOutlet var separators: [UIView]!
     @IBOutlet var keyLabels: [UILabel]!
@@ -26,10 +32,8 @@ class InformationViewController: BaseViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupInformation()
-        initLocalization()
-
         setupView()
+        setupInformation()
 
     }
     
@@ -39,11 +43,17 @@ class InformationViewController: BaseViewController, UIScrollViewDelegate {
 
     func setupView() {
 
+        userNameTitleLabel.text = LocalString.Log_Key_Username.localized
+        createdTitleLabel.text = LocalString.Log_Key_Created.localized
+        keyHandleTitleLabel.text = LocalString.Log_Key_Key_Handle.localized
+        applicationTitleLabel.text = LocalString.Log_Key_Id_Provider.localized
+        
         view.backgroundColor = UIColor.Gluu.tableBackground
 
         valueLabels.forEach({
             $0.font = UIFont.regular(16)
             $0.textColor = AppConfiguration.systemColor
+            
         })
         
         keyLabels.forEach({
@@ -59,6 +69,7 @@ class InformationViewController: BaseViewController, UIScrollViewDelegate {
 
     }
 
+    // ** Local Text
     func editBBI() -> UIBarButtonItem? {
 
         let editSel: Selector = #selector(InformationViewController.showEditActionSheet)
@@ -69,19 +80,21 @@ class InformationViewController: BaseViewController, UIScrollViewDelegate {
 
     @objc func showEditActionSheet() {
 
-        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let actionSheet = UIAlertController(title: LocalString.Info_Change_Name.localized,
+                                            message: LocalString.Info_Change_Name_Question.localized,
+                                            preferredStyle: .actionSheet)
 
-        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { action in
+        actionSheet.addAction(UIAlertAction(title: LocalString.Cancel.localized, style: .cancel, handler: { action in
             actionSheet.dismiss(animated: true, completion: nil)
         }))
 
-        actionSheet.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { action in
+        actionSheet.addAction(UIAlertAction(title: LocalString.Delete.localized, style: .destructive, handler: { action in
             actionSheet.dismiss(animated: true, completion: nil)
             
             self.showDeleteAlert()
         }))
 
-        actionSheet.addAction(UIAlertAction(title: "Edit Name", style: .default, handler: { action in
+        actionSheet.addAction(UIAlertAction(title: LocalString.Info_Change_Name.localized, style: .default, handler: { action in
             actionSheet.dismiss(animated: true, completion: nil)
             
             self.showKeyRenameAlert()
@@ -123,31 +136,19 @@ class InformationViewController: BaseViewController, UIScrollViewDelegate {
         return nil
     }
 
-    func initLocalization() {
-//        informationLabel.text = NSLocalizedString(@"Information", @"Information");
-//        userNameLabel.text = NSLocalizedString(@"UserName", @"UserName");
-//        createdLabel.text = NSLocalizedString(@"Created", @"Created");
-//        applicationLabel.text = NSLocalizedString(@"Application", @"Application");
-//        issuerLabel.text = NSLocalizedString(@"Issuer", @"Issuer");
-//        closeButton.titleLabel.text = NSLocalizedString(@"CloseButton", @"CloseButton");
-//        keyHandleLabel.text = NSLocalizedString(@"keyHandle", @"Key handle");
-    }
-
     @objc
     func showDeleteAlert() {
         
         let alert = SCLAlertView(autoDismiss: false, horizontalButtons: true)
         
-        let subtitle = NSLocalizedString("DeleteKeyHandle", comment: "Delete KeyHandle")
-        
         alert.addButton(AlertConstants.yes, backgroundColor: .red, textColor: .white) {
-            print("YES clicked")
+            
             self.deleteKey()
             alert.hideView()
         }
         
         alert.showCustom(AlertConstants.delete,
-                         subTitle: subtitle,
+                         subTitle: LocalString.Info_Delete_Key.localized,
                          color: AppConfiguration.systemColor,
                          closeButtonTitle: AlertConstants.no,
                          circleIconImage: UIImage(named: "icon_trashcan_large")!)
@@ -160,9 +161,9 @@ class InformationViewController: BaseViewController, UIScrollViewDelegate {
         
         let alert = SCLAlertView(autoDismiss: false, closeButtonColor: .red, horizontalButtons: true)
         
-        let textField = alert.addTextField("Enter a name")
+        let textField = alert.addTextField(LocalString.Info_Enter_Name.localized)
         
-        alert.addButton("Save") {
+        alert.addButton(LocalString.Save.localized) {
             
 //            textField.endEditing(true)
             
@@ -176,20 +177,20 @@ class InformationViewController: BaseViewController, UIScrollViewDelegate {
                     self.setupInformation()
                     alert.hideView()
                 } else {
-                    let alert = SCLAlertView()
-                    alert.showCustom(NSLocalizedString("Info", comment: "Info"),
-                                     subTitle: "Name already exists or is empty. Please enter another one.",
+                    
+                    SCLAlertView().showCustom(LocalString.Info.localized,
+                                     subTitle: LocalString.Info_Duplicate_Name.localized,
                                      color: AppConfiguration.systemColor,
-                                     closeButtonTitle: "Close",
+                                     closeButtonTitle: LocalString.Close.localized,
                                      circleIconImage: AppConfiguration.systemAlertIcon)
                 }
             }
         }
         
-        alert.showCustom("Change key name",
-                         subTitle: "Enter a new name for your key:",
+        alert.showCustom(LocalString.Info_Change_Name.localized,
+                         subTitle: LocalString.Info_Enter_New_Name.localized,
                          color: AppConfiguration.systemColor,
-                         closeButtonTitle: "Cancel",
+                         closeButtonTitle: LocalString.Cancel.localized,
                          circleIconImage: UIImage(named: "icon_pencil"))
         
     }

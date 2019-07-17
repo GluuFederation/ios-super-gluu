@@ -79,17 +79,17 @@ class PAPasscodeViewController: UIViewController, UITextFieldDelegate {
         self.action = action
         switch action {
         case .set:
-            title = NSLocalizedString("Set Passcode", comment: "")
-            enterPrompt = NSLocalizedString("Enter a passcode", comment: "")
-            confirmPrompt = NSLocalizedString("Re-enter your passcode", comment: "")
+            title = LocalString.Passcode_Set.localized
+            enterPrompt = LocalString.Passcode_Enter_A_Passcode.localized
+            confirmPrompt = LocalString.Passcode_Reenter.localized
         case .enter:
-            title = NSLocalizedString("Enter Passcode", comment: "")
-            enterPrompt = NSLocalizedString("Enter your passcode", comment: "")
+            title = LocalString.Passcode_Enter_A_Passcode.localized
+            enterPrompt = LocalString.Passcode_Enter_Your_Passcode.localized
         case .change:
-            title = NSLocalizedString("Change Passcode", comment: "")
-            changePrompt = NSLocalizedString("Enter your old passcode", comment: "")
-            enterPrompt = NSLocalizedString("Enter your new passcode", comment: "")
-            confirmPrompt = NSLocalizedString("Re-enter your new passcode", comment: "")
+            title = LocalString.Passcode_Change.localized
+            changePrompt = LocalString.Passcode_Enter_Old.localized
+            enterPrompt = LocalString.Passcode_Enter_New.localized
+            confirmPrompt = LocalString.Passcode_Reenter_New.localized
         }
         
         modalPresentationStyle = .formSheet
@@ -262,7 +262,7 @@ class PAPasscodeViewController: UIViewController, UITextFieldDelegate {
                     delegate?.paPasscodeViewControllerDidSetPasscode(self)
                 } else {
                     showScreen(forPhase: 0, animated: true)
-                    messageLabel.text = NSLocalizedString("Passcodes did not match. Try again.", comment: "")
+                    messageLabel.text = LocalString.Passcode_Try_Again.localized
                 }
             }
             
@@ -298,7 +298,7 @@ class PAPasscodeViewController: UIViewController, UITextFieldDelegate {
                     delegate?.paPasscodeViewControllerDidChangePasscode(self)
                 } else {
                     showScreen(forPhase: 1, animated: true)
-                    messageLabel.text = NSLocalizedString("Passcodes did not match. Try again.", comment: "")
+                    messageLabel.text = LocalString.Passcode_Try_Again.localized
                 }
             }
         }
@@ -340,8 +340,7 @@ class PAPasscodeViewController: UIViewController, UITextFieldDelegate {
         }
 
         let remainingAttempts = GluuConstants.MAX_PASSCODE_ATTEMPTS_COUNT - failedAttempts
-        let attemptText = remainingAttempts > 1 ? " attempts left" : " attempt left"
-        failedAttemptsLabel.text = "\(remainingAttempts)" + attemptText
+        failedAttemptsLabel.text = "\(remainingAttempts)" + LocalString.Passcode_Attempts_Left.localized
     }
     
     private func showScreen(forPhase newPhase: Int, animated: Bool) {
@@ -380,7 +379,7 @@ class PAPasscodeViewController: UIViewController, UITextFieldDelegate {
             if isFinalScreen {
                 navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(PAPasscodeViewController.handleCompleteField))
             } else {
-                navigationItem.rightBarButtonItem = UIBarButtonItem(title: NSLocalizedString("Next", comment: ""), style: .plain, target: self, action: #selector(PAPasscodeViewController.handleCompleteField))
+                navigationItem.rightBarButtonItem = UIBarButtonItem(title: LocalString.Passcode_Next.localized, style: .plain, target: self, action: #selector(PAPasscodeViewController.handleCompleteField))
             }
             
             navigationItem.rightBarButtonItem?.isEnabled = false
