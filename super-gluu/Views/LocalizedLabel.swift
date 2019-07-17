@@ -112,7 +112,11 @@ enum LocalString: String {
     case Failed_Attempts_Warning = "Failed_Attempts_Warning"
     
     var localized: String {
-        return self.rawValue.localized()
+        return self.rawValue
+    }
+    
+    var localizedUppercase: String {
+        return self.rawValue.localizedUppercase
     }
 }
 

@@ -41,8 +41,8 @@ enum SettingsTableSections {
     var title: String {
         switch self {
         case .history:  return "HISTORY"
-        case .settings: return "SETTINGS"
-        case .help:     return "HELP"
+        case .settings: return LocalString.Menu_Settings.localizedUppercase
+        case .help:     return LocalString.Menu_Help.localizedUppercase
         }
     }
 
@@ -68,15 +68,16 @@ enum SettingsTableItem {
         }
     }
     
+    // ** Local Text
     var title: String? {
         switch self {
-        case .logs: return "Logs"
-        case .keys: return "Keys"
-        case .pinCodes: return "Passcode"
-        case .touchId: return "TouchId"
-        case .ssl: return "Trust SSL"
-        case .userGuide: return "User Guide"
-        case .privacyPolicy: return "Privacy Policy"
+        case .logs: return LocalString.Menu_Logs.localized
+        case .keys: return LocalString.Menu_Keys.localized
+        case .pinCodes: return LocalString.Menu_Passcode.localized
+        case .touchId: return  "" //LocalString.Men.
+        case .ssl: return "Trust SSL" // LocalString.MenuS
+        case .userGuide: return LocalString.Menu_User_Guide.localized
+        case .privacyPolicy: return LocalString.Menu_Privacy_Policy.localized
         }
     }
     
