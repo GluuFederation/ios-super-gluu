@@ -90,6 +90,10 @@ class ApproveDenyViewController: UIViewController {
         cityNameLabel.textColor = UIColor.Gluu.lightGreyText
         createdDateLabel.textColor = UIColor.Gluu.lightGreyText
         
+        approveRequest.setTitle(LocalString.Approve.localized, for: .normal)
+        
+        denyRequest.setTitle(LocalString.Deny.localized, for: .normal)
+        
     }
     
     @objc func openURL(_ tap: UITapGestureRecognizer?) {
@@ -191,7 +195,7 @@ class ApproveDenyViewController: UIViewController {
         } else {
             navigationItem.hidesBackButton = true
 
-            title = "Permission Approval"
+            title = LocalString.Permission_Approval.localized
 
 //            navigationView.hidden = true
         }
@@ -215,7 +219,7 @@ class ApproveDenyViewController: UIViewController {
 
         view.isUserInteractionEnabled = false
         
-        showAlertView(withTitle: "Approving...", andMessage: "", withCloseButton: false)
+        showAlertView(withTitle: LocalString.Approving.localized, andMessage: "", withCloseButton: false)
 
         AuthHelper.shared.approveRequest(completion: { success, errorMessage in
 
@@ -233,7 +237,7 @@ class ApproveDenyViewController: UIViewController {
 
         view.isUserInteractionEnabled = false
 
-        showAlertView(withTitle: "Denying...", andMessage: "", withCloseButton: false)
+        showAlertView(withTitle: LocalString.Denying.localized, andMessage: "", withCloseButton: false)
 
         AuthHelper.shared.denyRequest(completion: { success, errorMessage in
 
