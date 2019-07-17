@@ -31,7 +31,7 @@ class LogsViewController: BaseViewController, UITableViewDataSource, UITableView
 
         NotificationCenter.default.addObserver(self, selector: #selector(LogsViewController.initPushView), name: NSNotification.Name(rawValue: GluuConstants.NOTIFICATION_PUSH_ONLINE), object: nil)
 
-        navigationItem.title = "Logs"
+        navigationItem.title = LocalString.Menu_Logs.localized
         view.backgroundColor = UIColor.Gluu.tableBackground
 
         //    if ([[ADSubsriber sharedInstance] isSubscribed]){
@@ -118,6 +118,7 @@ class LogsViewController: BaseViewController, UITableViewDataSource, UITableView
  */
     }
 
+    // ** Local Text
     @IBAction func selectAllClick(_ sender: Any) {
         let tag = Int((sender as? UIButton)?.tag ?? 0)
         if tag == 1 {
@@ -180,7 +181,7 @@ class LogsViewController: BaseViewController, UITableViewDataSource, UITableView
             alert.hideView()
         }
         
-        let subText = logs != nil || (logs?.count ?? 0) > 0 ? AlertConstants.clearLogs : AlertConstants.clearLog
+        let subText = logs != nil || (logs?.count ?? 0) > 0 ? LocalString.Clear_Logs.localized : LocalString.Clear_Log.localized
         
         alert.showCustom(AlertConstants.delete,
                          subTitle: subText,

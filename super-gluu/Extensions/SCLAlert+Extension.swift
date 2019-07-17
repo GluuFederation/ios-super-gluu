@@ -87,9 +87,9 @@ enum AlertButtonStyle {
     var backgroundColor: UIColor {
         switch self {
         case .normal:
-            return Colors.primaryCTA
+            return UIColor.Gluu.green //Colors.primaryCTA
         case .dismiss:
-            return Colors.error
+            return .red
         }
     }
 }

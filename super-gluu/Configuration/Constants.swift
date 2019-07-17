@@ -14,18 +14,10 @@ fileprivate func NSLocalizedString(_ key: String) -> String {
     return NSLocalizedString(key, comment: "")
 }
 
-extension String {
-    static let Hello = NSLocalizedString("Hello")
-    static let ThisApplicationIsCreated = NSLocalizedString("This application is created by the swifting.io team")
-    static let OpsNoFeature = NSLocalizedString("Ops! It looks like this feature haven't been implemented yet :(!")
-}
-
 struct AlertConstants {
-    static let yes = NSLocalizedString("YES", comment: "YES")
-    static let no = NSLocalizedString("NO", comment: "NO")
-    static let delete = NSLocalizedString("Delete", comment: "Delete")
-    static let clearLog = NSLocalizedString("ClearLog", comment: "Clear Log")
-    static let clearLogs = NSLocalizedString("ClearLogs", comment: "Clear Logs")
+    static let yes = LocalString.Yes.localized
+    static let no = LocalString.No.localized
+    static let delete = LocalString.Delete.localized
 }
 
 struct GluuConstants {
