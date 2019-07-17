@@ -50,6 +50,7 @@ class SecurityPromptViewController: UIViewController {
         
         buttonsStackView.superview?.backgroundColor = UIColor.white
         
+        // Eric Point to come back to to enforce security
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Skip", style: .plain, target: self, action: #selector(dismissVC))
         
         if touchAuth.canEvaluatePolicy() == false {

@@ -1,0 +1,153 @@
+
+// Landing
+"Landing_Incorrect_Passcode" = "不正なパスコードの試行回数が多すぎます。10分待ってから再試行して下さい。"
+
+// Launch Setup
+"Launch_Enter_Passcode"  = "パスコードを入力"
+"Launch_Forgot_Passcode" = "パスコードを忘れた"
+
+// Security Prompt
+"Security_Passcode" = "パスコード"
+"Security_TouchId"  = "タッチID"
+
+// Home
+"Home_Check_Internet"       = "インターネット接続を確認して再試行して下さい。"
+"Home_No_Internet"          = "インターネット接続がありません"
+"Home_Tap_To_Scan_QR"       = "登録または認証用のQRコードを表示することがあります。ボタンをタップしてQRスキャナーを開いてください。"
+"Home_Welcome"              = "Super Gluuへようこそ！"
+"Home_Scan"                 = "QRコードをスキャンする"
+"Home_Remove_Ads"           = "広告を削除する"
+"Home_QR_Not_Recognized"    = "QRコードを読み取れません。再試行して下さい。"
+"Home_Auth_Success"         = "認証成功"
+"Home_Registration_Success" = "登録成功"
+"Home_Registration_Failed"  = "登録に失敗しました。再試行して下さい。"
+"Home_Decline_Failed"       = "辞退に失敗しました。"
+"Home_Authenticating"       = "認証しています…"
+"Home_Registering"          = "登録しています…"
+"Home_Auth_Failed"          = "認証に失敗しました。再試行して下さい。"
+"Home_Auth_Declined"        = "認証が拒否されました"
+"Home_Expired_Push"         = "あなたのプッシュ通知は期限が切れています"
+
+// Subscription Details
+"Subscription_Details" = "サブスクリプションの詳細"
+"Details"              = "詳細"
+"Subscription_Info"    = "毎月のサブスクリプションを購入するとSuper Gluuを完全に広告なしにできます。購入が成功するとバナー広告やフルスクリーン広告は表示されなくなります。購入の確認した後は、支払いはiTunesアカウントに請求されます。自動更新が現在の期間の終了の少なくとも24時間前にオフにされていない限り、当サブスクリプション期間の終わりにサブスクリプションが自動的に更新されるとき、iTunesアカウントは再び課金されます。 無料試用期間の未使用部分は、サブスクリプションを購入した時点で失効します。購入後はいつでもApple IDアカウント設定で自動更新を管理または無効にできます。"
+
+// Menu
+"Menu_Logs"           = "ログ"
+"Menu_Keys"           = "キー"
+"Menu_Passcode"       = "パスコード"
+"Menu_User_Guide"     = "ユーザーガイド"
+"Menu_Privacy_Policy" = "プライバシーポリシー"
+"Menu_Settings"       = "設定"
+"Menu_Help"           = "ヘルプ"
+
+// Logs
+"Logs_Description" = "Super Gluuを使用する度にトランザクションログがアプリに記録されます。"
+
+// Passcode
+"Passcode_Enabled_Info"   = "有効にするとSuper GluuへのアクセスはタッチIDによって保護されます。"
+"Passcode_Touch"          = "Touch ID"
+"Passcode_Touch_Security" = "タッチセキュリティ"
+
+// PAPasscodeVC
+"Passcode_Set"                 = "パスコードを設定"
+"Passcode_Enter_A_Passcode"    = "パスコードを入力"
+"Passcode_Reenter"             = "パスコードを再入力"
+"Passcode_Enter_Passcode"      = "パスコードを入力"
+"Passcode_Enter_Your_Passcode" = "パスコードを入力して下さい"
+"Passcode_Change"              = "パスコードの変更"
+"Passcode_Enter_Old"           = "古いパスコードを入力して下さい"
+"Passcode_Enter_New"           = "新しいパスコードを入力して下さい"
+"Passcode_Reenter_New"         = "新しいパスコードを再入力して下さい"
+"Passcode_Try_Again"           = "パスコードが一致しませんでした。再試行して下さい。"
+"Passcode_Attempts_Left"       = "試行回数 残"
+"Passcode_Next"                = "次"
+
+// SSL
+"SSL_Info"  = "Super Gluuを有効にすると、Super Gluuは自分が署名した証明書でサーバーを信頼します。開発時のみを推奨"
+"SSL_Trust" = "すべてのSSLを信頼"
+
+// Log/Key Detail
+"Log_Key_Username"    = "ユーザー名"
+"Log_Key_Created"     = "作成済み"
+"Log_Key_Id_Provider" = "IDプロバイダー"
+"Log_Key_Key_Handle"  = "キーハンドル"
+
+// Keys
+"Keys_Info"       = "Super Gluuで新しいアカウントを保護する度に固有の秘密鍵が生成され、あなたのデバイスに保存されます。"
+"Keys_Text_Value" = "文字列値:"
+
+// InformationVC
+"Info_Delete_Key"           = "この鍵を削除しますか？"
+"Info_Change_Name_How_To"   = "鍵の名称を変更するにはここを3秒間押し続けて下さい。"
+"Info_Change_Name_Question" = "この鍵の表示名を変更しますか？"
+"Info_Duplicate_Name"       = "この名称は既に存在するか空欄です。再度お試しください。"
+"Info_Enter_Name"           = "名称を入力"
+"Info_Change_Name"          = "鍵の名称を変更"
+"Info_Enter_New_Name"       = "鍵に新しい名称を入力:"
+
+// Approve/Deny VC
+"Approve"             = "承認"
+"Deny"                = "拒否"
+"Permission_Approval" = "許可承認"
+"Approving"           = "承認しています…"
+"Denying"             = "拒否しています…"
+
+// Alert Constants
+"Info"       = "Info"
+"Yes"        = "YES"
+"No"         = "NO"
+"Delete"     = "削除"
+"Clear_Log"  = "ログのクリア"
+"Clear_Logs" = "ログを消去する"
+"Close"      = "閉じる"
+"Cancel"     = "キャンセル"
+"Save"       = "保存"
+"Oops"       = "おーっと！"
+
+// Status Messages
+"Signed_In_To"             = "にサインイン"
+"Auth_Failed_To"           = "認証に失敗しました"
+"Registered_To"            = "に登録済み"
+"Registration_Failed_To"   = "への登録に失敗しました"
+"Auth_Declined_To"         = "への認証が拒否されました"
+"Registration_Declined_To" = "への登録が拒否されました"
+"Unknown_Error"            = "不明なエラー"
+
+// Auth Helper
+"Success!"             = "成功しました！"
+"Missing_Request_Info" = "リクエスト情報がありません"
+
+// Purchase Handler
+"Unknown_Error_Something" = "不明なエラー。何かが間違っていました。"
+"Not_Allowed_Payment"     = "支払いができません。"
+"Invalid_Purchase_Id"     = "購入識別子が無効でした。"
+"Unallowed_Device"        = "このデバイスでは支払いをすることができません。"
+"Unavailable_Product"     = "この製品は当店舗ではご利用できません。"
+"Unallowed_Cloud_Access"  ="クラウドサービス情報へのアクセスは許可されていません。"
+"No_Network_Connection"   = "ネットワークに接続できませんでした。"
+
+// Touch Id Auth
+"Enable_TouchID"                = "タッチIDを有効にする"
+"Identify_Yourself"             = "自分自身を識別します！"
+"Identify_Verification_Problem" = "識別情報の検証で問題がありました。"
+"Cancel_Pressed"                = "キャンセルを押しました。"
+"Password_Pressed"              = "パスワードを押しました。"
+"TouchID_Not_Configured"        = "タッチIDが設定されていない可能性があります。"
+
+// PinCodeSettingsTableVC
+"2_Attempts_Remaining"    = "あと2回の試行でアプリが10分間ロックされます。"
+"Failed_Attempts_Warning" = "今回失敗した試行回数が多すぎたため、アプリは10分間ロックされます。"
+
+
+
+
+
+
+
+
+
+
+
+

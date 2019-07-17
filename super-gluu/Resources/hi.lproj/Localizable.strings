@@ -1,0 +1,150 @@
+
+
+
+"Landing_Incorrect_Passcode" = "बहुत से गलत पासकोड प्रयास। 10 मिनट प्रतीक्षा करें और पुन: प्रयास करें।"
+
+
+"Launch_Enter_Passcode"  = "पासकोड भरें"
+"Launch_Forgot_Passcode" = "पासकोड भूल गए"
+
+
+"Security_Passcode" = "पासकोड"
+"Security_TouchId"  = "टच आईडी"
+
+
+"Home_Check_Internet"       = "अपना इंटरनेट कनेक्शन जांचें और पुन: प्रयास करें।"
+"Home_No_Internet"          = "कोई इंटरनेट कनेक्शन नहीं"
+"Home_Tap_To_Scan_QR"       = "आपको पंजीकरण या प्रमाणीकरण के लिए एक QR कोड के साथ प्रस्तुत किया जा सकता है। अपने QR स्कैनर को खोलने के लिए बटन पर टैप करें।"
+"Home_Welcome"              = "सुपर ग्लू में आपका स्वागत है!"
+"Home_Scan"                 = "QR कोड स्कैन करें"
+"Home_Remove_Ads"           = "विज्ञापन हटाएँ"
+"Home_QR_Not_Recognized"    = "QR कोड मान्य नहीं। पुनः प्रयास करें।"
+"Home_Auth_Success"         = "प्रमाणीकरण सफल।"
+"Home_Registration_Success" = "पंजीकरण सफल।"
+"Home_Registration_Failed"  = "पंजीकरण विफल। पुनः प्रयास करें।"
+"Home_Decline_Failed"       = "अस्वीकृत हो गया"
+"Home_Authenticating"       = "प्रमाणित कर रहा है..."
+"Home_Registering"          = "पंजीकरण जारी है ..."
+"Home_Auth_Failed"          = "प्रमाणीकरण विफल। पुनः प्रयास करें।"
+"Home_Auth_Declined"        = "प्रमाणीकरण अस्वीकृत"
+"Home_Expired_Push"         = "आपकी पुश सूचना की समय सीमा समाप्त हो गई है"
+
+
+"Subscription_Details" = "सदस्यता विवरण"
+"Details"              = "विवरण"
+"Subscription_Info"    = "मासिक सदस्यता सुपर ग्लू को पूरी तरह से विज्ञापन मुक्त बनाती है। एक सफल खरीद के बाद, आप अब बैनर विज्ञापन या पूर्ण स्क्रीन विज्ञापन नहीं देखेंगे। आपकी खरीद की पुष्टि करने के बाद आपका भुगतान आपके iTunes खाते से वसूला जाएगा। जब आपकी सदस्यता स्वचालित रूप से आपकी वर्तमान सदस्यता अवधि के अंत में नवीनीकृत हो जाती है, जब तक कि ऑटो-नवीनीकरण चालू अवधि के अंत से कम से कम 24 घंटे पहले बंद न हो जाए, तब आपका iTunes खाता फिर से चार्ज किया जाएगा। नि: शुल्क परीक्षण अवधि के किसी भी अप्रयुक्त हिस्से को सदस्यता खरीदने पर जब्त कर लिया जाएगा। आप खरीद के बाद किसी भी समय अपने Apple ID खाता सेटिंग्स में ऑटो-नवीनीकरण को प्रबंधित या बंद कर सकते हैं।"
+
+"Menu_Logs"           = "लॉग्स"
+"Menu_Keys"           = "कुंजियाँ"
+"Menu_Passcode"       = "पासकोड"
+"Menu_User_Guide"     = "उपयोगकर्ता गाइड"
+"Menu_Privacy_Policy" = "गोपनीयता नीति"
+"Menu_Settings"       = "सेटिंग्स"
+"Menu_Help"           = "मदद"
+
+
+"Logs_Description" = "हर बार जब सुपर ग्लू का उपयोग किया जाता है, आपके ऐप में एक लेनदेन लॉग दर्ज किया जाता है।"
+
+
+"Passcode_Enabled_Info"   = "सक्षम होने पर, सुपर ग्लू को एक्सेस टच आईडी द्वारा संरक्षित किया जाएगा।"
+"Passcode_Touch"          = "टच आईडी"
+"Passcode_Touch_Security" = "टच सुरक्षा"
+
+
+"Passcode_Set"                 = "पासकोड सेट करें"
+"Passcode_Enter_A_Passcode"    = "पासकोड भरें "
+"Passcode_Reenter"             = "पासकोड पुनः भरें"
+"Passcode_Enter_Passcode"      = "पासकोड भरें "
+"Passcode_Enter_Your_Passcode" = "अपना पासकोड भरें"
+"Passcode_Change"              = "पासकोड बदलें"
+"Passcode_Enter_Old"           = "अपना पुराना पासकोड डालें"
+"Passcode_Enter_New"           = "अपना नया पासकोड डालें"
+"Passcode_Reenter_New"         = "अपना नया पासकोड पुनः डालें"
+"Passcode_Try_Again"           = "पासकोड मेल नहीं खाते थे। पुनः प्रयास करें।"
+"Passcode_Attempts_Left"       = "बचे हुए प्रयास"
+"Passcode_Next"                = "आगामी"
+
+
+"SSL_Info"  = "सक्षम होने पर, सुपर ग्लू स्वयं-हस्ताक्षरित प्रमाण पत्र के साथ सर्वरों पर भरोसा करेगा। केवल विकास के लिए अनुशंसित।"
+"SSL_Trust" = "सभी SSL पर भरोसा करें"
+
+
+"Log_Key_Username"    = "उपयोगकर्ता नाम"
+"Log_Key_Created"     = "बनाया गया"
+"Log_Key_Id_Provider" = "आईडी प्रदाता"
+"Log_Key_Key_Handle"  = "कुंजी हैंडल"
+
+
+"Keys_Info"       = "जब भी आप सुपर ग्लू के साथ एक नया खाता सुरक्षित करते हैं, तो हर बार एक अद्वितीय निजी कुंजी आपके डिवाइस पर जनरेट और स्टोर की जाती है।"
+"Keys_Text_Value" = "पाठ मान:"
+
+
+"Info_Delete_Key"           = "क्या आप इस कुंजी को हटाना चाहते हैं?"
+"Info_Change_Name_How_To"   = "कुंजी का नाम बदलने के लिए, 3 सेकंड के लिए उस पर दबाए रखें"
+"Info_Change_Name_Question" = "क्या आप इस कुंजी का प्रदर्शन नाम बदलना चाहते हैं?"
+"Info_Duplicate_Name"       = "नाम पहले से मौजूद है या खाली है। पुनः प्रयास करें।"
+"Info_Enter_Name"           = "नाम डालें"
+"Info_Change_Name"          = "कुंजी का नाम बदलें"
+"Info_Enter_New_Name"       = "अपनी कुंजी के लिए एक नया नाम दर्ज करें:"
+
+
+"Approve"             = "स्वीकृत करें"
+"Deny"                = "मना करें "
+"Permission_Approval" = "अनुमति अनुमोदन"
+"Approving"           = "स्वीकृति दी जा रही है..."
+"Denying"             = "अस्वीकार किया जा रहा है..."
+
+
+"Info"       = "जानकारी"
+"Yes"        = "हाँ"
+"No"         = "नहीं"
+"Delete"     = "हटा दें"
+"Clear_Log"  = "लॉग खाली करें"
+"Clear_Logs" = "लॉग खाली करें"
+"Close"      = "बंद करें"
+"Cancel"     = "रद्द करें"
+"Save"       = "बचाएं"
+"Oops"       = "ओह"
+
+
+"Signed_In_To"             = "साइन इन किया"
+"Auth_Failed_To"           = "प्रमाणीकरण विफल रहा"
+"Registered_To"            = "को पंजीकृत"
+"Registration_Failed_To"   = "पंजीकरण में विफल रहा"
+"Auth_Declined_To"         = "प्रमाणीकरण के लिए मना कर दिया"
+"Registration_Declined_To" = "पंजीकरण करने से मना कर दिया"
+"Unknown_Error"            = "अज्ञात त्रुटि"
+
+
+"Success!"             = "सफलता!"
+"Missing_Request_Info" = "अनुरोध जानकारी अनुपस्थित"
+
+
+"Unknown_Error_Something" = "अज्ञात त्रुटि। कुछ गलत हो गया।"
+"Not_Allowed_Payment"     = "भुगतान करने की अनुमति नहीं है।"
+"Invalid_Purchase_Id"     = "खरीद पहचानकर्ता अमान्य था।"
+"Unallowed_Device"        = "इस उपकरण को भुगतान करने की अनुमति नहीं है।"
+"Unavailable_Product"     = "उत्पाद वर्तमान स्टोरफ्रंट में उपलब्ध नहीं है।"
+"Unallowed_Cloud_Access"  = "क्लाउड सेवा की जानकारी तक पहुँच की अनुमति नहीं है।"
+"No_Network_Connection"   = "नेटवर्क से कनेक्ट नहीं हो सका।"
+
+
+"Enable_TouchID"                = "टच आईडी को सक्षम करने के लिए"
+"Identify_Yourself"             = "अपनी पहचान बताएं!"
+"Identify_Verification_Problem" = "आपकी पहचान सत्यापित करने में कुछ समस्या थी।"
+"Cancel_Pressed"                = "आपने रद्द को दबाया।"
+"Password_Pressed"              = "आपने पासवर्ड दबाया।"
+"TouchID_Not_Configured"        = "टच आईडी कॉन्फ़िगर नहीं किया जा सकता है"
+
+
+"2_Attempts_Remaining"    = "ऐप को 10 मिनट के लिए लॉक करने से पहले 2 और प्रयास"
+"Failed_Attempts_Warning" = "इतने असफल प्रयासों के बाद ऐप को 10 मिनट के लिए बंद कर दिया जाएगा"
+
+
+
+
+
+
+
+
+

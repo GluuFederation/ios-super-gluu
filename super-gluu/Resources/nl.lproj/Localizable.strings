@@ -1,0 +1,141 @@
+
+
+"Landing_Incorrect_Passcode" = "Te veel onjuist inlogpogingen. Wacht 10 minuten en probeer het opnieuw"
+
+
+"Launch_Enter_Passcode"  = "Invoeren inlogcode"
+"Launch_Forgot_Passcode" = "Inlogcode vergeten "
+
+
+"Security_Passcode" = "Inlogcode"
+"Security_TouchId"  = "TouchID"
+
+
+"Home_Check_Internet"       = "Controleer je internetverbinding en probeer het opnieuw"
+"Home_No_Internet"          = "Geen internetverbinding"
+"Home_Tap_To_Scan_QR"       = "Je kunt een QR code krijgen voor registratie of authenticatie. Druk op de knop om je QR scanner te openen"
+"Home_Welcome"              = "Welkom bij Super Gluu"
+"Home_Scan"                 = "Scan QR code"
+"Home_Remove_Ads"           = "Verwijder reclame"
+"Home_QR_Not_Recognized"    = "QR Code niet herkend, Probeer nogmaals."
+"Home_Auth_Success"         = "Authenticatie geslaagd."
+"Home_Registration_Success" = "Registratie geslaagd."
+"Home_Registration_Failed"  = "Registratie mislukt. Probeer opnieuw."
+"Home_Decline_Failed"       = "Afwijzen mislukt"
+"Home_Authenticating"       = "Authenticeren..."
+"Home_Registering"          = "Registreren..."
+"Home_Auth_Failed"          = "Authenticatie mislukt, Probeer opnieuw."
+"Home_Auth_Declined"        = "Authenticatie afgewezen."
+"Home_Expired_Push"         = "Je push-melding is verlopen"
+
+
+"Subscription_Details" = "Abonnementsdetails"
+"Details"              = "Details"
+"Subscription_Info"    = "Het maandelijkse abonnement maar Super Gluu reclamevrij. Na een succesvolle aanschaf, zie je geen banners of volledig scherm advertenties meer. Je betaling wordt belastop je iTunes account als je de betaling bevestigt. Je iTunes account wordt opnieuw belast als je abonnement automatisch aan het eind van de abonnementsperiode wordt verlengd, tenzij de automatische verleging minimaal 24 uur voor het eind van de huidige periode wordt beëindigd. Ongebruikte tijd van de gratis proefperiode vervalt bij aankoop van een abonnement. Je kunt na aanschaf altijd auto-verversing beheren of uitschakelen in je Apple ID Account Instellingen"
+
+
+"Menu_Logs"           = "Logs"
+"Menu_Keys"           = "Sleutels"
+"Menu_Passcode"       = "Inlogcode"
+"Menu_User_Guide"     = "Gebruikshandleiding"
+"Menu_Privacy_Policy" = "Privacybeleid"
+"Menu_Settings"       = "Instellingen"
+"Menu_Help"           = "Help"
+
+
+"Logs_Description" = "Elke keer dat Super Gluu wordt gebruikt, wordt een transactielogregel geregistreerd in de app."
+
+
+"Passcode_Enabled_Info"   = "Wanneer ingeschakeld wordt toegang tot Super Gluu beschermd door Touch ID."
+"Passcode_Touch"          = "Touch ID"
+"Passcode_Touch_Security" = "Touch Security"
+
+
+"Passcode_Set"                 = "Instellen Inlogcode"
+"Passcode_Enter_A_Passcode"    = "Invoeren Inlogcode"
+"Passcode_Reenter"             = "Opnieuw Inlogcode"
+"Passcode_Enter_Passcode"      = "Invoeren Inlogcode"
+"Passcode_Enter_Your_Passcode" = "Voer je inlogcode in"
+"Passcode_Change"              = "Wijzigen inlogcode"
+"Passcode_Enter_Old"           = "Geef je oude inlogcode op"
+"Passcode_Enter_New"           = "Geef je nieuwe inlogcode op"
+"Passcode_Reenter_New"         = "Nieuwe inlogcode opnieuw"
+"Passcode_Try_Again"           = "Inlogcodes komen niet overeen. Probeer opnieuw."
+"Passcode_Attempts_Left"       = "poging(en) over"
+"Passcode_Next"                = "Volgende"
+
+
+"SSL_Info"  = "Wanneer ingeschakeld zal Super Gluu servers met zelf-ondertekende certificaten vertrouwen. Alleen aanbevolen voor ontwikkeldoeleinden."
+"SSL_Trust" = "Vertrouw alle SSL"
+
+
+"Log_Key_Username"    = "Gebruikersnaam"
+"Log_Key_Created"     = "Aangemaakt"
+"Log_Key_Id_Provider" = "ID provider"
+"Log_Key_Key_Handle"  = "Sleutelnaam"
+
+
+"Keys_Info"       = "Elke keer dat je een nieuw account met Super Gluu beveiligt, wordt er een unieke persoonlijke sleutel gegenereerd en opgeslagen op je toestel "
+"Keys_Text_Value" = "Tekstwaarde:"
+
+
+"Info_Delete_Key"           = "Wil je deze sleutel verwijderen?"
+"Info_Change_Name_How_To"   = "Om een sleutelnaam te wijzigen, hou je die voor 3 seconden ingedrukt"
+"Info_Change_Name_Question" = "Wil je de weergavenaam van deze sleutel wijzigen?"
+"Info_Duplicate_Name"       = "Naam bestaat al of is leeg. Probeer opnieuw."
+"Info_Enter_Name"           = "Voer een naam in"
+"Info_Change_Name"          = "Wijzig sleutelnaam"
+"Info_Enter_New_Name"       = "Geef een nieuwe naam op voor je sleutel:"
+
+
+"Approve"             = "Goedkeuren"
+"Deny"                = "Weigeren"
+"Permission_Approval" = "Permissietoestemming"
+"Approving"           = "Goedkeuren..."
+"Denying"             = "Weigeren..."
+
+
+"Info"       = "Info"
+"Yes"        = "JA"
+"No"         = "NEE"
+"Delete"     = "Verwijderen"
+"Clear_Log"  = "Log schonen"
+"Clear_Logs" = "Logs schonen"
+"Close"      = "Sluiten"
+"Cancel"     = "Annuleren"
+"Save"       = "Bewaren"
+"Oops"       = "Oeps!"
+
+
+"Signed_In_To"             = "Ingelogd op"
+"Auth_Failed_To"           = "Authenticatie mislukte "
+"Registered_To"            = "Geregistreerd voor"
+"Registration_Failed_To"   = "Registratie mislukt voor"
+"Auth_Declined_To"         = "Authenticatie geweigerd voor"
+"Registration_Declined_To" = "Registratie geweigerd voor"
+"Unknown_Error"            = "Onbekende fout"
+
+
+"Success!"             = "Succes!"
+"Missing_Request_Info" = "Ontbrekende aanvraag info"
+
+
+"Unknown_Error_Something" = "Onbekende fout. Er ging iets verkeerd."
+"Not_Allowed_Payment"     = "Betaling niet toegestaan."
+"Invalid_Purchase_Id"     = "De aankoopidntificatie was ongeldig."
+"Unallowed_Device"        = "Dit toestel mag geen betaling verrichten."
+"Unavailable_Product"     = "Dit product is niet beschikbaar in de huidige webshop."
+"Unallowed_Cloud_Access"  = "Toegang tot cloud service informatie niet toegestaan."
+"No_Network_Connection"   = "Kon niet verbinden met netwerk."
+
+
+"Enable_TouchID"                = "Om Touch ID in te schakelen"
+"Identify_Yourself"             = "Identificeer jezelf!"
+"Identify_Verification_Problem" = "Er was een probleem bij verificatie van je identiteit."
+"Cancel_Pressed"                = "Je drukte op annuleren."
+"Password_Pressed"              = "Je drukte op wachtwoord."
+"TouchID_Not_Configured"        = "Touch ID is misschien niet geconfigureerd"
+
+
+"2_Attempts_Remaining"    = "2 pogingen voor 10-minuten blokkade van de app over."
+"Failed_Attempts_Warning" = "App zal worden geblokkeerd voor 10 minuten na te veel mislukte pogingen"

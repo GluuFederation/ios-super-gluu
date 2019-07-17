@@ -1,143 +1,182 @@
-/* 
-  Localizable.strings
-  oxPush2-IOS
 
-  Created by Nazar Yavornytskyy on 2/2/16.
-  Copyright © 2016 Nazar Yavornytskyy. All rights reserved.
-*/
+// Landing
+"Landing_Incorrect_Passcode" = "Too many incorrect passcode attempts. Wait 10 minutes and try again."
 
-"AppName" = "oxPush2-ios";
-"AppNameTitle" = "oxPush2";
+// Launch Setup
+"Launch_Enter_Passcode"  = "Enter Passcode"
+"Launch_Forgot_Passcode" = "Forgot Passcode"
 
+// Security Prompt
+"Security_Passcode" = "Passcode"
+"Security_TouchId"  = "TouchID"
 
-
-// Eric Final Strings
 // Home
-"ScanText" = "You may be presented with a QR code for enrollment or authentication. Tap the button below to open your QR scanner.";
-"Welcome" = "Welcome to Super Gluu!";
-"ScanAction" = "Scan QR Code"
-"RemoveAds" = "Remove Ads"
+"Home_Check_Internet"       = "Check your Internet connection and try again."
+"Home_No_Internet"          = "No Internet connection"
+"Home_Tap_To_Scan_QR"       = "You may be presented with a QR code for registration or authentication. Tap the button to open your QR scanner."
+"Home_Welcome"              = "Welcome to Super Gluu!"
+"Home_Scan"                 = "Scan QR Code""
+"Home_Remove_Ads"           = "Remove Ads"
+"Home_QR_Not_Recognized"    = "QR Code not recognized. Try again."
+"Home_Auth_Success"         = "Authentication success."
+"Home_Registration_Success" = "Registration success."
+"Home_Registration_Failed"  = "Registration failed. Try again."
+"Home_Decline_Failed"       = "Decline failed"
+"Home_Authenticating"       = "Authenticating..."
+"Home_Registering"          = "Registering..."
+"Home_Auth_Failed"          = "Authentication failed. Try again. "
+"Home_Auth_Declined"        = "Authentication declined"
+"Home_Expired_Push"         = "Your push notification has expired"
+
+// Subscription Details
+"Subscription_Details" = "Subscription Details"
+"Details"              = "Details"
+"Subscription_Info"    = "The monthly subscription makes Super Gluu totally ad-free. After a successful purchase, you will no longer see banners ads or full screen ads. Your payment will be charged to your iTunes Account once you confirm your purchase. Your iTunes account will be charged again when your subscription automatically renews at the end of your current subscription period unless auto-renew is turned off at least 24 hours prior to end of the current period. Any unused portion of the free trial period will be forfeited when subscription is purchased. You can manage or turn off auto-renew in your Apple ID Account Settings any time after purchase."
+
 
 // Menu
-"Logs" = "Logs"
-"Keys"
-"Passcode"
-"User Guide"
-"Privacy Policy"
-"Settings"
-"Help"
+"Menu_Logs"           = "Logs"
+"Menu_Keys"           = "Keys"
+"Menu_Passcode"       = "Passcode"
+"Menu_User_Guide"     = "User Guide"
+"Menu_Privacy_Policy" = "Privacy Policy"
+"Menu_Settings"       = "Settings"
+"Menu_Help"           = "Help"
+
+
+// Logs
+"Logs_Description" = "Each time Super Gluu is used, a transaction log is recorded in your app."
+
+
+// Passcode
+"Passcode_Enabled_Info"   = "When enabled, access to Super Gluu will be protected by Touch ID."
+"Passcode_Touch"          = "Touch ID"
+"Passcode_Touch_Security" = "Touch Security"
+
+
+// PAPasscodeVC
+"Passcode_Set"                 = "Set Passcode"
+"Passcode_Enter_A_Passcode"    = "Enter a passcode"
+"Passcode_Reenter"             = "Re-enter your passcode"
+"Passcode_Enter_Passcode"      = "Enter Passcode"
+"Passcode_Enter_Your_Passcode" = "Enter your passcode"
+"Passcode_Change"              = "Change Passcode"
+"Passcode_Enter_Old"           = "Enter your old passcode"
+"Passcode_Enter_New"           = "Enter your new passcode"
+"Passcode_Reenter_New"         = "Re-enter your new passcode"
+"Passcode_Try_Again"           = "Passcodes did not match. Try again."
+"Passcode_Attempts_Left"       = "attempt(s) left"
+"Passcode_Next"                = "Next"
+
+// SSL
+"SSL_Info"  = "When enabled, Super Gluu will trust servers with self-signed certificates. Recommended for development only. "
+"SSL_Trust" = "Trust all SSL"
+
+
+// Log/Key Detail
+"Log_Key_Username"    = "Username"
+"Log_Key_Created"     = "Created"
+"Log_Key_Id_Provider" = "ID Provider"
+"Log_Key_Key_Handle"  = "Key Handle"
+
+
+// Keys
+"Keys_Info"       = "A unique private key is generated and stored on your device each time you secure a new account with Super Gluu."
+"Keys_Text_Value" = "Text value:"
+
+
+// InformationVC
+"Info_Delete_Key"           = "Do you want to delete this key?"
+"Info_Change_Name_How_To"   = "To change a Key's name, hold down on it for 3 seconds"
+"Info_Change_Name_Question" = "Do you want to change this Key's display name?"
+"Info_Duplicate_Name"       = "Name already exists or is empty. Try again."
+"Info_Enter_Name"           = "Enter a name"
+"Info_Change_Name"          = "Change key name"
+"Info_Enter_New_Name"       = "Enter a new name for your key:"
+
+
+// Approve/Deny VC
+"Approve"             = "Approve"
+"Deny"                = "Deny"
+"Permission_Approval" = "Permission Approval"
+"Approving"           = "Approving..."
+"Denying"             = "Denying..."
+
+
+// Alert Constants
+"Info"       = "Info"
+"Yes"        = "YES"
+"No"         = "NO"
+"Delete"     = "Delete"
+"Clear_Log"  = "Clear Log"
+"Clear_Logs" = "Clear Logs"
+"Close"      = "Close"
+"Cancel"     = "Cancel"
+"Save"       = "Save"
+"Oops"       = "Oops!"
+
+
+// Status Messages
+"Signed_In_To"             = "Signed in to"
+"Auth_Failed_To"           = "Authentication failed to"
+"Registered_To"            = "Registered to"
+"Registration_Failed_To"   = "Registration failed to"
+"Auth_Declined_To"         = "Authentication declined to"
+"Registration_Declined_To" = "Registration declined to"
+"Unknown_Error"            = "Unknown error"
+
+
+// Auth Helper
+"Success!"             = "Success!"
+"Missing_Request_Info" = "Missing request info"
+
+
+// Purchase Handler
+"Unknown_Error_Something" = "Unknown error. Something went wrong."
+"Not_Allowed_Payment"     = "Not allowed to make payment."
+"Invalid_Purchase_Id"     = "The purchase identifier was invalid."
+"Unallowed_Device"        = "This device is not allowed to make payment."
+"Unavailable_Product"     = "The product is not available in the current storefront."
+"Unallowed_Cloud_Access"  = "Access to cloud service information is not allowed."
+"No_Network_Connection"   = "Could not connect to the network."
+
+// Touch Id Auth
+"Enable_TouchID"                = "To enable TouchID"
+"Identify_Yourself"             = "Identify yourself!"
+"Identify_Verification_Problem" = "There was a problem verifying your identity."
+"Cancel_Pressed"                = "You pressed cancel."
+"Password_Pressed"              = "You pressed password."
+"TouchID_Not_Configured"        = "Touch ID may not be configured"
+
+
+// PinCodeSettingsTableVC
+"2_Attempts_Remaining"    = "2 more attempts before the app is locked for 10 minutes"
+"Failed_Attempts_Warning" = "App will be locked for 10 minutes after this many failed attempts"
 
 
 
 
-//Strings for License Agreement View
-"LicenseAgreementTitle" = "License Agreement";
-"AcceptButtonTitle" = "Accept and Continue";
 
-"Home" = "Home";
-"Logs" = "Logs";
-"Keys" = "Keys";
-
-"LoggedIn" = "Logged in to %@";
-"LoggedInFailed" = "Failed to log in to %@";
-"EnrollIn" = "Enroll to %@";
-"EnrollInFailed" = "Failed enroll to %@";
-"LoginDeclined" = "Declined login to %@";
-"EnrollDeclined" = "Declined enroll to %@";
-
-"Enrol" = "Enroll";
-"Authentication" = "Authentication";
-
-
-
-"PressApprove" = "To continue, press Approve";
-
-"OneStep" = "1 step: ";
-"TwoStep" = "2 step: ";
-
-"OneStepMode" = "One step";
-"TwoStepMode" = "Two step";
-
-"ScanButtonTitle" = "Scan QR Code";
-
-//AlertView
-"AlertTitle" = "Info";
-"AlertTitleSuccess" = "Success";
-"AlertTitleFailed" = "Failed";
-"AlertMessageNoQRScanning" = "Camera isn't available or please turn off camera restriction";
-"WrongQRImage" = "You scanned wrong QR Code";
-"OK" = "OK";
-"Cancel" = "Cancel";
-"Approve" = "Approve";
-"Deny" = "Deny";
-
-"QRCodeScanning" = "QR Code Scanning...";
-"QRCodeCalceled" = "QR Scanning canceled!";
-
-"UnsupportedU2FV2Version" = "Unsupported U2F_V2 version!";
-
-//Statuses
-"StartAuthentication" = "Authentication...";
-"StartRegistaration" = "Registering...";
-"SuccessAuthentication" = "You have successfully authenticated!";
-"FailedAuthentication" = "Failed, authentication!";
-"SuccessEnrollment" = "You have successfully sign up!";
-"FailedEnrollment" = "Failed, sign up!";
-
-"DenyFailed" = "Decline Failed";
-"DenySuccess" = "Authentication declined";
-
-"AvailableKeyHandles" = "Available Keys";
-
-"Delete" = "Delete";
-"YES" = "YES";
-"NO" = "NO";
-
-"keyHandleFor" = "Key for";
-"keyHandle" = "Key handle";
-"ChangeKeyHandleName" = "Do you want to change this Key's display name?";
-"RenameKeyNameInfo" = "To change a Key's name, hold down on it for 3 seconds";
-"DeleteKeyHandle" = "Do you want to delete this key?";
-
-"FailedKeyHandle" = "Failed keyHandles, please try again to generate new one";
-
-"PushTimeOver" = "Your push notification has been expired";
-
-"ClearLog" = "Do you want to delete this log?";
-"ClearLogs" = "Do you want to delete all logs?";
-
-"ApproveDeclineTitle" = "To continue press %@, to stop %@";
-
-"FailedGettingCityName" = "Failed to recieve city name";
-
-"FaiedGetLocation" = "Failed to get location";
-
-"Information" = "Key Information";
-"UserName" = "User name";
-"Created" = "Created";
-"Application" = "Application";
-"Issuer" = "Issuer";
-"AuthenticationMode" = "Authentication mode";
-"AuthenticationType" = "Authentication type";
-"CloseButton" = "Close";
-
-"SecondsLeft" = "seconds left";
-
-"UniqueKeyLabel" = "When login with Gluu Server, a private key is generated and stored on your phone";
-
-"SetPinCode" = "Set passcode";
-"ChangePinCode" = "Change passcode";
-"SetPinCodeTitle" = "Do you want to set a passcode?";
-"ChangePinCodeTitle" = "Do you want to change your current passcode?";
-
-"ReEnterPinCode" = "To continue, please enter passcode";
-"EnterPinCode" = "Enter passcode";
-"FailedPinCode" = "Application is locked, you entered wrong Pin %i times, please wait.";
-"LastAttempts" = "Last 2 attempts before the app is locked for 10 minutes";
-"AttemptsText" = "App will be locked for 10 minutes after this many failed attempts";
-
-"UnKnownError" = "Unknown error";
-
+    // Landing
+    // Launch Setup
+    // Security Prompt
+    // Home
+    // Subscription Details
+    // Menu
+    // Logs
+    // Passcode
+    // PAPasscodeVC
+    // SSL
+    // Log/Key Detail
+    // Keys
+    // InformationVC
+    // Approve/Deny VC
+    // Alert Constants
+    // Status Messages
+    // Auth Helper
+    // Purchase Handler
+    // Touch Id Auth
+    // PinCodeSettingsTableVC
 
 
 

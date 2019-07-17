@@ -51,9 +51,12 @@ class LaunchSetupViewController: UIViewController {
         
         enterPasscodeButton.layer.cornerRadius = enterPasscodeButton.bounds.height / 2
         enterPasscodeButton.layer.masksToBounds = true
+        enterPasscodeButton.setTitle(LocalString.Launch_Enter_Passcode.localized, for: .normal)
         
         fingerprintButton.layer.cornerRadius = fingerprintButton.bounds.height / 2
         fingerprintButton.layer.masksToBounds = true
+        
+        lockedOutButton.setTitle(LocalString.Launch_Forgot_Passcode.localized, for: .normal)
         
         pinButtons(shouldShow: false)
     }

@@ -1,118 +1,144 @@
-/* 
-  Localizable.strings
-  oxPush2-IOS
 
-  Created by Nazar Yavornytskyy on 2/2/16.
-  Copyright © 2016 Nazar Yavornytskyy. All rights reserved.
-*/
 
-"AppName" = "super-gluu";
+"Landing_Incorrect_Passcode" = "Забагато спроб з неправильним паролем. Почекайте 10 хвилин і спробуйте ще раз."
 
-//Strings for License Agreement View
-"LicenseAgreementTitle" = "Ліцензійна угода";
-"AcceptButtonTitle" = "Підтвердити та продовжити";
 
-"Home" = "Дім";
-"Logs" = "Журнал";
-"Keys" = "Ключі";
+"Launch_Enter_Passcode"  = "Введіть пароль"
+"Launch_Forgot_Passcode" = "Забутий пароль"
 
-"LoggedIn" = "Ви увійшли до %@";
-"LoggedInFailed" = "Невдалося увійшли до %@";
-"EnrollIn" = "Реєстрація на %@";
-"EnrollInFailed" = "Невдалося зареєструватися на %@";
-"LoginDeclined" = "Відхилено вхід до %@";
-"EnrollDeclined" = "Відхилено реєстрацію до %@";
 
-"Enrol" = "Зарахування";
-"Authentication" = "Реєстрація";
+"Security_Passcode" = "Пароль"
+"Security_TouchId"  = "TouchID"
 
-"ScanText" = "Ви можете бачити  QR-код для реєстрації або авторизації. Натисніть на кнопку, щоб відкрити свій QR-сканер.";
-"Welcome" = "Ласкаво просимо";
 
-"PressApprove" = "Щоб продовжити, нажміть Підтвердити";
+"Home_Check_Internet"       = "Перевірьте інтернет зєднання і спробуйте ще раз"
+"Home_No_Internet"          = "Немає інтернет зєднання"
+"Home_Tap_To_Scan_QR"       = "Вам може бути представлено QR код для реєстрації чи аутентифікації."
+"Home_Welcome"              = "Ласкаво просимо до Super Gluu"
+"Home_Scan"                 = "Зіскануйте QR код"
+"Home_Remove_Ads"           = "Видалити рекламу"
+"Home_QR_Not_Recognized"    = "QR код не розпізнано. Попробуйте ще раз."
+"Home_Auth_Success"         = "Аутентифікація пройшла успішно."
+"Home_Registration_Success" = "Реєстрація пройшла успішно"
+"Home_Registration_Failed"  = "Помилка при реєстрації. Попробуйте ще раз."
+"Home_Decline_Failed"       = "Помилка при відмові "
+"Home_Authenticating"       = "Аутентифікація ..."
+"Home_Registering"          = "Реєстрація ..."
+"Home_Auth_Failed"          = "Помилка при аутентифікації. Попробуйте ще раз."
+"Home_Auth_Declined"        = "Відмова у аутентифікації."
+"Home_Expired_Push"         = "Ваше повідомлення застаріло."
 
-"OneStep" = "1 етап: ";
-"TwoStep" = "2-й етап: ";
 
-"OneStepMode" = "Один етап";
-"TwoStepMode" = "Два етапи";
+"Subscription_Details" = "Деталі підписки"
+"Details"              = "Деталі"
+"Subscription_Info"    = "Місячна підписка робить Super Gluu вільною від реклами. Після успішного замовлення ви більше не побачите баннери чи рекламу на повний екран. Ваша оплата буде здійснена через iTunes Account після вашого підтвердження. Оплата буде автоматично стягнена з вашого iTunes екаунту при оновленні підписки після завершення вашої поточної підписки. за виключенням випадку коли авто-оновлення відключене за 24 години до закінчення поточного періоду. Будь-яка невикористана частина безплатного періоду буде втрачена, якщо замовлена підписка. Ви можете керувати вашою автоматичною підпискою у вашому Apple ID Account Settings в будь-який час після замовлення."
 
-"ScanButtonTitle" = "Сканувати QR код";
 
-//AlertView
-"AlertTitle" = "Інформація";
-"AlertTitleSuccess" = "Успішно";
-"AlertTitleFailed" = "Невдало";
-"AlertMessageNoQRScanning" = "Цей пристрій не підтримує сканування QR коду";
-"WrongQRImage" = "Здається ви відсканували поганий QR код!";
-"OK" = "OK";
-"Cancel" = "Відміна";
-"Approve" = "Підтвердити";
-"Deny" = "Відхилити";
+"Menu_Logs"           = "Логи"
+"Menu_Keys"           = "Ключі"
+"Menu_Passcode"       = "Пароль"
+"Menu_User_Guide"     = "Керівництво користувача"
+"Menu_Privacy_Policy" = "Політика конфіденційності"
+"Menu_Settings"       = "Настройки"
+"Menu_Help"           = "Допомога"
 
-"QRCodeScanning" = "Сканування QR коду ...";
-"QRCodeCalceled" = "Відміна сканування QR коду!";
 
-"UnsupportedU2FV2Version" = "Не підтримується U2F_V2 версія!";
+"Logs_Description" = "Кожен раз при використанні Super Gluu, записується лог у аплікації."
 
-//Statuses
-"StartAuthentication" = "Ідентифікація...";
-"SuccessAuthentication" = "Вітаємо, ви вдало пройшли ідентифікацію!";
-"FailedAuthentication" = "Вам не вдалось пройти ідентифікацію!";
-"SuccessEnrollment" = "Вітаємо, ви вдало зареєструвалися!";
-"FailedEnrollment" = "Вам не вдалось зареєструватися!";
 
-"DenyFailed" = "Decline Failed";
-"DenySuccess" = "Authentication declined";
+"Passcode_Enabled_Info"   = "Коли включено, доступ до Super Gluu буде захищено Touch ID."
+"Passcode_Touch"          = "TouchID"
+"Passcode_Touch_Security" = "Натисніть Безпека"
 
-"AvailableKeyHandles" = "Доступні ключі";
 
-"Delete" = "Видалити";
-"YES" = "Так";
-"NO" = "Ні";
+"Passcode_Set"                 = "Встановити пароль"
+"Passcode_Enter_A_Passcode"    = "Ввести пароль"
+"Passcode_Reenter"             = "Ввести пароль ще раз"
+"Passcode_Enter_Passcode"      = "Ввести пароль"
+"Passcode_Enter_Your_Passcode" = "Введіть ваш пароль"
+"Passcode_Change"              = "Змінити пароль"
+"Passcode_Enter_Old"           = "Введіть ваш старий пароль"
+"Passcode_Enter_New"           = "Введіть ваш новий пароль"
+"Passcode_Reenter_New"         = "Введіть ваш новий пароль ще раз"
+"Passcode_Try_Again"           = "Паролі не співпадають. Попробуйте ще раз."
+"Passcode_Attempts_Left"       = "спроб залишилось"
+"Passcode_Next"                = "Наступний"
 
-"keyHandleFor" = "Kлюч для";
-"keyHandle" = "Key handle";
-"ChangeKeyHandleName" = "Ви дійсно бажаєте змінити ім'я ключа?";
-"RenameKeyNameInfo" = "Щоб змінити ім'я ключа утримуйте на ньому протягом 3 секунд";
-"DeleteKeyHandle" = "Ви дійсно бажаєте видалити цей ключ?";
 
-"FailedKeyHandle" = "Невідповідний ключ, спробуйте знову щоб згенерувати новий";
+"SSL_Info"  = "Коли включено, Super Gluu буде довіряти серверам з self-signed сертифікатами. Рекомендується під час розробки."
+"SSL_Trust" = "Довіряти усім сертифікатам."
 
-"PushTimeOver" = "Вичерпано час для аутентифікації на допомогою випливаючого повідомлення";
 
-"ClearLog" = "Ви дійсно бажаєте вилучити цей запис?";
-"ClearLogs" = "Ви дійсно бажаєте вилучити всі записи?";
+"Log_Key_Username"    = "Імя користувача"
+"Log_Key_Created"     = "Створено"
+"Log_Key_Id_Provider" = "ID постачальника"
+"Log_Key_Key_Handle"  = "Ручка клавіш"
 
-"ApproveDeclineTitle" = "To continue press %@, to stop %@";
 
-"FaiedGetLocation" = "Невдале визначення місцезнаходження";
+"Keys_Info"       = "Унікальний приватний ключ згенеровано і збережено на вашому пристрої коже раз, коли ви захищаєте новий екаунт Super Gluu."
+"Keys_Text_Value" = "Текстове значення"
 
-"Information" = "Інформація";
-"UserName" = "Ім'я користувача";
-"Created" = "Створено";
-"Application" = "Звернення";
-"Issuer" = "Видавець";
-"AuthenticationMode" = "Режим автентичності";
-"AuthenticationType" = "Тип автентичності";
-"CloseButton" = "Закрити";
 
-"SecondsLeft" = "секунд залишилося";
+"Info_Delete_Key"           = "Ви хочете видалити ключ?"
+"Info_Change_Name_How_To"   = "Щоб змінити імя ключа, зажміть і тримайте протягом 3 секунд"
+"Info_Change_Name_Question" = "Ви хочете змінити імя ключа ?"
+"Info_Duplicate_Name"       = "Імя вже зайняте чи є пустим. Попробуйте ще раз."
+"Info_Enter_Name"           = "Введіть імя"
+"Info_Change_Name"          = "Змінити імя ключа"
+"Info_Enter_New_Name"       = "Ввести нове імя для ключа"
 
-"UniqueKeyLabel" = "A unique key is generated for each Gluu Server  you log into with %@. You can manage keys here:";
 
-"SetPinCode" = "Створити пін код";
-"ChangePinCode" = "Змінити пін код";
-"SetPinCodeTitle" = "Ви дійсно бажаєте встановити пін код?";
-"ChangePinCodeTitle" = "Ви дійсно бажаєте змінити пін код?";
+"Approve"             = "Підтвердити"
+"Deny"                = "Відмінити"
+"Permission_Approval" = "Дозвіл"
+"Approving"           = "Підтверджую ..."
+"Denying"             = "Відміняю ..."
 
-"ReEnterPinCode" = "Щоб продовжити, будь ласка введіть пін код";
-"EnterPinCode" = "Введіть пін код";
-"FailedPinCode" = "Доступ заблоковано, ви ввели невірний код %i раз, будь ласка зачекайте.";
-"LastAttempts" = "Залишилося 2 спроби перед блокуванням програми на 10 хв";
-"AttemptsText" = "Програмв буде заблокована на 10 хв якщо вичерпається дана кількість спроб";
 
-"UnKnownError" = "Невідома помилка";
+"Info"       = "Інформація"
+"Yes"        = "Так"
+"No"         = "Ні"
+"Delete"     = "Видалити"
+"Clear_Log"  = "Очистити логи"
+"Clear_Logs" = "Очистити логи"
+"Close"      = "Закрити"
+"Cancel"     = "Відмінити"
+"Save"       = "Зберегти"
+"Oops"       = "Вупс ..."
+
+
+"Signed_In_To"             = "Увійти до"
+"Auth_Failed_To"           = "Аутентифікація провалена до"
+"Registered_To"            = "Зареєстровано до"
+"Registration_Failed_To"   = "Реєстрація провалена до"
+"Auth_Declined_To"         = "Аутентифікація відхилена до"
+"Registration_Declined_To" = "Реєстрація відхилена до"
+"Unknown_Error"            = "Невідома помилка"
+
+
+"Success!"             = "Успіх!"
+"Missing_Request_Info" = "Немає інформації запиту"
+
+
+"Unknown_Error_Something" = "Невідома помилка. Щось пішло не так."
+"Not_Allowed_Payment"     = "Оплата не дозволена."
+"Invalid_Purchase_Id"     = "Ідентифікатор замовлення не є валідним."
+"Unallowed_Device"        = "Пристрій не є дозволеним для замовлення."
+"Unavailable_Product"     = "Продукт не є доступним у магазині."
+"Unallowed_Cloud_Access"  = "Доступ до хмари заборонено."
+"No_Network_Connection"   = "Не можу підєднатися до інтернету."
+
+
+"Enable_TouchID"                = "Включити Touch ID"
+"Identify_Yourself"             = "Ідентифікуйте себе"
+"Identify_Verification_Problem" = "Проблема ідентифікації"
+"Cancel_Pressed"                = "Ви натиснули відміна."
+"Password_Pressed"              = "Ви натиснули пароль."
+"TouchID_Not_Configured"        = "Touch ID не можу бути сконфігуроване."
+
+
+"2_Attempts_Remaining"    = "Ще 2 спроби перед тим, як палікація буде залочена на 10 хвилин."
+"Failed_Attempts_Warning" = "Аплікація буде залочена на 10 хвилин після багатьох невдалих спроб."
 
 
 

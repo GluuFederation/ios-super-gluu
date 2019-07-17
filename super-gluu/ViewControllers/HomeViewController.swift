@@ -95,13 +95,13 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
         removeAdsView.layer.shadowOffset = CGSize(width: 0, height: 1)
         removeAdsView.layer.shadowOpacity = 0.3
         removeAdsView.layer.cornerRadius = GluuConstants.CORNER_RADIUS
-        removeAdsButton.layer.cornerRadius = GluuConstants.CORNER_RADIUS
         
+        removeAdsButton.layer.cornerRadius = GluuConstants.CORNER_RADIUS
+        removeAdsButton.setTitle(LocalString.Home_Remove_Ads.localized, for: .normal)
         
         let sel: Selector = #selector(self.goToSettings)
         let menuButton = UIBarButtonItem(image: UIImage(named: "icon_menu"), style: .plain, target: self, action: sel)
         navigationItem.rightBarButtonItem = menuButton
-        
         
         if GluuConstants.IS_IPHONE_6 {
             scanTextLabel.font = UIFont.systemFont(ofSize: 17)
@@ -113,8 +113,8 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
         
         statusView.backgroundColor = AppConfiguration.systemColor
         
-        welcomeLabel.text = NSLocalizedString("Welcome", comment: "Welcome")
-        scanTextLabel.text = NSLocalizedString("ScanText", comment: "Scan Text")
+        welcomeLabel.text = LocalString.Home_Welcome.localized
+        scanTextLabel.text = LocalString.Home_Tap_To_Scan_QR.localized
         
     }
     
@@ -149,7 +149,7 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
         
         let jsonDictionary =  PushNotificationsHelper.parsedInfo(pushNotificationRequest)
         
-        guard  PushNotificationsHelper.isLastPushExpired() == false else {
+        guard PushNotificationsHelper.isLastPushExpired() == false else {
             UserDefaults.standard.removeObject(forKey: GluuConstants.NotificationRequest)
             NotificationCenter.default.post(name: noti(GluuConstants.NOTIFICATION_PUSH_TIMEOVER), object: jsonDictionary)
             return
@@ -237,9 +237,12 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
     @objc
     func notificationRecieved(_ notification: Notification?) {
         
-        let step = notification?.userInfo?["oneStep"] as? String
-        let oneStep = Bool(step ?? "") ?? false
-        var message = ""
+//        let step = notification?.userInfo?["oneStep"] as? String
+//        let oneStep = Bool(step ?? "") ?? false
+//        var message = ""
+        
+        let localSuccess = LocalString.Success.localized
+        let localFail = LocalString.Oops.localized
         
         guard let name = notification?.name else {
             return
@@ -249,78 +252,57 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
         
         if name == noti(GluuConstants.NOTIFICATION_REGISTRATION_SUCCESS) {
             
-            message = NSLocalizedString("SuccessEnrollment", comment: "Success Authentication")
-            
-            showAlertView(withTitle: NSLocalizedString("AlertTitleSuccess", comment: "Success"), andMessage: message)
+            showAlertView(withTitle: localSuccess, andMessage: LocalString.Home_Registration_Success.localized)
             
             showFullScreenAd()
             
         } else if name == noti(GluuConstants.NOTIFICATION_REGISTRATION_FAILED) {
             
-            message = NSLocalizedString("FailedEnrollment", comment: "Failed Authentication")
-            
-            if oneStep {
-                message = "\(NSLocalizedString("OneStep", comment: "OneStep Authentication"))\(NSLocalizedString("FailedEnrollment", comment: "Failed Authentication"))"
-            } else {
-                message = "\(NSLocalizedString("TwoStep", comment: "TwoStep Authentication"))\(NSLocalizedString("FailedEnrollment", comment: "Failed Enrollment"))"
-            }
-            
-            showAlertView(withTitle: NSLocalizedString("FailedEnrollment", comment: "Failed Enrollment"), andMessage: message)
+            showAlertView(withTitle: localFail, andMessage: LocalString.Home_Registration_Failed.localized)
             
             showFullScreenAd()
             
         } else if name == noti(GluuConstants.NOTIFICATION_REGISTRATION_STARTING) {
             
-            message = NSLocalizedString("StartRegistration", comment: "Registration...")
-            
-            if oneStep {
-                message = "\(NSLocalizedString("OneStep", comment: "OneStep Authentication"))\(NSLocalizedString("StartRegistration", comment: "Registration..."))"
-            } else {
-                message = "\(NSLocalizedString("TwoStep", comment: "TwoStep Authentication"))\(NSLocalizedString("StartRegistration", comment: "Registration..."))"
-            }
+            showAlertView(withTitle: LocalString.Home_Registering.localized, andMessage: nil)
+
         } else if name == noti(GluuConstants.NOTIFICATION_AUTENTIFICATION_SUCCESS) {
             
-            message = NSLocalizedString("SuccessAuthentication", comment: "Success Authentication")
-            showAlertView(withTitle: NSLocalizedString("AlertTitleSuccess", comment: "Success"), andMessage: message)
+            showAlertView(withTitle: LocalString.Home_Auth_Success.localized, andMessage: nil)
             
             showFullScreenAd()
             
         } else if name == noti(GluuConstants.NOTIFICATION_AUTENTIFICATION_FAILED) {
             
-            message = NSLocalizedString("FailedAuthentication", comment: "Failed Authentication")
-            
-            if oneStep {
-                message = "\(NSLocalizedString("OneStep", comment: "OneStep Authentication"))\(NSLocalizedString("FailedAuthentication", comment: "Failed Authentication"))"
-            } else {
-                message = "\(NSLocalizedString("TwoStep", comment: "TwoStep Authentication"))\(NSLocalizedString("FailedAuthentication", comment: "Failed Authentication"))"
-            }
-            
-            showAlertView(withTitle: NSLocalizedString("FailedAuthentication", comment: "Failed Authentication"), andMessage: message)
+            showAlertView(withTitle: localFail, andMessage: LocalString.Home_Auth_Failed.localized)
             
             showFullScreenAd()
             
         } else if name == noti(GluuConstants.NOTIFICATION_ERROR) {
             
-            message = notification?.object as? String ?? ""
+            let errorMessage = notification?.object as? String ?? ""
+            
             //        [UserLoginInfo sharedInstance]->logState = UNKNOWN_ERROR;
-            UserLoginInfo.sharedInstance().errorMessage = message
+            
+            UserLoginInfo.sharedInstance().errorMessage = errorMessage
             
             DataStoreManager.sharedInstance().save(UserLoginInfo.sharedInstance())
+            
+            showAlertView(withTitle: localFail, andMessage: errorMessage)
         
          } else if name == noti(GluuConstants.NOTIFICATION_UNSUPPORTED_VERSION) {
             
-            message = NSLocalizedString("UnsupportedU2FV2Version", comment: "Unsupported U2F_V2 version...")
-        
-         } else if name == noti(GluuConstants.NOTIFICATION_PUSH_RECEIVED) {
+            let message = NSLocalizedString("UnsupportedU2FV2Version", comment: "Unsupported U2F_V2 version...")
+            showAlertView(withTitle: localFail, andMessage: message)
             
-            if oneStep {
-                message = "\(NSLocalizedString("OneStep", comment: "OneStep Authentication"))\(NSLocalizedString("StartAuthentication", comment: "Authentication..."))"
-            } else {
-                message = "\(NSLocalizedString("TwoStep", comment: "TwoStep Authentication"))\(NSLocalizedString("StartAuthentication", comment: "Authentication..."))"
-            }
+         } else if name == noti(GluuConstants.NOTIFICATION_PUSH_RECEIVED) {
+
             print("NOTIFICATION_PUSH_RECEIVED called")
             
+            showAlertView(withTitle: LocalString.Home_Authenticating.localized, andMessage: nil)
+            
             UserDefaults.standard.removeObject(forKey: GluuConstants.NotificationRequest)
+            
             let pushAuthRequest = notification?.object as? [AnyHashable : Any]
             handleAuthRequest(pushAuthRequest)
             
@@ -329,6 +311,7 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
             // the check in viewWillAppear doesn't get called
             
             UserDefaults.standard.removeObject(forKey: GluuConstants.NotificationRequest)
+            
             let pushRequest = notification?.object as? [AnyHashable : Any]
             AuthHelper.shared.requestDictionary = pushRequest
             initUserInfo(pushRequest)
@@ -347,27 +330,23 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
             return
         }
         
-        
         if name == noti(GluuConstants.NOTIFICATION_DECLINE_SUCCESS) {
-            message = NSLocalizedString("DenySuccess", comment: "Deny Success")
-            showAlertView(withTitle: NSLocalizedString("AlertTitle", comment: "Info"), andMessage: message)
+            showAlertView(withTitle: localSuccess, andMessage: LocalString.Home_Auth_Declined.localized)
             return
         }
         
         if name == noti(GluuConstants.NOTIFICATION_DECLINE_FAILED) {
-            message = NSLocalizedString("DenyFailed", comment: "Deny Failed")
-            showAlertView(withTitle: NSLocalizedString("AlertTitle", comment: "Info"), andMessage: message)
+            showAlertView(withTitle: localFail, andMessage: LocalString.Home_Decline_Failed.localized)
             return
         }
         
         if name == noti(GluuConstants.NOTIFICATION_FAILED_KEYHANDLE) {
-            message = NSLocalizedString("FailedKeyHandle", comment: "Failed KeyHandles")
-            showAlertView(withTitle: NSLocalizedString("AlertTitle", comment: "Info"), andMessage: message)
+            let message = NSLocalizedString("FailedKeyHandle", comment: "Failed KeyHandles")
+            showAlertView(withTitle: localFail, andMessage: message)
         }
         
         if name == noti(GluuConstants.NOTIFICATION_PUSH_TIMEOVER) {
-            let mess = NSLocalizedString("PushTimeOver", comment: "Push Time Over")
-            showAlertView(withTitle: NSLocalizedString("AlertTitle", comment: "Info"), andMessage: mess)
+            showAlertView(withTitle: localFail, andMessage: LocalString.Home_Expired_Push.localized)
             return
         }
         
@@ -409,7 +388,7 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
             initUserInfo(jsonDictionary)
             loadApproveDenyView()
         } else {
-            updateStatus(NSLocalizedString("WrongQRImage", comment: "Wrong QR Code image"))
+            updateStatus(LocalString.Home_QR_Not_Recognized.localized)
             perform(#selector(HomeViewController.hideStatusBar), with: nil, afterDelay: 5.0)
         }
     }
@@ -438,21 +417,14 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
     
     func showQRReader() {
         
-        if ConnectionCheck.isConnectedToNetwork() {
-        
-            if QRCodeReader.isAvailable() {
-                
-                qrReaderVC.title = "Scan Barcode"
-                qrReaderVC.delegate = self
-                
-                navigationController?.pushViewController(qrReaderVC, animated: true)
-                
-            } else {
-                
-                showAlertView(withTitle: NSLocalizedString("AlertTitle", comment: "Info"), andMessage: NSLocalizedString("AlertMessageNoQRScanning", comment: "No QR Scanning available"))
-            }
+        if ConnectionCheck.isConnectedToNetwork(), QRCodeReader.isAvailable() {
+            
+            qrReaderVC.title = LocalString.Home_Scan.localized
+            qrReaderVC.delegate = self
+            
+            navigationController?.pushViewController(qrReaderVC, animated: true)
         } else {
-            showAlertView(withTitle: "No Internet Connection", andMessage: "Please check your internet connection and try again.")
+            showAlertView(withTitle: LocalString.Home_No_Internet.localized, andMessage: LocalString.Home_Check_Internet.localized)
         }
         
         scanButton.isEnabled = true
@@ -468,7 +440,8 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
             let encodedData = result.value.data(using: .utf8),
             let jsonDictionary = try? JSONSerialization.jsonObject(with: encodedData, options: []) as? [AnyHashable : Any] else {
                 
-                self.showAlertView(withTitle: "Unrecognized QR Code", andMessage: "The QR code scanned wasn't recognized. Please make sure it is from Gluu.")
+                self.showAlertView(withTitle: nil, andMessage: LocalString.Home_QR_Not_Recognized.localized)
+//                self.showAlertView(withTitle: "Unrecognized QR Code", andMessage: "The QR code scanned wasn't recognized. Please make sure it is from Gluu.")
 
                 navigationController?.popViewController(animated: true)
                 
@@ -526,34 +499,15 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
     
     func cameraDenied() {
         
-        print("\("Denied camera access")")
+        print("Denied camera access")
         
-        var alertText: String
-        var alertButton: String
-        
-        let canOpenSettings: Bool = UIApplicationOpenSettingsURLString != nil
-        if canOpenSettings {
-            alertText = "It looks like your privacy settings are preventing us from accessing your camera to do barcode scanning. You can fix this by doing the following:\n\n1. Touch the Go button below to open the Settings app.\n\n2. Touch Privacy.\n\n3. Turn the Camera on.\n\n4. Open this app and try again."
-            
-            alertButton = "Go"
-        } else {
-            alertText = "It looks like your privacy settings are preventing us from accessing your camera to do barcode scanning. You can fix this by doing the following:\n\n1. Close this app.\n\n2. Open the Settings app.\n\n3. Scroll to the bottom and select this app in the list.\n\n4. Touch Privacy.\n\n5. Turn the Camera on.\n\n6. Open this app and try again."
-            
-            alertButton = "OK"
-        }
+        // ** LOCAL TEXT
+        let alertText = "It looks like your privacy settings are preventing us from accessing your camera to do barcode scanning. You can fix this by doing the following:\n\n1. Touch the Go button below to open the Settings app.\n\n2. Touch Privacy.\n\n3. Turn the Camera on.\n\n4. Open this app and try again."
         
         let alert = UIAlertController(title: "Camera Issue", message: alertText, preferredStyle: .alert)
         
-        let action = UIAlertAction(title: alertButton, style: UIAlertActionStyle.default) { (action) in
-            let canOpenSettings: Bool = UIApplicationOpenSettingsURLString != nil
-            
-            if canOpenSettings {
-                if let aString = URL(string: UIApplicationOpenSettingsURLString) {
-                    if let aString = URL(string: UIApplicationOpenSettingsURLString) {
-                        UIApplication.shared.openURL(aString)
-                    }
-                }
-            }
+        let action = UIAlertAction(title: "Go", style: UIAlertActionStyle.default) { (action) in
+            UIApplication.shared.open(URL(string: UIApplicationOpenSettingsURLString)!)
         }
         
         alert.addAction(action)

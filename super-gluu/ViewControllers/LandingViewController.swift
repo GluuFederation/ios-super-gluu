@@ -22,6 +22,8 @@ class LandingViewController: UIViewController {
         super.viewDidLoad()
                 
         // on initial load, prompt user to setup secure entry to app
+        
+        lockedLabel.text = LocalString.Landing_Incorrect_Passcode.localized
 
         if AppDelegate.appDel.appIsLocked() {
             print("Timer created")
