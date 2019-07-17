@@ -43,6 +43,7 @@ class KeysViewController: BaseViewController, UITableViewDataSource, UITableView
         keyHandleTableView.backgroundColor = UIColor.Gluu.tableBackground
         keyHandleTableView.separatorColor = UIColor.Gluu.separator
 
+        uniqueKeyLabel.text = LocalString.Keys_Info.localized
     }
 
     @objc func initPushView() {
@@ -249,4 +250,72 @@ class KeysViewController: BaseViewController, UITableViewDataSource, UITableView
         }
     }
  
+}
+
+
+protocol KeyDeletionHandler {
+//    var keyHandler: KeyHandler
+}
+
+class KeyHandler: NSObject {
+    
+    func delete(token: TokenEntity, didDelete: @escaping ()->Void) {
+        
+        let alert = SCLAlertView(autoDismiss: false, horizontalButtons: true)
+        
+        alert.addButton(AlertConstants.yes, backgroundColor: .red, textColor: .white) {
+            
+            didDelete()
+            alert.hideView()
+        }
+        
+        alert.showCustom(AlertConstants.delete,
+                         subTitle: LocalString.Info_Delete_Key.localized,
+                         color: AppConfiguration.systemColor,
+                         closeButtonTitle: AlertConstants.no,
+                         circleIconImage: UIImage(named: "icon_trashcan_large")!)
+    }
+    
+    func iUniqueName(_ name: String?, andID keyID: String?) -> Bool {
+        return DataStoreManager.sharedInstance().isUniqueTokenName(name)
+    }
+    
+    func editKeyToken(token: TokenEntity, didEdit: @escaping ()->Void ) {
+        
+        let alert = SCLAlertView(autoDismiss: false, closeButtonColor: .red, horizontalButtons: true)
+        
+        let textField = alert.addTextField("Enter a name")
+        
+        alert.addButton(LocalString.Save.localized) {
+            
+            guard let newName = textField.text else {
+                alert.hideView()
+                return
+            }
+
+            if DataStoreManager.sharedInstance().isUniqueTokenName(newName) {
+                
+                DataStoreManager.sharedInstance().setTokenEntitiesNameByID(token.id, userName: token.userName, newName: newName)
+//                self.loadKeyHandlesFromDatabase()
+                didEdit()
+                alert.hideView()
+                
+            } else {
+                SCLAlertView().showCustom(LocalString.Info.localized,
+                                          subTitle: LocalString.Info_Duplicate_Name.localized,
+                                          color: AppConfiguration.systemColor,
+                                          closeButtonTitle: LocalString.Close.localized,
+                                          circleIconImage: AppConfiguration.systemAlertIcon)
+            }
+        }
+        
+        
+        alert.showCustom(LocalString.Info_Change_Name.localized,
+                         subTitle: LocalString.Info_Enter_New_Name.localized,
+                         color: AppConfiguration.systemColor,
+                         closeButtonTitle: LocalString.Cancel.localized,
+                         circleIconImage: UIImage(named: "icon_pencil"))
+        
+    }
+    
 }
