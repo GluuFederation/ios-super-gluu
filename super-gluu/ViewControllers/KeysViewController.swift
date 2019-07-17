@@ -18,18 +18,20 @@ class KeysViewController: BaseViewController, UITableViewDataSource, UITableView
     @IBOutlet var uniqueKeyLabel: UILabel!
     
     var keyHandleArray: [TokenEntity] = []
-    var rowToDelete: Int = 0
     var isLandScape = false
     var keyCells: [String : String] = [:]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupDisplay()
 
         //uniqueKeyLabel.text = [NSString stringWithFormat: NSLocalizedString(@"UniqueKeyLabel", @"UniqueKeyLabel"), [[AppConfiguration sharedInstance] systemTitle]];
 
         NotificationCenter.default.addObserver(self, selector: #selector(KeysViewController.initPushView), name: noti(GluuConstants.NOTIFICATION_PUSH_ONLINE), object: nil)
+        
+        loadKeyHandlesFromDatabase()
     }
 
     func setupDisplay() {
@@ -47,57 +49,57 @@ class KeysViewController: BaseViewController, UITableViewDataSource, UITableView
     }
 
     @objc func initPushView() {
-        tabBarController?.selectedIndex = 0
+//        tabBarController?.selectedIndex = 0
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        loadKeyHandlesFromDatabase()
-        keyHandleTableView.reloadData()
+//        loadKeyHandlesFromDatabase()
+//        keyHandleTableView.reloadData()
     }
 
-    func showEditNameAlert() {
-        
-        guard let cell = keyHandleTableView.cellForRow(at: IndexPath(item: rowToDelete, section: 0)) as? KeyHandleCell, let tokenEntity = tokenAt(rowToDelete) else {
-            return
-        }
-
-        
-        let alert = SCLAlertView(autoDismiss: false, closeButtonColor: .red, horizontalButtons: true)
-        
-        let textField = alert.addTextField("Enter a name")
-        
-        alert.addButton("Save") {
-            if let aText = textField.text {
-                print("Text value: \(aText)")
-            }
-        
-            if self.checkUniqueName(textField.text, andID: cell.accessibilityLabel) {
-                
-                DataStoreManager.sharedInstance().setTokenEntitiesNameByID(tokenEntity.id, userName: tokenEntity.userName, newName: textField.text)
-                self.loadKeyHandlesFromDatabase()
-                alert.hideView()
-                
-            } else {
-                let alert = SCLAlertView(autoDismiss: false, horizontalButtons: false)
-                
-                alert.showCustom(NSLocalizedString("Info", comment: "Info"),
-                                 subTitle: "Name already exists or is empty. Please enter another one.",
-                                 color: AppConfiguration.systemColor,
-                                 closeButtonTitle: "Ok",
-                                 circleIconImage: AppConfiguration.systemAlertIcon,
-                                 animationStyle: SCLAnimationStyle.topToBottom)
-            }
-        }
-
-        
-        alert.showCustom("Change key name",
-                         subTitle: "Enter a new name for your key:",
-                         color: AppConfiguration.systemColor,
-                         closeButtonTitle: "Cancel",
-                         circleIconImage: UIImage(named: "icon_pencil")!)
-    
-    }
+//    func showEditNameAlert() {
+//
+//        guard let cell = keyHandleTableView.cellForRow(at: IndexPath(item: rowToDelete, section: 0)) as? KeyHandleCell, let tokenEntity = tokenAt(rowToDelete) else {
+//            return
+//        }
+//
+//
+//        let alert = SCLAlertView(autoDismiss: false, closeButtonColor: .red, horizontalButtons: true)
+//
+//        let textField = alert.addTextField("Enter a name")
+//
+//        alert.addButton("Save") {
+//            if let aText = textField.text {
+//                print("Text value: \(aText)")
+//            }
+//
+//            if self.checkUniqueName(textField.text, andID: cell.accessibilityLabel) {
+//
+//                DataStoreManager.sharedInstance().setTokenEntitiesNameByID(tokenEntity.id, userName: tokenEntity.userName, newName: textField.text)
+//                self.loadKeyHandlesFromDatabase()
+//                alert.hideView()
+//
+//            } else {
+//                let alert = SCLAlertView(autoDismiss: false, horizontalButtons: false)
+//
+//                alert.showCustom(NSLocalizedString("Info", comment: "Info"),
+//                                 subTitle: "Name already exists or is empty. Please enter another one.",
+//                                 color: AppConfiguration.systemColor,
+//                                 closeButtonTitle: "Ok",
+//                                 circleIconImage: AppConfiguration.systemAlertIcon,
+//                                 animationStyle: SCLAnimationStyle.topToBottom)
+//            }
+//        }
+//
+//
+//        alert.showCustom("Change key name",
+//                         subTitle: "Enter a new name for your key:",
+//                         color: AppConfiguration.systemColor,
+//                         closeButtonTitle: "Cancel",
+//                         circleIconImage: UIImage(named: "icon_pencil")!)
+//
+//    }
 
     func loadKeyHandlesFromDatabase() {
 
@@ -108,21 +110,21 @@ class KeysViewController: BaseViewController, UITableViewDataSource, UITableView
 
     }
 
-    func checkUniqueName(_ name: String?, andID keyID: String?) -> Bool {
-        
-        guard let name = name, name.count > 0 else {
-            return false
-        }
-
-        for cellKey: String in keyCells.keys {
-            if !(cellKey == keyID) {
-                if (keyCells[cellKey] == name) {
-                    return false
-                }
-            }
-        }
-        return true
-    }
+//    func checkUniqueName(_ name: String?, andID keyID: String?) -> Bool {
+//
+//        guard let name = name, name.count > 0 else {
+//            return false
+//        }
+//
+//        for cellKey: String in keyCells.keys {
+//            if !(cellKey == keyID) {
+//                if (keyCells[cellKey] == name) {
+//                    return false
+//                }
+//            }
+//        }
+//        return true
+//    }
 
 // MARK: - UITableview Delegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -151,7 +153,9 @@ class KeysViewController: BaseViewController, UITableViewDataSource, UITableView
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        showKeyInfo(indexPath.row)
+        if let token = tokenAt(indexPath.row) {
+            showKeyInfo(token)
+        }
     }
 
     
@@ -164,50 +168,50 @@ class KeysViewController: BaseViewController, UITableViewDataSource, UITableView
     }
     
     
-    func showKeyInfo(_ index: Int) {
-        
-        let tokenEntity = tokenAt(index)
+    func showKeyInfo(_ token: TokenEntity) {
         
         let infoVC = InformationViewController.fromStoryboard("Main")
-        infoVC.token = tokenEntity
+        infoVC.token = token
+        infoVC.didEditToken = {
+            self.loadKeyHandlesFromDatabase()
+        }
 
         navigationController?.pushViewController(infoVC, animated: true)
         
     }
 
-    func showDeleteAlert() {
-        
-        let alert = SCLAlertView(autoDismiss: false, horizontalButtons: true)
-        
-        let subtitle = NSLocalizedString("DeleteKeyHandle", comment: "Delete KeyHandle")
-        
-        alert.addButton(AlertConstants.yes, backgroundColor: .red, textColor: .white) {
-            print("YES clicked")
-            self.deleteRow()
-            alert.hideView()
-        }
-
-        alert.showCustom(AlertConstants.delete,
-                         subTitle: subtitle,
-                         color: AppConfiguration.systemColor,
-                         closeButtonTitle: AlertConstants.no,
-                         circleIconImage: UIImage(named: "icon_trashcan_large")!)
- 
-     }
-
-    func deleteRow() {
-
-        guard let tokenEntity = tokenAt(rowToDelete) else { return }
-        DataStoreManager.sharedInstance().deleteTokenEntities(byID: tokenEntity.application, userName: tokenEntity.userName)
-        loadKeyHandlesFromDatabase()
-
-        // check in mainViewController for matching code. we use the token issuer combined with the username
-        let keyId = tokenEntity.application ?? "" + (tokenEntity.userName ?? "")
-
-        // whether the key is licensed or not, call remove to be sure
-        GluuUserDefaults.removeLicensedKey(keyId)
-
-    }
+//    func showDeleteAlert() {
+//
+//        let alert = SCLAlertView(autoDismiss: false, horizontalButtons: true)
+//
+//        let subtitle = NSLocalizedString("DeleteKeyHandle", comment: "Delete KeyHandle")
+//
+//        alert.addButton(AlertConstants.yes, backgroundColor: .red, textColor: .white) {
+//            print("YES clicked")
+//            self.deleteRow()
+//            alert.hideView()
+//        }
+//
+//        alert.showCustom(AlertConstants.delete,
+//                         subTitle: subtitle,
+//                         color: AppConfiguration.systemColor,
+//                         closeButtonTitle: AlertConstants.no,
+//                         circleIconImage: UIImage(named: "icon_trashcan_large")!)
+//
+//     }
+//
+//    func deleteRow() {
+//
+//        guard let tokenEntity = tokenAt(rowToDelete) else { return }
+//        DataStoreManager.sharedInstance().deleteTokenEntities(byID: tokenEntity.application, userName: tokenEntity.userName)
+//        loadKeyHandlesFromDatabase()
+//
+//        // check in mainViewController for matching code. we use the token issuer combined with the username
+//        let keyId = tokenEntity.application ?? "" + (tokenEntity.userName ?? "")
+//
+//        // whether the key is licensed or not, call remove to be sure
+//        GluuUserDefaults.removeLicensedKey(keyId)
+//    }
 
     func rightButtons() -> [UIButton]? {
         
@@ -228,22 +232,27 @@ class KeysViewController: BaseViewController, UITableViewDataSource, UITableView
     }
 
     func swipeableTableViewCell(_ cell: SWTableViewCell?, didTriggerRightUtilityButtonWith index: Int) {
+        
+        guard let swipedRow = cell?.tag, let token = tokenAt(swipedRow) else {
+            return
+        }
+        
         switch index {
             case 0:
-                print("More button was pressed")
-                showKeyInfo(cell?.tag ?? 0)
+                // More button was pressed
+                showKeyInfo(token)
             
             case 1:
                 // Rename button was pressed
-                print("Rename button was pressed")
-                rowToDelete = Int(cell?.tag ?? 0)
-                showEditNameAlert()
+                KeyHandler().editKeyToken(token: token) {
+                    self.loadKeyHandlesFromDatabase()
+                }
             
             case 2:
                 // Delete button was pressed
-                print("Delete button was pressed")
-                rowToDelete = Int(cell?.tag ?? 0)
-                showDeleteAlert()
+                KeyHandler().confirmDelete(token: token) {
+                    self.loadKeyHandlesFromDatabase()
+                }
             
             default:
                 break
@@ -253,19 +262,16 @@ class KeysViewController: BaseViewController, UITableViewDataSource, UITableView
 }
 
 
-protocol KeyDeletionHandler {
-//    var keyHandler: KeyHandler
-}
-
 class KeyHandler: NSObject {
     
-    func delete(token: TokenEntity, didDelete: @escaping ()->Void) {
+    func confirmDelete(token: TokenEntity, didDelete: @escaping ()->Void) {
         
         let alert = SCLAlertView(autoDismiss: false, horizontalButtons: true)
         
         alert.addButton(AlertConstants.yes, backgroundColor: .red, textColor: .white) {
-            
-            didDelete()
+            self.deleteToken(token: token, tokenDeleted: {
+                didDelete()
+            })
             alert.hideView()
         }
         
@@ -276,8 +282,21 @@ class KeyHandler: NSObject {
                          circleIconImage: UIImage(named: "icon_trashcan_large")!)
     }
     
-    func iUniqueName(_ name: String?, andID keyID: String?) -> Bool {
-        return DataStoreManager.sharedInstance().isUniqueTokenName(name)
+//    func isUniqueName(_ name: String?, andID keyID: String?) -> Bool {
+//        return DataStoreManager.sharedInstance().isUniqueTokenName(name)
+//    }
+    
+    func deleteToken(token: TokenEntity, tokenDeleted: @escaping ()->Void) {
+        
+        DataStoreManager.sharedInstance().deleteTokenEntities(byID: token.application, userName: token.userName)
+        
+        // check in mainViewController for matching code. we use the token issuer combined with the username
+        let keyId = token.application ?? "" + (token.userName ?? "")
+        
+        // whether the key is licensed or not, call remove to be sure
+        GluuUserDefaults.removeLicensedKey(keyId)
+        
+        tokenDeleted()
     }
     
     func editKeyToken(token: TokenEntity, didEdit: @escaping ()->Void ) {
@@ -296,6 +315,7 @@ class KeyHandler: NSObject {
             if DataStoreManager.sharedInstance().isUniqueTokenName(newName) {
                 
                 DataStoreManager.sharedInstance().setTokenEntitiesNameByID(token.id, userName: token.userName, newName: newName)
+                token.keyName = newName
 //                self.loadKeyHandlesFromDatabase()
                 didEdit()
                 alert.hideView()

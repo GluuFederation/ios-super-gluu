@@ -12,8 +12,6 @@ import SCLAlertView
 
 class InformationViewController: BaseViewController, UIScrollViewDelegate {
     
-    var token: TokenEntity?
-    
     @IBOutlet var userNameValueLabel: UILabel!
     @IBOutlet var createdValueLabel: UILabel!
     @IBOutlet var applicationValueLabel: UILabel!
@@ -28,6 +26,9 @@ class InformationViewController: BaseViewController, UIScrollViewDelegate {
     @IBOutlet var separators: [UIView]!
     @IBOutlet var keyLabels: [UILabel]!
     
+    
+    var token: TokenEntity?
+    var didEditToken: (()-> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,6 +76,8 @@ class InformationViewController: BaseViewController, UIScrollViewDelegate {
     }
 
     @objc func showEditActionSheet() {
+        
+
 
         let actionSheet = UIAlertController(title: LocalString.Info_Change_Name.localized,
                                             message: LocalString.Info_Change_Name_Question.localized,
@@ -86,13 +89,13 @@ class InformationViewController: BaseViewController, UIScrollViewDelegate {
 
         actionSheet.addAction(UIAlertAction(title: LocalString.Delete.localized, style: .destructive, handler: { action in
             actionSheet.dismiss(animated: true, completion: nil)
-            
+
             self.showDeleteAlert()
         }))
 
         actionSheet.addAction(UIAlertAction(title: LocalString.Info_Change_Name.localized, style: .default, handler: { action in
             actionSheet.dismiss(animated: true, completion: nil)
-            
+
             self.showKeyRenameAlert()
         }))
 
@@ -135,6 +138,15 @@ class InformationViewController: BaseViewController, UIScrollViewDelegate {
     @objc
     func showDeleteAlert() {
         
+        guard let token = token else { return }
+        
+        KeyHandler().confirmDelete(token: token) {
+            
+            self.didEditToken?()
+            self.dismiss(animated: true)
+        }
+        
+        /*
         let alert = SCLAlertView(autoDismiss: false, horizontalButtons: true)
         
         alert.addButton(AlertConstants.yes, backgroundColor: .red, textColor: .white) {
@@ -149,12 +161,21 @@ class InformationViewController: BaseViewController, UIScrollViewDelegate {
                          closeButtonTitle: AlertConstants.no,
                          circleIconImage: UIImage(named: "icon_trashcan_large")!)
         
+        */
+        
     }
     
     func showKeyRenameAlert() {
         
         guard let token = token else { return }
         
+        KeyHandler().editKeyToken(token: token) {
+            
+            self.didEditToken?()
+            self.setupInformation()
+        }
+        
+        /*
         let alert = SCLAlertView(autoDismiss: false, closeButtonColor: .red, horizontalButtons: true)
         
         let textField = alert.addTextField(LocalString.Info_Enter_Name.localized)
@@ -189,16 +210,19 @@ class InformationViewController: BaseViewController, UIScrollViewDelegate {
                          closeButtonTitle: LocalString.Cancel.localized,
                          circleIconImage: UIImage(named: "icon_pencil"))
         
+        */
     }
 
     @objc
     func deleteKey() {
         
+        /*
         guard let token = token else { return }
         
         DataStoreManager.sharedInstance().deleteTokenEntities(byID: token.application, userName: token.userName)
 
         dismiss(animated: true)
+         */
     }
 
     func generateAttrStrings(_ name: String?, value: String?) -> NSAttributedString? {
