@@ -75,26 +75,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     }
     
-    private func setupPushNotificationActions() {
-        
-        // Configure User Notification Center
-        
-        let action1 = UNNotificationAction(identifier: GluuConstants.NotificationActionApprove,
-                                           title: NSLocalizedString("Approve", comment: "Approve"),
-                                           options: [.foreground])
-        
-        let action2 = UNNotificationAction(identifier: GluuConstants.NotificationActionDeny,
-                                           title: NSLocalizedString("Deny", comment: "Deny"),
-                                           options: [.foreground, .destructive])
-        
-        let actionCategory = UNNotificationCategory(identifier: GluuConstants.NotificationCategoryIdent,
-                                               actions: [action1, action2],
-                                               intentIdentifiers: [],
-                                               options: [])
-        
-        // Register Category
-        UNUserNotificationCenter.current().setNotificationCategories([actionCategory])
-    }
+     private func setupPushNotificationActions() {
+          
+          // Configure User Notification Center
+          
+          let action1 = UNNotificationAction(identifier: GluuConstants.NotificationActionApprove,
+                                             title: LocalString.Approve.localized,
+                                             options: [.foreground])
+          
+          let action2 = UNNotificationAction(identifier: GluuConstants.NotificationActionDeny,
+                                             title: LocalString.Deny.localized,
+                                             options: [.foreground, .destructive])
+          
+          let actionCategory = UNNotificationCategory(identifier: GluuConstants.NotificationCategoryIdent,
+                                                      actions: [action1, action2],
+                                                      intentIdentifiers: [],
+                                                      options: [])
+          
+          // Register Category
+          UNUserNotificationCenter.current().setNotificationCategories([actionCategory])
+     }
     
     private func requestNotifications(completion: ((Bool) -> Void)? = nil) {
         

@@ -8,20 +8,15 @@ use_frameworks!
 #target "Super Gluu", "Super Gluu - Ad Free" do
 
 def project_pods
- pod 'AFNetworking', '~> 2.5'
- pod 'NSHash', '~> 1.1.0'
- pod 'JTMaterialSwitch'
- pod 'Google-Mobile-Ads-SDK'
- pod 'IAPHelper'
- pod 'SWTableViewCell', '~> 0.3.7'
- pod 'CATCurveProgressView'
- pod 'SCLAlertView', :git => 'https://github.com/soulfoodz/SCLAlertView-Swift.git'
- pod 'SwiftMessages'
- pod 'SwiftyStoreKit', '~> 0.11'
- pod 'QRCodeReader.swift', '~> 9.0.1'
-
-# pod 'ox-push3', :git => 'https://github.com/GluuFederation/ox-push3.git'
-pod 'ox-push3', :git => 'https://github.com/soulfoodz/oxPush3.git'
+    pod 'AFNetworking', '~> 2.5'
+    pod 'NSHash', '~> 1.1.0'
+    pod 'Google-Mobile-Ads-SDK'
+    pod 'SWTableViewCell', '~> 0.3.7'
+    pod 'SCLAlertView', :git => 'https://github.com/soulfoodz/SCLAlertView-Swift.git'
+    pod 'SwiftyStoreKit', '~> 0.11'
+    pod 'QRCodeReader.swift', '~> 9.0.1'
+    
+    pod 'ox-push3', :git => 'https://github.com/soulfoodz/GluuOxPush.git'
 
 end
 

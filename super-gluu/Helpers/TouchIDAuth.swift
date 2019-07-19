@@ -34,7 +34,7 @@ import LocalAuthentication
             // check to see if they need to enter their passcode
             // due to touchId attempts failing too many times
             if error?.code == -8 {
-                context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: "To enable touch auth", reply: { (success, error) in
+                context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: LocalString.Enable_TouchID.localized, reply: { (success, error) in
                     return success
                 })
             } else {
@@ -45,7 +45,7 @@ import LocalAuthentication
         return false
         
     }
-
+    
     
     func authenticateUser(completion: @escaping (Bool, String?) -> Void) {
         let context = LAContext()
@@ -54,7 +54,7 @@ import LocalAuthentication
             return
         }
         
-        let reason = "Identify yourself!"
+        let reason = LocalString.Identify_Yourself.localized
         
         context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) {
             [unowned self] success, authenticationError in
@@ -70,13 +70,13 @@ import LocalAuthentication
                     switch authenticationError {
                         
                     case LAError.authenticationFailed?:
-                        message = "There was a problem verifying your identity."
+                        message = LocalString.Identify_Verification_Problem.localized
                     case LAError.userCancel?:
-                        message = "You pressed cancel."
+                        message = LocalString.Cancel_Pressed.localized
                     case LAError.userFallback?:
-                        message = "You pressed password."
+                        message = LocalString.Password_Pressed.localized
                     default:
-                        message = "Touch ID may not be configured"
+                        message = LocalString.TouchID_Not_Configured.localized
                     }
                     
                     completion(false, message)

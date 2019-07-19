@@ -1,145 +1,109 @@
+"Landing_Incorrect_Passcode" = "Plusieurs essais avec code incorrect. Veuillez réessayer dans 10 minutes";
+"Launch_Enter_Passcode"  = "Entrer le cod";
+"Launch_Forgot_Passcode" = "Code oubli";
+"Security_Passcode" = "Cod";
+"Security_TouchId"  = "TouchI";
+"Home_Check_Internet"       = "Vérifier votre connexion internet et réessayer";
+"Home_No_Internet"          = "Pas de connexion interne";
+"Home_Tap_To_Scan_QR"       = "Un QR Code vous sera présenté pour l'enregistrement ou l'authentification. Appuyer sur le button pour ouvrir votre QR scanner";
+"Home_Welcome"              = "Bienvenue sur Super Glu";
+"Home_Scan"                 = "Scanner le QR Cod";
+"Home_Remove_Ads"           = "Retirer les publicité";
+"Home_QR_Not_Recognized"    = "Code QR non reconnu. Veuillez réessayer";
+"Home_Auth_Success"         = "Authentification réuss";
+"Home_Registration_Success" = "Enregistrement réuss";
+"Home_Registration_Failed"  = "L'enregistrement a échoué. Veuillez réessayer";
+"Home_Decline_Failed"       = "Déclin échou";
+"Home_Authenticating"       = "Authentification en cours ..";
+"Home_Registering"          = "Enregistrement en cours ..";
+"Home_Auth_Failed"          = "Authentification échoué. Veuillez réessayer";
+"Home_Auth_Declined"        = "Authentification refus";
+"Home_Expired_Push"         = "Votre push notification a expir";
+"Subscription_Details" = "Détails de la subscriptio";
+"Details"              = "Détails";
+"Subscription_Info"    = "L'abonnement mensuel rend Super Gluu totalement sans publicité. Après un achat réussi, vous ne verrez plus de bannières ni d’annonces plein écran. Votre paiement sera débité de votre compte iTunes une fois que vous aurez confirmé votre achat. Votre compte iTunes sera facturé à nouveau lorsque votre abonnement sera automatiquement renouvelé à la fin de votre période d'abonnement en cours, à moins que le renouvellement automatique ne soit désactivé au moins 24 heures avant la fin de la période en cours. Toute portion inutilisée de la période d'essai gratuite sera perdue lors de l'achat de l'abonnement. Vous pouvez gérer ou désactiver le renouvellement automatique dans les paramètres de votre compte Apple ID à tout moment après l'achat.";
+"Menu_Logs"           = "Fichiers de logs";
+"Menu_Keys"           = "Clés";
+"Menu_Passcode"       = "Code";
+"Menu_User_Guide"     = "Guide Utilisateur";
+"Menu_Privacy_Policy" = "Politique de confidentialité";
+"Menu_Settings"       = "Paramètres";
+"Menu_Help"           = "Aide";
+"Logs_Description" = "A Chaque fois que Super Gluu est utilisé, une transaction es loggué dans votre application.";
+"Passcode_Enabled_Info"   = "Quand activé, l'accès à Super Gluu sera protégé par Touch ID.";
+"Passcode_Touch"          = "Touch ID";
+"Passcode_Touch_Security" = "Touch Securité";
+"Passcode_Set"                 = "Apliquer le code";
+"Passcode_Enter_A_Passcode"    = "Entrer un code";
+"Passcode_Reenter"             = "Entrer à nouveau le code";
+"Passcode_Enter_Passcode"      = "Entrer le Code";
+"Passcode_Enter_Your_Passcode" = "Entrer votre code";
+"Passcode_Change"              = "Changer le code";
+"Passcode_Enter_Old"           = "Entrer votre ancien code";
+"Passcode_Enter_New"           = "Entrer votre nouveau code";
+"Passcode_Reenter_New"         = "Entrer à nouveau votre code";
+"Passcode_Try_Again"           = "Les codes ne correspondent pas. Veuillez réessayer.";
+"Passcode_Attempts_Left"       = "Essai(s) restants";
+"Passcode_Next"                = "Suivant";
+"SSL_Info"  = "Quand activé, Super Gluu fera confiance à tous les serveurs avec certificats auto-signé. Récommandé juste en mode developpement.";
+"SSL_Trust" = "Accepter tous les SSL";
+"Log_Key_Username"    = "Nom d'utilisateur";
+"Log_Key_Created"     = "Crée";
+"Log_Key_Id_Provider" = "Fournisseur de clé";
+"Log_Key_Key_Handle"  = "Clé de gestion";
+"Keys_Info"       = "Une clé privée unique est génerée et stocké dans votre appareil à chaque fois aue vous sécuriser un nouveau compte avec Super Gluu.";
+"Keys_Text_Value" = "Value de la texte:";
+"Info_Delete_Key"           = "Voulez vous supprimer cette clé?";
+"Info_Change_Name_How_To"   = "Pour changer le nom de la clé, appyez et maintenez pendant 3 secondes. ";
+"Info_Change_Name_Question" = "Voulez vous change le nom de ce cette clé.";
+"Info_Duplicate_Name"       = "Ce nom est soit vide soit il existe déjà. Veuillez réessayer.";
+"Info_Enter_Name"           = "Entrer un nom";
+"Info_Change_Name"          = "Changer le nom de la clé";
+"Info_Enter_New_Name"       = "Entrer un nom pour votre clé:";
+"Approve"             = "Approuver";
+"Deny"                = "Nier";
+"Permission_Approval" = "Approbation de permission";
+"Approving"           = "Approuvant...";
+"Denying"             = "En cours de refu...";
+"Info"       = "Info";
+"Yes"        = "Oui";
+"No"         = "Non";
+"Delete"     = "Supprimer";
+"Clear_Log"  = "Effacer le log";
+"Clear_Logs" = "Effacer les logs";
+"Close"      = "Fermer";
+"Cancel"     = "Annuler";
+"Save"       = "Sauvegarder";
+"Oops"       = "Oops!";
+"Signed_In_To"             = "Signed in to";
+"Auth_Failed_To"           = "L'authentification a échoué";
+"Registered_To"            = "Enregistré à";
+"Registration_Failed_To"   = "L'enregistrement a échoué";
+"Auth_Declined_To"         = "Authentification refusée à";
+"Registration_Declined_To" = "Inscription refusée à";
+"Unknown_Error"            = "Erreur inconnu";
+"Success!"             = "Réussi!";
+"Missing_Request_Info" = "Information manquante pour la requête.";
+"Unknown_Error_Something" = "Erreur inconnu. Un problème est survenu.";
+"Not_Allowed_Payment"     = "Payment non permit";
+"Invalid_Purchase_Id"     = "L'identifiant  de l'achat était invalid.";
+"Unallowed_Device"        = "Cet appareil n'est pas permit pour procéder au payment.";
+"Unavailable_Product"     = "Le produit n'est pas disponible dans la boutique suivant.";
+"Unallowed_Cloud_Access"  = "L'access au service cloud n'est pas permis.";
+"No_Network_Connection"   = "Problème de connexion au réseau.";
+"Enable_TouchID"                = "Pour activer TouchID";
+"Identify_Yourself"             = "Identifier vous!";
+"Identify_Verification_Problem" = "Un problème est survenu lors de la vérification de votre identité.";
+"Cancel_Pressed"                = "Vous avez appuyé sur supprimer.";
+"Password_Pressed"              = "Vous avez appuyé sur password.";
+"TouchID_Not_Configured"        = "Il se peut que Touch ID ne sois pas configuré.";
+"2_Attempts_Remaining"    = "Deux éssais restants avant que l'application ne se verouille pendant 10 minutes.";
+"Failed_Attempts_Warning" = "L'application sera verouillée pendant 10 minutes.";
 
 
 
-"Landing_Incorrect_Passcode" = "Plusieurs essais avec code incorrect. Veuillez réessayer dans 10 minutes."
 
 
-"Launch_Enter_Passcode"  = "Entrer le code"
-"Launch_Forgot_Passcode" = "Code oublié"
-
-
-"Security_Passcode" = "Code"
-"Security_TouchId"  = "TouchID"
-
-
-"Home_Check_Internet"       = "Vérifier votre connexion internet et réessayer."
-"Home_No_Internet"          = "Pas de connexion internet"
-"Home_Tap_To_Scan_QR"       = "Un QR Code vous sera présenté pour l'enregistrement ou l'authentification. Appuyer sur le button pour ouvrir votre QR scanner."
-"Home_Welcome"              = "Bienvenue sur Super Gluu"
-"Home_Scan"                 = "Scanner le QR Code"
-"Home_Remove_Ads"           = "Retirer les publicités"
-"Home_QR_Not_Recognized"    = "Code QR non reconnu. Veuillez réessayer."
-"Home_Auth_Success"         = "Authentification réussi"
-"Home_Registration_Success" = "Enregistrement réussi"
-"Home_Registration_Failed"  = "L'enregistrement a échoué. Veuillez réessayer."
-"Home_Decline_Failed"       = "Déclin échoué"
-"Home_Authenticating"       = "Authentification en cours ..."
-"Home_Registering"          = "Enregistrement en cours ..."
-"Home_Auth_Failed"          = "Authentification échoué. Veuillez réessayer."
-"Home_Auth_Declined"        = "Authentification refusé"
-"Home_Expired_Push"         = "Votre push notification a expiré"
-
-
-"Subscription_Details" = "Détails de la subscription"
-"Details"              = "Détails "
-"Subscription_Info"    = "L'abonnement mensuel rend Super Gluu totalement sans publicité. Après un achat réussi, vous ne verrez plus de bannières ni d’annonces plein écran. Votre paiement sera débité de votre compte iTunes une fois que vous aurez confirmé votre achat. Votre compte iTunes sera facturé à nouveau lorsque votre abonnement sera automatiquement renouvelé à la fin de votre période d'abonnement en cours, à moins que le renouvellement automatique ne soit désactivé au moins 24 heures avant la fin de la période en cours. Toute portion inutilisée de la période d'essai gratuite sera perdue lors de l'achat de l'abonnement. Vous pouvez gérer ou désactiver le renouvellement automatique dans les paramètres de votre compte Apple ID à tout moment après l'achat."
-
-
-"Menu_Logs"           = "Fichiers de logs"
-"Menu_Keys"           = "Clés"
-"Menu_Passcode"       = "Code"
-"Menu_User_Guide"     = "Guide Utilisateur"
-"Menu_Privacy_Policy" = "Politique de confidentialité"
-"Menu_Settings"       = "Paramètres"
-"Menu_Help"           = "Aide"
-
-
-"Logs_Description" = "A Chaque fois que Super Gluu est utilisé, une transaction es loggué dans votre application."
-
-
-"Passcode_Enabled_Info"   = "Quand activé, l'accès à Super Gluu sera protégé par Touch ID."
-"Passcode_Touch"          = "Touch ID"
-"Passcode_Touch_Security" = "Touch Securité"
-
-
-"Passcode_Set"                 = "Apliquer le code"
-"Passcode_Enter_A_Passcode"    = "Entrer un code"
-"Passcode_Reenter"             = "Entrer à nouveau le code"
-"Passcode_Enter_Passcode"      = "Entrer le Code"
-"Passcode_Enter_Your_Passcode" = "Entrer votre code"
-"Passcode_Change"              = "Changer le code"
-"Passcode_Enter_Old"           = "Entrer votre ancien code"
-"Passcode_Enter_New"           = "Entrer votre nouveau code"
-"Passcode_Reenter_New"         = "Entrer à nouveau votre code"
-"Passcode_Try_Again"           = "Les codes ne correspondent pas. Veuillez réessayer."
-"Passcode_Attempts_Left"       = "Essai(s) restants"
-"Passcode_Next"                = "Suivant"
-
-
-"SSL_Info"  = "Quand activé, Super Gluu fera confiance à tous les serveurs avec certificats auto-signé. Récommandé juste en mode developpement."
-"SSL_Trust" = "Accepter tous les SSL"
-
-
-"Log_Key_Username"    = "Nom d'utilisateur"
-"Log_Key_Created"     = "Crée"
-"Log_Key_Id_Provider" = "Fournisseur de clé"
-"Log_Key_Key_Handle"  = "Clé de gestion"
-
-
-"Keys_Info"       = "Une clé privée unique est génerée et stocké dans votre appareil à chaque fois aue vous sécuriser un nouveau compte avec Super Gluu."
-"Keys_Text_Value" = "Value de la texte:"
-
-
-"Info_Delete_Key"           = "Voulez vous supprimer cette clé?"
-"Info_Change_Name_How_To"   = "Pour changer le nom de la clé, appyez et maintenez pendant 3 secondes. "
-"Info_Change_Name_Question" = "Voulez vous change le nom de ce cette clé."
-"Info_Duplicate_Name"       = "Ce nom est soit vide soit il existe déjà. Veuillez réessayer."
-"Info_Enter_Name"           = "Entrer un nom"
-"Info_Change_Name"          = "Changer le nom de la clé"
-"Info_Enter_New_Name"       = "Entrer un nom pour votre clé:"
-
-
-"Approve"             = "Approuver"
-"Deny"                = "Nier"
-"Permission_Approval" = "Approbation de permission"
-"Approving"           = "Approuvant..."
-"Denying"             = "En cours de refu..."
-
-
-"Info"       = "Info"
-"Yes"        = "Oui"
-"No"         = "Non"
-"Delete"     = "Supprimer"
-"Clear_Log"  = "Effacer le log"
-"Clear_Logs" = "Effacer les logs"
-"Close"      = "Fermer"
-"Cancel"     = "Annuler"
-"Save"       = "Sauvegarder"
-"Oops"       = "Oops!"
-
-
-"Signed_In_To"             = "Signed in to"
-"Auth_Failed_To"           = "L'authentification a échoué"
-"Registered_To"            = "Enregistré à"
-"Registration_Failed_To"   = "L'enregistrement a échoué"
-"Auth_Declined_To"         = "Authentification refusée à"
-"Registration_Declined_To" = "Inscription refusée à"
-"Unknown_Error"            = "Erreur inconnu"
-
-
-"Success!"             = "Réussi!"
-"Missing_Request_Info" = "Information manquante pour la requête."
-
-
-"Unknown_Error_Something" = "Erreur inconnu. Un problème est survenu."
-"Not_Allowed_Payment"     = "Payment non permit"
-"Invalid_Purchase_Id"     = "L'identifiant  de l'achat était invalid."
-"Unallowed_Device"        = "Cet appareil n'est pas permit pour procéder au payment."
-"Unavailable_Product"     = "Le produit n'est pas disponible dans la boutique suivant."
-"Unallowed_Cloud_Access"  = "L'access au service cloud n'est pas permis."
-"No_Network_Connection"   = "Problème de connexion au réseau."
-
-
-"Enable_TouchID"                = "Pour activer TouchID"
-"Identify_Yourself"             = "Identifier vous!"
-"Identify_Verification_Problem" = "Un problème est survenu lors de la vérification de votre identité."
-"Cancel_Pressed"                = "Vous avez appuyé sur supprimer."
-"Password_Pressed"              = "Vous avez appuyé sur password."
-"TouchID_Not_Configured"        = "Il se peut que Touch ID ne sois pas configuré."
-
-
-"2_Attempts_Remaining"    = "Deux éssais restants avant que l'application ne se verouille pendant 10 minutes."
-"Failed_Attempts_Warning" = "L'application sera verouillée pendant 10 minutes."
 
 
 

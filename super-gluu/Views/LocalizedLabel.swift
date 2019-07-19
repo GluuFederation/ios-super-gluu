@@ -9,9 +9,9 @@
 import UIKit
 
 enum LocalString: String {
-//    case Landing_Incorrect_Passcode = "Landing_Incorrect_Passcode"
-//    case Launch_Enter_Passcode  = "Launch_Enter_Passcode"
-//    case Launch_Forgot_Passcode = "Launch_Forgot_Passcode"
+    case Landing_Incorrect_Passcode = "Landing_Incorrect_Passcode"
+    case Launch_Enter_Passcode  = "Launch_Enter_Passcode"
+    case Launch_Forgot_Passcode = "Launch_Forgot_Passcode"
     case Security_Passcode = "Security_Passcode"
     case Security_TouchId  = "Security_TouchId"
     case Home_Check_Internet       = "Home_Check_Internet"
@@ -112,11 +112,11 @@ enum LocalString: String {
     case Failed_Attempts_Warning = "Failed_Attempts_Warning"
     
     var localized: String {
-        return self.rawValue
+        return self.rawValue.localized()
     }
     
     var localizedUppercase: String {
-        return self.rawValue.localizedUppercase
+        return self.rawValue.localized().uppercased()
     }
 }
 

@@ -10,7 +10,6 @@ import UIKit
 import ox_push3
 import QRCodeReader
 import SCLAlertView
-import IAPHelper
 import AVFoundation
 
 
@@ -110,10 +109,12 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
         statusView.layer.cornerRadius = GluuConstants.BUTTON_CORNER_RADIUS
         
         scanButton.layer.cornerRadius = scanButton.bounds.size.height / 2
+        scanButton.setTitle(LocalString.Home_Scan.localized, for: .normal)
         
         statusView.backgroundColor = AppConfiguration.systemColor
         
         welcomeLabel.text = LocalString.Home_Welcome.localized
+        
         scanTextLabel.text = LocalString.Home_Tap_To_Scan_QR.localized
         
     }
@@ -149,6 +150,7 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
         
         let jsonDictionary =  PushNotificationsHelper.parsedInfo(pushNotificationRequest)
         
+        // If the push is expired, clear it out and let the user know
         guard PushNotificationsHelper.isLastPushExpired() == false else {
             UserDefaults.standard.removeObject(forKey: GluuConstants.NotificationRequest)
             NotificationCenter.default.post(name: noti(GluuConstants.NOTIFICATION_PUSH_TIMEOVER), object: jsonDictionary)

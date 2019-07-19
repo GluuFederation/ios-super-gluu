@@ -43,6 +43,7 @@ class LogsTableCell: SWTableViewCell {
     func adoptLog(byState serverURL: URL?, andState logState: LogState) {
         let state: LogState = logState
         
+        // ** Local Text
         switch state {
             case .LOGIN_SUCCESS:
                 logLabel.text = String(format: NSLocalizedString("LoggedIn", comment: "Logged in"), serverURL?.host ?? "")

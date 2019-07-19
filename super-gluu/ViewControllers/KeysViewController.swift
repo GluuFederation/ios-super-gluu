@@ -35,8 +35,8 @@ class KeysViewController: BaseViewController, UITableViewDataSource, UITableView
     }
 
     func setupDisplay() {
-
-        navigationItem.title = "Keys"
+        
+        navigationItem.title = LocalString.Menu_Keys.localized
 
         view.backgroundColor = UIColor.Gluu.tableBackground
 

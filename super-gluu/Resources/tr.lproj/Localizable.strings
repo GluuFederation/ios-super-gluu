@@ -1,144 +1,145 @@
 
 
-"Landing_Incorrect_Passcode" = "Çok fazla parolakodu girişimi. 10 dakika bekleyip tekrar deneyin."
+
+"Landing_Incorrect_Passcode" = "Çok fazla parolakodu girişimi. 10 dakika bekleyip tekrar deneyin.";
 
 
-"Launch_Enter_Passcode"  = "Parolakodu Girin"
-"Launch_Forgot_Passcode" = "Parolakodu’mu Unuttum"
+"Launch_Enter_Passcode"  = "Parolakodu Girin";
+"Launch_Forgot_Passcode" = "Parolakodu’mu Unuttum";
 
 
-"Security_Passcode" = "Parolakodu"
-"Security_TouchId"  = "Dokunmatik Kimlik"
+"Security_Passcode" = "Parolakodu";
+"Security_TouchId"  = "Dokunmatik Kimlik";
 
 
-"Home_Check_Internet"       = "İnternet bağlantınızı kontrol edin ve tekrar deneyin."
-"Home_No_Internet"          = "İnternet bağlantısı yok"
-"Home_Tap_To_Scan_QR"       = "Kayıtlanma veya kimlik doğrulama için size bir QR kodu sunulabilir. QR tarayıcınızı açmak için düğmeye dokunun."
-"Home_Welcome"              = "Super Gluu'ya Hoşgeldiniz!"
-"Home_Scan"                 = "QR kodu tara"
-"Home_Remove_Ads"           = "Reklamları Kaldır"
-"Home_QR_Not_Recognized"    = "QR kodu tanınmadı. Tekrar deneyin."
-"Home_Auth_Success"         = "Kimlik doğrulama başarılı."
-"Home_Registration_Success" = "Kayıtlanma başarılı."
-"Home_Registration_Failed"  = "Kayıtlanma başarısız. Tekrar deneyin."
-"Home_Decline_Failed"       = "Reddetme başarısız"
-"Home_Authenticating"       = "Kimlik doğrulanıyor..."
-"Home_Registering"          = "Kayıt yapılıyor..."
-"Home_Auth_Failed"          = "Kimlik doğrulama başarısız. Tekrar deneyin."
-"Home_Auth_Declined"        = "Kimlik doğrulama reddedildi"
-"Home_Expired_Push"         = "İtme bildiriminizin süresi geçti."
+"Home_Check_Internet"       = "İnternet bağlantınızı kontrol edin ve tekrar deneyin.";
+"Home_No_Internet"          = "İnternet bağlantısı yok";
+"Home_Tap_To_Scan_QR"       = "Kayıtlanma veya kimlik doğrulama için size bir QR kodu sunulabilir. QR tarayıcınızı açmak için düğmeye dokunun.";
+"Home_Welcome"              = "Super Gluu'ya Hoşgeldiniz!";
+"Home_Scan"                 = "QR kodu tara";
+"Home_Remove_Ads"           = "Reklamları Kaldır";
+"Home_QR_Not_Recognized"    = "QR kodu tanınmadı. Tekrar deneyin.";
+"Home_Auth_Success"         = "Kimlik doğrulama başarılı.";
+"Home_Registration_Success" = "Kayıtlanma başarılı.";
+"Home_Registration_Failed"  = "Kayıtlanma başarısız. Tekrar deneyin.";
+"Home_Decline_Failed"       = "Reddetme başarısız";
+"Home_Authenticating"       = "Kimlik doğrulanıyor...";
+"Home_Registering"          = "Kayıt yapılıyor...";
+"Home_Auth_Failed"          = "Kimlik doğrulama başarısız. Tekrar deneyin.";
+"Home_Auth_Declined"        = "Kimlik doğrulama reddedildi";
+"Home_Expired_Push"         = "İtme bildiriminizin süresi geçti.";
 
 
-"Subscription_Details" = "Abonelik Detayları"
-"Details"              = "Detaylar"
-"Subscription_Info"    = "Super Gluu'ya aylık abonelik reklamları tamamen kaldırır. Başarılı satın alma olduğunda, pankart ya da tam ekran reklam görmeyeceksiniz. Satın almayı onayladığınızda ödeme iTunes hesabınıza ücretlendirilecektir. Yürürlükte olan abonelik sürenizin bitiminden 24 saat önce otomatik yenilenmeyi kapatmadığınızda aboneliğinizin süresi dolduğunda otomatik olarak yenilenecek olup iTunes hesabınıza ücretlendirilecektir. Abonelik satın alındığında kullanılmayan ücretsiz deneme süresi yanacaktır. Satın almadan sonra Apple ID Kimlik Hesap ayarlarınızı yönetebilir veya otomatik yenilemeyi kapatabilirsiniz."
+"Subscription_Details" = "Abonelik Detayları";
+"Details"              = "Detaylar";
+"Subscription_Info"    = "Super Gluu'ya aylık abonelik reklamları tamamen kaldırır. Başarılı satın alma olduğunda, pankart ya da tam ekran reklam görmeyeceksiniz. Satın almayı onayladığınızda ödeme iTunes hesabınıza ücretlendirilecektir. Yürürlükte olan abonelik sürenizin bitiminden 24 saat önce otomatik yenilenmeyi kapatmadığınızda aboneliğinizin süresi dolduğunda otomatik olarak yenilenecek olup iTunes hesabınıza ücretlendirilecektir. Abonelik satın alındığında kullanılmayan ücretsiz deneme süresi yanacaktır. Satın almadan sonra Apple ID Kimlik Hesap ayarlarınızı yönetebilir veya otomatik yenilemeyi kapatabilirsiniz.";
 
 
-"Menu_Logs"           = "Kütükler"
-"Menu_Keys"           = "Anahtarlar"
-"Menu_Passcode"       = "Parolakodu"
-"Menu_User_Guide"     = "Kullanıcı Rehberi"
-"Menu_Privacy_Policy" = "Gizlilik Politikası"
-"Menu_Settings"       = "Ayarlar"
-"Menu_Help"           = "Yardım"
+"Menu_Logs"           = "Kütükler";
+"Menu_Keys"           = "Anahtarlar";
+"Menu_Passcode"       = "Parolakodu";
+"Menu_User_Guide"     = "Kullanıcı Rehberi";
+"Menu_Privacy_Policy" = "Gizlilik Politikası";
+"Menu_Settings"       = "Ayarlar";
+"Menu_Help"           = "Yardım";
 
 
-"Logs_Description" = "Super Gluu her kullanıldığında, uygulamanızda bir işlem kütüğü kaydedilir."
+"Logs_Description" = "Super Gluu her kullanıldığında, uygulamanızda bir işlem kütüğü kaydedilir.";
 
 
-"Passcode_Enabled_Info"   = "Etkinleştirilirse, Super Gluu'ya erişim Dokunmatik Kimlik ile korunur."
-"Passcode_Touch"          = "Dokunmatik Kimlik"
-"Passcode_Touch_Security" = "Dokunmatik Güvenlik"
+"Passcode_Enabled_Info"   = "Etkinleştirilirse, Super Gluu'ya erişim Dokunmatik Kimlik ile korunur.";
+"Passcode_Touch"          = "Dokunmatik Kimlik";
+"Passcode_Touch_Security" = "Dokunmatik Güvenlik";
 
 
-"Passcode_Set"                 = "Parloakodu Belirle"
-"Passcode_Enter_A_Passcode"    = "Bir Parolakodu Gir"
-"Passcode_Reenter"             = "Proolakodunuzu tekrar girin"
-"Passcode_Enter_Passcode"      = "Parolakodu Gir"
-"Passcode_Enter_Your_Passcode" = "Parolakodunuzu girin"
-"Passcode_Change"              = "Parolakodu Değiştir"
-"Passcode_Enter_Old"           = "Önceki parolakodunuzu girin"
-"Passcode_Enter_New"           = "Yeni parolakodunuzu girin"
-"Passcode_Reenter_New"         = "Yeni parolakodunuzu tekrar girin"
-"Passcode_Try_Again"           = "Parolakodları eşleşmiyor. Tekrar deneyin."
-"Passcode_Attempts_Left"       = "deneme kaldı."
-"Passcode_Next"                = "Sonraki"
+"Passcode_Set"                 = "Parloakodu Belirle";
+"Passcode_Enter_A_Passcode"    = "Bir Parolakodu Gir";
+"Passcode_Reenter"             = "Proolakodunuzu tekrar girin";
+"Passcode_Enter_Passcode"      = "Parolakodu Gir";
+"Passcode_Enter_Your_Passcode" = "Parolakodunuzu girin";
+"Passcode_Change"              = "Parolakodu Değiştir";
+"Passcode_Enter_Old"           = "Önceki parolakodunuzu girin";
+"Passcode_Enter_New"           = "Yeni parolakodunuzu girin";
+"Passcode_Reenter_New"         = "Yeni parolakodunuzu tekrar girin";
+"Passcode_Try_Again"           = "Parolakodları eşleşmiyor. Tekrar deneyin.";
+"Passcode_Attempts_Left"       = "deneme kaldı.";
+"Passcode_Next"                = "Sonraki";
 
 
-"SSL_Info"  = "Etkinleştirilirse, Super Gluu kendinden imzalı sertifikalı sunuculara güvenir. Sadece geliştirme için önerilir."
-"SSL_Trust" = "Tüm SSL'e Güven"
+"SSL_Info"  = "Etkinleştirilirse, Super Gluu kendinden imzalı sertifikalı sunuculara güvenir. Sadece geliştirme için önerilir.";
+"SSL_Trust" = "Tüm SSL'e Güven";
 
 
-"Log_Key_Username"    = "Kullanıcı Adı"
-"Log_Key_Created"     = "Oluşturuldu"
-"Log_Key_Id_Provider" = "Kimlik Sağlayıcı"
-"Log_Key_Key_Handle"  = "Anahtar Kolu"
+"Log_Key_Username"    = "Kullanıcı Adı";
+"Log_Key_Created"     = "Oluşturuldu";
+"Log_Key_Id_Provider" = "Kimlik Sağlayıcı";
+"Log_Key_Key_Handle"  = "Anahtar Kolu";
 
 
-"Keys_Info"       = "Yeni bir hesabı Super Gluu ile güvenleştirdiğinizde her seferinde yeni bir anahtar oluşturulur ve cihazınızda saklanır."
-"Keys_Text_Value" = "Metin değer:"
+"Keys_Info"       = "Yeni bir hesabı Super Gluu ile güvenleştirdiğinizde her seferinde yeni bir anahtar oluşturulur ve cihazınızda saklanır.";
+"Keys_Text_Value" = "Metin değer:";
 
 
-"Info_Delete_Key"           = "Bu anahtarı silmek istiyor musunuz?"
-"Info_Change_Name_How_To"   = "Bir Anahtarın ismini değiştirmek için, 3 saniye basılı tutun."
-"Info_Change_Name_Question" = "Bu anahtarın görünen ismini değiştirmek istiyor musunuz?"
-"Info_Duplicate_Name"       = "İsim zaten var ya da boş. Tekrar deneyin."
-"Info_Enter_Name"           = "Bir isim girin"
-"Info_Change_Name"          = "Anahtar adını değiştir"
-"Info_Enter_New_Name"       = "Anahtarınız için yeni bir isim girin:"
+"Info_Delete_Key"           = "Bu anahtarı silmek istiyor musunuz?";
+"Info_Change_Name_How_To"   = "Bir Anahtarın ismini değiştirmek için, 3 saniye basılı tutun.";
+"Info_Change_Name_Question" = "Bu anahtarın görünen ismini değiştirmek istiyor musunuz?";
+"Info_Duplicate_Name"       = "İsim zaten var ya da boş. Tekrar deneyin.";
+"Info_Enter_Name"           = "Bir isim girin";
+"Info_Change_Name"          = "Anahtar adını değiştir";
+"Info_Enter_New_Name"       = "Anahtarınız için yeni bir isim girin:";
 
 
-"Approve"             = "Onayla"
-"Deny"                = "Reddet"
-"Permission_Approval" = "İzin Onayı"
-"Approving"           = "Onaylanıyor..."
-"Denying"             = "Reddediliyor..."
+"Approve"             = "Onayla";
+"Deny"                = "Reddet";
+"Permission_Approval" = "İzin Onayı";
+"Approving"           = "Onaylanıyor...";
+"Denying"             = "Reddediliyor...";
 
 
-"Info"       = "Bilgi"
-"Yes"        = "EVET"
-"No"         = "HAYIR"
-"Delete"     = "Sil"
-"Clear_Log"  = "Kütüğü Temizle"
-"Clear_Logs" = "Kütükleri Temizle"
-"Close"      = "Kapat"
-"Cancel"     = "Vazgeç"
-"Save"       = "Kaydet"
-"Oops"       = "Ayy!"
+"Info"       = "Bilgi";
+"Yes"        = "EVET";
+"No"         = "HAYIR";
+"Delete"     = "Sil";
+"Clear_Log"  = "Kütüğü Temizle";
+"Clear_Logs" = "Kütükleri Temizle";
+"Close"      = "Kapat";
+"Cancel"     = "Vazgeç";
+"Save"       = "Kaydet";
+"Oops"       = "Ayy!";
 
 
-"Signed_In_To"             = "İçin oturum açıldı"
-"Auth_Failed_To"           = "İçin kimlik doğrulanma başarısız"
-"Registered_To"            = "İçin kayıtlanıldı"
-"Registration_Failed_To"   = "İçin kayıtlanma başarısız"
-"Auth_Declined_To"         = "İçin kimlik doğrulanma reddedildi"
-"Registration_Declined_To" = "İçin kayıtlanma reddedildi"
-"Unknown_Error"            = "Bilinmeyen hata"
+"Signed_In_To"             = "İçin oturum açıldı";
+"Auth_Failed_To"           = "İçin kimlik doğrulanma başarısız";
+"Registered_To"            = "İçin kayıtlanıldı";
+"Registration_Failed_To"   = "İçin kayıtlanma başarısız";
+"Auth_Declined_To"         = "İçin kimlik doğrulanma reddedildi";
+"Registration_Declined_To" = "İçin kayıtlanma reddedildi";
+"Unknown_Error"            = "Bilinmeyen hata";
 
 
-"Success!"             = "Başarılı!"
-"Missing_Request_Info" = "İstek bilgisi eksik"
+"Success!"             = "Başarılı!";
+"Missing_Request_Info" = "İstek bilgisi eksik";
 
 
-"Unknown_Error_Something" = "Bilinmeyen hata. Birşeyler yanlış gitti."
-"Not_Allowed_Payment"     = "Ödeme yapmaya izin verilmedi."
-"Invalid_Purchase_Id"     = "Satın alma tanımlayıcısı geçersiz."
-"Unallowed_Device"        = "Bu cihazın ödeme yapmasına izin verilmedi."
-"Unavailable_Product"     = "Ürün, geçerli mağazada mevcut değil."
-"Unallowed_Cloud_Access"  = "Bulut hizmeti bilgilerine erişime izin verilmiyor."
-"No_Network_Connection"   = "Ağa bağlanılamıyor."
+"Unknown_Error_Something" = "Bilinmeyen hata. Birşeyler yanlış gitti.";
+"Not_Allowed_Payment"     = "Ödeme yapmaya izin verilmedi.";
+"Invalid_Purchase_Id"     = "Satın alma tanımlayıcısı geçersiz.";
+"Unallowed_Device"        = "Bu cihazın ödeme yapmasına izin verilmedi.";
+"Unavailable_Product"     = "Ürün, geçerli mağazada mevcut değil.";
+"Unallowed_Cloud_Access"  = "Bulut hizmeti bilgilerine erişime izin verilmiyor.";
+"No_Network_Connection"   = "Ağa bağlanılamıyor.";
 
 
-"Enable_TouchID"                = "Dokunmatik Kimliği etkinleştirmek için"
-"Identify_Yourself"             = "Kendinizi tanıtın!"
-"Identify_Verification_Problem" = "Kimliğinizin doğrulanmasında bir hata vardı."
-"Cancel_Pressed"                = "Vazgeçe bastırdınız."
-"Password_Pressed"              = "Parolaya bastırdınız."
-"TouchID_Not_Configured"        = "Dokunmatik Kimlik yeniden yapılandırılamayabilir"
+"Enable_TouchID"                = "Dokunmatik Kimliği etkinleştirmek için";
+"Identify_Yourself"             = "Kendinizi tanıtın!";
+"Identify_Verification_Problem" = "Kimliğinizin doğrulanmasında bir hata vardı.";
+"Cancel_Pressed"                = "Vazgeçe bastırdınız.";
+"Password_Pressed"              = "Parolaya bastırdınız.";
+"TouchID_Not_Configured"        = "Dokunmatik Kimlik yeniden yapılandırılamayabilir";
 
 
-"2_Attempts_Remaining"    = "Uygulamanın 10 dakikalığına kilitlenmesinden önce 2 girişim daha."
-"Failed_Attempts_Warning" = "Bu kadar çok başarısız girişimden sonra uygulama 10 dakikalığına kilitlenecektir."
+"2_Attempts_Remaining"    = "Uygulamanın 10 dakikalığına kilitlenmesinden önce 2 girişim daha.";
+"Failed_Attempts_Warning" = "Bu kadar çok başarısız girişimden sonra uygulama 10 dakikalığına kilitlenecektir.";
 
 
 

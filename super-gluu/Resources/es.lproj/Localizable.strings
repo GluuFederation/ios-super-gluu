@@ -1,169 +1,145 @@
-/* 
-  Localizable.strings
-  oxPush2-IOS
-
-  Created by Nazar Yavornytskyy on 2/2/16.
-  Copyright © 2016 Nazar Yavornytskyy. All rights reserved.
-*/
-
-"AppName" = "oxPush2-ios";
-"AppNameTitle" = "oxPush2";
-
     // Landing
-"Landing_Incorrect_Passcode" = "Demasiados intentos erróneos. Espere 10 minutos e intente de nuevo."
+"Landing_Incorrect_Passcode" = "Demasiados intentos erróneos. Espere 10 minutos e intente de nuevo.";
 
 
-    // Launch Setup
-"Launch_Enter_Passcode"  = "Ingrese el código"
-"Launch_Forgot_Passcode" = "¿Olvidó su código?"
+    // Launch Setup;
+"Launch_Enter_Passcode"  = "Ingrese el código";
+"Launch_Forgot_Passcode" = "¿Olvidó su código?";
 
 
-    // Security Prompt
-"Security_Passcode" = "Código"
-"Security_TouchId"  = "TouchID"
+    // Security Prompt;
+"Security_Passcode" = "Código";
+"Security_TouchId"  = "TouchID";
 
 
-// Home
-"Home_Check_Internet"       = "Verifique su conexión a Internet e intente de nuevo."
-"Home_No_Internet"          = "Sin conexión a Internet"
-"Home_Tap_To_Scan_QR"       = "Puede aparecer un código QR para registrarse o autenticarse. Presione el botón para abrir el lector de códigos QR."
-"Home_Welcome"              = "Bienvenido a Super Gluu!"
-"Home_Scan"                 = "Escanee el código QR"
-"Home_Remove_Ads"           = "Quitar la publicidad"
-"Home_QR_Not_Recognized"    = "No se reconoce el código QR. Intente de nuevo."
-"Home_Auth_Success"         = "Autenticación exitosa."
-"Home_Registration_Success" = "Registro exitoso."
-"Home_Registration_Failed"  = "El registro falló. Intente de nuevo."
-"Home_Decline_Failed"       = "El rechazo falló"
-"Home_Authenticating"       = "Autenticando..."
-"Home_Registering"          = "Registrando..."
-"Home_Auth_Failed"          = "Autenticación fallida. Intente de nuevo."
-"Home_Auth_Declined"        = "Autenticación rechazada"
-"Home_Expired_Push"         = "Su notificación ha expirado"
+    // Home;
+"Home_Check_Internet"       = "Verifique su conexión a Internet e intente de nuevo.";
+"Home_No_Internet"          = "Sin conexión a Internet";
+"Home_Tap_To_Scan_QR"       = "Puede aparecer un código QR para registrarse o autenticarse. Presione el botón para abrir el lector de códigos QR.";
+"Home_Welcome"              = "Bienvenido a Super Gluu!";
+"Home_Scan"                 = "Escanee el código QR";
+"Home_Remove_Ads"           = "Quitar la publicidad";
+"Home_QR_Not_Recognized"    = "No se reconoce el código QR. Intente de nuevo.";
+"Home_Auth_Success"         = "Autenticación exitosa.";
+"Home_Registration_Success" = "Registro exitoso.";
+"Home_Registration_Failed"  = "El registro falló. Intente de nuevo.";
+"Home_Decline_Failed"       = "El rechazo falló";
+"Home_Authenticating"       = "Autenticando...";
+"Home_Registering"          = "Registrando...";
+"Home_Auth_Failed"          = "Autenticación fallida. Intente de nuevo.";
+"Home_Auth_Declined"        = "Autenticación rechazada";
+"Home_Expired_Push"         = "Su notificación ha expirado";
 
 
-// Subscription Details
-"Subscription_Details" = "Detalles de la suscripcion"
-"Details"              = "Detalles"
-"Subscription_Info"    = "La suscripción mensual hace que Super Gluu no contenga ninguna publicidad. Luego de una compra exitosa, ya no verá más anuncios publicitarios en forma de banners o pantalla completa. El valor del pago será acreditado a su cuenta de iTunes cuando confirme su compra. Su cuenta de iTunes será acreditada de nuevo cuando la suscripción se renueve automáticamente al finalizar su periodo actual de suscripción, a menos que la autorenovación esté desactivada 24 horas antes de la finalización del periodo actual. Cualquier porción no utilizada del periodo de prueba gratuito se perderá cuando compre la suscripción. Usted puede administrar o desactivar la renovación automática a través de las configuraciones de su cuenta de Apple ID en cualquier momento luego de la compra."
+    // Subscription Details;
+"Subscription_Details" = "Detalles de la suscripcion";
+"Details"              = "Detalles";
+"Subscription_Info"    = "La suscripción mensual hace que Super Gluu no contenga ninguna publicidad. Luego de una compra exitosa, ya no verá más anuncios publicitarios en forma de banners o pantalla completa. El valor del pago será acreditado a su cuenta de iTunes cuando confirme su compra. Su cuenta de iTunes será acreditada de nuevo cuando la suscripción se renueve automáticamente al finalizar su periodo actual de suscripción, a menos que la autorenovación esté desactivada 24 horas antes de la finalización del periodo actual. Cualquier porción no utilizada del periodo de prueba gratuito se perderá cuando compre la suscripción. Usted puede administrar o desactivar la renovación automática a través de las configuraciones de su cuenta de Apple ID en cualquier momento luego de la compra.";
 
 
-// Menu
-"Menu_Logs"           = "Registro de actividad"
-"Menu_Keys"           = "Claves"
-"Menu_Passcode"       = "Código"
-"Menu_User_Guide"     = "Guía de usuario"
-"Menu_Privacy_Policy" = "Política de privacidad"
-"Menu_Settings"       = "Configuraciones"
-"Menu_Help"           = "Ayuda"
+    // Menu
+"Menu_Logs"           = "Registro de actividad";
+"Menu_Keys"           = "Claves";
+"Menu_Passcode"       = "Código";
+"Menu_User_Guide"     = "Guía de usuario";
+"Menu_Privacy_Policy" = "Política de privacidad";
+"Menu_Settings"       = "Configuraciones";
+"Menu_Help"           = "Ayuda";
 
+    // Logs;
+"Logs_Description" = "Cada vez que usa Super Gluu se almacena una entrada en el registro de actividad de la app.";
 
-// Logs
-"Logs_Description" = "Cada vez que usa Super Gluu se almacena una entrada en el registro de actividad de la app."
+    // Passcode;
+"Passcode_Enabled_Info"   = "Al habilitarse, el acceso a Super Gluu será protegido por Touch ID.";
+"Passcode_Touch"          = "Touch ID";
+"Passcode_Touch_Security" = "Seguridad táctil";
 
+    // PAPasscodeVC;
+"Passcode_Set"                 = "Asignar código de acceso";
+"Passcode_Enter_A_Passcode"    = "Ingrese un código";
+"Passcode_Reenter"             = "Re-ingrese el código";
+"Passcode_Enter_Passcode"      = "Ingrese el código";
+"Passcode_Enter_Your_Passcode" = "Ingrese su código";
+"Passcode_Change"              = "Cambiar código";
+"Passcode_Enter_Old"           = "Ingrese su código anterior";
+"Passcode_Enter_New"           = "Ingrese su código nuevo";
+"Passcode_Reenter_New"         = "Re-ingrese su código nuevo";
+"Passcode_Try_Again"           = "Los códigos no coinciden. Intente de nuevo.";
+"Passcode_Attempts_Left"       = "intentos quedan";
+"Passcode_Next"                = "Siguiente";
 
-// Passcode
-"Passcode_Enabled_Info"   = "Al habilitarse, el acceso a Super Gluu será protegido por Touch ID."
-"Passcode_Touch"          = "Touch ID"
-"Passcode_Touch_Security" = "Seguridad táctil"
+    // SSL;
+"SSL_Info"  = "Al habilitarse, Super Gluu confiará en servidores con certificados auto firmados. Recomendado para desarrollo únicamente.";
+"SSL_Trust" = "Confiar en todo SSL";
 
+    // Log/Key;
+"Log_Key_Username"    = "Nombre de usuario";
+"Log_Key_Created"     = "Creado";
+"Log_Key_Id_Provider" = "ID del proveedor";
+"Log_Key_Key_Handle"  = "Controlador de clave";
 
-// PAPasscodeVC
-"Passcode_Set"                 = "Asignar código de acceso"
-"Passcode_Enter_A_Passcode"    = "Ingrese un código"
-"Passcode_Reenter"             = "Re-ingrese el código"
-"Passcode_Enter_Passcode"      = "Ingrese el código"
-"Passcode_Enter_Your_Passcode" = "Ingrese su código"
-"Passcode_Change"              = "Cambiar código"
-"Passcode_Enter_Old"           = "Ingrese su código anterior"
-"Passcode_Enter_New"           = "Ingrese su código nuevo"
-"Passcode_Reenter_New"         = "Re-ingrese su código nuevo"
-"Passcode_Try_Again"           = "Los códigos no coinciden. Intente de nuevo."
-"Passcode_Attempts_Left"       = "intentos quedan"
-"Passcode_Next"                = "Siguiente"
+    // Keys;
+"Keys_Info"       = "Una clave privada se genera y almacena en su dispositivo cada vez que asegura una nueva cuenta con Super Gluu.";
+"Keys_Text_Value" = "Valor textual:";
 
-    // SSL
-"SSL_Info"  = "Al habilitarse, Super Gluu confiará en servidores con certificados auto firmados. Recomendado para desarrollo únicamente."
-"SSL_Trust" = "Confiar en todo SSL"
+    // InformationVC;
+"Info_Delete_Key"           = "¿Desea borrar esta clave?";
+"Info_Change_Name_How_To"   = "Para cambiar el nombre de la clave, presione sobre ella por 3 segundos";
+"Info_Change_Name_Question" = "¿Quiere cambiar el nombre asociado a esta clave?";
+"Info_Duplicate_Name"       = "El nombre está vacío o ya existe. Intente de nuevo.";
+"Info_Enter_Name"           = "Ingrese un nombre";
+"Info_Change_Name"          = "Cambiar nombre de la clave";
+"Info_Enter_New_Name"       = "Ingrese un nombre nuevo para su clave:";
 
+    // Approve/Deny;
+"Approve"             = "Aprobar";
+"Deny"                = "Rechazar";
+"Permission_Approval" = "Aprobación de permiso";
+"Approving"           = "Aprobando...";
+"Denying"             = "Rechazando...";
 
-    // Log/Key
-"Log_Key_Username"    = "Nombre de usuario"
-"Log_Key_Created"     = "Creado"
-"Log_Key_Id_Provider" = "ID del proveedor"
-"Log_Key_Key_Handle"  = "Controlador de clave"
+    // Alert Constants;
+"Info"       = "Info";
+"Yes"        = "SI";
+"No"         = "NO";
+"Delete"     = "Borrar";
+"Clear_Log"  = "Limpiar registro de actividad";
+"Clear_Logs" = "Limpiar registros de actividad";
+"Close"      = "Cerrar";
+"Cancel"     = "Cancelar";
+"Save"       = "Guardar";
+"Oops"       = "Oops!";
 
+    // Status Messages;
+"Signed_In_To"             = "Ha ingresado a";
+"Auth_Failed_To"           = "Fallo al autenticarse a";
+"Registered_To"            = "Registrado para";
+"Registration_Failed_To"   = "Falló el registro para";
+"Auth_Declined_To"         = "Autenticación rechazada para";
+"Registration_Declined_To" = "Registro rechazado para";
+"Unknown_Error"            = "Error desconocido";
 
-    // Keys
-"Keys_Info"       = "Una clave privada se genera y almacena en su dispositivo cada vez que asegura una nueva cuenta con Super Gluu."
-"Keys_Text_Value" = "Valor textual:"
+    // Auth Helper;
+"Success!"             = "Éxito!";
+"Missing_Request_Info" = "Faltan datos en la solicitud";
 
+    // Purchase Handler;
+"Unknown_Error_Something" = "Error desconocido. Algo falló.";
+"Not_Allowed_Payment"     = "Pago no está permitido.";
+"Invalid_Purchase_Id"     = "El identificador de la compra fue inválido.";
+"Unallowed_Device"        = "El dispositivo no está permitido para pagar.";
+"Unavailable_Product"     = "El producto no está disponible en la tienda actualmente.";
+"Unallowed_Cloud_Access"  = "Acceso no permitido a la información en la nube.";
+"No_Network_Connection"   = "No se pudo conectar a la red.";
 
-    // InformationVC
-"Info_Delete_Key"           = "¿Desea borrar esta clave?"
-"Info_Change_Name_How_To"   = "Para cambiar el nombre de la clave, presione sobre ella por 3 segundos"
-"Info_Change_Name_Question" = "¿Quiere cambiar el nombre asociado a esta clave?"
-"Info_Duplicate_Name"       = "El nombre está vacío o ya existe. Intente de nuevo."
-"Info_Enter_Name"           = "Ingrese un nombre"
-"Info_Change_Name"          = "Cambiar nombre de la clave"
-"Info_Enter_New_Name"       = "Ingrese un nombre nuevo para su clave:"
+    // Touch Id;
+"Enable_TouchID"                = "Para habilitar TouchID";
+"Identify_Yourself"             = "Identifíquese!";
+"Identify_Verification_Problem" = "Hubo un problema verificando su identidad.";
+"Cancel_Pressed"                = "Usted presionó cancelar.";
+"Password_Pressed"              = "Usted presionó contraseña.";
+"TouchID_Not_Configured"        = "Touch ID puede no estar configurado";
 
-
-    // Approve/Deny
-"Approve"             = "Aprobar"
-"Deny"                = "Rechazar"
-"Permission_Approval" = "Aprobación de permiso"
-"Approving"           = "Aprobando..."
-"Denying"             = "Rechazando..."
-
-
-    // Alert Constants
-"Info"       = "Info"
-"Yes"        = "SI"
-"No"         = "NO"
-"Delete"     = "Borrar"
-"Clear_Log"  = "Limpiar registro de actividad"
-"Clear_Logs" = "Limpiar registros de actividad"
-"Close"      = "Cerrar"
-"Cancel"     = "Cancelar"
-"Save"       = "Guardar"
-"Oops"       = "Oops!"
-
-
-    // Status Messages
-"Signed_In_To"             = "Ha ingresado a"
-"Auth_Failed_To"           = "Fallo al autenticarse a"
-"Registered_To"            = "Registrado para"
-"Registration_Failed_To"   = "Falló el registro para"
-"Auth_Declined_To"         = "Autenticación rechazada para"
-"Registration_Declined_To" = "Registro rechazado para"
-"Unknown_Error"            = "Error desconocido"
-
-
-    // Auth Helper
-"Success!"             = "Éxito!"
-"Missing_Request_Info" = "Faltan datos en la solicitud"
-
-
-    // Purchase Handler
-"Unknown_Error_Something" = "Error desconocido. Algo falló."
-"Not_Allowed_Payment"     = "Pago no está permitido."
-"Invalid_Purchase_Id"     = "El identificador de la compra fue inválido."
-"Unallowed_Device"        = "El dispositivo no está permitido para pagar."
-"Unavailable_Product"     = "El producto no está disponible en la tienda actualmente."
-"Unallowed_Cloud_Access"  = "Acceso no permitido a la información en la nube."
-"No_Network_Connection"   = "No se pudo conectar a la red."
-
-
-    // Touch Id
-"Enable_TouchID"                = "Para habilitar TouchID"
-"Identify_Yourself"             = "Identifíquese!"
-"Identify_Verification_Problem" = "Hubo un problema verificando su identidad."
-"Cancel_Pressed"                = "Usted presionó cancelar."
-"Password_Pressed"              = "Usted presionó contraseña."
-"TouchID_Not_Configured"        = "Touch ID puede no estar configurado"
-
-
-    // PinCodeSettingsTableVC
-"2_Attempts_Remaining"    = "2 intentos más antes que la app se bloquee por 10 minutos"
-"Failed_Attempts_Warning" = "La app se bloquará por 10 minutos luego de estos intentos fallidos"
+    // PinCodeSettingsTableVC;
+"2_Attempts_Remaining"    = "2 intentos más antes que la app se bloquee por 10 minutos";
+"Failed_Attempts_Warning" = "La app se bloquará por 10 minutos luego de estos intentos fallidos";

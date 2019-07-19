@@ -1,144 +1,144 @@
 
 
-"Landing_Incorrect_Passcode" = "ਬਹੁਤ ਸਾਰੀਆਂ ਗ਼ਲਤ ਪਾਸਕੋਡ ਕੋਸ਼ਿਸ਼ਾਂ।  10 ਮਿੰਟ ਉਡੀਕ ਕਰੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
+"Landing_Incorrect_Passcode" = "ਬਹੁਤ ਸਾਰੀਆਂ ਗ਼ਲਤ ਪਾਸਕੋਡ ਕੋਸ਼ਿਸ਼ਾਂ।  10 ਮਿੰਟ ਉਡੀਕ ਕਰੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।";
 
 
-"Launch_Enter_Passcode"  = "ਪਾਸਕੋਡ ਭਰੋ"
-"Launch_Forgot_Passcode" = "ਪਾਸਕੋਡ ਭੁੱਲ ਗਏ"
+"Launch_Enter_Passcode"  = "ਪਾਸਕੋਡ ਭਰੋ";
+"Launch_Forgot_Passcode" = "ਪਾਸਕੋਡ ਭੁੱਲ ਗਏ";
 
 
-"Security_Passcode" = "ਪਾਸਕੋਡ"
-"Security_TouchId"  = "ਟਚ ਆਈਡੀ"
+"Security_Passcode" = "ਪਾਸਕੋਡ";
+"Security_TouchId"  = "ਟਚ ਆਈਡੀ";
 
 
-"Home_Check_Internet"       = "ਆਪਣੇ ਇੰਟਰਨੈਟ ਕਨੈਕਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ."
-"Home_No_Internet"          = "ਕੋਈ ਇੰਟਰਨੈਟ ਕਨੈਕਸ਼ਨ ਨਹੀਂ"
-"Home_Tap_To_Scan_QR"       = "ਰਜਿਸਟਰੇਸ਼ਨ ਜਾਂ ਪ੍ਰਮਾਣਿਕਤਾ ਲਈ ਤੁਹਾਨੂੰ ਇੱਕ QR ਕੋਡ ਦੇ ਨਾਲ ਪੇਸ਼ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ. ਆਪਣਾ QR ਸਕੈਨਰ ਖੋਲ੍ਹਣ ਲਈ ਬਟਨ ਤੇ ਟੈਪ ਕਰੋ"
-"Home_Welcome"              = "ਸੁਪਰ ਗਲੂ ਸੁਆਗਤ ਹੈ!"
-"Home_Scan"                 = "QR ਕੋਡ ਨੂੰ ਸਕੈਨ ਕਰੋ"
-"Home_Remove_Ads"           = "Ads ਹਟਾਉ"
-"Home_QR_Not_Recognized"    = "QR ਕੋਡ ਵੈਧ ਨਹੀਂ ਹੈ. ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ."
-"Home_Auth_Success"         = "ਪ੍ਰਮਾਣੀਕਰਨ ਸਫਲ"
-"Home_Registration_Success" = "ਰਜਿਸਟਰੇਸ਼ਨ ਸਫਲ"
-"Home_Registration_Failed"  = "ਰਜਿਸਟਰੇਸ਼ਨ ਅਸਫਲ. ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ."
-"Home_Decline_Failed"       = "ਰੱਦ ਕੀਤਾ"
-"Home_Authenticating"       = "ਪ੍ਰਮਾਣਿਤ ਕਰ ਰਿਹਾ ਹੈ..."
-"Home_Registering"          = "ਰਜਿਸਟਰੇਸ਼ਨ ਜਾਰੀ ਹੈ..."
-"Home_Auth_Failed"          = "ਪ੍ਰਮਾਣੀਕਰਨ ਅਸਫਲ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ."
-"Home_Auth_Declined"        = "ਪ੍ਰਮਾਣੀਕਰਨ ਅਸਵੀਕਾਰ ਕੀਤਾ"
-"Home_Expired_Push"         = "ਤੁਹਾਡੀ ਪੁਸ਼ ਸੂਚਨਾ ਦੀ ਮਿਆਦ ਪੁੱਗ ਗਈ ਹੈ"
+"Home_Check_Internet"       = "ਆਪਣੇ ਇੰਟਰਨੈਟ ਕਨੈਕਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.";
+"Home_No_Internet"          = "ਕੋਈ ਇੰਟਰਨੈਟ ਕਨੈਕਸ਼ਨ ਨਹੀਂ";
+"Home_Tap_To_Scan_QR"       = "ਰਜਿਸਟਰੇਸ਼ਨ ਜਾਂ ਪ੍ਰਮਾਣਿਕਤਾ ਲਈ ਤੁਹਾਨੂੰ ਇੱਕ QR ਕੋਡ ਦੇ ਨਾਲ ਪੇਸ਼ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ. ਆਪਣਾ QR ਸਕੈਨਰ ਖੋਲ੍ਹਣ ਲਈ ਬਟਨ ਤੇ ਟੈਪ ਕਰੋ";
+"Home_Welcome"              = "ਸੁਪਰ ਗਲੂ ਸੁਆਗਤ ਹੈ!";
+"Home_Scan"                 = "QR ਕੋਡ ਨੂੰ ਸਕੈਨ ਕਰੋ";
+"Home_Remove_Ads"           = "Ads ਹਟਾਉ";
+"Home_QR_Not_Recognized"    = "QR ਕੋਡ ਵੈਧ ਨਹੀਂ ਹੈ. ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.";
+"Home_Auth_Success"         = "ਪ੍ਰਮਾਣੀਕਰਨ ਸਫਲ";
+"Home_Registration_Success" = "ਰਜਿਸਟਰੇਸ਼ਨ ਸਫਲ";
+"Home_Registration_Failed"  = "ਰਜਿਸਟਰੇਸ਼ਨ ਅਸਫਲ. ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.";
+"Home_Decline_Failed"       = "ਰੱਦ ਕੀਤਾ";
+"Home_Authenticating"       = "ਪ੍ਰਮਾਣਿਤ ਕਰ ਰਿਹਾ ਹੈ...";
+"Home_Registering"          = "ਰਜਿਸਟਰੇਸ਼ਨ ਜਾਰੀ ਹੈ...";
+"Home_Auth_Failed"          = "ਪ੍ਰਮਾਣੀਕਰਨ ਅਸਫਲ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.";
+"Home_Auth_Declined"        = "ਪ੍ਰਮਾਣੀਕਰਨ ਅਸਵੀਕਾਰ ਕੀਤਾ";
+"Home_Expired_Push"         = "ਤੁਹਾਡੀ ਪੁਸ਼ ਸੂਚਨਾ ਦੀ ਮਿਆਦ ਪੁੱਗ ਗਈ ਹੈ";
 
 
-"Subscription_Details" = "ਗਾਹਕੀ ਵੇਰਵੇ"
-"Details"              = "ਵੇਰਵੇ"
-"Subscription_Info"    = "ਮਹੀਨਾਵਾਰ ਗਾਹਕੀ ਸੁਪਰ ਗਲੂ  ਨੂੰ ਪੂਰੀ ਤਰ੍ਹਾਂ ਵਿਗਿਆਪਨ-ਮੁਕਤ ਬਣਾਉਂਦਾ ਹੈ।  ਸਫਲ ਖਰੀਦ ਤੋਂ ਬਾਅਦ, ਤੁਸੀਂ ਹੁਣ ਬੈਨਰ ਵਿਗਿਆਪਨ ਜਾਂ ਪੂਰੀ ਸਕ੍ਰੀਨ ਵਿਗਿਆਪਨ ਨਹੀਂ ਦੇਖ ਸਕੋਗੇ।  ਆਪਣੀ ਖਰੀਦ ਦੀ ਪੁਸ਼ਟੀ ਕਰਨ ਤੋਂ ਬਾਅਦ, ਤੁਹਾਡੇ ਭੁਗਤਾਨ ਨੂੰ ਤੁਹਾਡੇ iTunes ਖਾਤੇ ਤੋਂ ਚਾਰਜ ਕੀਤਾ ਜਾਵੇਗਾ।  ਜਦੋਂ ਤੁਹਾਡੀ ਸੁਬਸਕ੍ਰਿਪਸ਼ਨ  ਤੁਹਾਡੀ ਵਰਤਮਾਨ ਗਾਹਕੀ ਅਵਧੀ ਦੀ ਮਿਆਦ ਦੇ ਅੰਤ 'ਤੇ ਸਵੈਚਲ ਰੂਪ ਵਿੱਚ ਨਵਿਆਇਆ ਜਾਦੀ ਹੈ, ਤਾਂ ਤੁਹਾਡੇ iTunes ਖਾਤੇ ਨੂੰ ਮੁੜ ਚਾਰਜ ਕੀਤਾ ਜਾਵੇਗਾ, ਜਦੋਂ ਤੱਕ ਆਟੋ-ਰੀਨਿਊਅਲ ਚਾਲੂ ਮਿਆਦ ਦੇ ਸਮਾਪਤ ਹੋਣ ਤੋਂ ਘੱਟੋ-ਘੱਟ 24 ਘੰਟੇ ਬੰਦ ਨਹੀਂ ਹੁੰਦਾ।  ਮੁਫਤ ਅਜ਼ਮਾਇਸ਼ ਦੇ ਕਿਸੇ ਵੀ ਵਰਤੇ ਹਿੱਸੇ ਨੂੰ ਖਰੀਦਦਾਰੀ ਲਈ ਜ਼ਬਤ ਕੀਤਾ ਜਾਵੇਗਾ। ਤੁਸੀਂ ਖਰੀਦ ਤੋਂ ਬਾਅਦ ਕਿਸੇ ਵੀ ਸਮੇਂ ਆਪਣੇ ਐਪਲ ID ਖਾਤੇ ਦੀਆਂ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਆਟੋ-ਨਵਿਆਉਣ ਜਾਂ ਬੰਦ ਕਰ ਸਕਦੇ ਹੋ। "
+"Subscription_Details" = "ਗਾਹਕੀ ਵੇਰਵੇ";
+"Details"              = "ਵੇਰਵੇ";
+"Subscription_Info"    = "ਮਹੀਨਾਵਾਰ ਗਾਹਕੀ ਸੁਪਰ ਗਲੂ  ਨੂੰ ਪੂਰੀ ਤਰ੍ਹਾਂ ਵਿਗਿਆਪਨ-ਮੁਕਤ ਬਣਾਉਂਦਾ ਹੈ।  ਸਫਲ ਖਰੀਦ ਤੋਂ ਬਾਅਦ, ਤੁਸੀਂ ਹੁਣ ਬੈਨਰ ਵਿਗਿਆਪਨ ਜਾਂ ਪੂਰੀ ਸਕ੍ਰੀਨ ਵਿਗਿਆਪਨ ਨਹੀਂ ਦੇਖ ਸਕੋਗੇ।  ਆਪਣੀ ਖਰੀਦ ਦੀ ਪੁਸ਼ਟੀ ਕਰਨ ਤੋਂ ਬਾਅਦ, ਤੁਹਾਡੇ ਭੁਗਤਾਨ ਨੂੰ ਤੁਹਾਡੇ iTunes ਖਾਤੇ ਤੋਂ ਚਾਰਜ ਕੀਤਾ ਜਾਵੇਗਾ।  ਜਦੋਂ ਤੁਹਾਡੀ ਸੁਬਸਕ੍ਰਿਪਸ਼ਨ  ਤੁਹਾਡੀ ਵਰਤਮਾਨ ਗਾਹਕੀ ਅਵਧੀ ਦੀ ਮਿਆਦ ਦੇ ਅੰਤ 'ਤੇ ਸਵੈਚਲ ਰੂਪ ਵਿੱਚ ਨਵਿਆਇਆ ਜਾਦੀ ਹੈ, ਤਾਂ ਤੁਹਾਡੇ iTunes ਖਾਤੇ ਨੂੰ ਮੁੜ ਚਾਰਜ ਕੀਤਾ ਜਾਵੇਗਾ, ਜਦੋਂ ਤੱਕ ਆਟੋ-ਰੀਨਿਊਅਲ ਚਾਲੂ ਮਿਆਦ ਦੇ ਸਮਾਪਤ ਹੋਣ ਤੋਂ ਘੱਟੋ-ਘੱਟ 24 ਘੰਟੇ ਬੰਦ ਨਹੀਂ ਹੁੰਦਾ।  ਮੁਫਤ ਅਜ਼ਮਾਇਸ਼ ਦੇ ਕਿਸੇ ਵੀ ਵਰਤੇ ਹਿੱਸੇ ਨੂੰ ਖਰੀਦਦਾਰੀ ਲਈ ਜ਼ਬਤ ਕੀਤਾ ਜਾਵੇਗਾ। ਤੁਸੀਂ ਖਰੀਦ ਤੋਂ ਬਾਅਦ ਕਿਸੇ ਵੀ ਸਮੇਂ ਆਪਣੇ ਐਪਲ ID ਖਾਤੇ ਦੀਆਂ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਆਟੋ-ਨਵਿਆਉਣ ਜਾਂ ਬੰਦ ਕਰ ਸਕਦੇ ਹੋ। ";
 
 
-"Menu_Logs"           = "ਲਾਗ"
-"Menu_Keys"           = "ਕੁੰਜੀਆਂ"
-"Menu_Passcode"       = "ਪਾਸਕੋਡ"
-"Menu_User_Guide"     = "ਯੂਜ਼ਰ ਗਾਈਡ"
-"Menu_Privacy_Policy" = "ਗੋਪਨੀਯਤਾ ਨੀਤੀ"
-"Menu_Settings"       = "ਸੈਟਿੰਗਾਂ"
-"Menu_Help"           = "ਮੱਦਦ"
+"Menu_Logs"           = "ਲਾਗ";
+"Menu_Keys"           = "ਕੁੰਜੀਆਂ";
+"Menu_Passcode"       = "ਪਾਸਕੋਡ";
+"Menu_User_Guide"     = "ਯੂਜ਼ਰ ਗਾਈਡ";
+"Menu_Privacy_Policy" = "ਗੋਪਨੀਯਤਾ ਨੀਤੀ";
+"Menu_Settings"       = "ਸੈਟਿੰਗਾਂ";
+"Menu_Help"           = "ਮੱਦਦ";
 
 
-"Logs_Description" = "ਹਰ ਵਾਰ ਸੁਪਰ ਗਲੂ ਦੀ ਵਰਤੋਂ ਕੀਤੀ ਜਾਂਦੀ ਹੈ, ਤੁਹਾਡੇ ਐੱਪ ਵਿਚ ਟ੍ਰਾਂਜੈਕਸ਼ਨ ਲਾਗ ਦਰਜ ਕੀਤੀ ਜਾਂਦੀ ਹੈ। "
+"Logs_Description" = "ਹਰ ਵਾਰ ਸੁਪਰ ਗਲੂ ਦੀ ਵਰਤੋਂ ਕੀਤੀ ਜਾਂਦੀ ਹੈ, ਤੁਹਾਡੇ ਐੱਪ ਵਿਚ ਟ੍ਰਾਂਜੈਕਸ਼ਨ ਲਾਗ ਦਰਜ ਕੀਤੀ ਜਾਂਦੀ ਹੈ। ";
 
 
-"Passcode_Enabled_Info"   = "ਹਰ ਵਾਰ ਸੁਪਰ ਗਲੂ ਦੀ ਵਰਤੋਂ ਕੀਤੀ ਜਾਂਦੀ ਹੈ, ਤੁਹਾਡੇ ਐੱਪ ਵਿਚ ਟ੍ਰਾਂਜੈਕਸ਼ਨ ਲਾਗ ਦਰਜ ਕੀਤੀ ਜਾਂਦੀ ਹੈ। "
-"Passcode_Touch"          = "ਟਚ ਆਈਡੀ"
-"Passcode_Touch_Security" = "ਟਚ ਸੁਰੱਖਿਆ"
+"Passcode_Enabled_Info"   = "ਹਰ ਵਾਰ ਸੁਪਰ ਗਲੂ ਦੀ ਵਰਤੋਂ ਕੀਤੀ ਜਾਂਦੀ ਹੈ, ਤੁਹਾਡੇ ਐੱਪ ਵਿਚ ਟ੍ਰਾਂਜੈਕਸ਼ਨ ਲਾਗ ਦਰਜ ਕੀਤੀ ਜਾਂਦੀ ਹੈ। ";
+"Passcode_Touch"          = "ਟਚ ਆਈਡੀ";
+"Passcode_Touch_Security" = "ਟਚ ਸੁਰੱਖਿਆ";
 
 
-"Passcode_Set"                 = "ਪਾਸਕੋਡ ਸੈੱਟ ਕਰੋ"
-"Passcode_Enter_A_Passcode"    = "ਪਾਸਕੋਡ ਸੈੱਟ ਕਰੋ"
-"Passcode_Reenter"             = "ਪਾਸਕੋਡ ਮੁੜ ਦਾਖਲ ਕਰੋ"
-"Passcode_Enter_Passcode"      = "ਪਾਸਕੋਡ ਭਰੋ"
-"Passcode_Enter_Your_Passcode" = "ਆਪਣਾ ਪਾਸਕੋਡ ਭਰੋ"
-"Passcode_Change"              = "ਪਾਸਕੋਡ ਬਦਲੋ"
-"Passcode_Enter_Old"           = "ਆਪਣਾ ਪੁਰਾਣਾ ਪਾਸਕੋਡ ਦਰਜ ਕਰੋ"
-"Passcode_Enter_New"           = "ਆਪਣਾ ਨਵਾਂ ਪਾਸਕੋਡ ਦਰਜ ਕਰੋ"
-"Passcode_Reenter_New"         = "ਆਪਣਾ ਨਵਾਂ ਪਾਸਕੋਡ ਮੁੜ ਦਾਖਲ ਕਰੋ"
-"Passcode_Try_Again"           = "ਪਾਸਕੋਡਸ ਮੇਲ ਨਹੀਂ ਖਾਂਦੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ."
-"Passcode_Attempts_Left"       = "ਬਾਕੀ ਬਚੇ ਯਤਨ"
-"Passcode_Next"                = "ਆਗਾਮੀ"
+"Passcode_Set"                 = "ਪਾਸਕੋਡ ਸੈੱਟ ਕਰੋ";
+"Passcode_Enter_A_Passcode"    = "ਪਾਸਕੋਡ ਸੈੱਟ ਕਰੋ";
+"Passcode_Reenter"             = "ਪਾਸਕੋਡ ਮੁੜ ਦਾਖਲ ਕਰੋ";
+"Passcode_Enter_Passcode"      = "ਪਾਸਕੋਡ ਭਰੋ";
+"Passcode_Enter_Your_Passcode" = "ਆਪਣਾ ਪਾਸਕੋਡ ਭਰੋ";
+"Passcode_Change"              = "ਪਾਸਕੋਡ ਬਦਲੋ";
+"Passcode_Enter_Old"           = "ਆਪਣਾ ਪੁਰਾਣਾ ਪਾਸਕੋਡ ਦਰਜ ਕਰੋ";
+"Passcode_Enter_New"           = "ਆਪਣਾ ਨਵਾਂ ਪਾਸਕੋਡ ਦਰਜ ਕਰੋ";
+"Passcode_Reenter_New"         = "ਆਪਣਾ ਨਵਾਂ ਪਾਸਕੋਡ ਮੁੜ ਦਾਖਲ ਕਰੋ";
+"Passcode_Try_Again"           = "ਪਾਸਕੋਡਸ ਮੇਲ ਨਹੀਂ ਖਾਂਦੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ.";
+"Passcode_Attempts_Left"       = "ਬਾਕੀ ਬਚੇ ਯਤਨ";
+"Passcode_Next"                = "ਆਗਾਮੀ";
 
 
-"SSL_Info"  = "ਇਸ ਨੂੰ ਯੋਗ ਕਰਨ, ਸੁਪਰ ਗਲੂ ਸਵੈ-ਹਸਤਾਖਰ ਕੀਤੇ ਸਰਟੀਫਿਕੇਟ ਨੂੰ ਸਰਵਰ 'ਤੇ ਭਰੋਸਾ ਕਰੇਗਾ।  ਸਿਰਫ ਵਿਕਾਸ ਲਈ ਸਿਫਾਰਸ਼ ਕੀਤੀ ਗਈ। "
-"SSL_Trust" = "ਸਾਰੇ SSL ਤੇ ਭਰੋਸਾ ਕਰੋ"
+"SSL_Info"  = "ਇਸ ਨੂੰ ਯੋਗ ਕਰਨ, ਸੁਪਰ ਗਲੂ ਸਵੈ-ਹਸਤਾਖਰ ਕੀਤੇ ਸਰਟੀਫਿਕੇਟ ਨੂੰ ਸਰਵਰ 'ਤੇ ਭਰੋਸਾ ਕਰੇਗਾ।  ਸਿਰਫ ਵਿਕਾਸ ਲਈ ਸਿਫਾਰਸ਼ ਕੀਤੀ ਗਈ। ";
+"SSL_Trust" = "ਸਾਰੇ SSL ਤੇ ਭਰੋਸਾ ਕਰੋ";
 
 
-"Log_Key_Username"    = "ਯੂਜ਼ਰ ਨਾਮ"
-"Log_Key_Created"     = "ਬਣਾਇਆ ਗਿਆ"
-"Log_Key_Id_Provider" = "ਆਈਡੀ ਪ੍ਰਦਾਤਾ"
-"Log_Key_Key_Handle"  = "ਕੁੰਜੀ ਹੈਂਡਲ"
+"Log_Key_Username"    = "ਯੂਜ਼ਰ ਨਾਮ";
+"Log_Key_Created"     = "ਬਣਾਇਆ ਗਿਆ";
+"Log_Key_Id_Provider" = "ਆਈਡੀ ਪ੍ਰਦਾਤਾ";
+"Log_Key_Key_Handle"  = "ਕੁੰਜੀ ਹੈਂਡਲ";
 
 
-"Keys_Info"       = "ਜਦੋਂ ਵੀ ਤੁਸੀਂ ਸੁਪਰ ਗਲੂ ਨਾਲ ਇੱਕ ਨਵਾਂ ਖਾਤਾ ਸੁਰੱਖਿਅਤ ਕਰਦੇ ਹੋ, ਹਰ ਵਾਰ ਇੱਕ ਵਿਲੱਖਣ ਪ੍ਰਾਈਵੇਟ ਕੁੰਜੀ ਤੁਹਾਡੇ ਡਿਵਾਈਸ ਉੱਤੇ ਬਣਾਈ ਅਤੇ ਸਟੋਰ ਕੀਤੀ ਜਾਂਦੀ ਹੈ। "
-"Keys_Text_Value" = "ਪਾਠ ਮੁੱਲ:"
+"Keys_Info"       = "ਜਦੋਂ ਵੀ ਤੁਸੀਂ ਸੁਪਰ ਗਲੂ ਨਾਲ ਇੱਕ ਨਵਾਂ ਖਾਤਾ ਸੁਰੱਖਿਅਤ ਕਰਦੇ ਹੋ, ਹਰ ਵਾਰ ਇੱਕ ਵਿਲੱਖਣ ਪ੍ਰਾਈਵੇਟ ਕੁੰਜੀ ਤੁਹਾਡੇ ਡਿਵਾਈਸ ਉੱਤੇ ਬਣਾਈ ਅਤੇ ਸਟੋਰ ਕੀਤੀ ਜਾਂਦੀ ਹੈ। ";
+"Keys_Text_Value" = "ਪਾਠ ਮੁੱਲ:";
 
 
-"Info_Delete_Key"           = "ਕੀ ਤੁਸੀਂ ਇਹ ਕੁੰਜੀ ਹਟਾਉਣੀ ਚਾਹੁੰਦੇ ਹੋ?"
-"Info_Change_Name_How_To"   = "ਕੁੰਜੀ ਦਾ ਨਾਂ ਬਦਲਣ ਲਈ, ਇਸਨੂੰ 3 ਸੈਕਿੰਡ ਲਈ ਰੱਖੋ। "
-"Info_Change_Name_Question" = "ਕੀ ਤੁਸੀਂ ਇਸ ਕੁੰਜੀ ਦਾ ਡਿਸਪਲੇ ਨਾਮ ਬਦਲਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
-"Info_Duplicate_Name"       = "ਨਾਮ ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ ਜਾਂ ਖਾਲੀ ਹੈ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ। "
-"Info_Enter_Name"           = "ਨਾਮ ਦਰਜ ਕਰੋ"
-"Info_Change_Name"          = "ਕੁੰਜੀ ਦਾ ਨਾਂ ਬਦਲੋ"
-"Info_Enter_New_Name"       = "ਆਪਣੀ ਕੁੰਜੀ ਲਈ ਨਵਾਂ ਨਾਂ ਦਿਓ:"
+"Info_Delete_Key"           = "ਕੀ ਤੁਸੀਂ ਇਹ ਕੁੰਜੀ ਹਟਾਉਣੀ ਚਾਹੁੰਦੇ ਹੋ?";
+"Info_Change_Name_How_To"   = "ਕੁੰਜੀ ਦਾ ਨਾਂ ਬਦਲਣ ਲਈ, ਇਸਨੂੰ 3 ਸੈਕਿੰਡ ਲਈ ਰੱਖੋ। ";
+"Info_Change_Name_Question" = "ਕੀ ਤੁਸੀਂ ਇਸ ਕੁੰਜੀ ਦਾ ਡਿਸਪਲੇ ਨਾਮ ਬਦਲਣਾ ਚਾਹੁੰਦੇ ਹੋ?";
+"Info_Duplicate_Name"       = "ਨਾਮ ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ ਜਾਂ ਖਾਲੀ ਹੈ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ। ";
+"Info_Enter_Name"           = "ਨਾਮ ਦਰਜ ਕਰੋ";
+"Info_Change_Name"          = "ਕੁੰਜੀ ਦਾ ਨਾਂ ਬਦਲੋ";
+"Info_Enter_New_Name"       = "ਆਪਣੀ ਕੁੰਜੀ ਲਈ ਨਵਾਂ ਨਾਂ ਦਿਓ:";
 
 
-"Approve"             = "ਸਵੀਕਾਰ ਕਰੋ"
-"Deny"                = "ਮਨਾਂ ਕਰੋ "
-"Permission_Approval" = "ਅਧਿਕਾਰ ਮਨਜ਼ੂਰੀ"
-"Approving"           = "ਪ੍ਰਵਾਨਗੀ ਦਿੱਤੀ ਜਾ ਰਹੀ ਹੈ..."
-"Denying"             = "ਰੱਦ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ..."
+"Approve"             = "ਸਵੀਕਾਰ ਕਰੋ";
+"Deny"                = "ਮਨਾਂ ਕਰੋ ";
+"Permission_Approval" = "ਅਧਿਕਾਰ ਮਨਜ਼ੂਰੀ";
+"Approving"           = "ਪ੍ਰਵਾਨਗੀ ਦਿੱਤੀ ਜਾ ਰਹੀ ਹੈ...";
+"Denying"             = "ਰੱਦ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ...";
 
 
-"Info"       = "ਜਾਣਕਾਰੀ"
-"Yes"        = "ਹਾਂ "
-"No"         = "ਨਹੀਂ "
-"Delete"     = "ਹਟਾਓ"
-"Clear_Log"  = "ਲੋਗ ਖਾਲੀ ਕਰੋ "
-"Clear_Logs" = "ਲੋਗ ਖਾਲੀ ਕਰੋ "
-"Close"      = "ਬੰਦ ਕਰੋ"
-"Cancel"     = "ਰੱਦ ਕਰੋ"
-"Save"       = "ਸੇਵ ਕਰੋ"
-"Oops"       = "ਓਹ ਹੋ"
+"Info"       = "ਜਾਣਕਾਰੀ";
+"Yes"        = "ਹਾਂ ";
+"No"         = "ਨਹੀਂ ";
+"Delete"     = "ਹਟਾਓ";
+"Clear_Log"  = "ਲੋਗ ਖਾਲੀ ਕਰੋ ";
+"Clear_Logs" = "ਲੋਗ ਖਾਲੀ ਕਰੋ ";
+"Close"      = "ਬੰਦ ਕਰੋ";
+"Cancel"     = "ਰੱਦ ਕਰੋ";
+"Save"       = "ਸੇਵ ਕਰੋ";
+"Oops"       = "ਓਹ ਹੋ";
 
 
-"Signed_In_To"             = "ਸਾਈਨ ਇਨ ਕੀਤਾ"
-"Auth_Failed_To"           = "ਪ੍ਰਮਾਣਿਕਤਾ ਅਸਫਲ"
-"Registered_To"            = "ਰਜਿਸਟਰਡ"
-"Registration_Failed_To"   = "ਰਜਿਸਟਰੇਸ਼ਨ ਅਸਫਲ"
-"Auth_Declined_To"         = "ਪ੍ਰਮਾਣਿਤ ਕਰਨ ਤੋਂ ਇਨਕਾਰ"
-"Registration_Declined_To" = "ਰਜਿਸਟਰ ਕਰਨ ਤੋਂ ਇਨਕਾਰ ਕੀਤਾ"
-"Unknown_Error"            = "ਅਣਜਾਣੀ ਗਲਤੀ"
+"Signed_In_To"             = "ਸਾਈਨ ਇਨ ਕੀਤਾ";
+"Auth_Failed_To"           = "ਪ੍ਰਮਾਣਿਕਤਾ ਅਸਫਲ";
+"Registered_To"            = "ਰਜਿਸਟਰਡ";
+"Registration_Failed_To"   = "ਰਜਿਸਟਰੇਸ਼ਨ ਅਸਫਲ";
+"Auth_Declined_To"         = "ਪ੍ਰਮਾਣਿਤ ਕਰਨ ਤੋਂ ਇਨਕਾਰ";
+"Registration_Declined_To" = "ਰਜਿਸਟਰ ਕਰਨ ਤੋਂ ਇਨਕਾਰ ਕੀਤਾ";
+"Unknown_Error"            = "ਅਣਜਾਣੀ ਗਲਤੀ";
 
 
-"Success!"             = "ਸਫਲਤਾ!"
-"Missing_Request_Info" = "ਬੇਨਤੀ ਜਾਣਕਾਰੀ ਦੀ ਗੈਰਹਾਜ਼ਰੀ"
+"Success!"             = "ਸਫਲਤਾ!";
+"Missing_Request_Info" = "ਬੇਨਤੀ ਜਾਣਕਾਰੀ ਦੀ ਗੈਰਹਾਜ਼ਰੀ";
 
 
-"Unknown_Error_Something" = "ਅਣਜਾਣੀ ਗਲਤੀ। ਕੁਝ ਗ਼ਲਤ ਹੋਇਆ ਸੀ। "
-"Not_Allowed_Payment"     = "ਭੁਗਤਾਨ ਦੀ ਆਗਿਆ ਨਹੀਂ ਹੈ। "
-"Invalid_Purchase_Id"     = "ਖਰੀਦਦਾਰੀ ਪਛਾਣਕਰਤਾ ਅਵੈਧ ਸੀ। "
-"Unallowed_Device"        = "ਇਸ ਡਿਵਾਈਸ ਨੂੰ ਭੁਗਤਾਨ ਕਰਨ ਦੀ ਆਗਿਆ ਨਹੀਂ ਹੈ। "
-"Unavailable_Product"     = "ਇਹ ਉਤਪਾਦ ਮੌਜੂਦਾ ਸਟੋਰਫਰੰਟ ਵਿੱਚ ਉਪਲਬਧ ਨਹੀਂ ਹੈ। "
-"Unallowed_Cloud_Access"  = "ਕਲਾਉਡ ਸੇਵਾ ਜਾਣਕਾਰੀ ਤੱਕ ਪਹੁੰਚ ਦੀ ਆਗਿਆ ਨਹੀਂ ਹੈ। "
-"No_Network_Connection"   = "ਨੈਟਵਰਕ ਨਾਲ ਕਨੈਕਟ ਨਹੀਂ ਕਰ ਸਕਿਆ। "
+"Unknown_Error_Something" = "ਅਣਜਾਣੀ ਗਲਤੀ। ਕੁਝ ਗ਼ਲਤ ਹੋਇਆ ਸੀ। ";
+"Not_Allowed_Payment"     = "ਭੁਗਤਾਨ ਦੀ ਆਗਿਆ ਨਹੀਂ ਹੈ। ";
+"Invalid_Purchase_Id"     = "ਖਰੀਦਦਾਰੀ ਪਛਾਣਕਰਤਾ ਅਵੈਧ ਸੀ। ";
+"Unallowed_Device"        = "ਇਸ ਡਿਵਾਈਸ ਨੂੰ ਭੁਗਤਾਨ ਕਰਨ ਦੀ ਆਗਿਆ ਨਹੀਂ ਹੈ। ";
+"Unavailable_Product"     = "ਇਹ ਉਤਪਾਦ ਮੌਜੂਦਾ ਸਟੋਰਫਰੰਟ ਵਿੱਚ ਉਪਲਬਧ ਨਹੀਂ ਹੈ। ";
+"Unallowed_Cloud_Access"  = "ਕਲਾਉਡ ਸੇਵਾ ਜਾਣਕਾਰੀ ਤੱਕ ਪਹੁੰਚ ਦੀ ਆਗਿਆ ਨਹੀਂ ਹੈ। ";
+"No_Network_Connection"   = "ਨੈਟਵਰਕ ਨਾਲ ਕਨੈਕਟ ਨਹੀਂ ਕਰ ਸਕਿਆ। ";
 
 
-"Enable_TouchID"                = "ਟਚ ਆਈਡੀ ਨੂੰ ਸਮਰੱਥ ਬਣਾਉਣ ਲਈ"
-"Identify_Yourself"             = "ਆਪਣੀ ਪਛਾਣ ਦੱਸੋ!"
-"Identify_Verification_Problem" = "ਤੁਹਾਡੀ ਪਛਾਣ ਦੀ ਤਸਦੀਕ ਕਰਨ ਵਿੱਚ ਕੋਈ ਸਮੱਸਿਆ ਸੀ। "
-"Cancel_Pressed"                = "ਤੁਸੀਂ ਰੱਦ ਕੀਤਾ।"
-"Password_Pressed"              = "ਤੁਸੀਂ ਪਾਸਵਰਡ ਨੂੰ ਦੱਬਿਆ।"
-"TouchID_Not_Configured"        = "ਟਚ ID ਸੰਰਚਿਤ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ"
+"Enable_TouchID"                = "ਟਚ ਆਈਡੀ ਨੂੰ ਸਮਰੱਥ ਬਣਾਉਣ ਲਈ";
+"Identify_Yourself"             = "ਆਪਣੀ ਪਛਾਣ ਦੱਸੋ!";
+"Identify_Verification_Problem" = "ਤੁਹਾਡੀ ਪਛਾਣ ਦੀ ਤਸਦੀਕ ਕਰਨ ਵਿੱਚ ਕੋਈ ਸਮੱਸਿਆ ਸੀ। ";
+"Cancel_Pressed"                = "ਤੁਸੀਂ ਰੱਦ ਕੀਤਾ।";
+"Password_Pressed"              = "ਤੁਸੀਂ ਪਾਸਵਰਡ ਨੂੰ ਦੱਬਿਆ।";
+"TouchID_Not_Configured"        = "ਟਚ ID ਸੰਰਚਿਤ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ";
 
 
-"2_Attempts_Remaining"    = "10 ਮਿੰਟ ਲਈ ਐਪ ਲਾਕ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ 2 ਹੋਰ ਕੋਸ਼ਿਸ਼ਾਂ"
-"Failed_Attempts_Warning" = "ਅਜਿਹੇ ਅਸਫਲ ਕੋਸ਼ਿਸ਼ਾਂ ਦੇ ਬਾਅਦ, ਐਪ ਨੂੰ 10 ਮਿੰਟ ਲਈ ਬੰਦ ਕਰ ਦਿੱਤਾ ਜਾਵੇਗਾ"
+"2_Attempts_Remaining"    = "10 ਮਿੰਟ ਲਈ ਐਪ ਲਾਕ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ 2 ਹੋਰ ਕੋਸ਼ਿਸ਼ਾਂ";
+"Failed_Attempts_Warning" = "ਅਜਿਹੇ ਅਸਫਲ ਕੋਸ਼ਿਸ਼ਾਂ ਦੇ ਬਾਅਦ, ਐਪ ਨੂੰ 10 ਮਿੰਟ ਲਈ ਬੰਦ ਕਰ ਦਿੱਤਾ ਜਾਵੇਗਾ";
 
 
 

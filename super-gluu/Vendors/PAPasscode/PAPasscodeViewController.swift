@@ -117,6 +117,20 @@ class PAPasscodeViewController: UIViewController, UITextFieldDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(PAPasscodeViewController.keyboardWillShow(_:)), name: .UIKeyboardWillChangeFrame, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(PAPasscodeViewController.keyboardWillHide(_:)), name: .UIKeyboardWillHide, object: nil)
         
+//        switch action {
+//        case .set:
+//            title = LocalString.Passcode_Set.localized
+//            enterPrompt = LocalString.Passcode_Enter_A_Passcode.localized
+//            confirmPrompt = LocalString.Passcode_Reenter.localized
+//        case .enter:
+//            title = LocalString.Passcode_Enter_A_Passcode.localized
+//            enterPrompt = LocalString.Passcode_Enter_Your_Passcode.localized
+//        case .change:
+//            title = LocalString.Passcode_Change.localized
+//            changePrompt = LocalString.Passcode_Enter_Old.localized
+//            enterPrompt = LocalString.Passcode_Enter_New.localized
+//            confirmPrompt = LocalString.Passcode_Reenter_New.localized
+//        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

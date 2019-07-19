@@ -14,6 +14,14 @@ enum WebDisplay: String {
     case privacy = "Privacy Policy"
     case tos = "Terms of Service"
     
+    // ** Local Text TOS
+    var localized: String {
+        switch self {
+        case .privacy: return LocalString.Menu_Privacy_Policy.localized
+        case .tos: return ""
+        }
+    }
+    
     var urlString: String {
         switch self {
         case .privacy:
@@ -37,7 +45,7 @@ class WebViewController: UIViewController {
         
         setupDisplay()
         
-        title = display.rawValue
+        title = display.localized
         
         webView.load(URLRequest(url: URL(string: display.urlString)!))
         
@@ -46,7 +54,7 @@ class WebViewController: UIViewController {
     // MARK: - View Setup
     
     func setupDisplay() {
-    
+        
         view.addSubview(webView)
         
         webView.translatesAutoresizingMaskIntoConstraints = false

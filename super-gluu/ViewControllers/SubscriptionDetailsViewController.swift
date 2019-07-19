@@ -46,6 +46,7 @@ class SubscriptionDetailsViewController: UIViewController {
         
         titleL.text = LocalString.Details.localized
         
+        // ** Local Text ( Check out line breaks here)
         descL.text = LocalString.Subscription_Info.localized //"The monthly subscription makes Super Gluu totally ad-free. After successfully purchasing you will not see banners ads or full screen ads.\n\nYour payment will be charged to your iTunes Account once you confirm your purchase.\n\nYour iTunes account will be charged again when your subscription automatically renews at the end of your current subscription period unless auto-renew is turned off at least 24 hours prior to end of the current period.\n\nAny unused portion of the free trial period will be forfeited when subscription is purchased. You can manage or turn off auto-renew in your Apple ID Account Settings any time after purchase."
         
         purchaseButton.backgroundColor = AppConfiguration.systemColor
