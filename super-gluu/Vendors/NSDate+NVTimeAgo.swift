@@ -228,9 +228,9 @@ extension Date {
 
         //Handle Plural
         if minutesSince == 1 {
-            return "1 minute ago"
+            return "1m ago"
         } else {
-            return "\(minutesSince) minutes ago"
+            return "\(minutesSince)m ago"
         }
     }
 
@@ -241,9 +241,9 @@ extension Date {
 
         //Handle Plural
         if hoursSince == 1 {
-            return "1 hour ago"
+            return "1h ago"
         } else {
-            return "\(hoursSince) hours ago"
+            return "\(hoursSince)h ago"
         }
     }
 
