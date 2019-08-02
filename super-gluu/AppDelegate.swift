@@ -253,6 +253,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+     //
     func handleAuthenticationRequest(_ isAction: Bool) {
 
         if pushNotificationRequest == nil {

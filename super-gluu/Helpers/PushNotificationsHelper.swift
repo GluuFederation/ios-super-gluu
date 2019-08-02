@@ -9,6 +9,7 @@
 import UIKit
 
 class PushNotificationsHelper: NSObject {
+    
 
     class func isLastPushExpired() -> Bool {
         
