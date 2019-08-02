@@ -8,10 +8,13 @@
 
 import UIKit
 
-class PushNotificationsHelper: NSObject {
+class PushHelper: NSObject {
     
-
-    class func isLastPushExpired() -> Bool {
+    static let shared = PushHelper()
+    
+    var lastPush: PushNoti?
+    
+    func isLastPushExpired() -> Bool {
         
         let pushReceivedDate = UserDefaults.standard.object(forKey: GluuConstants.PUSH_CAME_DATE) as? Date
         
@@ -21,6 +24,7 @@ class PushNotificationsHelper: NSObject {
         
         let currentDate = Date()
         var distanceBetweenDates: TimeInterval? = nil
+        
         if let aDate = pushReceivedDate {
             distanceBetweenDates = currentDate.timeIntervalSince(aDate)
         }
@@ -28,11 +32,11 @@ class PushNotificationsHelper: NSObject {
         
         UserDefaults.standard.removeObject(forKey: GluuConstants.PUSH_CAME_DATE)
         
-        return seconds > GluuConstants.WAITING_TIME
+        return seconds > GluuConstants.PUSH_EXPIRY
         
     }
     
-    class func parsedInfo(_ pushInfo: [AnyHashable : Any]?) -> [AnyHashable : Any]? {
+    func parsedInfo(_ pushInfo: [AnyHashable : Any]?) -> [AnyHashable : Any]? {
         
         guard
             let pushInfo = pushInfo,
@@ -60,3 +64,26 @@ class PushNotificationsHelper: NSObject {
     }
 }
 
+
+struct PushNoti {
+    var date: NSDate?
+    var userInfo: [AnyHashable : Any]?
+    var action: PushAction?
+}
+
+
+enum PushAction {
+    case approve
+    case decline
+    case none
+}
+
+/*
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+*/

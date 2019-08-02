@@ -191,7 +191,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return
         }
 
-        let parsedPushDict =  PushNotificationsHelper.parsedInfo(pushInfo)
+        let parsedPushDict =  PushHelper.shared.parsedInfo(pushInfo)
 
         if parsedPushDict != nil {
             NotificationCenter.default.post(name: Notification.Name(GluuConstants.NOTIFICATION_PUSH_ONLINE), object: parsedPushDict)
@@ -260,7 +260,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return
         }
 
-        let jsonDictionary =  PushNotificationsHelper.parsedInfo(pushNotificationRequest!)
+        let jsonDictionary =  PushHelper.shared.parsedInfo(pushNotificationRequest!)
 
         if  PushNotificationsHelper.isLastPushExpired() == false {
 

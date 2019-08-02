@@ -97,7 +97,7 @@ struct GluuConstants {
     static let MAX_PASSCODE_ATTEMPTS_COUNT = 5
     static let LOCKOUT_DURATION: TimeInterval = 10*60
     
-    static let WAITING_TIME: TimeInterval = 40
+    static let PUSH_EXPIRY: TimeInterval = 40
     
     static let CORNER_RADIUS: CGFloat = 8.0
     static let BUTTON_CORNER_RADIUS: CGFloat = 5.0

@@ -155,10 +155,10 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
             return
         }
         
-        let jsonDictionary =  PushNotificationsHelper.parsedInfo(pushNotificationRequest)
+        let jsonDictionary =  PushHelper.shared.parsedInfo(pushNotificationRequest)
         
         // If the push is expired, clear it out and let the user know
-        guard PushNotificationsHelper.isLastPushExpired() == false else {
+        guard PushHelper.shared.isLastPushExpired() == false else {
             UserDefaults.standard.removeObject(forKey: GluuConstants.NotificationRequest)
             NotificationCenter.default.post(name: noti(GluuConstants.NOTIFICATION_PUSH_TIMEOVER), object: jsonDictionary)
             return
