@@ -28,6 +28,25 @@ extension UIViewController {
         
     }
     
+    func add(_ child: UIViewController) {
+        addChildViewController(child)
+        view.addSubview(child.view)
+        child.didMove(toParentViewController: self)
+    }
+        
+    func remove() {
+        // Just to be safe, we check that this view controller
+        // is actually added to a parent before removing it.
+        guard parent != nil else {
+            return
+        }
+        
+        willMove(toParentViewController: nil)
+        view.removeFromSuperview()
+        removeFromParentViewController()
+    }
+    
+    
     /*
      Convenience method for delaying a block from executing
      */

@@ -12,20 +12,6 @@ import SCLAlertView
 import ox_push3
 
 
-/*
-#include <ifaddrs.h>
-#include <arpa/inet.h>
-#import <CoreTelephony/CTTelephonyNetworkInfo.h>
-#import <CoreTelephony/CTCarrier.h>
-
-#import <CFNetwork/CFNetwork.h>
-#import "NSString+URLEncode.h"
-
-#import "OXPushManager.h"
-#import "AFHTTPRequestOperationManager.h"
-#import "DataStoreManager.h"
- */
-
 let moveUpY = 70
 let LANDSCAPE_Y = 290
 let LANDSCAPE_Y_IPHONE_5 = 245
@@ -34,8 +20,9 @@ let START_TIME = 40
 class ApproveDenyViewController: UIViewController {
     
     @IBOutlet var approveDenyContainerView: UIView!
-    @IBOutlet var approveRequest: UIButton!
-    @IBOutlet var denyRequest: UIButton!
+    @IBOutlet var circularProgressBar: CircularProgressBar!
+    @IBOutlet var approveButton: UIButton!
+    @IBOutlet var denyButton: UIButton!
     //Info
     @IBOutlet var serverNameLabel: UILabel!
     @IBOutlet var serverUrlLabel: UILabel!
@@ -45,8 +32,6 @@ class ApproveDenyViewController: UIViewController {
     @IBOutlet var createdTimeLabel: UILabel!
     @IBOutlet var createdDateLabel: UILabel!
     @IBOutlet var typeLabel: UILabel!
-    @IBOutlet var logoImageView: UIImageView!
-    @IBOutlet var separators: [UIView]!
     @IBOutlet var titleLabels: [UILabel]!
     
     
@@ -56,44 +41,35 @@ class ApproveDenyViewController: UIViewController {
     var isLandScape = false
     var timer: Timer?
     var time: Int = 0
-    var timerLabel: UILabel?
     
     private var alertView: SCLAlertView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        initLocalization()
         updateInfo()
-
-        if !isLogDisplay {
-            initAndStartTimer()
-        } else {
-            // showing info about a specific log
-            let sel: Selector = #selector(ApproveDenyViewController.showDeleteLogAlert)
-            let trashButton = UIBarButtonItem(image: UIImage(named: "icon_nav_trash"), style: .plain, target: self, action: sel)
-            navigationItem.rightBarButtonItem = trashButton
-        }
 
         setupDisplay()
 
         let tap = UITapGestureRecognizer(target: self, action: #selector(ApproveDenyViewController.openURL(_:)))
         serverUrlLabel.isUserInteractionEnabled = true
         serverUrlLabel.addGestureRecognizer(tap)
+        
     }
+    
     
     func setupDisplay() {
         
-        separators.forEach({ $0.backgroundColor = UIColor.Gluu.separator })
-        titleLabels.forEach({ $0.textColor = UIColor.black })        
+        titleLabels.forEach({ $0.textColor = UIColor.black })
         
         cityNameLabel.textColor = UIColor.Gluu.lightGreyText
         createdDateLabel.textColor = UIColor.Gluu.lightGreyText
         
-        approveRequest.setTitle(LocalString.Approve.localized, for: .normal)
+        approveButton.setTitle(LocalString.Approve.localized, for: .normal)
         
-        denyRequest.setTitle(LocalString.Deny.localized, for: .normal)
+        denyButton.setTitle(LocalString.Deny.localized, for: .normal)
         
+        serverUrlLabel.textColor = UIColor.Gluu.green
     }
     
     @objc func openURL(_ tap: UITapGestureRecognizer?) {
@@ -102,52 +78,6 @@ class ApproveDenyViewController: UIViewController {
         if let anURL = targetURL {
             UIApplication.shared.open(anURL, options: [:])
         }
-    }
-
-    func initAndStartTimer() {
-
-        // Add countdown timer label to right side of navbar
-
-        timerLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 60, height: 24))
-        timerLabel?.numberOfLines = 1
-        timerLabel?.backgroundColor = UIColor.clear
-        timerLabel?.textColor = UIColor.white
-        timerLabel?.textAlignment = .right
-        
-        let timerBBI = UIBarButtonItem(customView: timerLabel!)
-
-        navigationItem.rightBarButtonItem = timerBBI
-
-        timerLabel?.text = String(format: "%i", START_TIME)
-        time = START_TIME
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ApproveDenyViewController.updateTime), userInfo: nil, repeats: true)
-
-    }
-
-    @objc func updateTime() {
-        time -= 1
-        timerLabel?.text = String(format: "%i", time)
-        
-        if time == 20 {
-            timerLabel?.textColor = UIColor.yellow
-        }
-        
-        if time == 10 {
-            timerLabel?.textColor = UIColor.red
-        }
-        
-        if time == 0 {
-            denyTapped()
-        }
-
-    }
-
-    func initLocalization() {
-        //    [approveRequest setTitle:NSLocalizedString(@"Approve", @"Approve") forState:UIControlStateNormal];
-        //    [denyRequest setTitle:NSLocalizedString(@"Deny", @"Deny") forState:UIControlStateNormal];
-        
-        
-//        titleLabel.text = NSLocalizedString("PressApprove", comment: "To continue, press Approve")
     }
 
     func updateInfo() {
@@ -167,9 +97,14 @@ class ApproveDenyViewController: UIViewController {
             serverNameLabel.text = "Gluu Server \(serverURL?.host ?? "")"
         }
         
+        // created format
+        // "2019-07-25 20:28:46 +0000"
         if info!.created != nil {
             createdTimeLabel.text = info!.created.getTime()
             createdDateLabel.text = info!.created.getDate()
+            
+            let createdAt = info!.created.getNSDate()
+            
         }
         
         if info!.locationIP != nil {
@@ -182,38 +117,16 @@ class ApproveDenyViewController: UIViewController {
         }
         typeLabel.text = info!.authenticationType
 
-        if isLogDisplay {
-            approveDenyContainerView.isHidden = true
-            
-            switch info!.logState {
-            case .LOGIN_FAILED, .ENROLL_FAILED, .ENROLL_DECLINED, .LOGIN_DECLINED, .UNKNOWN_ERROR:
-                logoImageView.image = AppConfiguration.systemLogRedIcon
-                
-            default: break
-            }
-            
-        } else {
-            navigationItem.hidesBackButton = true
+        navigationItem.hidesBackButton = true
 
-            title = LocalString.Permission_Approval.localized
-
-//            navigationView.hidden = true
-        }
+        title = LocalString.Permission_Approval.localized
         
-        moveUpViews()
+        circularProgressBar.setProgress(to: 1, withAnimation: true)
+        circularProgressBar.timeExpired = {
+            
+        }
     }
 
-    func moveUpViews() {
-        /*
-        let moveUpPosition: Int = titleLabel.center.y - timerView.center.y
-        mainInfoView.center = CGPoint(x: mainInfoView.center.x, y: titleLabel.center.y + titleLabel.frame.size.height / 1.5)
-        if !isLogDisplay {
-            timerView.center = CGPoint(x: timerView.center.x, y: CGFloat(timerView.center.y - moveUpPosition))
-            titleLabel.center = CGPoint(x: titleLabel.center.x, y: CGFloat(titleLabel.center.y - moveUpPosition))
-            mainInfoView.frame = CGRect(x: mainInfoView.frame.origin.x, y: titleLabel.center.y + titleLabel.frame.size.height / 2, width: mainInfoView.frame.size.width, height: mainInfoView.frame.size.height)
-        }
- */
-    }
 
     @IBAction func approveTapped() {
 
@@ -250,10 +163,6 @@ class ApproveDenyViewController: UIViewController {
         timer?.invalidate()
         timer = nil
     }
-    
-    @IBAction func onDeleteClick() {
-        showDeleteLogAlert()
-    }
 
     func showAlertView(withTitle title: String?, andMessage message: String?, withCloseButton showCloseButton: Bool) {
 
@@ -269,35 +178,25 @@ class ApproveDenyViewController: UIViewController {
                               circleIconImage: AppConfiguration.systemAlertIcon,
                               animationStyle: .topToBottom)
     }
-
-    @objc func showDeleteLogAlert() {
-        let alert = SCLAlertView(autoDismiss: false, showCloseButton: true, horizontalButtons: true)
-        
-        alert.addButton(AlertConstants.yes, backgroundColor: .red, action: {
-            if self.userInfo != nil {
-                self.deleteLog(self.userInfo!)
-            }
-            
-            alert.dismiss(animated: true, completion: nil)
-        })
-        
-        alert.showCustom(AlertConstants.delete,
-                         subTitle: LocalString.Clear_Log.localized,
-                         color: AppConfiguration.systemColor,
-                         closeButtonTitle: AlertConstants.no,
-                         circleIconImage: UIImage(named: "icon_trashcan_large")!)
-        
-    }
-
-    func deleteLog(_ log: UserLoginInfo?) {
-        // Eric
-        DataStoreManager.sharedInstance().deleteLog(log)
-        
-        navigationController?.popViewController(animated: true)
-    }
     
     deinit {
         timer?.invalidate()
         timer = nil
     }
+}
+
+
+
+extension UIView {
+// Adds a view as a subview of another view with anchors at all sides
+func add(toView view: UIView) {
+    self.translatesAutoresizingMaskIntoConstraints = false
+    
+    view.addSubview(self)
+    
+    self.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+    self.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+    self.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+    self.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+}
 }

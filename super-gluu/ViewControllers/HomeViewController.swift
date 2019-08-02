@@ -407,9 +407,10 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
     @objc
     func goToSettings() {
         let settingsVC = SettingsViewController.fromStoryboard("Main")
-        let navC = UINavigationController(rootViewController: settingsVC)
+//        let navC = UINavigationController(rootViewController: settingsVC)
         
-        present(navC, animated: true, completion: nil)
+        navigationController?.pushViewController(settingsVC, animated: true)
+//        present(navC, animated: true, completion: nil)
     }
     
     func loadApproveDenyView() {

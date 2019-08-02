@@ -8,7 +8,7 @@
 
 
 "Security_Passcode" = "Inlogcode";
-"Security_TouchId"  = "TouchID";
+"Security_Touch_Id"  = "TouchID";
 
 
 "Home_Check_Internet"       = "Controleer je internetverbinding en probeer het opnieuw";

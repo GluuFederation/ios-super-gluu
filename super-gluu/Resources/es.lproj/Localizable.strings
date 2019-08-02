@@ -9,7 +9,7 @@
 
     // Security Prompt;
 "Security_Passcode" = "Código";
-"Security_TouchId"  = "TouchID";
+"Security_Touch_Id"  = "TouchID";
 
 
     // Home;

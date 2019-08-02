@@ -10,9 +10,45 @@ import UIKit
 import LocalAuthentication
 
 
+enum BiometricType: String {
+    case none
+    case touchID
+    case faceID
+}
+
+extension LAContext {
+
+    var biometricType: BiometricType {
+        var error: NSError?
+        
+        guard self.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) else {
+            // Capture these recoverable error thru Crashlytics
+            return .none
+        }
+        
+        if #available(iOS 11.0, *) {
+            switch self.biometryType {
+            case .none:
+                return .none
+            case .touchID:
+                return .touchID
+            case .faceID:
+                return .faceID
+            }
+        } else {
+            return  self.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) ? .touchID : .none
+        }
+    }
+}
+
 @objc class TouchIDAuth: NSObject {
     
     let context = LAContext()
+    
+    @available(iOS 11.0, *)
+    func availableBioSecurity() -> LABiometryType {
+        return context.biometryType
+    }
     
     func canEvaluatePolicy() -> Bool {
         
@@ -21,7 +57,7 @@ import LocalAuthentication
             
             if #available(iOS 11.0, *) {
                 
-                if (context.biometryType == .touchID) {
+                if (context.biometryType == .touchID || context.biometryType == .faceID) {
                     return true
                 }
                 

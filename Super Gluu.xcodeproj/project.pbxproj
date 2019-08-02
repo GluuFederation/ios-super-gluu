@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26A5F3B822F0C5C8002038DF /* RootContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A5F3B722F0C5C8002038DF /* RootContainerViewController.swift */; };
+		26A5F3BB22F39B4E002038DF /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A5F3BA22F39B4E002038DF /* CircularProgressBar.swift */; };
+		26A5F3BD22F3B6FD002038DF /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26A5F3BC22F3B39F002038DF /* Root.storyboard */; };
 		26E1DCDB21B9D5EF00F8C843 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E1DCDA21B9D4F200F8C843 /* Constants.swift */; };
 		26E1DCE721B9F3F500F8C843 /* AdHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E1DCE121B9F3F200F8C843 /* AdHelper.swift */; };
 		26E1DCE821B9F3F500F8C843 /* AuthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E1DCE221B9F3F200F8C843 /* AuthHelper.swift */; };
@@ -158,6 +161,10 @@
 /* Begin PBXFileReference section */
 		21C62C7E2E6093747FE1D418 /* Pods-Super Gluu (ad free).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Super Gluu (ad free).debug.xcconfig"; path = "Pods/Target Support Files/Pods-Super Gluu (ad free)/Pods-Super Gluu (ad free).debug.xcconfig"; sourceTree = "<group>"; };
 		244ED1E8112E194E698C753B /* Pods-Super Gluu - Ad Free.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Super Gluu - Ad Free.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Super Gluu - Ad Free/Pods-Super Gluu - Ad Free.debug.xcconfig"; sourceTree = "<group>"; };
+		26A5F3B722F0C5C8002038DF /* RootContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootContainerViewController.swift; sourceTree = "<group>"; };
+		26A5F3B922F3736E002038DF /* LogDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDetailViewController.swift; sourceTree = "<group>"; };
+		26A5F3BA22F39B4E002038DF /* CircularProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
+		26A5F3BC22F3B39F002038DF /* Root.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Root.storyboard; sourceTree = "<group>"; };
 		26E1DCDA21B9D4F200F8C843 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Configuration/Constants.swift; sourceTree = "<group>"; };
 		26E1DCE121B9F3F200F8C843 /* AdHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdHelper.swift; path = "super-gluu/Helpers/AdHelper.swift"; sourceTree = SOURCE_ROOT; };
 		26E1DCE221B9F3F200F8C843 /* AuthHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthHelper.swift; path = "super-gluu/Helpers/AuthHelper.swift"; sourceTree = SOURCE_ROOT; };
@@ -520,6 +527,7 @@
 		BB37DF071C7E0B8E0016D422 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				26A5F3B922F3736E002038DF /* LogDetailViewController.swift */,
 				C887B3F820DC4C9E00D99A21 /* LandingViewController.swift */,
 				C89E1EF8215D88C800355756 /* Base */,
 				C86A3C9E2154674500DDBA6F /* HomeViewController.swift */,
@@ -528,6 +536,7 @@
 				C86A3C9F215495D700DDBA6F /* ApproveDenyViewController.swift */,
 				C83D2B041FE2F18B00F9455E /* SecurityPromptViewController.swift */,
 				BB128D7F1E8000790041BD21 /* Settings */,
+				26A5F3B722F0C5C8002038DF /* RootContainerViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -611,6 +620,7 @@
 			isa = PBXGroup;
 			children = (
 				C872CB5F215B9ADE00735A3F /* SuperGluuBannerView.swift */,
+				26A5F3BA22F39B4E002038DF /* CircularProgressBar.swift */,
 				BB37DF0C1C7E0B8E0016D422 /* TableViewCells */,
 				26F43EF822DE406B003168AC /* LocalizedButton.swift */,
 				26F43EFA22DE4355003168AC /* LocalizedLabel.swift */,
@@ -644,6 +654,7 @@
 		C89E1EF9215D88EE00355756 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				26A5F3BC22F3B39F002038DF /* Root.storyboard */,
 				C8419626201A4F05005A4ACC /* LaunchScreen.storyboard */,
 				C887B3F620DC4C3300D99A21 /* Landing.storyboard */,
 				BBB5114A1EF2EF9500E19D8E /* Main.storyboard */,
@@ -786,6 +797,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 				es,
@@ -822,6 +834,7 @@
 				BBEC92001E293179000D522F /* www.gluu.org.cer in Resources */,
 				BBB5114B1EF2EF9500E19D8E /* Main.storyboard in Resources */,
 				C8419627201A4F05005A4ACC /* LaunchScreen.storyboard in Resources */,
+				26A5F3BD22F3B6FD002038DF /* Root.storyboard in Resources */,
 				C887B3F720DC4C3300D99A21 /* Landing.storyboard in Resources */,
 				BB97CDEA1F1E4FB90033C2A5 /* ProximaNova-Reg.otf in Resources */,
 				BB37DF241C7E0B8E0016D422 /* Localizable.strings in Resources */,
@@ -988,6 +1001,7 @@
 				C872CB64215BB4BE00735A3F /* PinCodeSettingsTableViewController.swift in Sources */,
 				C86A3CA0215495D900DDBA6F /* ApproveDenyViewController.swift in Sources */,
 				26F43EF922DE406B003168AC /* LocalizedButton.swift in Sources */,
+				26A5F3B822F0C5C8002038DF /* RootContainerViewController.swift in Sources */,
 				C82967621FE9C2C1008FEBE8 /* WebViewController.swift in Sources */,
 				BB79FA381E7A8B6400AEAE58 /* Data+Extension.swift in Sources */,
 				26E1DCE921B9F3F500F8C843 /* ConnectionCheck.swift in Sources */,
@@ -996,6 +1010,7 @@
 				BB37DE561C7E08320016D422 /* main.m in Sources */,
 				26E1DCE721B9F3F500F8C843 /* AdHelper.swift in Sources */,
 				BB79FA2C1E78309000AEAE58 /* CharacteristicScanner.swift in Sources */,
+				26A5F3BB22F39B4E002038DF /* CircularProgressBar.swift in Sources */,
 				C8F0E2DC1FD21C3800FF9342 /* Color+Extension.swift in Sources */,
 				C887B3F920DC4C9E00D99A21 /* LandingViewController.swift in Sources */,
 				C872CB62215B9EA900735A3F /* AppDelegate.swift in Sources */,

@@ -8,7 +8,7 @@
 
 
 "Security_Passcode" = "Пароль";
-"Security_TouchId"  = "TouchID";
+"Security_Touch_Id"  = "TouchID";
 
 
 "Home_Check_Internet"       = "Проверьте ваше подключение к интернету и попробуйте снова.";

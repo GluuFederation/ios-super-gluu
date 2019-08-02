@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import LocalAuthentication
 
 let screenheight = UIScreen.main.bounds.size.height
 let screenwidth = UIScreen.main.bounds.size.width
@@ -26,12 +27,19 @@ enum SettingsTableSections {
             
             // Don't show touch auth if user's device doesn't have it
             // Removing SSL for time being
-            let touchAuth = TouchIDAuth()
-            if touchAuth.canEvaluatePolicy() {
-                return [.pinCodes, .touchId] //, .ssl]
-            } else {
-                return [.pinCodes] //, .ssl]
+//            let touchAuth = TouchIDAuth()
+            var securityArray: [SettingsTableItem] = [.pinCodes]
+            
+            switch LAContext().biometricType {
+            case .faceID:
+                securityArray.append(.faceId)
+            case .touchID:
+                securityArray.append(.touchId)
+            case .none:
+                return securityArray
             }
+            
+            return securityArray
             
         case .help:
             return [.userGuide, .privacyPolicy]
@@ -54,6 +62,7 @@ enum SettingsTableItem {
     case keys
     case pinCodes
     case touchId
+    case faceId
     case ssl
     case userGuide
     case privacyPolicy
@@ -64,6 +73,7 @@ enum SettingsTableItem {
         case .keys: return #imageLiteral(resourceName: "icon_settings_keys")
         case .pinCodes: return #imageLiteral(resourceName: "icon_settings_pin")
         case .touchId: return #imageLiteral(resourceName: "icon_settings_touchid")
+        case .faceId: return UIImage()
         case .ssl: return #imageLiteral(resourceName: "icon_settings_ssl")
         case .userGuide, .privacyPolicy: return nil
         }
@@ -74,7 +84,8 @@ enum SettingsTableItem {
         case .logs: return LocalString.Menu_Logs.localized
         case .keys: return LocalString.Menu_Keys.localized
         case .pinCodes: return LocalString.Menu_Passcode.localized
-        case .touchId: return  LocalString.Security_TouchId.localized
+        case .touchId: return  LocalString.Security_Touch_Id.localized
+        case .faceId: return  LocalString.Security_Face_Id.localized
         case .ssl: return LocalString.SSL_Trust.localized
         case .userGuide: return LocalString.Menu_User_Guide.localized
         case .privacyPolicy: return LocalString.Menu_Privacy_Policy.localized
@@ -87,6 +98,7 @@ enum SettingsTableItem {
         case .keys:          return "segueSettingsToKeys"
         case .pinCodes:      return "segueSettingsToPin"
         case .touchId:       return "segueSettingsToSingleCell"
+        case .faceId:       return "segueSettingsToSingleCell"
         case .ssl:           return "segueSettingsToSingleCell"
         case .userGuide:     return "segueSettingsToWeb"
         case .privacyPolicy: return "segueSettingsToWeb"
@@ -134,7 +146,7 @@ class SettingsViewController: UIViewController {
     func setupDisplay() {
         
         self.navigationItem.title = " "
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "icon_x"), style: .plain, target: self, action: #selector(dismissVC))
+//        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "icon_x"), style: .plain, target: self, action: #selector(dismissVC))
         
         view.backgroundColor = UIColor.Gluu.tableBackground
         

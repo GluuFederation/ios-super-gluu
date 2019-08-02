@@ -2,7 +2,7 @@
 "Launch_Enter_Passcode"  = "Entrer le cod";
 "Launch_Forgot_Passcode" = "Code oubli";
 "Security_Passcode" = "Cod";
-"Security_TouchId"  = "TouchI";
+"Security_Touch_Id"  = "TouchI";
 "Home_Check_Internet"       = "Vérifier votre connexion internet et réessayer";
 "Home_No_Internet"          = "Pas de connexion interne";
 "Home_Tap_To_Scan_QR"       = "Un QR Code vous sera présenté pour l'enregistrement ou l'authentification. Appuyer sur le button pour ouvrir votre QR scanner";

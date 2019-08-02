@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UwQ-Qt-B2H">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="hUc-yt-qnW">
+            <objects>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="UwQ-Qt-B2H" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y4b-c7-390">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqc-3n-7sG">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <segue destination="GUS-O0-zs7" kind="embed" identifier="RootToApproveDeny" id="yxC-JJ-Zrs"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agy-Lb-sCC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <segue destination="nrd-lp-vAs" kind="embed" identifier="RootToHome" id="4ou-Bh-2RU"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5ut-3L-P0g">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <segue destination="9QM-1o-ohV" kind="embed" identifier="RootToSecurity" id="B8i-bl-Ub7"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5ut-3L-P0g" firstAttribute="top" secondItem="y4b-c7-390" secondAttribute="top" id="1HA-C4-w9i"/>
+                            <constraint firstItem="agy-Lb-sCC" firstAttribute="leading" secondItem="TKb-8I-Afo" secondAttribute="leading" id="SBi-ho-CF9"/>
+                            <constraint firstAttribute="trailing" secondItem="5ut-3L-P0g" secondAttribute="trailing" id="XW8-Sy-tfB"/>
+                            <constraint firstItem="5ut-3L-P0g" firstAttribute="leading" secondItem="TKb-8I-Afo" secondAttribute="leading" id="Z1j-2G-WL4"/>
+                            <constraint firstItem="qqc-3n-7sG" firstAttribute="leading" secondItem="TKb-8I-Afo" secondAttribute="leading" id="hvy-PZ-QhQ"/>
+                            <constraint firstItem="agy-Lb-sCC" firstAttribute="top" secondItem="y4b-c7-390" secondAttribute="top" id="jFw-xY-4Bh"/>
+                            <constraint firstAttribute="bottom" secondItem="agy-Lb-sCC" secondAttribute="bottom" id="jS1-5Q-s7Z"/>
+                            <constraint firstAttribute="bottom" secondItem="5ut-3L-P0g" secondAttribute="bottom" id="kyS-b9-lh8"/>
+                            <constraint firstAttribute="bottom" secondItem="qqc-3n-7sG" secondAttribute="bottom" id="myC-J9-mKt"/>
+                            <constraint firstAttribute="trailing" secondItem="qqc-3n-7sG" secondAttribute="trailing" id="rE7-62-svC"/>
+                            <constraint firstItem="qqc-3n-7sG" firstAttribute="top" secondItem="y4b-c7-390" secondAttribute="top" id="uQN-N1-UIV"/>
+                            <constraint firstItem="agy-Lb-sCC" firstAttribute="trailing" secondItem="TKb-8I-Afo" secondAttribute="trailing" id="xbm-fP-rCJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TKb-8I-Afo"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zTP-1k-7o9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13.043478260869566" y="78.348214285714278"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="4kH-xU-o9w">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="nrd-lp-vAs" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qxn-gS-2cN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="835" y="-98"/>
+        </scene>
+        <!--Landing-->
+        <scene sceneID="QpQ-Dq-Udh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Landing" id="9QM-1o-ohV" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="erE-gP-3Xl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="898" y="51"/>
+        </scene>
+        <!--ApproveDenyViewController-->
+        <scene sceneID="Yn5-dX-ck3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="ApproveDenyViewController" id="GUS-O0-zs7" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WY6-70-MTf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="895" y="186"/>
+        </scene>
+    </scenes>
+</document>

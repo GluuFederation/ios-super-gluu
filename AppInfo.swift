@@ -5,7 +5,7 @@ import Foundation
 class AppInfo {
     let version: String
     let build: String
-    let gitCommitSHA: String = "ac50237"
+    let gitCommitSHA: String = "8d8331f"
     
     init?() {
         guard let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String,

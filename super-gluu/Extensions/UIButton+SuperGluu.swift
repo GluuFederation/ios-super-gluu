@@ -39,6 +39,22 @@ extension UIButton
         spinner.startAnimating()
     }
     
+    func addDetailDisclosure() {
+        let image = UIImage(named: "icon_detaildisclosure")
+        let imageV = UIImageView(image: image)
+        let imgSz = image!.size
+        
+        imageV.translatesAutoresizingMaskIntoConstraints = false
+        
+        addSubview(imageV)
+
+        imageV.heightAnchor.constraint(equalToConstant: imgSz.height).isActive = true
+        imageV.widthAnchor.constraint(equalToConstant: imgSz.width).isActive = true
+        imageV.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        imageV.trailingAnchor.constraint(equalTo: trailingAnchor, constant: (-15 + -imgSz.width)).isActive = true
+
+    }
+    
     
     func hideSpinner() {
         

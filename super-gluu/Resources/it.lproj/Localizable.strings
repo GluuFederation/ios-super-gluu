@@ -11,7 +11,7 @@
 
     // Security Prompt;
 "Security_Passcode" = "Codice di accesso";
-"Security_TouchId"  = "TouchID";
+"Security_Touch_Id"  = "TouchID";
 
     // Home;
 "Home_Check_Internet"       = "Verificare la connessione internet e riprovare.";

@@ -9,7 +9,7 @@
 
 
 "Security_Passcode" = "رمز المرور";
-"Security_TouchId"  = "معرف اللمس";
+"Security_Touch_Id"  = "معرف اللمس";
 
 
 "Home_Check_Internet"       = "تحقق من اتصالك بالإنترنت وحاول مرة أخرى.";

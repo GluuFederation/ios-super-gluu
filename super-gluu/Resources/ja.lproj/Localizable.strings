@@ -9,7 +9,7 @@
 
     // Security Prompt;
 "Security_Passcode" = "パスコード";
-"Security_TouchId"  = "タッチID";
+"Security_Touch_Id"  = "タッチID";
 
     // Home;
 "Home_Check_Internet"       = "インターネット接続を確認して再試行して下さい。";

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LocalAuthentication
 
 class LaunchSetupViewController: UIViewController {
 
@@ -14,11 +15,14 @@ class LaunchSetupViewController: UIViewController {
     
     @IBOutlet weak var lockedOutButton: UIButton!
     @IBOutlet weak var enterPasscodeButton: UIButton!
-    @IBOutlet weak var fingerprintButton: UIButton!
+    @IBOutlet weak var bioAuthButton: UIButton!
     
     let touchAuth = TouchIDAuth()
     
     var ranOnce = false
+    
+    var authCheckComplete: (()->Void)?
+    var presentPasscodeEntry: (()->Void)?
     
     
     // MARK: - View Lifecycle
@@ -27,6 +31,7 @@ class LaunchSetupViewController: UIViewController {
         super.viewDidLoad()                
         
         setupDisplay()
+        NotificationCenter.default.addObserver(self, selector: #selector(checkSecurity), name: noti(GluuConstants.NOTIFICATION_APP_ENTERING_FOREGROUND), object: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -37,6 +42,8 @@ class LaunchSetupViewController: UIViewController {
             ranOnce = true
             checkSecurity()
             
+        } else if GluuUserDefaults.userPin() != nil {
+            pinButtons(shouldShow: true)
         }
     }
     
@@ -53,30 +60,42 @@ class LaunchSetupViewController: UIViewController {
         enterPasscodeButton.layer.masksToBounds = true
         enterPasscodeButton.setTitle(LocalString.Launch_Enter_Passcode.localized, for: .normal)
         
-        fingerprintButton.layer.cornerRadius = fingerprintButton.bounds.height / 2
-        fingerprintButton.layer.masksToBounds = true
-        
         lockedOutButton.setTitle(LocalString.Launch_Forgot_Passcode.localized, for: .normal)
         
         pinButtons(shouldShow: false)
+        
+        switch LAContext().biometricType {
+        case .faceID:
+            bioAuthButton.setImage(UIImage(named: "icon_face"), for: .normal)
+            bioAuthButton.layer.cornerRadius = 8
+        case .touchID:
+            bioAuthButton.setImage(UIImage(named: "icon_fingerprint"), for: .normal)
+            bioAuthButton.layer.cornerRadius = bioAuthButton.bounds.height / 2
+        case .none:
+            bioAuthButton.isHidden = true
+        }
+        
+        bioAuthButton.layer.masksToBounds = true
     }
     
+    @objc
     func checkSecurity() {
         
         // Check for touch
-        if GluuUserDefaults.hasTouchAuthEnabled() && touchAuth.canEvaluatePolicy() == true {
+        if GluuUserDefaults.userPin() != nil {
+            presentPasscodeEntry?()
+            
+        } else if GluuUserDefaults.hasTouchAuthEnabled() && touchAuth.canEvaluatePolicy() == true {
             
             touchAuth.authenticateUser { (success, errorMessage) in
                 
                 if success {
-                    self.goToHomeScreen()
+                    self.authCheckComplete?()
                 } else {
                     self.pinButtons(shouldShow: true)
                 }
             }
             
-        } else if GluuUserDefaults.userPin() != nil {
-            displayPinCodeEntry()
         } else {
             // go to main view controller
 
@@ -84,23 +103,25 @@ class LaunchSetupViewController: UIViewController {
         }
     }
     
-    func displayPinCodeEntry() {
-        
-        let passcodeVC = PAPasscodeViewController(for: .enter)
-        
-        passcodeVC.delegate = self
-        passcodeVC.passcode = GluuUserDefaults.userPin() ?? ""
-        passcodeVC.simple   = true
-
-        let navC = UINavigationController(rootViewController: passcodeVC);
-        
-        present(navC, animated: false, completion: nil)
-        
-    }
+//    func displayPinCodeEntry() {
+//
+//        let passcodeVC = PAPasscodeViewController(for: .enter)
+//
+//        passcodeVC.delegate = self
+//        passcodeVC.passcode = GluuUserDefaults.userPin() ?? ""
+//        passcodeVC.simple   = true
+//
+//        let navC = UINavigationController(rootViewController: passcodeVC);
+//
+//
+//        present(navC, animated: false, completion: nil)
+//
+//    }
     
     
     func goToHomeScreen() {
-        performSegue(withIdentifier: "segueUnwindSecureEntryToLanding", sender: nil)
+        
+//        performSegue(withIdentifier: "segueUnwindSecureEntryToLanding", sender: nil)
 //        performSegue(withIdentifier: "SegueLaunchToHome", sender: nil)
     }
     
@@ -112,14 +133,14 @@ class LaunchSetupViewController: UIViewController {
     // MARK: - Action Handling
     
     @IBAction func enterPasscodeTapped() {
-        displayPinCodeEntry()
+        presentPasscodeEntry?()
     }
 
-    @IBAction func fingerprintTapped() {
+    @IBAction func bioAuthTapped() {
         touchAuth.authenticateUser { (success, errorMessage) in
             
             if success {
-                self.goToHomeScreen()
+                self.authCheckComplete?()
             } else {
                 self.pinButtons(shouldShow: true)
             }
@@ -133,7 +154,7 @@ class LaunchSetupViewController: UIViewController {
     
     func pinButtons(shouldShow: Bool) {
         
-        fingerprintButton.isHidden = !(touchAuth.canEvaluatePolicy() && shouldShow == true)
+//        bioAuthButton.isHidden = !(touchAuth.canEvaluatePolicy() && shouldShow == true)
         
         if shouldShow == true {
             enterPasscodeButton.isHidden = GluuUserDefaults.userPin() == nil
@@ -145,6 +166,9 @@ class LaunchSetupViewController: UIViewController {
 //        lockedOutButton.isHidden = !shouldShow
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
 }
 
 extension LaunchSetupViewController: PAPasscodeViewControllerDelegate {

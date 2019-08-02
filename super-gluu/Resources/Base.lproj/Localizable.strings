@@ -8,7 +8,8 @@
 
 // Security Prompt
 "Security_Passcode" = "Passcode";
-"Security_TouchId"  = "TouchID";
+"Security_Touch_Id"  = "TouchID";
+"Security_Face_Id"   = "FaceID";
 
 // Home
 "Home_Check_Internet"       = "Check your Internet connection and try again.";

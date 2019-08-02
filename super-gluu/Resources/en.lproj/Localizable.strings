@@ -8,7 +8,8 @@
 
     // Security Prompt
 "Security_Passcode" = "Passcode";
-"Security_TouchId"  = "TouchID";
+"Security_Touch_Id"  = "TouchID";
+"Security_Face_Id"   = "FaceID";
 
     // Home
 "Home_Check_Internet"       = "Check your Internet connection and try again.";
@@ -187,7 +188,8 @@
 "Launch_Enter_Passcode"  =
 "Launch_Forgot_Passcode" =
 "Security_Passcode" =
-"Security_TouchId"  =
+"Security_Touch_Id"  =
+"Security_Face_Id"   =
 "Home_Check_Internet"       =
 "Home_No_Internet"          =
 "Home_Tap_To_Scan_QR"       = 

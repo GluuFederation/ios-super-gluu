@@ -7,15 +7,20 @@
 //
 
 import UIKit
+import LocalAuthentication
 
 class SecurityPromptViewController: UIViewController {
     
     @IBOutlet weak var buttonsStackView: UIStackView!
-    @IBOutlet weak var touchStackView: UIStackView?
-    @IBOutlet weak var touchButton: UIButton?
+    @IBOutlet weak var bioButton: UIButton?
+    @IBOutlet weak var passcodeButton: UIButton?
     @IBOutlet weak var separatorView: UIView?
+    @IBOutlet weak var headerLabel: UILabel?
     
     let touchAuth = TouchIDAuth()
+    
+    var authEntryCompleted: (()->Void)?
+    var presentPasscodeEntry: (()->Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,46 +31,51 @@ class SecurityPromptViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        navigationItem.title = "Add Secure Entry"
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        navigationItem.title = " "
+        passcodeButton?.addDetailDisclosure()
+        bioButton?.addDetailDisclosure()
     }
     
     func setupDisplay() {
         
         view.backgroundColor = UIColor.Gluu.tableBackground
         
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.tintColor = .white 
-        navigationController?.navigationBar.barTintColor = AppConfiguration.systemColor
-        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        headerLabel?.text = "Add Secure Entry"
+        
+//        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+//        navigationController?.navigationBar.shadowImage = UIImage()
+//        navigationController?.navigationBar.isTranslucent = false
+//        navigationController?.navigationBar.tintColor = .white
+//        navigationController?.navigationBar.barTintColor = AppConfiguration.systemColor
+//        navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         
         separatorView?.backgroundColor = UIColor.Gluu.tableBackground
         
         buttonsStackView.superview?.backgroundColor = UIColor.white
         
-        // Eric Point to come back to to enforce security
-//        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Skip", style: .plain, target: self, action: #selector(dismissVC))
+        passcodeButton?.setTitle(LocalString.Security_Passcode.localized, for: .normal)
+
         
-        if touchAuth.canEvaluatePolicy() == false {
-            touchStackView?.arrangedSubviews.forEach({$0.removeFromSuperview()})
-            touchStackView?.removeFromSuperview()
-            touchButton?.removeFromSuperview()
+        switch LAContext().biometricType {
+        case .faceID:
+            let faceIdIcon = UIImage(named: "icon_settings_touchid")
+            bioButton?.setImage(faceIdIcon, for: .normal)
+            bioButton?.setTitle(LocalString.Security_Face_Id.localized, for: .normal)
+        case .touchID:
+            let faceIdIcon = UIImage(named: "icon_settings_touchid")
+            bioButton?.setImage(faceIdIcon, for: .normal)
+            bioButton?.setTitle(LocalString.Security_Touch_Id.localized, for: .normal)
+        case .none:
+            bioButton?.removeFromSuperview()
             separatorView?.removeFromSuperview()
         }
+        
     }
     
     @IBAction func pinTapped() {
         goToPinEntry()
     }
     
-    @IBAction func touchTapped() {
+    @IBAction func bioTapped() {
         touchAuth.authenticateUser { (success, errorMessage) in
 
             GluuUserDefaults.setTouchAuth(isOn: success)
@@ -76,13 +86,14 @@ class SecurityPromptViewController: UIViewController {
     }
     
     func goToPinEntry() {
-        let passcodeVC = PAPasscodeViewController.init(for: .set)
-        
-        passcodeVC.delegate = self
-        passcodeVC.simple = true
-        passcodeVC.navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: .plain, target: nil, action: nil)
-        
-        navigationController?.pushViewController(passcodeVC, animated: true)
+        presentPasscodeEntry?()
+//        let passcodeVC = PAPasscodeViewController.init(for: .set)
+//
+//        passcodeVC.delegate = self
+//        passcodeVC.simple = true
+//        passcodeVC.navigationItem.backBarButtonItem = UIBarButtonItem(title: " ", style: .plain, target: nil, action: nil)
+//
+//        navigationController?.pushViewController(passcodeVC, animated: true)
         
     }
     
@@ -106,15 +117,14 @@ extension SecurityPromptViewController: PAPasscodeViewControllerDelegate {
         self.dismissVC()
     }
 
-    func paPasscodeViewControllerDidCancel(_ controller: PAPasscodeViewController) {}
+    func paPasscodeViewControllerDidCancel(_ controller: PAPasscodeViewController) {
+        navigationController?.popViewController(animated: true)
+    }
+    
     func paPasscodeViewControllerDidEnterPasscode(_ controller: PAPasscodeViewController) {}
     func paPasscodeViewControllerDidChangePasscode(_ controller: PAPasscodeViewController) {}
     func paPasscodeViewControllerDidEnterAlternativePasscode(_ controller: PAPasscodeViewController) {}
     func paPasscodeViewController(_ controller: PAPasscodeViewController, didFailToEnterPasscode attempts: Int) {}
     
-    
-    
-    
-    
-    
+
 }

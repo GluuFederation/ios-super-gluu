@@ -6,7 +6,7 @@
 
 
 "Security_Passcode" = "पासकोड";
-"Security_TouchId"  = "टच आईडी";
+"Security_Touch_Id"  = "टच आईडी";
 
 
 "Home_Check_Internet"       = "अपना इंटरनेट कनेक्शन जांचें और पुन: प्रयास करें।";

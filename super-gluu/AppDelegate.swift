@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var coverWindow: UIWindow?
     private var coverVC: UIViewController?
     var isHidingLockScreen = false
+     
+    let rootVC = RootContainerViewController()
     
     static let appDel = UIApplication.shared.delegate as! AppDelegate
     
@@ -45,6 +47,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GADMobileAds.configure(withApplicationID: AppConfiguration.googleAdsId)
 
         setupSwiftyStoreKit()
+     
+        setupRootViewController()
 
         return true
     }
@@ -74,6 +78,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return unlockDate > Date()
 
     }
+     
+     func setupRootViewController() {
+          
+          window                     = UIWindow(frame: UIScreen.main.bounds)
+          window?.rootViewController = rootVC
+          window?.makeKeyAndVisible()
+          
+     }
     
      private func setupPushNotificationActions() {
           
@@ -186,19 +198,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+
     func applicationDidEnterBackground(_ application: UIApplication) {
-        
-        // if the user has secure entry enabled, display it
-        let hasSecurityEnabled = GluuUserDefaults.hasTouchAuthEnabled() == true || GluuUserDefaults.userPin() != nil
-        
-        if hasSecurityEnabled && coverWindow == nil {
-            
-            let storyboardName = "Landing"
-            let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
-            let navC = storyboard.instantiateInitialViewController() as? UINavigationController
-            
-            window?.rootViewController = navC
-        }
+     
+//        rootVC.transitionToLandingNavigationViewController()
+
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -206,6 +210,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // always update ad status when the user comes into the app
         AdHandler.shared.refreshAdStatus()
 
+//        rootVC.transitionToLandingNavigationViewController()
+        rootVC.updateDisplay(nextState: RootState.security)
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
