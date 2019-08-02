@@ -33,11 +33,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         registerForPushNotifications()
 
         let remoteNotif = launchOptions?[.remoteNotification] as? [AnyHashable : Any]
-
+     
+        PushHelper.shared.lastPush = PushNoti(date: Date(), userInfo: remoteNotif, action: .none)
+     
+       /*
         //Accept push notification when app is not open
         if remoteNotif != nil {
             UserDefaults.standard.set(remoteNotif, forKey: GluuConstants.NotificationRequest)
         }
+      */
 
         //Setup Basic
 
@@ -161,6 +165,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // called as soon as a notification is received
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
 
+        /*
         // store push came date so we don't handle expired auth requests when the user comes into the app
         if application.applicationState == .background {
             UserDefaults.standard.set(Date(), forKey: GluuConstants.PUSH_CAME_DATE)
@@ -183,8 +188,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UserDefaults.standard.set(false, forKey: GluuConstants.NotificationRequestActionsApprove)
         UserDefaults.standard.set(false, forKey: GluuConstants.NotificationRequestActionsDeny)
         print("Received notification: \(userInfo)")
+ 
+        */
+     
+        PushHelper.shared.lastPush = PushNoti(date: Date(), userInfo: userInfo, action: .none)
     }
 
+     /*
     func parsePushAndNotify(_ pushInfo: [AnyHashable : Any]?) {
 
         if pushInfo == nil {
@@ -197,6 +207,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             NotificationCenter.default.post(name: Notification.Name(GluuConstants.NOTIFICATION_PUSH_ONLINE), object: parsedPushDict)
         }
     }
+ */
 
 
     func applicationDidEnterBackground(_ application: UIApplication) {
@@ -221,9 +232,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if appIsLocked() == false && coverWindow != nil && !isHidingLockScreen {
             hideLockedScreen()
         }
-        
+     
+     /*
         // check if a push has been received. Method handles situation appropriately
         handleAuthenticationRequest(false)
+      */
     }
     
     func showLockedScreen() {
@@ -256,6 +269,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      //
     func handleAuthenticationRequest(_ isAction: Bool) {
 
+     /*
         if pushNotificationRequest == nil {
             return
         }
@@ -282,6 +296,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
 
         pushNotificationRequest = nil
+     
+     */
     }
 
 
@@ -328,22 +344,31 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         switch response.actionIdentifier {
             
         case GluuConstants.NotificationActionApprove:
-                
+          
+          PushHelper.shared.lastPush = PushNoti(date: Date(), userInfo: userInfo, action: .approve)
+          
+          /*
+          
             isDecline = false
             pushNotificationRequest = userInfo
             UserDefaults.standard.set(userInfo, forKey: GluuConstants.NotificationRequest)
             UserDefaults.standard.set(true, forKey: GluuConstants.NotificationRequestActionsApprove)
             UserDefaults.standard.set(false, forKey: GluuConstants.NotificationRequestActionsDeny)
             handleAuthenticationRequest(true)
+          */
             
         case GluuConstants.NotificationActionDeny:
-            
+          
+          PushHelper.shared.lastPush = PushNoti(date: Date(), userInfo: userInfo, action: .approve)
+          
+          /*
             isDecline = true
             pushNotificationRequest = userInfo
             UserDefaults.standard.set(userInfo, forKey: GluuConstants.NotificationRequest)
             UserDefaults.standard.set(true, forKey: GluuConstants.NotificationRequestActionsDeny)
             UserDefaults.standard.set(false, forKey: GluuConstants.NotificationRequestActionsApprove)
             handleAuthenticationRequest(true)
+          */
             
         case UNNotificationDismissActionIdentifier:
             print("Dismiss Action")
