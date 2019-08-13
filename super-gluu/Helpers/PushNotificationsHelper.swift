@@ -14,6 +14,7 @@ class PushHelper: NSObject {
     
     var lastPush: PushNoti?
     
+    
     func isLastPushExpired() -> Bool {
         
         let pushReceivedDate = UserDefaults.standard.object(forKey: GluuConstants.PUSH_CAME_DATE) as? Date
@@ -62,11 +63,20 @@ class PushHelper: NSObject {
         return json
         
     }
+    
+    func handlePush() {
+        // call approve/deny
+        // do what home screen does. If the action is approve/decline, do that.
+        // otherwise, show the approve/deny screen
+        // this gets triggered in RootContainerVC when user gets through the Landing VC
+        // and enters the app securely
+        
+    }
 }
 
 
 struct PushNoti {
-    var date: NSDate?
+    var date: Date?
     var userInfo: [AnyHashable : Any]?
     var action: PushAction?
 }

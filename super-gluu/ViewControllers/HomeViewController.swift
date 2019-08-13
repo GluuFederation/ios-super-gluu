@@ -82,7 +82,7 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
         super.viewDidAppear(animated)
         
         _ = qrReaderVC
-        checkPushNotification()
+//        checkPushNotification()
     }
     
     // MARK: - View Setup
@@ -150,6 +150,9 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
     }
 
     func checkPushNotification() {
+        
+        /*
+        
         // check for an existing request via push notification
         guard let pushNotificationRequest = UserDefaults.standard.object(forKey: GluuConstants.NotificationRequest) as? [AnyHashable: Any] else {
             return
@@ -198,6 +201,7 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
             UserDefaults.standard.set(false, forKey: NotificationRequestActionsApprove)
             UserDefaults.standard.set(false, forKey: NotificationRequestActionsDeny)
         }
+        */
     }
     
     @objc func initPushView(_ notification: Notification?) {
