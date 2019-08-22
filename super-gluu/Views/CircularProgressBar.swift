@@ -11,11 +11,11 @@ import UIKit
 
 class CircularProgressBar: UIView {
     
-    var animationDuration = CFTimeInterval(40)
+    var animationDuration = CFTimeInterval(GluuConstants.PUSH_EXPIRY)
     var startingTimeElapsed = CFTimeInterval(0)
     
     var timeExpired: (()->Void)?
-    
+    var timer: Timer?
     
     //MARK: awakeFromNib
     
@@ -29,7 +29,7 @@ class CircularProgressBar: UIView {
     //MARK: Public
     
     public var lineWidth:CGFloat = 6 {
-        didSet{
+        didSet {
             foregroundLayer.lineWidth = lineWidth
 //            backgroundLayer.lineWidth = lineWidth - (0.20 * lineWidth)
         }
@@ -49,7 +49,7 @@ class CircularProgressBar: UIView {
         }
     }
     
-    public func setProgress(to progressConstant: Double, withAnimation: Bool) {
+    public func setProgress(to progressConstant: Double, timeElapsed: Double, withAnimation: Bool) {
         
         var progress: Double {
             get {
@@ -63,15 +63,18 @@ class CircularProgressBar: UIView {
         
         if withAnimation {
             let animation = CABasicAnimation(keyPath: "strokeEnd")
-            animation.fromValue = 0
+            animation.fromValue = timeElapsed / animationDuration
             animation.toValue = progress
             animation.duration = animationDuration
             foregroundLayer.add(animation, forKey: "foregroundAnimation")
             
         }
         
-        var currentTime:Double = 0
-        let timer = Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true) { (timer) in
+        var currentTime:Double = timeElapsed
+        let time = Timer.scheduledTimer(withTimeInterval: 0.05, repeats: true) { [weak self] (timer) in
+            
+            guard let `self` = self else { return }
+            
             if currentTime >= self.animationDuration {
                 timer.invalidate()
                 self.timeExpired?()
@@ -82,8 +85,15 @@ class CircularProgressBar: UIView {
                 self.configLabel()
             }
         }
-        timer.fire()
         
+        time.fire()
+        
+        self.timer = time
+    }
+    
+    func killTimer() {
+        self.timer?.invalidate()
+        self.timer = nil
     }
     
     
@@ -163,8 +173,6 @@ class CircularProgressBar: UIView {
         self.addSubview(label)
     }
     
-    
-    
     //Layout Sublayers
 
     private var layoutDone = false
@@ -175,6 +183,11 @@ class CircularProgressBar: UIView {
             label.text = tempText
             layoutDone = true
         }
+    }
+    
+    deinit {
+        timer?.invalidate()
+        timer = nil
     }
     
 }

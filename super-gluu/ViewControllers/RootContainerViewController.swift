@@ -8,15 +8,6 @@
 
 import UIKit
 
-//private func updateView() {
-//    if segmentedControl.selectedSegmentIndex == 0 {
-//        remove(asChildViewController: sessionsViewController)
-//        add(asChildViewController: summaryViewController)
-//    } else {
-//        remove(asChildViewController: summaryViewController)
-//        add(asChildViewController: sessionsViewController)
-//    }
-//}
 
 enum RootState {
     case security
@@ -48,8 +39,8 @@ class RootContainerViewController: UIViewController {
     private var currentState: RootState?
     
     func updateDisplay(nextState: RootState) {
+        
         if currentState == nextState { return }
-    
     
         if currentState != nil {
             switch currentState! {
@@ -67,28 +58,28 @@ class RootContainerViewController: UIViewController {
             add(approveDenyController)
         case .home:
             add(homeNavigationController)
+            
+            if let push = PushHelper.shared.lastPush,
+                !push.isExpired,
+                let homeVC = homeNavigationController.viewControllers.first as? HomeViewController {
+                
+                homeVC.handlePush()
+            }
+
         case .security:
             let navigationController = UIStoryboard(name: "Landing", bundle: nil).instantiateInitialViewController() as! UINavigationController
             add(navigationController)
-//            securityController.popToRootViewController(animated: false)
-//            add(securityController)
         }
- 
- 
-        
-//        switch nextState {
-//        case .approveDeny:
-//            performSegue(withIdentifier: "RootToApproveDeny", sender: nil)
-//        case .home:
-//            performSegue(withIdentifier: "RootToHome", sender: nil)
-//        case .security:
-//            performSegue(withIdentifier: "RootToSecurity", sender: nil)
-//        }
-//        currentState = nextState
  
     }
     
-
+    func activeStatePushReceived() {
+        guard currentState == RootState.home, let homeVC = homeNavigationController.viewControllers.first as? HomeViewController else { return }
+        
+        homeVC.handlePush()
+        
+    }
+    
     // MARK: – View lifecycle
 
     override func viewDidLoad() {
@@ -97,56 +88,6 @@ class RootContainerViewController: UIViewController {
         updateDisplay(nextState: .security)
     }
 
-    /*
-    private func setRootChildViewController() {
-        
-        guard let navigationController = UIStoryboard(name: "Landing", bundle: nil).instantiateInitialViewController() as? UINavigationController else {
-            return
-        }
-        
-        landingNavigationController = navigationController
-        
-        add(landingNavigationController!)
-        
-    }
-
-    // MARK: – Child View Controller Helpers
-
-    
-    func transitionToLandingNavigationViewController() {
-        
-        guard homeNavigationController != nil else {
-            return
-        }
-        
-        if let presentedVC = homeNavigationController?.presentedViewController {
-            presentedVC.dismiss(animated: false, completion: nil)
-        }
-        
-        guard let navigationController = UIStoryboard(name: "Landing", bundle: nil).instantiateInitialViewController() as? UINavigationController else {
-            return
-        }
-        
-        landingNavigationController = navigationController
-        add(landingNavigationController!)
-        homeNavigationController?.remove()
-        
-    }
-
-    func transitionToHomeViewController() {
-        
-        landingNavigationController?.willMove(toParentViewController: nil)
-        
-        guard let navigationController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as? BaseNavigationController else {
-            return
-        }
-        
-        homeNavigationController = navigationController
-        add(homeNavigationController!)
-        landingNavigationController?.remove()
-
-    }
- */
 
 }
 

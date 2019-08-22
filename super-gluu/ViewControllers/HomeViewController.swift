@@ -39,9 +39,8 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
     var isEnroll = false
     var isShowingQRReader = false
     
-    var count = 0
     var oxPushManager: OXPushManager?
-    var alert: UIAlertController?
+//    var alert: UIAlertController?
     var bannerView: SuperGluuBannerView?
     
     // Good practice: create the reader lazily to avoid cpu overload during the
@@ -82,7 +81,6 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
         super.viewDidAppear(animated)
         
         _ = qrReaderVC
-//        checkPushNotification()
     }
     
     // MARK: - View Setup
@@ -148,92 +146,12 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
         
         showAlertView(withTitle: "SecureClick", andMessage: "Short click on device button")
     }
-
-    func checkPushNotification() {
-        
-        /*
-        
-        // check for an existing request via push notification
-        guard let pushNotificationRequest = UserDefaults.standard.object(forKey: GluuConstants.NotificationRequest) as? [AnyHashable: Any] else {
-            return
-        }
-        
-        let jsonDictionary =  PushHelper.shared.parsedInfo(pushNotificationRequest)
-        
-        // If the push is expired, clear it out and let the user know
-        guard PushHelper.shared.isLastPushExpired() == false else {
-            UserDefaults.standard.removeObject(forKey: GluuConstants.NotificationRequest)
-            NotificationCenter.default.post(name: noti(GluuConstants.NOTIFICATION_PUSH_TIMEOVER), object: jsonDictionary)
-            return
-        }
-        
-        if jsonDictionary != nil {
-            //        NSString* message = NSLocalizedString(@"StartAuthentication", @"Authentication...");
-            //        [self updateStatus:message];
-            
-            //            [self performSelector:@selector(hideStatusBar) withObject:nil afterDelay:5.0];
-            
-            
-            AuthHelper.shared.requestDictionary = jsonDictionary
-            
-            initUserInfo(jsonDictionary)
-            
-            let isApprove: Bool = UserDefaults.standard.bool(forKey: NotificationRequestActionsApprove)
-            let isDeny: Bool = UserDefaults.standard.bool(forKey: NotificationRequestActionsDeny)
-            
-            // Currently, we are double calling approve request.
-            // It's getting called both when we approve via the home screen, then again when
-            // the user comes into the app and the Main VC is launched.
-            
-            if isApprove {
-                approveRequest()
-            } else if isDeny {
-                denyRequest()
-            } else {
-                self.delay(delay: 1.0) {
-                    print("Stored push auth request")
-                    self.handleAuthRequest(jsonDictionary)
-                }
-            }
-            
-            // clear existing data
-            UserDefaults.standard.removeObject(forKey: GluuConstants.NotificationRequest)
-            UserDefaults.standard.set(false, forKey: NotificationRequestActionsApprove)
-            UserDefaults.standard.set(false, forKey: NotificationRequestActionsDeny)
-        }
-        */
-    }
-    
-    @objc func initPushView(_ notification: Notification?) {
-        //Make sound and vibrate like push
-        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
-        AudioServicesPlaySystemSound(1003) //push sound
-        
-        let requestDictionary = notification?.object as? [AnyHashable : Any]
-        
-        AuthHelper.shared.requestDictionary = requestDictionary
-        
-        print("init push view called")
-        
-        handleAuthRequest(requestDictionary)
-    }
     
     func initNotificationCenterObservers() {
         
-        NotificationCenter.default.addObserver(self, selector: #selector(self.notificationRecieved(_:)), name: noti(GluuConstants.NOTIFICATION_REGISTRATION_SUCCESS), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.notificationRecieved(_:)), name: noti(GluuConstants.NOTIFICATION_REGISTRATION_FAILED), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.notificationRecieved(_:)), name: noti(GluuConstants.NOTIFICATION_AUTENTIFICATION_SUCCESS), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.notificationRecieved(_:)), name: noti(GluuConstants.NOTIFICATION_AUTENTIFICATION_FAILED), object: nil)
-
-        NotificationCenter.default.addObserver(self, selector: #selector(self.notificationRecieved(_:)), name: noti(GluuConstants.NOTIFICATION_ERROR), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.showFullScreenAd), name: noti(GluuConstants.NOTIFICATION_SHOW_FULLSCREEN_AD), object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.notificationRecieved(_:)), name: noti(GluuConstants.NOTIFICATION_PUSH_RECEIVED), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.notificationRecieved(_:)), name: noti(GluuConstants.NOTIFICATION_PUSH_RECEIVED_APPROVE), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.notificationRecieved(_:)), name: noti(GluuConstants.NOTIFICATION_PUSH_RECEIVED_DENY), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.initPushView(_:)), name: noti(GluuConstants.NOTIFICATION_PUSH_ONLINE), object: nil)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(self.notificationRecieved(_:)), name: noti(GluuConstants.NOTIFICATION_DECLINE_FAILED), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.notificationRecieved(_:)), name: noti(GluuConstants.NOTIFICATION_DECLINE_SUCCESS), object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.notificationRecieved(_:)), name: noti(GluuConstants.NOTIFICATION_PUSH_TIMEOVER), object: nil)
         
@@ -254,7 +172,7 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
 //        let oneStep = Bool(step ?? "") ?? false
 //        var message = ""
         
-        let localSuccess = LocalString.Success.localized
+//        let localSuccess = LocalString.Success.localized
         let localFail = LocalString.Oops.localized
         
         guard let name = notification?.name else {
@@ -263,35 +181,7 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
         
         print("Noti name: \(name)")
         
-        if name == noti(GluuConstants.NOTIFICATION_REGISTRATION_SUCCESS) {
-            
-            showAlertView(withTitle: localSuccess, andMessage: LocalString.Home_Registration_Success.localized)
-            
-            showFullScreenAd()
-            
-        } else if name == noti(GluuConstants.NOTIFICATION_REGISTRATION_FAILED) {
-            
-            showAlertView(withTitle: localFail, andMessage: LocalString.Home_Registration_Failed.localized)
-            
-            showFullScreenAd()
-            
-        } else if name == noti(GluuConstants.NOTIFICATION_REGISTRATION_STARTING) {
-            
-            showAlertView(withTitle: LocalString.Home_Registering.localized, andMessage: nil)
-
-        } else if name == noti(GluuConstants.NOTIFICATION_AUTENTIFICATION_SUCCESS) {
-            
-            showAlertView(withTitle: LocalString.Home_Auth_Success.localized, andMessage: nil)
-            
-            showFullScreenAd()
-            
-        } else if name == noti(GluuConstants.NOTIFICATION_AUTENTIFICATION_FAILED) {
-            
-            showAlertView(withTitle: localFail, andMessage: LocalString.Home_Auth_Failed.localized)
-            
-            showFullScreenAd()
-            
-        } else if name == noti(GluuConstants.NOTIFICATION_ERROR) {
+        if name == noti(GluuConstants.NOTIFICATION_ERROR) {
             
             let errorMessage = notification?.object as? String ?? ""
             
@@ -310,47 +200,10 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
             
          } else if name == noti(GluuConstants.NOTIFICATION_PUSH_RECEIVED) {
 
-            print("NOTIFICATION_PUSH_RECEIVED called")
+            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+            AudioServicesPlaySystemSound(1003) //push sound
             
-            showAlertView(withTitle: LocalString.Home_Authenticating.localized, andMessage: nil)
-            
-            UserDefaults.standard.removeObject(forKey: GluuConstants.NotificationRequest)
-            
-            let pushAuthRequest = notification?.object as? [AnyHashable : Any]
-            handleAuthRequest(pushAuthRequest)
-            
-        } else if name == noti(GluuConstants.NOTIFICATION_PUSH_RECEIVED_APPROVE)  {
-            // clear out the notification from user defaults. That way
-            // the check in viewWillAppear doesn't get called
-            
-            UserDefaults.standard.removeObject(forKey: GluuConstants.NotificationRequest)
-            
-            let pushRequest = notification?.object as? [AnyHashable : Any]
-            AuthHelper.shared.requestDictionary = pushRequest
-            initUserInfo(pushRequest)
-            approveRequest()
-            return
-            
-        } else if name == noti(GluuConstants.NOTIFICATION_PUSH_RECEIVED_DENY) {
-            // clear out the notification from user defaults. That way
-            // the check in viewWillAppear doesn't get called
-            
-            UserDefaults.standard.removeObject(forKey: GluuConstants.NotificationRequest)
-            let pushRequest = notification?.object as? [AnyHashable : Any]
-            AuthHelper.shared.requestDictionary = pushRequest
-            initUserInfo(pushRequest)
-            denyRequest()
-            return
-        }
-        
-        if name == noti(GluuConstants.NOTIFICATION_DECLINE_SUCCESS) {
-            showAlertView(withTitle: localSuccess, andMessage: LocalString.Home_Auth_Declined.localized)
-            return
-        }
-        
-        if name == noti(GluuConstants.NOTIFICATION_DECLINE_FAILED) {
-            showAlertView(withTitle: localFail, andMessage: LocalString.Home_Decline_Failed.localized)
-            return
+            handlePush()
         }
         
         if name == noti(GluuConstants.NOTIFICATION_FAILED_KEYHANDLE) {
@@ -367,19 +220,29 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
     
     //LicenseAgreementDelegates
     
+    func handlePush() {
+        guard let push = PushHelper.shared.lastPush, !push.isExpired else { return }
+        
+        switch push.action {
+        case .none: openRequest()
+        case .approve: approveRequest()
+        case .decline: denyRequest()
+        }
+    }
+    
     func approveRequest() {
         
-        AuthHelper.shared.approveRequest(completion: { success, errorMessage in
-            // AuthHelper handles success/failure
-        })
+        AuthHelper.shared.handleRequest(isApproved: true) { (success, errorMessage) in
+            
+        }
         
     }
     
     func denyRequest() {
         
-        AuthHelper.shared.denyRequest(completion: { success, errorMessage in
-            // AuthHelper handles success/failure
-        })
+        AuthHelper.shared.handleRequest(isApproved: false) { (success, errorMessage) in
+            
+        }
         
     }
     
@@ -387,44 +250,18 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
         loadApproveDenyView()
     }
     
-    //# ------------ END -----------------------------
-    
-    // MARK: - QRCodeReaderViewController Delegate Methods
-    
-    func handleAuthRequest(_ jsonDictionary: [AnyHashable : Any]?) {
-        
-        print("Handle Auth Request")
-        
-        if jsonDictionary != nil {
-            
-            AuthHelper.shared.requestDictionary = jsonDictionary
-            initUserInfo(jsonDictionary)
-            loadApproveDenyView()
-        } else {
-            updateStatus(LocalString.Home_QR_Not_Recognized.localized)
-            perform(#selector(HomeViewController.hideStatusBar), with: nil, afterDelay: 5.0)
-        }
-    }
     
     // MARK: - Navigation
     
     @objc
     func goToSettings() {
         let settingsVC = SettingsViewController.fromStoryboard("Main")
-//        let navC = UINavigationController(rootViewController: settingsVC)
-        
         navigationController?.pushViewController(settingsVC, animated: true)
-//        present(navC, animated: true, completion: nil)
     }
     
     func loadApproveDenyView() {
-        
-        count += 1
-        
-        print("Count = \(count)")
  
         let approveDenyVC = ApproveDenyViewController.fromStoryboard("Main")
-        approveDenyVC.isLogDisplay = false
         
         navigationController?.pushViewController(approveDenyVC, animated: true)
     }
@@ -464,7 +301,11 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
         
         reader.dismiss(animated: true, completion: nil)
         
-        handleAuthRequest(jsonDictionary)
+        var push = PushNoti(pushData: nil)
+        push.userInfo = jsonDictionary
+        PushHelper.shared.lastPush = push
+        
+        handlePush()
         
     }
 
@@ -561,7 +402,7 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
         smallBannerView.isHidden = true
     }
     
-    func showFullScreenAd() {
+    @objc func showFullScreenAd() {
         // ad handler shouldShowAds state is checked in function prior to showing ad
         
         if bannerView == nil {
@@ -593,19 +434,9 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
                 self.statusView.alpha = 1.0
                 if GluuConstants.IS_IPHONE_5 {
                     //IS_IPHONE_4 ||
-                    if UIDeviceOrientationIsLandscape(UIDevice.current.orientation) {
-                        // code for landscape orientation
-                        self.statusView.center = CGPoint(x: self.statusView.center.x, y: 15)
-                    } else {
-                        self.statusView.center = CGPoint(x: self.statusView.center.x, y: 45)
-                    }
+                    self.statusView.center = CGPoint(x: self.statusView.center.x, y: 45)
                 } else {
-                    if UIDeviceOrientationIsLandscape(UIDevice.current.orientation) {
-                        // code for landscape orientation
-                        self.statusView.center = CGPoint(x: self.statusView.center.x, y: 35)
-                    } else {
-                        self.statusView.center = CGPoint(x: self.statusView.center.x, y: 65)
-                    }
+                    self.statusView.center = CGPoint(x: self.statusView.center.x, y: 65)
                 }
                 self.isStatusViewVisible = true
             })
@@ -621,57 +452,7 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
             //
         }
     }
-    
-    func initUserInfo(_ parameters: [AnyHashable : Any]?) {
-        
-        let app = parameters?["app"] as? String ?? ""
-        let created = "\(Date())"
-        let issuer = parameters?["issuer"] as? String ?? ""
-        let username = parameters?["username"] as? String ?? ""
-        let method = parameters?["method"] as? String ?? ""
-        
-        let isLicensedInt = parameters?["licensed"] as? Int ?? 0
-        let isLicensed: Bool = isLicensedInt != 0
-        
-        let oneStep: Bool = username.isEmpty ? true : false
-        
-        UserLoginInfo.sharedInstance().application = app
-        UserLoginInfo.sharedInstance().created = created
-        UserLoginInfo.sharedInstance().issuer = issuer
-        UserLoginInfo.sharedInstance().userName = username
-        
-        isEnroll = (method == "enroll") ? true : false
-        if isEnroll {
-            let type = NSLocalizedString("Enrol", comment: "Enrol")
-            UserLoginInfo.sharedInstance().authenticationType = type
-        } else {
-            UserLoginInfo.sharedInstance().authenticationType = method
-        }
-        
-        // we use the token application combined with the username to identify a licensed key
-        
-        let keyIssuer = app + username
-        
-        // if isLicensed is true, this is a licensed account and
-        // ads should not display. As long as the user has 1 key that is licensed
-        // ads should not display, regardless of other unlicensed keys the user has
-        
-        if isLicensed == true {
-            print("Saving Licensed Key")
-            GluuUserDefaults.saveLicensedKey(keyIssuer)
-            AdHandler.shared.refreshAdStatus()
-        } else {
-            print("Removing Licensed Key")
-            GluuUserDefaults.removeLicensedKey(keyIssuer)
-            AdHandler.shared.refreshAdStatus()
-        }
-        
-        let mode = oneStep ? NSLocalizedString("OneStepMode", comment: "One Step") : NSLocalizedString("TwoStepMode", comment: "Two Step")
-        UserLoginInfo.sharedInstance().authenticationMode = mode
-        UserLoginInfo.sharedInstance().locationCity = parameters?["req_loc"] as? String ?? ""
-        UserLoginInfo.sharedInstance().locationIP = parameters?["req_ip"] as? String ?? ""
-    }
-    
+ 
     func showSystemMessage(_ title: String?, message: String?) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         

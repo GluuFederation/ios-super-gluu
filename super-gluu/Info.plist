@@ -2,12 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSFaceIDUsageDescription</key>
-	<string>Use Face ID to secure Gluu</string>
-	<key>CFBundleDisplayName</key>
-	<string>$(APP_DISPLAY_NAME)</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>$(APP_DISPLAY_NAME)</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -37,6 +35,8 @@
 	<string>$(EXECUTABLE_NAME) requires Bluetooth service to work</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Providing camera access allows you to scan QR Codes, an essential part of this app. </string>
+	<key>NSFaceIDUsageDescription</key>
+	<string>Use Face ID to secure Gluu</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>$(EXECUTABLE_NAME) requires location services to work</string>
 	<key>NSLocationWhenInUseUsageDescription</key>

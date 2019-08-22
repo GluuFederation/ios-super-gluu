@@ -7,42 +7,108 @@
 //
 
 import UIKit
+import ox_push3
+
 
 class PushHelper: NSObject {
     
     static let shared = PushHelper()
     
-    var lastPush: PushNoti?
-    
-    
-    func isLastPushExpired() -> Bool {
-        
-        let pushReceivedDate = UserDefaults.standard.object(forKey: GluuConstants.PUSH_CAME_DATE) as? Date
-        
-        if pushReceivedDate == nil {
-            return false
+    var lastPush: PushNoti? {
+
+        didSet {
+            guard lastPush != nil else { return }
+            
+            initUserInfo(self.lastPush?.userInfo)
+            AuthHelper.shared.requestDictionary =  lastPush?.userInfo
         }
-        
-        let currentDate = Date()
-        var distanceBetweenDates: TimeInterval? = nil
-        
-        if let aDate = pushReceivedDate {
-            distanceBetweenDates = currentDate.timeIntervalSince(aDate)
-        }
-        let seconds = distanceBetweenDates ?? 0
-        
-        UserDefaults.standard.removeObject(forKey: GluuConstants.PUSH_CAME_DATE)
-        
-        return seconds > GluuConstants.PUSH_EXPIRY
-        
     }
     
-    func parsedInfo(_ pushInfo: [AnyHashable : Any]?) -> [AnyHashable : Any]? {
+    fileprivate func initUserInfo(_ parameters: [AnyHashable : Any]?) {
+        
+        let app = parameters?["app"] as? String ?? ""
+        let created = "\(Date())"
+        let issuer = parameters?["issuer"] as? String ?? ""
+        let username = parameters?["username"] as? String ?? ""
+        let method = parameters?["method"] as? String ?? ""
+        
+        let isLicensedInt = parameters?["licensed"] as? Int ?? 0
+        let isLicensed: Bool = isLicensedInt != 0
+        
+        let oneStep: Bool = username.isEmpty ? true : false
+        
+        UserLoginInfo.sharedInstance().application = app
+        UserLoginInfo.sharedInstance().created = created
+        UserLoginInfo.sharedInstance().issuer = issuer
+        UserLoginInfo.sharedInstance().userName = username
+        
+        let isEnroll = (method == "enroll") ? true : false
+        if isEnroll {
+            let type = NSLocalizedString("Enrol", comment: "Enrol")
+            UserLoginInfo.sharedInstance().authenticationType = type
+        } else {
+            UserLoginInfo.sharedInstance().authenticationType = method
+        }
+        
+        // we use the token application combined with the username to identify a licensed key
+        
+        let keyIssuer = app + username
+        
+        // if isLicensed is true, this is a licensed account and
+        // ads should not display. As long as the user has 1 key that is licensed
+        // ads should not display, regardless of other unlicensed keys the user has
+        
+        if isLicensed == true {
+            print("Saving Licensed Key")
+            GluuUserDefaults.saveLicensedKey(keyIssuer)
+            AdHandler.shared.refreshAdStatus()
+        } else {
+            print("Removing Licensed Key")
+            GluuUserDefaults.removeLicensedKey(keyIssuer)
+            AdHandler.shared.refreshAdStatus()
+        }
+        
+        let mode = oneStep ? NSLocalizedString("OneStepMode", comment: "One Step") : NSLocalizedString("TwoStepMode", comment: "Two Step")
+        UserLoginInfo.sharedInstance().authenticationMode = mode
+        UserLoginInfo.sharedInstance().locationCity = parameters?["req_loc"] as? String ?? ""
+        UserLoginInfo.sharedInstance().locationIP = parameters?["req_ip"] as? String ?? ""
+    }
+    
+}
+
+
+struct PushNoti {
+    var receivedDate: Date = Date()
+    var action = PushAction.none {
+        didSet {
+            print("Action:\(action)")
+        }
+    }
+    var userInfo: [AnyHashable : Any]? = nil
+    
+    var isExpired: Bool {
+        print("Current Date: \(Date())")
+        print("Received Date: \(receivedDate)")
+        print("Elapsed Time: \(Date().timeIntervalSince(receivedDate))")
+        
+        return Date().timeIntervalSince(receivedDate) > GluuConstants.PUSH_EXPIRY
+    }
+    
+    var timeTillExpired: TimeInterval {
+        return GluuConstants.PUSH_EXPIRY - Date().timeIntervalSince(receivedDate)
+    }
+    
+    init(pushData: [AnyHashable : Any]?, action: PushAction = PushAction.none) {
+        self.userInfo = self.parsedInfo(pushData)
+        self.action = action
+    }
+    
+    fileprivate func parsedInfo(_ pushData: [AnyHashable : Any]?) -> [AnyHashable : Any]? {
         
         guard
-            let pushInfo = pushInfo,
-            let requestItem = pushInfo["request"] else {
-            return nil
+            let data = pushData,
+            let requestItem = data["request"] else {
+                return nil
         }
         
         var dataOrNil: Data?
@@ -54,31 +120,15 @@ class PushHelper: NSObject {
         }
         
         guard
-            let data = dataOrNil,
-            let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [AnyHashable : Any] else {
-            return nil
+            let finalData = dataOrNil,
+            let json = try? JSONSerialization.jsonObject(with: finalData, options: []) as? [AnyHashable : Any] else {
+                return nil
         }
-
+        
         
         return json
         
     }
-    
-    func handlePush() {
-        // call approve/deny
-        // do what home screen does. If the action is approve/decline, do that.
-        // otherwise, show the approve/deny screen
-        // this gets triggered in RootContainerVC when user gets through the Landing VC
-        // and enters the app securely
-        
-    }
-}
-
-
-struct PushNoti {
-    var date: Date?
-    var userInfo: [AnyHashable : Any]?
-    var action: PushAction?
 }
 
 

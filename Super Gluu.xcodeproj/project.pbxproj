@@ -10,6 +10,7 @@
 		26A5F3B822F0C5C8002038DF /* RootContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A5F3B722F0C5C8002038DF /* RootContainerViewController.swift */; };
 		26A5F3BB22F39B4E002038DF /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A5F3BA22F39B4E002038DF /* CircularProgressBar.swift */; };
 		26A5F3BD22F3B6FD002038DF /* Root.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26A5F3BC22F3B39F002038DF /* Root.storyboard */; };
+		26B2EFFE230C98CB00C365EF /* LogDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A5F3B922F3736E002038DF /* LogDetailViewController.swift */; };
 		26E1DCDB21B9D5EF00F8C843 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E1DCDA21B9D4F200F8C843 /* Constants.swift */; };
 		26E1DCE721B9F3F500F8C843 /* AdHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E1DCE121B9F3F200F8C843 /* AdHelper.swift */; };
 		26E1DCE821B9F3F500F8C843 /* AuthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E1DCE221B9F3F200F8C843 /* AuthHelper.swift */; };
@@ -981,6 +982,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26B2EFFE230C98CB00C365EF /* LogDetailViewController.swift in Sources */,
 				BB6041691F978E540051F38D /* PinCodeDelegate.h in Sources */,
 				C8494D0B1FD5E67600CD5FA8 /* SettingsTableViewCell.swift in Sources */,
 				26E1DCEE21B9F40700F8C843 /* TouchIDAuth.swift in Sources */,

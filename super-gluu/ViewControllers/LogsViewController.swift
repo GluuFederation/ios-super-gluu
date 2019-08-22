@@ -218,7 +218,7 @@ class LogsViewController: BaseViewController, UITableViewDataSource, UITableView
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if logsTableView.isEditing != true {
-            loadApproveDenyView(indexPath.row)
+            showLogDetail(indexPath.row)
         }
     }
 
@@ -237,25 +237,13 @@ class LogsViewController: BaseViewController, UITableViewDataSource, UITableView
     }
 
     func swipeableTableViewCell(_ cell: SWTableViewCell?, didTriggerLeftUtilityButtonWith index: Int) {
-//        switch index {
-//            case 0:
-//                print("check button was pressed")
-//            case 1:
-//                print("clock button was pressed")
-//            case 2:
-//                print("cross button was pressed")
-//            case 3:
-//                print("list button was pressed")
-//            default:
-//                break
-//        }
     }
 
     func swipeableTableViewCell(_ cell: SWTableViewCell?, didTriggerRightUtilityButtonWith index: Int) {
         switch index {
             case 0:
                 print("More button was pressed")
-                loadApproveDenyView(Int(cell?.tag ?? 0))
+                showLogDetail(Int(cell?.tag ?? 0))
             case 1:
                 // Delete button was pressed
                 print("Delete button was pressed")
@@ -267,16 +255,13 @@ class LogsViewController: BaseViewController, UITableViewDataSource, UITableView
     }
 
     //------------------ END --------------------------------
-    func loadApproveDenyView(_ index: Int) {
+    func showLogDetail(_ index: Int) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let approveDenyView = storyboard.instantiateViewController(withIdentifier: "ApproveDenyViewController") as? ApproveDenyViewController
-        approveDenyView?.isLogDisplay = true
+        let logVC = storyboard.instantiateViewController(withIdentifier: "LogDetailViewController") as! LogDetailViewController
+        
         let userInfo = logsArray[index] as? UserLoginInfo
-        approveDenyView?.userInfo = userInfo
-        tabBarController?.tabBar.isHidden = true
-        if let aView = approveDenyView {
-            navigationController?.pushViewController(aView, animated: true)
-        }
+        logVC.userInfo = userInfo
+        navigationController?.pushViewController(logVC, animated: true)
     }
 
     func getLogsForDelete() -> [AnyHashable]? {

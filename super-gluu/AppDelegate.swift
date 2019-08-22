@@ -32,22 +32,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         registerForPushNotifications()
 
-        let remoteNotif = launchOptions?[.remoteNotification] as? [AnyHashable : Any]
-     
-        PushHelper.shared.lastPush = PushNoti(date: Date(), userInfo: remoteNotif, action: .none)
-     
-       /*
-        //Accept push notification when app is not open
-        if remoteNotif != nil {
-            UserDefaults.standard.set(remoteNotif, forKey: GluuConstants.NotificationRequest)
+        if let remoteNotif = launchOptions?[.remoteNotification] as? [AnyHashable : Any] {
+            PushHelper.shared.lastPush = PushNoti(pushData: remoteNotif)
         }
-      */
 
         //Setup Basic
 
         setupAppearance()
 
-        
         GADMobileAds.configure(withApplicationID: AppConfiguration.googleAdsId)
 
         setupSwiftyStoreKit()
@@ -165,49 +157,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // called as soon as a notification is received
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
 
-        /*
-        // store push came date so we don't handle expired auth requests when the user comes into the app
-        if application.applicationState == .background {
-            UserDefaults.standard.set(Date(), forKey: GluuConstants.PUSH_CAME_DATE)
-        }
+          PushHelper.shared.lastPush = PushNoti(pushData: userInfo)
 
-        if application.applicationState == .active {
-            // app was already in the foreground and we show custom push notifications view
-            parsePushAndNotify(userInfo)
-        } else {
-            // app state is Inactive. App was just brought from background to foreground and we wait when user click or slide on push notification
-            
-            // if/else prevents double handling of pushes received when no security measures are in place
-            if GluuUserDefaults.hasTouchAuthEnabled() == true || GluuUserDefaults.userPin() != nil {
-                UserDefaults.standard.set(userInfo, forKey: GluuConstants.NotificationRequest)
-            } else {
-                pushNotificationRequest = userInfo
-            }
-        }
-
-        UserDefaults.standard.set(false, forKey: GluuConstants.NotificationRequestActionsApprove)
-        UserDefaults.standard.set(false, forKey: GluuConstants.NotificationRequestActionsDeny)
-        print("Received notification: \(userInfo)")
- 
-        */
+          if application.applicationState == .active {
+               NotificationCenter.default.post(name: Notification.Name(GluuConstants.NOTIFICATION_PUSH_RECEIVED), object: nil)
+          }
      
-        PushHelper.shared.lastPush = PushNoti(date: Date(), userInfo: userInfo, action: .none)
+          completionHandler(UIBackgroundFetchResult.newData)
+     
     }
-
-     /*
-    func parsePushAndNotify(_ pushInfo: [AnyHashable : Any]?) {
-
-        if pushInfo == nil {
-            return
-        }
-
-        let parsedPushDict =  PushHelper.shared.parsedInfo(pushInfo)
-
-        if parsedPushDict != nil {
-            NotificationCenter.default.post(name: Notification.Name(GluuConstants.NOTIFICATION_PUSH_ONLINE), object: parsedPushDict)
-        }
-    }
- */
 
 
     func applicationDidEnterBackground(_ application: UIApplication) {
@@ -232,11 +190,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if appIsLocked() == false && coverWindow != nil && !isHidingLockScreen {
             hideLockedScreen()
         }
-     
-     /*
-        // check if a push has been received. Method handles situation appropriately
-        handleAuthenticationRequest(false)
-      */
+ 
     }
     
     func showLockedScreen() {
@@ -266,42 +220,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
-     //
-    func handleAuthenticationRequest(_ isAction: Bool) {
 
-     /*
-        if pushNotificationRequest == nil {
-            return
-        }
-
-        let jsonDictionary =  PushHelper.shared.parsedInfo(pushNotificationRequest!)
-
-        if  PushNotificationsHelper.isLastPushExpired() == false {
-
-            if jsonDictionary != nil {
-
-                if !isAction {
-                    NotificationCenter.default.post(name: Notification.Name(GluuConstants.NOTIFICATION_PUSH_RECEIVED), object: jsonDictionary)
-                } else {
-                    let notiName = isDecline ? GluuConstants.NOTIFICATION_PUSH_RECEIVED_DENY : GluuConstants.NOTIFICATION_PUSH_RECEIVED_APPROVE
-                    
-                    NotificationCenter.default.post(name: Notification.Name(notiName), object: jsonDictionary)
-                }
-            }
-        } else {
-
-            UserDefaults.standard.removeObject(forKey: GluuConstants.NotificationRequest)
-
-            NotificationCenter.default.post(name: Notification.Name(GluuConstants.NOTIFICATION_PUSH_TIMEOVER), object: jsonDictionary)
-        }
-
-        pushNotificationRequest = nil
-     
-     */
-    }
-
-
-// MARK: - Appearance
+    // MARK: - Appearance
     func setupAppearance() {
 
         UINavigationBar.appearance().barTintColor = AppConfiguration.systemColor
@@ -345,30 +265,11 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
             
         case GluuConstants.NotificationActionApprove:
           
-          PushHelper.shared.lastPush = PushNoti(date: Date(), userInfo: userInfo, action: .approve)
-          
-          /*
-          
-            isDecline = false
-            pushNotificationRequest = userInfo
-            UserDefaults.standard.set(userInfo, forKey: GluuConstants.NotificationRequest)
-            UserDefaults.standard.set(true, forKey: GluuConstants.NotificationRequestActionsApprove)
-            UserDefaults.standard.set(false, forKey: GluuConstants.NotificationRequestActionsDeny)
-            handleAuthenticationRequest(true)
-          */
+          PushHelper.shared.lastPush = PushNoti(pushData: userInfo, action: .approve)
             
         case GluuConstants.NotificationActionDeny:
           
-          PushHelper.shared.lastPush = PushNoti(date: Date(), userInfo: userInfo, action: .approve)
-          
-          /*
-            isDecline = true
-            pushNotificationRequest = userInfo
-            UserDefaults.standard.set(userInfo, forKey: GluuConstants.NotificationRequest)
-            UserDefaults.standard.set(true, forKey: GluuConstants.NotificationRequestActionsDeny)
-            UserDefaults.standard.set(false, forKey: GluuConstants.NotificationRequestActionsApprove)
-            handleAuthenticationRequest(true)
-          */
+          PushHelper.shared.lastPush = PushNoti(pushData: userInfo, action: .decline)
             
         case UNNotificationDismissActionIdentifier:
             print("Dismiss Action")

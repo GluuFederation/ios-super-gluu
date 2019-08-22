@@ -8,6 +8,7 @@
 
 import Foundation
 import ox_push3
+import SCLAlertView
 
 enum OxRequestType: String {
     case authenticate = "authenticate"
@@ -25,9 +26,8 @@ enum OxRequestType: String {
     //This prevents others from using the default '()' initializer for this class.
     private override init() {}
     
-    func approveRequest(completion: @escaping (Bool, String?) -> Void) {
-        
-        handleRequest(isDecline: false) { (success, errorMessage) in
+    func handleRequest(isApproved: Bool, completion: @escaping (Bool, String?) -> Void) {
+        handleRequest(isDecline: !isApproved) { (success, errorMessage) in
             if success {
                 completion(true, LocalString.Success.localized)
             } else {
@@ -36,16 +36,6 @@ enum OxRequestType: String {
         }
     }
     
-    func denyRequest(completion: @escaping (Bool, String?) -> Void) {
-        
-        handleRequest(isDecline: true) { (success, errorMessage) in
-            if success {
-                completion(true, LocalString.Success.localized)
-            } else {
-                completion(false, errorMessage)
-            }
-        }
-    }
     
     fileprivate func handleRequest(isDecline: Bool, completion: @escaping (Bool, String?) -> Void) {
         
@@ -53,6 +43,12 @@ enum OxRequestType: String {
             completion(false, LocalString.Missing_Request_Info.localized)
             return
         }
+        
+//        if isDecline {
+//            showAlertView(withTitle: LocalString.Denying.localized, andMessage: "", withCloseButton: false)
+//        } else {
+//            showAlertView(withTitle: LocalString.Approving.localized, andMessage: "", withCloseButton: false)
+//        }
         
         oxPushManager.onOxPushApproveRequest(requestDictionary, isDecline: isDecline, isSecureClick: false){ (result, error) in
             
@@ -66,7 +62,9 @@ enum OxRequestType: String {
                 }
             }
             
-            self.postNotification(requestType: requestType, isApproval: !isDecline, didSucceed: result != nil)
+            self.showAlert(requestType: requestType, isApproval: !isDecline, didSucceed: result != nil)
+            
+            NotificationCenter.default.post(name: Notification.Name(GluuConstants.NOTIFICATION_SHOW_FULLSCREEN_AD), object: nil)
             
             if result != nil {
                 completion(true, nil)
@@ -76,41 +74,57 @@ enum OxRequestType: String {
         }
     }
     
-    fileprivate func postNotification(requestType: OxRequestType?, isApproval: Bool, didSucceed: Bool) {
+    fileprivate func showAlert(requestType: OxRequestType?, isApproval: Bool, didSucceed: Bool) {
         guard let reqType = requestType else {
             return
         }
+        
+        let localSuccess = LocalString.Success.localized
+        let localFail = LocalString.Oops.localized
         
         switch reqType {
         case .enroll:
             if didSucceed == true {
                 if isApproval == true {
-                    NotificationCenter.default.post(name: Notification.Name(GluuConstants.NOTIFICATION_REGISTRATION_SUCCESS), object: nil)
+                    showAlertView(withTitle: localSuccess, andMessage: LocalString.Home_Registration_Success.localized)
                 } else {
-                    NotificationCenter.default.post(name: Notification.Name(GluuConstants.NOTIFICATION_DECLINE_SUCCESS), object: nil)
+                    showAlertView(withTitle: localSuccess, andMessage: LocalString.Home_Auth_Declined.localized)
                 }
             } else {
                 if isApproval == true {
-                    NotificationCenter.default.post(name: Notification.Name(GluuConstants.NOTIFICATION_REGISTRATION_FAILED), object: nil)
+                    showAlertView(withTitle: localFail, andMessage: LocalString.Home_Registration_Failed.localized)
                 } else {
-                    NotificationCenter.default.post(name: Notification.Name(GluuConstants.NOTIFICATION_DECLINE_FAILED), object: nil)
+                    showAlertView(withTitle: localFail, andMessage: LocalString.Home_Decline_Failed.localized)
                 }
             }
 
         case .authenticate:
             if didSucceed == true {
                 if isApproval == true {
-                    NotificationCenter.default.post(name: Notification.Name(GluuConstants.NOTIFICATION_AUTENTIFICATION_SUCCESS), object: nil)
+                    showAlertView(withTitle: LocalString.Home_Auth_Success.localized, andMessage: nil)
                 } else {
-                    NotificationCenter.default.post(name: Notification.Name(GluuConstants.NOTIFICATION_DECLINE_SUCCESS), object: nil)
+                    showAlertView(withTitle: localSuccess, andMessage: LocalString.Home_Auth_Declined.localized)
                 }
             } else {
                 if isApproval == true {
-                    NotificationCenter.default.post(name: Notification.Name(GluuConstants.NOTIFICATION_AUTENTIFICATION_FAILED), object: nil)
+                    showAlertView(withTitle: localFail, andMessage: LocalString.Home_Auth_Failed.localized)
                 } else {
-                    NotificationCenter.default.post(name: Notification.Name(GluuConstants.NOTIFICATION_DECLINE_FAILED), object: nil)
+                    showAlertView(withTitle: localFail, andMessage: LocalString.Home_Decline_Failed.localized)
                 }
             }
         }
+    }
+    
+    
+    func showAlertView(withTitle title: String?, andMessage message: String?, withCloseButton: Bool = true) {
+        let alert = SCLAlertView(autoDismiss: true, horizontalButtons: false)
+        
+        alert.showCustom(title ?? "",
+                         subTitle: message ?? "",
+                         color: AppConfiguration.systemColor,
+                         closeButtonTitle: "OK",
+                         timeout: alert.dismissTimeout(),
+                         circleIconImage: AppConfiguration.systemAlertIcon,
+                         animationStyle: SCLAnimationStyle.topToBottom)
     }
 }

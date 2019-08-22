@@ -12,17 +12,13 @@ import SCLAlertView
 import ox_push3
 
 
-let moveUpY = 70
-let LANDSCAPE_Y = 290
-let LANDSCAPE_Y_IPHONE_5 = 245
-let START_TIME = 40
-
 class ApproveDenyViewController: UIViewController {
     
     @IBOutlet var approveDenyContainerView: UIView!
     @IBOutlet var circularProgressBar: CircularProgressBar!
     @IBOutlet var approveButton: UIButton!
     @IBOutlet var denyButton: UIButton!
+    
     //Info
     @IBOutlet var serverNameLabel: UILabel!
     @IBOutlet var serverUrlLabel: UILabel!
@@ -35,12 +31,7 @@ class ApproveDenyViewController: UIViewController {
     @IBOutlet var titleLabels: [UILabel]!
     
     
-    // if isLogDisplay, we're displaying info about a previous authorization
-    var isLogDisplay = false
     var userInfo: UserLoginInfo?
-    var isLandScape = false
-    var timer: Timer?
-    var time: Int = 0
     
     private var alertView: SCLAlertView?
 
@@ -56,7 +47,6 @@ class ApproveDenyViewController: UIViewController {
         serverUrlLabel.addGestureRecognizer(tap)
         
     }
-    
     
     func setupDisplay() {
         
@@ -110,58 +100,64 @@ class ApproveDenyViewController: UIViewController {
         if info!.locationIP != nil {
             locationLabel.text = info!.locationIP
         }
+        
         if info!.locationCity != nil {
             let location = info!.locationCity
             let locationDecode = location?.urlDecode()
             cityNameLabel.text = locationDecode
         }
+        
         typeLabel.text = info!.authenticationType
 
         navigationItem.hidesBackButton = true
 
         title = LocalString.Permission_Approval.localized
         
-        circularProgressBar.setProgress(to: 1, withAnimation: true)
-        circularProgressBar.timeExpired = {
-            
+        circularProgressBar.setProgress(to: 1, timeElapsed: GluuConstants.PUSH_EXPIRY - (PushHelper.shared.lastPush?.timeTillExpired ?? 0), withAnimation: true)
+        circularProgressBar.timeExpired = { [weak self] in
+            guard let `self` = self else { return }
+            self.pushExpired()
         }
+        
     }
-
+    
+    private func pushExpired() {
+        denyTapped()
+//        showAlertView(withTitle: LocalString.Denying.localized, andMessage: "", withCloseButton: false)
+    }
 
     @IBAction func approveTapped() {
 
-        view.isUserInteractionEnabled = false
-        
         showAlertView(withTitle: LocalString.Approving.localized, andMessage: "", withCloseButton: false)
-
-        AuthHelper.shared.approveRequest(completion: { success, errorMessage in
-
-            self.alertView?.hideView()
-
-            self.view.isUserInteractionEnabled = true
-            self.navigationController?.popToRootViewController(animated: true)
-        })
-
-        timer?.invalidate()
-        timer = nil
+        
+        handleAuth(isApproved: true)
     }
 
     @IBAction func denyTapped() {
-
-        view.isUserInteractionEnabled = false
-
         showAlertView(withTitle: LocalString.Denying.localized, andMessage: "", withCloseButton: false)
-
-        AuthHelper.shared.denyRequest(completion: { success, errorMessage in
-
+        
+        handleAuth(isApproved: false)
+    }
+    
+    func handleAuth(isApproved: Bool) {
+        
+        view.isUserInteractionEnabled = false
+        
+        AuthHelper.shared.handleRequest(isApproved: isApproved, completion: { [weak self] success, errorMessage in
+            
+            guard let `self` = self else { return }
+            
             self.alertView?.hideView()
-
+            self.circularProgressBar.killTimer()
+            
             self.view.isUserInteractionEnabled = true
             self.navigationController?.popToRootViewController(animated: true)
-        })
+            
+            // Clear out the old data
+            PushHelper.shared.lastPush = nil
 
-        timer?.invalidate()
-        timer = nil
+        })
+    
     }
 
     func showAlertView(withTitle title: String?, andMessage message: String?, withCloseButton showCloseButton: Bool) {
@@ -179,10 +175,6 @@ class ApproveDenyViewController: UIViewController {
                               animationStyle: .topToBottom)
     }
     
-    deinit {
-        timer?.invalidate()
-        timer = nil
-    }
 }
 
 
