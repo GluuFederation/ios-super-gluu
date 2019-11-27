@@ -34,7 +34,7 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
     
     var scanJsonDictionary = [AnyHashable: Any]()
 
-    var scanner: PeripheralScanner?
+//    var scanner: PeripheralScanner?
     var isSecureClick = false
     var isEnroll = false
     var isShowingQRReader = false
@@ -136,16 +136,16 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
         AdHandler.shared.refreshAdStatus()
     }
     
-    @objc
-    func initSecureClickScanner(_ notification: Notification) {
-        let valueData = notification.object as? Data
-        let scanner = PeripheralScanner()
-        scanner.valueForWrite = valueData
-        scanner.isEnroll = isEnroll
-        scanner.start()
-        
-        showAlertView(withTitle: "SecureClick", andMessage: "Short click on device button")
-    }
+//    @objc
+//    func initSecureClickScanner(_ notification: Notification) {
+//        let valueData = notification.object as? Data
+//        let scanner = PeripheralScanner()
+//        scanner.valueForWrite = valueData
+//        scanner.isEnroll = isEnroll
+//        scanner.start()
+//
+//        showAlertView(withTitle: "SecureClick", andMessage: "Short click on device button")
+//    }
     
     func initNotificationCenterObservers() {
         
@@ -155,15 +155,15 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.notificationRecieved(_:)), name: noti(GluuConstants.NOTIFICATION_PUSH_TIMEOVER), object: nil)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(self.initSecureClickScanner(_:)), name: noti(GluuConstants.INIT_SECURE_CLICK_NOTIFICATION), object: nil)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(self.notificationDidDisconnecPeritheralRecieved(_:)), name: noti(GluuConstants.DID_DISCONNECT_PERIPHERAL), object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(self.initSecureClickScanner(_:)), name: noti(GluuConstants.INIT_SECURE_CLICK_NOTIFICATION), object: nil)
+//
+//        NotificationCenter.default.addObserver(self, selector: #selector(self.notificationDidDisconnecPeritheralRecieved(_:)), name: noti(GluuConstants.DID_DISCONNECT_PERIPHERAL), object: nil)
     }
     
-    @objc
-    func notificationDidDisconnecPeritheralRecieved(_ notification: Notification?) {
-        scanner?.scanning = false
-    }
+//    @objc
+//    func notificationDidDisconnecPeritheralRecieved(_ notification: Notification?) {
+//        scanner?.scanning = false
+//    }
     
     @objc
     func notificationRecieved(_ notification: Notification?) {
