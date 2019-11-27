@@ -7,10 +7,10 @@
 //
 
 import UIKit
-import CoreBluetooth
+//import CoreBluetooth
 
 class CharacteristicScanner: NSObject {
-    
+    /*
     var peripharal: CBPeripheral!
     var service: CBService!
     
@@ -121,5 +121,5 @@ class CharacteristicObserver: NSObject {
         print("resultDataArray - \(resultDataArray)")
         return resultDataArray
     }
-    
+    */
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+/*
 import CoreBluetooth
 
 struct Constants {
@@ -171,3 +172,5 @@ extension PeripheralScanner : CBCentralManagerDelegate{
 //    }
     
 }
+
+ */
