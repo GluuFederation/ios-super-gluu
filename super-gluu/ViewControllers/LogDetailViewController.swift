@@ -13,10 +13,6 @@ import SCLAlertView
 import ox_push3
 
 
-let moveUpY = 70
-let LANDSCAPE_Y = 290
-let LANDSCAPE_Y_IPHONE_5 = 245
-
 class LogDetailViewController: UIViewController {
     
     @IBOutlet var serverNameLabel: UILabel!
@@ -31,7 +27,6 @@ class LogDetailViewController: UIViewController {
     @IBOutlet var titleLabels: [UILabel]!
     
     
-    // if isLogDisplay, we're displaying info about a previous authorization
     var userInfo: UserLoginInfo?
     
     private var alertView: SCLAlertView?
@@ -84,7 +79,7 @@ class LogDetailViewController: UIViewController {
         
         if server != nil {
             let serverURL = URL(string: server ?? "")
-            serverNameLabel.text = "Gluu Server \(serverURL?.host ?? "")"
+            serverNameLabel.text = "\(serverURL?.host ?? "")"
         }
         
         if info!.created != nil {
@@ -100,7 +95,18 @@ class LogDetailViewController: UIViewController {
             let locationDecode = location?.urlDecode()
             cityNameLabel.text = locationDecode
         }
-        typeLabel.text = info!.authenticationType
+        
+        if let authType = OxRequestType(rawValue: info!.authenticationType) {
+            typeLabel.text = authType.localizedString()
+        } else {
+            // handles legacy cases where the authType was "enrol"
+            var authType = OxRequestType.authenticate
+            if info!.authenticationType.lowercased().hasPrefix("enr") {
+                authType = OxRequestType.enroll
+            }
+            
+            typeLabel.text = authType.localizedString()
+        }
         
         
         switch info!.logState {

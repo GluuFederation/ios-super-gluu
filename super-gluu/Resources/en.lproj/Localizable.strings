@@ -155,7 +155,52 @@
 "Failed_Attempts_Warning" = "App will be locked for 10 minutes after this many failed attempts";
 
 
+"Camera_Denied_Directions" = "Provide access to your camera to proceed:\n\n1. Tap the Go button to open Settings.\n\n2. Tap Privacy.\n\n3. Enable Camera access.\n\n4. Open Super Gluu and try again.";
+"Camera_Access_Needed"     = "Camera Access Needed";
+"Go" = "Go";
 
+"Unrecognized_QR" =    "QR code not recognized. Try again.";
+"Unsopported_Fido" =    "Unsupported FIDO version";
+"Failed_KeyHandles" =    "Failed KeyHandles";
+
+"Passcode" =    "Passcode";
+"History" =    "History";
+"Face_ID" =    "Face ID";
+
+"Select_All" =    "Select All";
+"Unselect_All" =    "Unselect All";
+
+"Edit" =    "Edit";
+
+"Error" =    "Error";
+"Ok" =    "Ok";
+
+"Reset_Passcode" =    "Reset Passcode";
+"Same_Passcode" =    "Your new passcode must be different than your previous one.";
+"Pincode_Info" =    "When enabled, access to Super Gluu will be protected by a passcode of your choice.";
+"Locked_App_Info" =   "Super Gluu will be locked for 10 minutes after 5 failed attempts.";
+
+"Unable_To_Restore" =    "Unable to Restore";
+"TOS" =    "Terms of Service";
+"Ad_Free_Promo" =    "Go ad-free $0.99/month";
+"Restore_Subscription" =    "Restore a previous subscription.";
+"Purchase_Not_Found" =    "We couldn't find a purchase to be restored.";
+
+"Signed_In" =    "Signed in to";
+"Login_Failed" =    "Failed to sign in to";
+"Registered_To" =    "Registered to";
+"Registration_Failed" =    "Failed registration to";
+"Login_Declined" =    "Declined sign in to";
+"Enroll_Declined" =    "Declined registration to";
+
+"When_Enabled_FaceId" = "When enabled, access to Super Gluu will be protected by Face ID";
+"Yesterday" = "Yesterday";
+"Add_Secure_Entry" = "Add Secure Entry";
+
+"Registration" = "Registration";
+"Authentication" = "Authentication";
+
+"To_Continue" = "To continue, tap approve";
 
 /*
      Landing

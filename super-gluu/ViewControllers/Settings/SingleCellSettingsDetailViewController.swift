@@ -7,16 +7,19 @@
 //
 
 import UIKit
+import LocalAuthentication
 
 class SingleCellSettingsDetailViewController: UITableViewController {
 
     enum Display {
         case touchId
+        case faceId
         case ssl
         
         var titleAndIcon: (String, UIImage?) {
             switch self {
             case .touchId: return (LocalString.Passcode_Touch.localized, #imageLiteral(resourceName: "icon_settings_touchid"))
+            case .faceId: return (LocalString.Face_ID.localized, UIImage(named: "icon_settings_faceid"))
             case .ssl:     return (LocalString.SSL_Trust.localized, #imageLiteral(resourceName: "icon_settings_ssl"))
             }
         }
@@ -25,6 +28,8 @@ class SingleCellSettingsDetailViewController: UITableViewController {
             switch self {
             case .touchId:
                 return LocalString.Passcode_Enabled_Info.localized
+            case .faceId:
+                return LocalString.When_Enabled_FaceId.localized
             case .ssl:
                 return LocalString.SSL_Info.localized
             }
@@ -73,9 +78,12 @@ class SingleCellSettingsDetailViewController: UITableViewController {
             navigationItem.title = LocalString.SSL_Trust.localized
         
         case .touchId:
-            authSwitch.isOn = GluuUserDefaults.hasTouchAuthEnabled()
+            authSwitch.isOn = GluuUserDefaults.hasBioAuthEnabled()
             navigationItem.title = LocalString.Passcode_Touch_Security.localized
-        
+            
+        case .faceId:
+            authSwitch.isOn = GluuUserDefaults.hasBioAuthEnabled()
+            navigationItem.title = LocalString.Face_ID.localized
         }
         
     }
@@ -87,7 +95,10 @@ class SingleCellSettingsDetailViewController: UITableViewController {
             GluuUserDefaults.setSSLEnabled(isEnabled: sender.isOn)
             
         case .touchId:
-            GluuUserDefaults.setTouchAuth(isOn: sender.isOn)
+            GluuUserDefaults.setBioAuth(isOn: sender.isOn)
+            
+        case .faceId:
+            GluuUserDefaults.setBioAuth(isOn: sender.isOn)
             
         }
     }

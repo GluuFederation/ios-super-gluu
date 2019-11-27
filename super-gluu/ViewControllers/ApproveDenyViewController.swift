@@ -28,7 +28,9 @@ class ApproveDenyViewController: UIViewController {
     @IBOutlet var createdTimeLabel: UILabel!
     @IBOutlet var createdDateLabel: UILabel!
     @IBOutlet var typeLabel: UILabel!
+    @IBOutlet var toContinueLabel: UILabel!
     @IBOutlet var titleLabels: [UILabel]!
+    
     
     
     var userInfo: UserLoginInfo?
@@ -45,6 +47,8 @@ class ApproveDenyViewController: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(ApproveDenyViewController.openURL(_:)))
         serverUrlLabel.isUserInteractionEnabled = true
         serverUrlLabel.addGestureRecognizer(tap)
+        
+        toContinueLabel.text = LocalString.To_Continue.localized
         
     }
     
@@ -84,7 +88,7 @@ class ApproveDenyViewController: UIViewController {
         
         if server != nil {
             let serverURL = URL(string: server ?? "")
-            serverNameLabel.text = "Gluu Server \(serverURL?.host ?? "")"
+            serverNameLabel.text = "\(serverURL?.host ?? "")"
         }
         
         // created format
@@ -107,7 +111,9 @@ class ApproveDenyViewController: UIViewController {
             cityNameLabel.text = locationDecode
         }
         
-        typeLabel.text = info!.authenticationType
+        if let authType = OxRequestType(rawValue: info!.authenticationType) {
+            typeLabel.text = authType.localizedString()
+        }
 
         navigationItem.hidesBackButton = true
 

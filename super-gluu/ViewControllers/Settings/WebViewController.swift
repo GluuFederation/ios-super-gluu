@@ -18,7 +18,7 @@ enum WebDisplay: String {
     var localized: String {
         switch self {
         case .privacy: return LocalString.Menu_Privacy_Policy.localized
-        case .tos: return LocalString.Menu_User_Guide.localized
+        case .tos: return LocalString.TOS.localized
         }
     }
     

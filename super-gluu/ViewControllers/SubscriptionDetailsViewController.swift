@@ -51,8 +51,10 @@ class SubscriptionDetailsViewController: UIViewController {
         
         purchaseButton.backgroundColor = AppConfiguration.systemColor
         purchaseButton.layer.cornerRadius = purchaseButton.bounds.height / 2
+        purchaseButton.setTitle(LocalString.Ad_Free_Promo.localized, for: .normal)
         
         restorePurchaseButton.setTitleColor(AppConfiguration.systemColor, for: .normal)
+        restorePurchaseButton.setTitle(LocalString.Restore_Subscription.localized, for: .normal)
         
     }
     
@@ -81,10 +83,10 @@ class SubscriptionDetailsViewController: UIViewController {
             } else {
                 let alert = SCLAlertView(autoDismiss: true, horizontalButtons: false)
                 
-                alert.showCustom("Unable to Restore",
-                                 subTitle: "We didn't find a purchase to be restored.",
+                alert.showCustom(LocalString.Unable_To_Restore.localized,
+                                 subTitle: LocalString.Purchase_Not_Found.localized,
                                  color: AppConfiguration.systemColor,
-                                 closeButtonTitle: "OK",
+                                 closeButtonTitle: LocalString.Ok.localized,
                                  timeout: alert.dismissTimeout(),
                                  circleIconImage: AppConfiguration.systemAlertIcon)
         

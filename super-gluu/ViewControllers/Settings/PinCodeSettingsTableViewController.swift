@@ -42,10 +42,10 @@ class PinCodeSettingsTableViewController: UITableViewController, PAPasscodeViewC
     
     override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
         if section == 0 {
-            return LocalString.Auth_Declined_To.localized
+            return LocalString.Pincode_Info.localized
         }
         
-        return "Yes"
+        return LocalString.Locked_App_Info.localized
     }
     
     @IBAction func pinSwitchValueChanged(_ sender: Any) {
@@ -111,7 +111,7 @@ class PinCodeSettingsTableViewController: UITableViewController, PAPasscodeViewC
         if let pin = userPin() {
             passcodeViewController = PAPasscodeViewController(for: .change)
             passcodeViewController?.passcode = pin
-            passcodeViewController?.title = "Reset Passcode"
+            passcodeViewController?.title = LocalString.Reset_Passcode.localized
         } else {
             passcodeViewController = PAPasscodeViewController(for: .set)
         }
@@ -151,7 +151,7 @@ class PinCodeSettingsTableViewController: UITableViewController, PAPasscodeViewC
                 
                 // ** Local Text
                 alert.showCustom(LocalString.Info.localized,
-                                 subTitle: "Your new passcode must be different from your previous one.",
+                                 subTitle: LocalString.Same_Passcode.localized,
                                  color: AppConfiguration.systemColor,
                                  closeButtonTitle: LocalString.Close.localized,
                                  circleIconImage: AppConfiguration.systemAlertIcon,
@@ -210,7 +210,7 @@ class PinCodeSettingsTableViewController: UITableViewController, PAPasscodeViewC
     func showAlertView() {
         let alert = SCLAlertView(autoDismiss: false, showCloseButton: false, horizontalButtons: false)
         
-        alert.addButton("Ok", backgroundColor: AppConfiguration.systemColor, textColor: .white) {
+        alert.addButton(LocalString.Ok.localized, backgroundColor: AppConfiguration.systemColor, textColor: .white) {
             alert.hideView()
             self.passcodeViewController?.showKeyboard()
         }

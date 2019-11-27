@@ -10,9 +10,19 @@ import Foundation
 import ox_push3
 import SCLAlertView
 
+// Relates to String in https://github.com/GluuFederation/oxAuth/blob/master/Server/integrations/super_gluu/SuperGluuExternalAuthenticator.py#L400
+
 enum OxRequestType: String {
     case authenticate = "authenticate"
     case enroll = "enroll"
+    
+    func localizedString() -> String {
+        switch self {
+            case .authenticate: return LocalString.Authentication.localized
+            case .enroll: return LocalString.Registration.localized
+        }
+    }
+    
 }
 
 @objc class AuthHelper: NSObject {
@@ -43,12 +53,6 @@ enum OxRequestType: String {
             completion(false, LocalString.Missing_Request_Info.localized)
             return
         }
-        
-//        if isDecline {
-//            showAlertView(withTitle: LocalString.Denying.localized, andMessage: "", withCloseButton: false)
-//        } else {
-//            showAlertView(withTitle: LocalString.Approving.localized, andMessage: "", withCloseButton: false)
-//        }
         
         oxPushManager.onOxPushApproveRequest(requestDictionary, isDecline: isDecline, isSecureClick: false){ (result, error) in
             
@@ -88,7 +92,7 @@ enum OxRequestType: String {
                 if isApproval == true {
                     showAlertView(withTitle: localSuccess, andMessage: LocalString.Home_Registration_Success.localized)
                 } else {
-                    showAlertView(withTitle: localSuccess, andMessage: LocalString.Home_Auth_Declined.localized)
+                    showAlertView(withTitle: LocalString.Home_Auth_Declined.localized, andMessage: nil)
                 }
             } else {
                 if isApproval == true {
@@ -103,7 +107,7 @@ enum OxRequestType: String {
                 if isApproval == true {
                     showAlertView(withTitle: LocalString.Home_Auth_Success.localized, andMessage: nil)
                 } else {
-                    showAlertView(withTitle: localSuccess, andMessage: LocalString.Home_Auth_Declined.localized)
+                    showAlertView(withTitle: LocalString.Home_Auth_Declined.localized, andMessage: nil)
                 }
             } else {
                 if isApproval == true {
@@ -122,7 +126,7 @@ enum OxRequestType: String {
         alert.showCustom(title ?? "",
                          subTitle: message ?? "",
                          color: AppConfiguration.systemColor,
-                         closeButtonTitle: "OK",
+                         closeButtonTitle: LocalString.Ok.localized,
                          timeout: alert.dismissTimeout(),
                          circleIconImage: AppConfiguration.systemAlertIcon,
                          animationStyle: SCLAnimationStyle.topToBottom)

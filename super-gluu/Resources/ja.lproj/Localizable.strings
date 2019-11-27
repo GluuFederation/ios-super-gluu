@@ -32,7 +32,7 @@
     // Subscription Details;
 "Subscription_Details" = "サブスクリプションの詳細";
 "Details"              = "詳細";
-"Subscription_Info"    = "毎月のサブスクリプションを購入するとSuper Gluuを完全に広告なしにできます。購入が成功するとバナー広告やフルスクリーン広告は表示されなくなります。購入の確認した後は、支払いはiTunesアカウントに請求されます。自動更新が現在の期間の終了の少なくとも24時間前にオフにされていない限り、当サブスクリプション期間の終わりにサブスクリプションが自動的に更新されるとき、iTunesアカウントは再び課金されます。 無料試用期間の未使用部分は、サブスクリプションを購入した時点で失効します。購入後はいつでもApple IDアカウント設定で自動更新を管理または無効にできます。";
+"Subscription_Info"    = "毎月のサブスクリプションを購入するとSuper Gluuを完全に広告なしにできます。購入が成功するとバナー広告やフルスクリーン広告は表示されなくなります。購入の確認した後は、支払いはiTunesアカウントに請求されます。自動更新が現在の期間の終了の少なくとも24時間前にオフにされていない限り、当サブスクリプション期間の終わりにサブスクリプションが自動的に更新されるとき、iTunesアカウントは再び課金されます。無料試用期間の未使用部分は、サブスクリプションを購入した時点で失効します。購入後はいつでもApple IDアカウント設定で自動更新を管理または無効にできます。";
 
     // Menu
 "Menu_Logs"           = "ログ";
@@ -144,11 +144,51 @@
 
 
 
+"Camera_Denied_Directions" =    "「続行するには、カメラへのアクセスを提供してください。\ n \ n1。移動ボタンをタップして設定を開きます。\ n \ n2。プライバシーをタップします。\ n \ n3。カメラへのアクセスを有効にします。\ n \ n4。 」";
+"Camera_Access_Needed" =    "必要なカメラアクセス";
+"Go" =     "行く";
+
+"Unrecognized_QR" =    "QRコードが認識されません。再試行する。";
+"Unsopported_Fido" =    "サポートされていないFIDOバージョン";
+"Failed_KeyHandles" =    "失敗したKeyHandles";
+
+"Passcode" =    "パスコード";
+"History" =    "歴史";
+"Face_ID" =    "フェイスID";
+
+"Select_All" =    "すべて選択";
+"Unselect_All" =    "すべて選択解除";
+
+"Edit" =    "編集";
+
+"Error" =    "エラー";
+"Ok" =    "OK";
+
+"Reset_Passcode" =    "パスコードをリセット";
+"Same_Passcode" =    "新しいパスコードは、以前のものと異なる必要があります。";
+"Pincode_Info" =    "有効にすると、Super Gluuへのアクセスは選択したパスコードによって保護されます。";
+"Locked_App_Info" =   "Super Gluuは、5回失敗すると10分間ロックされます。";
+
+"Unable_To_Restore" =    "復元できません";
+"TOS" =    "利用規約";
+"Ad_Free_Promo" =    "広告なしで$ 0.99 /月";
+"Restore_Subscription" =    "以前のサブスクリプションを復元します。";
+"Purchase_Not_Found" =    "復元する購入を見つけることができませんでした。";
+
+"Signed_In" =    "にサインインしました";
+"Login_Failed" =    "サインインに失敗しました";
+"Registered_To" =    "に登録";
+"Registration_Failed" =    "への登録に失敗しました";
+"Login_Declined" =    "サインインの拒否";
+"Enroll_Declined" =    "への登録の拒否";
 
 
+"Add_Secure_Entry" =    "安全なエントリを追加";
+"Yesterday" =     "昨日";
+"When_Enabled_FaceId" =    "有効にすると、Super GluuへのアクセスはFace IDによって保護されます";
 
 
+"Registration" = "登録";
+"Authentication" = "認証";
 
-
-
-
+"To_Continue" = "続行するには、承認をタップします";

@@ -139,3 +139,54 @@
 
 "2_Attempts_Remaining"    = "2 pogingen voor 10-minuten blokkade van de app over.";
 "Failed_Attempts_Warning" = "App zal worden geblokkeerd voor 10 minuten na te veel mislukte pogingen";
+
+
+
+"Camera_Denied_Directions" =    "Geef toegang tot uw camera om door te gaan: \ n \ n1. Tik op de Go-knop om Instellingen te openen. \ N \ n2. Tik op Privacy. \ N \ n3. Cameratoegang inschakelen. \ N \ n4. Open Super Gluu en probeer het opnieuw .";
+"Camera_Access_Needed" =    "Cameratoegang vereist";
+"Go" =     "Gaan";
+
+"Unrecognized_QR" =    "QR-code niet herkend. Probeer opnieuw.";
+"Unsopported_Fido" =    "Niet-ondersteunde FIDO-versie";
+"Failed_KeyHandles" =    "KeyHandles mislukt";
+
+"Passcode" =    "Inlogcode";
+"History" =    "Geschiedenis";
+"Face_ID" =    "Face ID";
+
+"Select_All" =    "Selecteer alles";
+"Unselect_All" =    "Deselecteer alles";
+
+"Edit" =    "Bewerk";
+
+"Error" =    "Fout";
+"Ok" =    "OK";
+
+"Reset_Passcode" =    "Reset Inlogcode";
+"Same_Passcode" =    "Uw nieuwe inlogcode moet anders zijn dan uw vorige.";
+"Pincode_Info" =    "Indien ingeschakeld, wordt de toegang tot Super Gluu beschermd door een inlogcode naar keuze.";
+"Locked_App_Info" =  "Super Gluu wordt 10 minuten vergrendeld na 5 mislukte pogingen.";
+
+"Unable_To_Restore" =    "Kan niet herstellen";
+"TOS" =    "Servicevoorwaarden";
+"Ad_Free_Promo" =    "Ga advertentievrij $ 0,99 / maand";
+"Restore_Subscription" =    "Herstel een eerder abonnement.";
+"Purchase_Not_Found" =    "We konden geen aankoop vinden om te herstellen.";
+
+"Signed_In" =    "Aangemeld bij";
+"Login_Failed" =    "Aanmelden bij mislukt";
+"Registered_To" =    "Geregistreerd bij";
+"Registration_Failed" =    "Registratie mislukt bij";
+"Login_Declined" =    "Afgewezen aanmelden bij";
+"Enroll_Declined" =    "Weigering registratie aan";
+
+
+"Add_Secure_Entry" =    "Beveiligde invoer toevoegen";
+"Yesterday" =     "gisteren";
+"When_Enabled_FaceId" =    "Indien ingeschakeld, wordt de toegang tot Super Gluu beschermd door Face ID";
+
+
+"Registration" = "Registratie";
+"Authentication" = "Authenticatie";
+
+"To_Continue" = "Tik op Goedkeuren om door te gaan";

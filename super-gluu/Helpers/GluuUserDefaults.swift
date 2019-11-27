@@ -25,11 +25,11 @@ import Foundation
         UserDefaults.standard.set(false, forKey: GluuConstants.PIN_ENABLED)
     }
     
-    class func setTouchAuth(isOn: Bool) {
+    class func setBioAuth(isOn: Bool) {
         UserDefaults.standard.set(isOn, forKey: GluuConstants.TOUCH_ID_ENABLED)
     }
     
-    class func hasTouchAuthEnabled() -> Bool {
+    class func hasBioAuthEnabled() -> Bool {
         return UserDefaults.standard.bool(forKey: GluuConstants.TOUCH_ID_ENABLED)
     }
     

@@ -195,7 +195,7 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
         
          } else if name == noti(GluuConstants.NOTIFICATION_UNSUPPORTED_VERSION) {
             
-            let message = NSLocalizedString("UnsupportedU2FV2Version", comment: "Unsupported U2F_V2 version...")
+            let message = LocalString.Unsopported_Fido.localized
             showAlertView(withTitle: localFail, andMessage: message)
             
          } else if name == noti(GluuConstants.NOTIFICATION_PUSH_RECEIVED) {
@@ -207,7 +207,7 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
         }
         
         if name == noti(GluuConstants.NOTIFICATION_FAILED_KEYHANDLE) {
-            let message = NSLocalizedString("FailedKeyHandle", comment: "Failed KeyHandles")
+            let message = LocalString.Failed_KeyHandles.localized
             showAlertView(withTitle: localFail, andMessage: message)
         }
         
@@ -357,11 +357,12 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
         print("Denied camera access")
         
         // ** LOCAL TEXT
-        let alertText = "It looks like your privacy settings are preventing us from accessing your camera to do barcode scanning. You can fix this by doing the following:\n\n1. Touch the Go button below to open the Settings app.\n\n2. Touch Privacy.\n\n3. Turn the Camera on.\n\n4. Open this app and try again."
+//        let alertText = "It looks like your privacy settings are preventing us from accessing your camera to do barcode scanning. You can fix this by doing the following:\n\n1. Touch the Go button below to open the Settings app.\n\n2. Touch Privacy.\n\n3. Turn the Camera on.\n\n4. Open this app and try again."
         
-        let alert = UIAlertController(title: "Camera Issue", message: alertText, preferredStyle: .alert)
+        let alertText = LocalString.Camera_Denied_Directions.localized
+        let alert = UIAlertController(title: LocalString.Camera_Access_Needed.localized, message: alertText, preferredStyle: .alert)
         
-        let action = UIAlertAction(title: "Go", style: UIAlertActionStyle.default) { (action) in
+        let action = UIAlertAction(title: LocalString.Go.localized, style: UIAlertActionStyle.default) { (action) in
             UIApplication.shared.open(URL(string: UIApplicationOpenSettingsURLString)!)
         }
         
@@ -377,7 +378,7 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
         alert.showCustom(title ?? "",
                          subTitle: message ?? "",
                          color: AppConfiguration.systemColor,
-                         closeButtonTitle: "OK",
+                         closeButtonTitle: LocalString.Ok.localized,
                          timeout: alert.dismissTimeout(),
                          circleIconImage: AppConfiguration.systemAlertIcon,
                          animationStyle: SCLAnimationStyle.topToBottom)
@@ -456,7 +457,7 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
     func showSystemMessage(_ title: String?, message: String?) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
-        let yesButton = UIAlertAction(title: "OK", style: .default, handler: { action in
+        let yesButton = UIAlertAction(title: LocalString.Ok.localized, style: .default, handler: { action in
             //Handle your yes please button action here
         })
         

@@ -86,7 +86,7 @@ class LandingViewController: UIViewController {
 
     
     func goToApp() {
-        if GluuUserDefaults.hasTouchAuthEnabled() == true || GluuUserDefaults.userPin() != nil {
+        if GluuUserDefaults.hasBioAuthEnabled() == true || GluuUserDefaults.userPin() != nil {
             showSecureEntry()
         } else {
             showSecurityPrompt()

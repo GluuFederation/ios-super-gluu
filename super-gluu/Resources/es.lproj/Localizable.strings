@@ -143,3 +143,52 @@
     // PinCodeSettingsTableVC;
 "2_Attempts_Remaining"    = "2 intentos más antes que la app se bloquee por 10 minutos";
 "Failed_Attempts_Warning" = "La app se bloquará por 10 minutos luego de estos intentos fallidos";
+
+
+"Camera_Denied_Directions" =    "Proporcione acceso a su cámara para continuar: \ n \ n1. Toque el botón Ir para abrir Configuración. \ N \ n2. Toque Privacidad. \ N \ n3. Habilite el acceso a la cámara. \ N \ n4. Abra Super Gluu e intentenuevamente.";
+"Camera_Access_Needed" =    "Se necesita acceso a la cámara";
+"Go" =     "Ir";
+
+"Unrecognized_QR" =    "Código QR no reconocido. Inténtalo de nuevo.";
+"Unsopported_Fido" =    "Versión FIDO no compatible";
+"Failed_KeyHandles" =    "KeyHandles fallidos";
+
+"Passcode" =    "Código de acceso";
+"History" =    "Historia";
+"Face_ID" =    "ID de cara";
+
+"Select_All" =    "Seleccionar todo";
+"Unselect_All" =    "Deselecciona todo";
+
+"Edit" =    "Editar";
+
+"Error" =    "Error";
+"Ok" =    "Ok";
+
+"Reset_Passcode" =    "Restablecer código";
+"Same_Passcode" =    "Su nueva código debe ser diferente a la anterior.";
+"Pincode_Info" =    "Cuando está habilitado, el acceso a Super Gluu estará protegido por un código de acceso de su elección.";
+"Locked_App_Info" =  "Super Gluu se bloqueará durante 10 minutos después de 5 intentos fallidos.";
+
+"Unable_To_Restore" =    "Incapaz de restaurar";
+"TOS" =    "Términos de servicio";
+"Ad_Free_Promo" =    "Vaya sin publicidad $ 0.99 / mes";
+"Restore_Subscription" =    "Restaurar una suscripción anterior.";
+"Purchase_Not_Found" =    "No pudimos encontrar una compra para restaurar.";
+
+"Signed_In" =    "Accedido a";
+"Login_Failed" =    "Error al iniciar sesión en";
+"Registered_To" =    "Registrado a";
+"Registration_Failed" =    "Error al registrarse en";
+"Login_Declined" =    "Rechazado iniciar sesión en";
+"Enroll_Declined" =   "Registro rechazado para";
+
+
+"Add_Secure_Entry" =    "Agregar entrada segura";
+"Yesterday" =     "ayer";
+"When_Enabled_FaceId" =    "Cuando está habilitado, el acceso a Super Gluu estará protegido por Face ID";
+
+"Registration" = "Registro";
+"Authentication" = "Autenticación";
+
+"To_Continue" = "Para continuar, toque aprobar";

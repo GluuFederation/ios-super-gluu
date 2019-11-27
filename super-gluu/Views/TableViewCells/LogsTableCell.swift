@@ -17,16 +17,25 @@ class LogsTableCell: SWTableViewCell {
     @IBOutlet var logo: UIImageView!
     
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        backgroundColor = .white
+        logLabel.adjustsFontSizeToFitWidth = false
+    }
+    
     func setData(_ userLoginInfo: UserLoginInfo?) {
         
-        guard userLoginInfo != nil else { return }
+        guard let info = userLoginInfo else { return }
         
-        let server = userLoginInfo?.issuer
-        if server != nil, userLoginInfo?.logState != nil {
-            let serverURL = URL(string: server ?? "")
-            adoptLog(byState: serverURL, andState: userLoginInfo!.logState)
+        var logText = logStateText(state: info.logState)
+        
+        if let server = info.issuer {
+            logText.append(" \(server)")
         }
-        logTime.text = getTimeAgo(userLoginInfo?.created)
+        
+        logLabel.text = logText
+        logTime.text = getTimeAgo(info.created)
     }
 
     func getTimeAgo(_ createdTime: String?) -> String? {
@@ -40,28 +49,29 @@ class LogsTableCell: SWTableViewCell {
         return ""
     }
 
-    func adoptLog(byState serverURL: URL?, andState logState: LogState) {
-        let state: LogState = logState
+    func logStateText(state: LogState) -> String {
         
         // ** Local Text
         switch state {
             case .LOGIN_SUCCESS:
-                logLabel.text = String(format: NSLocalizedString("LoggedIn", comment: "Logged in"), serverURL?.host ?? "")
+                return LocalString.Signed_In.localized
             case .LOGIN_FAILED:
-                logLabel.text = String(format: NSLocalizedString("LoggedInFailed", comment: "Logged in failed"), serverURL?.host ?? "")
+                return LocalString.Login_Failed.localized
             case .ENROLL_SUCCESS:
-                logLabel.text = String(format: NSLocalizedString("EnrollIn", comment: "Enroll in"), serverURL?.host ?? "")
+                return LocalString.Registered_To.localized
             case .ENROLL_FAILED:
-                logLabel.text = String(format: NSLocalizedString("EnrollInFailed", comment: "Enroll in failed"), serverURL?.host ?? "")
+                return LocalString.Registration_Failed.localized
             case .ENROLL_DECLINED:
-                logLabel.text = String(format: NSLocalizedString("EnrollDeclined", comment: "Login declined"), serverURL?.host ?? "")
+                return LocalString.Enroll_Declined.localized
             case .LOGIN_DECLINED:
-                logLabel.text = String(format: NSLocalizedString("LoginDeclined", comment: "Enroll declined"), serverURL?.host ?? "")
+                return LocalString.Login_Declined.localized
             case .UNKNOWN_ERROR:
-                logLabel.text = String(format: NSLocalizedString("UnKnownError", comment: "UnKnownError"), serverURL?.host ?? "")
+                return LocalString.Unknown_Error.localized
             default:
                 break
         }
+        
+        return ""
     }
 
 }

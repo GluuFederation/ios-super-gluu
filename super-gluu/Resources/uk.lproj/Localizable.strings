@@ -144,3 +144,49 @@
 
 
 
+"Camera_Denied_Directions" =    "Надайте доступ до камери, щоб продовжити: \ n \ n1. Натисніть кнопку Go, щоб відкрити Налаштування. \ N \ n2. Натисніть конфіденційність. \ N \ n3. Увімкніть доступ до камери. \ N \ n4. Відкрийте Super Gluu та повторіть спробу.";
+"Camera_Access_Needed" =    "Необхідний доступ до камери";
+"Go" =     "Іди";
+
+"Unrecognized_QR" =    "QR-код не впізнано Спробуйте ще раз.";
+"Unsopported_Fido" =    "Непідтримувана версія FIDO";
+"Failed_KeyHandles" =    "Помилка KeyHandles";
+
+"Passcode" =    "Пароль";
+"History" =    "Історія";
+"Face_ID" =    "Face ID";
+
+"Select_All" =    "Вибрати все";
+"Unselect_All" =    "Скасувати вибір усіх";
+
+"Edit" =    "Редагувати";
+
+"Error" =    "Помилка";
+"Ok" =    "Гаразд";
+
+"Reset_Passcode" =    "Скинути пароль";
+"Same_Passcode" =    "Ваш новий пароль повинен відрізнятися від попереднього.";
+"Pincode_Info" =    "Якщо ввімкнено, доступ до Super Gluu буде захищений паролем на ваш вибір.";
+"Locked_App_Info" =   "Super Gluu буде заблокований на 10 хвилин після 5 невдалих спроб.";
+
+"Unable_To_Restore" =    "Не вдається відновити";
+"TOS" =    "Умови обслуговування";
+"Ad_Free_Promo" =    "Без реклами $ 0,99 / місяць";
+"Restore_Subscription" =    "Відновити попередню підписку.";
+"Purchase_Not_Found" =    "Відновити попередню підписку.";
+
+"Signed_In" =    "Увійшли в";
+"Login_Failed" =    "Помилка входу в систему";
+"Registered_To" =    "Зареєстровано в";
+"Registration_Failed" =    "Помилка реєстрації в";
+"Login_Declined" =    "Увійти до";
+"Enroll_Declined" =    "Відмовлено в реєстрації в";
+
+"Add_Secure_Entry" =    "Додати безпечну запис";
+"Yesterday" =     "вчора";
+"When_Enabled_FaceId" =    "Якщо ввімкнено, доступ до Super Gluu буде захищений Face ID";
+
+"Registration" = "Реєстрація";
+"Authentication" = "Аутентифікація";
+
+"To_Continue" = "Щоб продовжити, торкніться схвалення";

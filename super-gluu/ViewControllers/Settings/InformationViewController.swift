@@ -71,7 +71,7 @@ class InformationViewController: BaseViewController, UIScrollViewDelegate {
 
         let editSel: Selector = #selector(InformationViewController.showEditActionSheet)
 
-        return UIBarButtonItem(title: "Edit", style: .plain, target: self, action: editSel)
+        return UIBarButtonItem(title: LocalString.Edit.localized, style: .plain, target: self, action: editSel)
 
     }
 
@@ -110,7 +110,7 @@ class InformationViewController: BaseViewController, UIScrollViewDelegate {
         let url = URL(string: token.application)
         let time = convertPairingTime(token.pairingTime)
 
-        userNameValueLabel.text = token.keyName
+        userNameValueLabel.text = token.userName
         createdValueLabel.text = time
         applicationValueLabel.text = url?.host
         keyHandleValueLabel.text = keyHandleString(token: token)

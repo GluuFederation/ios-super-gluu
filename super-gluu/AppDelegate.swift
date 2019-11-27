@@ -45,6 +45,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupSwiftyStoreKit()
      
         setupRootViewController()
+     
+        if #available(iOS 13.0, *) {
+          window?.overrideUserInterfaceStyle = .light
+        }
 
         return true
     }
@@ -264,17 +268,17 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         switch response.actionIdentifier {
             
         case GluuConstants.NotificationActionApprove:
-          
-          PushHelper.shared.lastPush = PushNoti(pushData: userInfo, action: .approve)
+            PushHelper.shared.lastPush = PushNoti(pushData: userInfo, action: .approve)
             
         case GluuConstants.NotificationActionDeny:
+            PushHelper.shared.lastPush = PushNoti(pushData: userInfo, action: .decline)
           
-          PushHelper.shared.lastPush = PushNoti(pushData: userInfo, action: .decline)
+        case UNNotificationDefaultActionIdentifier:
+            PushHelper.shared.lastPush = PushNoti(pushData: userInfo)
+            print("Default")
             
         case UNNotificationDismissActionIdentifier:
             print("Dismiss Action")
-        case UNNotificationDefaultActionIdentifier:
-            print("Default")
             
         default:
             print("Noti tapped on")

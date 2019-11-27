@@ -43,7 +43,7 @@ class PurchaseHandler: NSObject {
         alert.showCustom(title,
                          subTitle: message,
                          color: AppConfiguration.systemColor,
-                         closeButtonTitle: "OK",
+                         closeButtonTitle: LocalString.Ok.localized,
                          circleIconImage: AppConfiguration.systemAlertIcon,
                          animationStyle: SCLAnimationStyle.topToBottom)
  
@@ -125,7 +125,7 @@ class PurchaseHandler: NSObject {
                     alert.showCustom(LocalString.Oops.localized,
                                      subTitle: message,
                                      color: AppConfiguration.systemColor,
-                                     closeButtonTitle: "OK",
+                                     closeButtonTitle: LocalString.Ok.localized,
                                      timeout: alert.dismissTimeout(),
                                      circleIconImage: AppConfiguration.systemAlertIcon,
                                      animationStyle: SCLAnimationStyle.topToBottom)

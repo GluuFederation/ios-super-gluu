@@ -39,9 +39,9 @@ class RootContainerViewController: UIViewController {
     private var currentState: RootState?
     
     func updateDisplay(nextState: RootState) {
-        
+
         if currentState == nextState { return }
-    
+
         if currentState != nil {
             switch currentState! {
             case .approveDeny:
@@ -52,17 +52,17 @@ class RootContainerViewController: UIViewController {
                 securityController.remove()
             }
         }
-        
+
         switch nextState {
         case .approveDeny:
             add(approveDenyController)
         case .home:
             add(homeNavigationController)
-            
+
             if let push = PushHelper.shared.lastPush,
                 !push.isExpired,
                 let homeVC = homeNavigationController.viewControllers.first as? HomeViewController {
-                
+
                 homeVC.handlePush()
             }
 
@@ -70,7 +70,7 @@ class RootContainerViewController: UIViewController {
             let navigationController = UIStoryboard(name: "Landing", bundle: nil).instantiateInitialViewController() as! UINavigationController
             add(navigationController)
         }
- 
+
     }
     
     func activeStatePushReceived() {

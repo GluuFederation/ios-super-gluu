@@ -101,11 +101,47 @@
 "Failed_Attempts_Warning" = "L'application sera verouillée pendant 10 minutes.";
 
 
+"Camera_Denied_Directions" =    "Donnez accès à votre caméra pour continuer: \ n \ n1. Appuyez sur le bouton OK pour ouvrir les paramètres. \ N \ n2. Appuyez sur Confidentialité. \ N \ n3. Activez l'accès à la caméra. \ N \ n4. Ouvrez Super Gluu et réessayez. ";
+"Camera_Access_Needed" =    "Accès à la caméra nécessaire";
 
 
+"Go" =     "Aller";
+"Unrecognized_QR" =    "Code QR non reconnu. Réessayer.";
+"Unsopported_Fido" =    "Version FIDO non supportée";
+"Failed_KeyHandles" =    "KeyHandles a échoué";
+
+"Passcode" =    "Code";
+"History" =    "Histoire";
+"Face_ID" =    "Identité faciale";
+"Select_All" =    "Tout sélectionner";
+"Unselect_All" =    "Tout déselectionner";
+"Edit" =    "Modifier";
+"Error" =    "Erreur";
+"Ok" =    "D'accord";
 
 
+"Reset_Passcode" =    "Réinitialiser le code";
+"Same_Passcode" =    "Votre nouveau code d'accès doit être différent de votre précédent.";
+"Pincode_Info" =    "Lorsqu'il est activé, l'accès à Super Gluu sera protégé par un mot de passe de votre choix.";
 
+"Locked_App_Info" =   "Super Gluu sera verrouillé pendant 10 minutes après 5 tentatives infructueuses.";
+"Unable_To_Restore" =    "Impossible de restaurer";
+"TOS" =    "Conditions d'utilisation";
 
+"Ad_Free_Promo" =    "Aller sans publicité 0,99 $ / mois";
+"Restore_Subscription" =    "Restaurer un abonnement précédent.";
+"Purchase_Not_Found" =    "Nous n'avons pas pu trouver un achat à restaurer.";
+"Signed_In" =    "Connecté à";
+"Login_Failed" =    "Échec de la connexion à";
+"Registered_To" =    "Enregistré à";
+"Registration_Failed" =    "Echec de l'inscription à";
+"Login_Declined" =    "Refusé connectez-vous à";
+"Enroll_Declined" =    "Inscription refusée à";
+"Add_Secure_Entry" =    "Ajouter une entrée sécurisée";
+"Yesterday" =     "hier";
+"When_Enabled_FaceId" =    "Lorsqu'il est activé, l'accès à Super Gluu sera protégé par un identifiant de visage";
 
+"Registration" = "Enregistrement";
+"Authentication" = "Authentification";
 
+"To_Continue" = "Pour continuer, appuyez sur approuver";

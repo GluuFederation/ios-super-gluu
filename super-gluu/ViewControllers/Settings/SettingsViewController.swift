@@ -49,7 +49,7 @@ enum SettingsTableSections {
     // ** Local Text
     var title: String {
         switch self {
-        case .history:  return "HISTORY"
+        case .history:  return LocalString.History.localizedUppercase
         case .settings: return LocalString.Menu_Settings.localizedUppercase
         case .help:     return LocalString.Menu_Help.localizedUppercase
         }
@@ -73,7 +73,7 @@ enum SettingsTableItem {
         case .keys: return #imageLiteral(resourceName: "icon_settings_keys")
         case .pinCodes: return #imageLiteral(resourceName: "icon_settings_pin")
         case .touchId: return #imageLiteral(resourceName: "icon_settings_touchid")
-        case .faceId: return UIImage()
+        case .faceId: return UIImage(named: "icon_settings_faceid")
         case .ssl: return #imageLiteral(resourceName: "icon_settings_ssl")
         case .userGuide, .privacyPolicy: return nil
         }
@@ -85,7 +85,7 @@ enum SettingsTableItem {
         case .keys: return LocalString.Menu_Keys.localized
         case .pinCodes: return LocalString.Menu_Passcode.localized
         case .touchId: return  LocalString.Security_Touch_Id.localized
-        case .faceId: return  LocalString.Security_Face_Id.localized
+        case .faceId: return  LocalString.Face_ID.localized
         case .ssl: return LocalString.SSL_Trust.localized
         case .userGuide: return LocalString.Menu_User_Guide.localized
         case .privacyPolicy: return LocalString.Menu_Privacy_Policy.localized
@@ -98,7 +98,7 @@ enum SettingsTableItem {
         case .keys:          return "segueSettingsToKeys"
         case .pinCodes:      return "segueSettingsToPin"
         case .touchId:       return "segueSettingsToSingleCell"
-        case .faceId:       return "segueSettingsToSingleCell"
+        case .faceId:        return "segueSettingsToSingleCell"
         case .ssl:           return "segueSettingsToSingleCell"
         case .userGuide:     return "segueSettingsToWeb"
         case .privacyPolicy: return "segueSettingsToWeb"
@@ -175,7 +175,7 @@ class SettingsViewController: UIViewController {
         let description = "\(commit) is the last commit"
         
         let alert = UIAlertController(title: title, message: description, preferredStyle: .alert)
-        let action = UIAlertAction(title: "Ok", style: UIAlertActionStyle.destructive) { (action) in
+        let action = UIAlertAction(title: LocalString.Ok.localized, style: UIAlertActionStyle.destructive) { (action) in
         }
         
         alert.addAction(action)
@@ -202,6 +202,7 @@ class SettingsViewController: UIViewController {
                 
                 switch sender {
                 case .touchId: destVC.display = .touchId
+                case .faceId: destVC.display = .faceId
                 case .ssl: destVC.display = .ssl
                     
                 default: break

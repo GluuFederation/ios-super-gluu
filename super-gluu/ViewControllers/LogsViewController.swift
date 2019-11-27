@@ -121,7 +121,7 @@ class LogsViewController: BaseViewController, UITableViewDataSource, UITableView
             //select all
             selectAllLogs(true)
             selectAllButton.tag = 2
-            selectAllButton.setTitle("Deselect All", for: .normal)
+            selectAllButton.setTitle(LocalString.Unselect_All.localized, for: .normal)
         } else {
             //deselect all
             deselectAllLogs()
@@ -131,7 +131,7 @@ class LogsViewController: BaseViewController, UITableViewDataSource, UITableView
     func deselectAllLogs() {
         selectAllLogs(false)
         selectAllButton.tag = 1
-        selectAllButton.setTitle("Select All", for: .normal)
+        selectAllButton.setTitle(LocalString.Select_All.localized, for: .normal)
     }
 
     

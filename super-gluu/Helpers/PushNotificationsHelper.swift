@@ -14,6 +14,8 @@ class PushHelper: NSObject {
     
     static let shared = PushHelper()
     
+    
+    
     var lastPush: PushNoti? {
 
         didSet {
@@ -42,12 +44,10 @@ class PushHelper: NSObject {
         UserLoginInfo.sharedInstance().issuer = issuer
         UserLoginInfo.sharedInstance().userName = username
         
-        let isEnroll = (method == "enroll") ? true : false
-        if isEnroll {
-            let type = NSLocalizedString("Enrol", comment: "Enrol")
-            UserLoginInfo.sharedInstance().authenticationType = type
+        if let authType = OxRequestType(rawValue: method) {
+            UserLoginInfo.sharedInstance().authenticationType = authType.rawValue
         } else {
-            UserLoginInfo.sharedInstance().authenticationType = method
+            print("Auth Type Error in PushNotificationsHelper")
         }
         
         // we use the token application combined with the username to identify a licensed key
@@ -68,6 +68,7 @@ class PushHelper: NSObject {
             AdHandler.shared.refreshAdStatus()
         }
         
+        // ** Local Text
         let mode = oneStep ? NSLocalizedString("OneStepMode", comment: "One Step") : NSLocalizedString("TwoStepMode", comment: "Two Step")
         UserLoginInfo.sharedInstance().authenticationMode = mode
         UserLoginInfo.sharedInstance().locationCity = parameters?["req_loc"] as? String ?? ""

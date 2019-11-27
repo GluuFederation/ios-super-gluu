@@ -14,6 +14,18 @@ class SettingsSwitchTableViewCell: SettingsTableViewCell {
     
     @IBOutlet weak var settingsSwitch: UISwitch!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        selectionStyle = .none
+        
+        titleLabel.font = UIFont.regular(17)
+        titleLabel.textColor = UIColor.Gluu.darkGreyText
+        
+        backgroundColor = .white
+        
+    }
+    
 }
 
 
@@ -30,6 +42,9 @@ class SettingsTableViewCell: UITableViewCell {
         selectionStyle = .none
         
         titleLabel.font = UIFont.regular(17)
+        titleLabel.textColor = UIColor.Gluu.darkGreyText
+        
+        backgroundColor = .white
         
     }
 

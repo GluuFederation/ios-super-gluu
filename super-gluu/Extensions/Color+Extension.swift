@@ -24,7 +24,7 @@ extension UIColor {
     struct Gluu {
         
         static let green           = UIColor(red: 0, green: 161, blue: 97)
-        static let darkGreyText    = UIColor(red: 123, green: 123, blue: 123)
+        static let darkGreyText    = UIColor(red: 100, green: 100, blue: 100)
         static let lightGreyText   = UIColor(red: 180, green: 180, blue: 180)
         static let separator       = UIColor(red: 210, green: 210, blue: 210)
         static let tableBackground = UIColor(red: 247, green: 247, blue: 247)

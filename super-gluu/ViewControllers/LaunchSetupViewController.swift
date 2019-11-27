@@ -85,7 +85,7 @@ class LaunchSetupViewController: UIViewController {
         if GluuUserDefaults.userPin() != nil {
             presentPasscodeEntry?()
             
-        } else if GluuUserDefaults.hasTouchAuthEnabled() && touchAuth.canEvaluatePolicy() == true {
+        } else if GluuUserDefaults.hasBioAuthEnabled() && touchAuth.canEvaluatePolicy() == true {
             
             touchAuth.authenticateUser { (success, errorMessage) in
                 

@@ -18,6 +18,12 @@ class KeyHandleCell: SWTableViewCell {
     @IBOutlet var keyHandleTime: UILabel!
     
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        backgroundColor = .white
+    }
+    
     func setToken(_ tokenEntity: TokenEntity) {
         
         key = tokenEntity.keyHandle.base64Encoded()

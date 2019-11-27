@@ -39,7 +39,7 @@ class SecurityPromptViewController: UIViewController {
         
         view.backgroundColor = UIColor.Gluu.tableBackground
         
-        headerLabel?.text = "Add Secure Entry"
+        headerLabel?.text = LocalString.Add_Secure_Entry.localized
         
 //        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
 //        navigationController?.navigationBar.shadowImage = UIImage()
@@ -57,12 +57,12 @@ class SecurityPromptViewController: UIViewController {
         
         switch LAContext().biometricType {
         case .faceID:
-            let faceIdIcon = UIImage(named: "icon_settings_touchid")
+            let faceIdIcon = UIImage(named: "icon_settings_faceid")
             bioButton?.setImage(faceIdIcon, for: .normal)
-            bioButton?.setTitle(LocalString.Security_Face_Id.localized, for: .normal)
+            bioButton?.setTitle(LocalString.Face_ID.localized, for: .normal)
         case .touchID:
-            let faceIdIcon = UIImage(named: "icon_settings_touchid")
-            bioButton?.setImage(faceIdIcon, for: .normal)
+            let touchIdIcon = UIImage(named: "icon_settings_touchid")
+            bioButton?.setImage(touchIdIcon, for: .normal)
             bioButton?.setTitle(LocalString.Security_Touch_Id.localized, for: .normal)
         case .none:
             bioButton?.removeFromSuperview()
@@ -78,7 +78,7 @@ class SecurityPromptViewController: UIViewController {
     @IBAction func bioTapped() {
         touchAuth.authenticateUser { (success, errorMessage) in
 
-            GluuUserDefaults.setTouchAuth(isOn: success)
+            GluuUserDefaults.setBioAuth(isOn: success)
             
             self.dismissVC()
             

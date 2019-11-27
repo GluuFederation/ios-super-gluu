@@ -254,7 +254,7 @@ extension Date {
 
         //Format
         dateFormatter.dateFormat = "h:mm a"
-        return "Yesterday at \(dateFormatter.string(from: self as Date))"
+        return LocalString.Yesterday.localized + " at \(dateFormatter.string(from: self as Date))"
     }
 
     // < Last 7 days = "Friday at 1:48 AM"

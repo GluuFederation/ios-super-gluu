@@ -140,3 +140,54 @@
 
 "2_Attempts_Remaining"    = "بقي محاولتان قبل قفل التطبيق لمدة 10 دقائق";
 "Failed_Attempts_Warning" = "سيتم قفل التطبيق لمدة 10 دقائق بعد هذا العدد من المحاولات الفاشلة ";
+
+
+
+
+"Camera_Denied_Directions" =    "قم بتوفير الوصول إلى الكاميرا للمتابعة: \ n \ n1. انقر فوق الزر 'انتقال' لفتح الإعدادات. \ n \ n2. انقر فوق الخصوصية. \ n \ n3. تمكين الوصول إلى الكاميرا. \ n \ n4. افتح Super Gluu وحاول مرة أخرى ";
+"Camera_Access_Needed" =    "وصول الكاميرا اللازمة";
+"Go" =     "اذهب";
+
+"Unrecognized_QR" =    "رمز الاستجابة السريعة غير معروف. حاول مرة أخري.";
+"Unsopported_Fido" =    "نسخة FIDO غير مدعومة";
+"Failed_KeyHandles" =    "فشل KeyHandles";
+
+"Passcode" =    "رمز المرو";
+"History" =    "التاريخ";
+"Face_ID" =    "معرف الوجه";
+
+"Select_All" =    "اختر الكل";
+"Unselect_All" =    "إلغاء تحديد الكل";
+
+"Edit" =    "تعديل";
+
+"Error" =    "خطأ";
+"Ok" =    "حسنا";
+
+"Reset_Passcode" =    "إعادة تعيين رمز المرور";
+"Same_Passcode" =    "يجب أن يكون رمز المرور الجديد مختلفًا عن الرمز السابق.";
+"Pincode_Info" =    "عند التمكين ، سيتم حماية الوصول إلى Super Gluu بواسطة رمز مرور من اختيارك.";
+"Locked_App_Info" =    "سيتم قفل Super Gluu لمدة 10 دقائق بعد 5 محاولات فاشلة.";
+
+"Unable_To_Restore" =    "غير قادر على استعادة";
+"TOS" =    "شروط الخدمة";
+"Ad_Free_Promo" =    "انتقل بدون إعلانات 0.99 دولار شهريًا";
+"Restore_Subscription" =    "استعادة الاشتراك السابق.";
+"Purchase_Not_Found" =    "لم نتمكن من العثور على عملية شراء لاستعادتها.";
+
+"Signed_In" =    "تم تسجيل الدخول إلى";
+"Login_Failed" =    "أخفق تسجيل الدخول إلى";
+"Registered_To" =    "مسجل إلى";
+"Registration_Failed" =    "فشل التسجيل إلى";
+"Login_Declined" =    "تم رفضتم تسجيل الدخول إلى";
+;"تم رفض التسجيل إلى" = "Enroll_Declined"
+
+"Add_Secure_Entry" = "إضافة الدخول الآمن";
+"Yesterday" = "في الامس";
+"When_Enabled_FaceId" =  "عند التمكين ، سيتم حماية الوصول إلى Super Gluu بواسطة Face ID";
+
+
+"Registration" = "التسجيل";
+"Authentication" = "المصادقة";
+
+"To_Continue" = "للمتابعة ، انقر فوق موافق";

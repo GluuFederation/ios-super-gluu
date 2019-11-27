@@ -144,3 +144,51 @@
 "Failed_Attempts_Warning" = "L'app si bloccherà per 10 minuti dopo questo numero di tentativi falliti.";
 
 
+"Camera_Denied_Directions" =    "Fornisci l'accesso alla tua videocamera per procedere: \ n \ n1. Tocca il pulsante Vai per aprire Impostazioni. \ N \ n2. Tocca Privacy. \ N \ n3. Abilita accesso alla videocamera. \ N \ n4. Apri Super Gluu e riprova.";
+"Camera_Access_Needed" =    "Accesso alla telecamera necessario";
+"Go" =     "Partire";
+
+"Unrecognized_QR" =    "Codice QR non riconosciuto. Riprova.";
+"Unsopported_Fido" =    "Versione FIDO non supportata";
+"Failed_KeyHandles" =    "KeyHandles non riusciti";
+
+"Passcode" =    "Codice";
+"History" =    "Storia";
+"Face_ID" =    "Face ID";
+
+"Select_All" =    "Seleziona tutto";
+"Unselect_All" =    "Deseleziona tutto";
+
+"Edit" =    "Modificare";
+
+"Error" =    "Errore";
+"Ok" =    "Ok";
+
+"Reset_Passcode" =    "Reimposta Codice";
+"Same_Passcode" =    "Il nuovo codice deve essere diverso dal precedente.";
+"Pincode_Info" =    "Se abilitato, l'accesso a Super Gluu sarà protetto da un codice di tua scelta.";
+"Locked_App_Info" =   "Super Gluu will be locked for 10 minutes after 5 failed attempts.";
+
+"Unable_To_Restore" =    "Impossibile ripristinare";
+"TOS" =    "Termini di servizio";
+"Ad_Free_Promo" =    "Go ad-free $0.99/month";
+"Restore_Subscription" =    "Ripristina un abbonamento precedente.";
+"Purchase_Not_Found" =    "Non è stato possibile trovare un acquisto da ripristinare.";
+
+"Signed_In" =    "Accesso eseguito a";
+"Login_Failed" =    "Impossibile accedere a";
+"Registered_To" =    "Registrato a";
+"Registration_Failed" =    "Registrazione non riuscita a";
+"Login_Declined" =    "Accesso rifiutato a";
+"Enroll_Declined" =    "Registrazione rifiutata a";
+
+"Add_Secure_Entry" =    "Aggiungi voce sicura";
+"Yesterday" =     "ieri";
+"When_Enabled_FaceId" =    "Se abilitato, l'accesso a Super Gluu sarà protetto da Face ID";
+
+
+"Registration" = "Registrazione";
+"Authentication" = "Autenticazione";
+
+
+"To_Continue" = "Per continuare, tocca approva";

@@ -144,3 +144,50 @@
 
 
 
+"Camera_Denied_Directions" =    "Devam etmek için kameraya erişim sağlayın: \ n \ n1. Ayarlar'ı açmak için Git düğmesine basın. \ N \ n2. Gizlilik'e dokunun. \ N \ n3. Kamera erişimini etkinleştirin. \ N \ n4. Süper Tutkal'ı açın ve tekrar deneyin .";
+"Camera_Access_Needed" =    "Kamera erişimi gerekli";
+"Go" =     "Git";
+
+"Unrecognized_QR" =    "QR kodu tanınmadı. Tekrar deneyin.";
+"Unsopported_Fido" =    "Desteklenmeyen FIDO sürümü";
+"Failed_KeyHandles" =    "Başarısız KeyHandles";
+
+"Passcode" =    "Parolakodu";
+"History" =    "Tarih";
+"Face_ID" =    "Yüz kimliği";
+
+"Select_All" =    "Hepsini seç";
+"Unselect_All" =    "Tüm Seçimleri Kaldır";
+
+"Edit" =    "Düzenle";
+
+"Error" =    "Hata";
+"Ok" =    "Tamam";
+
+"Reset_Passcode" =    "Parolakodu Sıfırla";
+"Same_Passcode" =    "Yeni parolakodu öncekinden farklı olmalıdır.";
+"Pincode_Info" =    "Etkinleştirildiğinde, Super Gluu'ya erişim, seçtiğiniz bir parolakodu ile korunacaktır.";
+"Locked_App_Info" =    "5 başarısız denemeden sonra Super Gluu 10 dakika kilitlenir.";
+
+"Unable_To_Restore" =    "Geri Yüklenemedi";
+"TOS" =    "Kullanım Şartları";
+"Ad_Free_Promo" =    "Reklamsız 0,99 ABD Doları / ay kazan";
+"Restore_Subscription" =    "Önceki bir aboneliği geri yükle.";
+"Purchase_Not_Found" =    "Geri yüklenecek bir satın alma işlemi bulamadık.";
+
+"Signed_In" =    "İçin oturum açıldı";
+"Login_Failed" =    "İçin oturum açılamadı";
+"Registered_To" =    "Kayıtlı";
+"Registration_Failed" =    "Kaydı başarısız oldu";
+"Login_Declined" =    "İçin reddedildi işareti";
+"Enroll_Declined" =    "İçin reddedilen kayıt";
+
+"Add_Secure_Entry" =    "Güvenli Giriş Ekle";
+"Yesterday" =     "dün";
+"When_Enabled_FaceId" =    "Etkinleştirildiğinde, Super Gluu'ya erişim Face ID tarafından korunacaktır";
+
+
+"Registration" = "Kayıt";
+"Authentication" = "Kimlik Doğrulama";
+
+"To_Continue" = "Devam etmek için onayla seçeneğine dokunun.";
