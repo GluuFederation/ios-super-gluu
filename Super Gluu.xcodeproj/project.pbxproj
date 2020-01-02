@@ -89,7 +89,6 @@
 		BBDE9B911DA788B8003B6673 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BBDE9B901DA788B8003B6673 /* libz.tbd */; };
 		BBDE9B931DA788C1003B6673 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBDE9B921DA788C1003B6673 /* CoreVideo.framework */; };
 		BBE787271C99954600E9E0D7 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BBE787261C99954600E9E0D7 /* Settings.bundle */; };
-		BBE83B9E1E69D1DD0099F83A /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBE83B9D1E69D1DD0099F83A /* CoreBluetooth.framework */; };
 		BBEC92001E293179000D522F /* www.gluu.org.cer in Resources */ = {isa = PBXBuildFile; fileRef = BBEC91FF1E293179000D522F /* www.gluu.org.cer */; };
 		C3F0A0B51B9FA04756D6CF64 /* Pods_Super_Gluu__ad_free_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58B47C39617C4CC79EB94B57 /* Pods_Super_Gluu__ad_free_.framework */; };
 		C828ACDC21895CDF006EEF1D /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C828ACDB21895CDE006EEF1D /* AppInfo.swift */; };
@@ -277,7 +276,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBE83B9E1E69D1DD0099F83A /* CoreBluetooth.framework in Frameworks */,
 				BB50AE1C1E5F0978003AEC78 /* LocalAuthentication.framework in Frameworks */,
 				BBDE9B931DA788C1003B6673 /* CoreVideo.framework in Frameworks */,
 				BBDE9B911DA788B8003B6673 /* libz.tbd in Frameworks */,
@@ -492,8 +490,8 @@
 		BB37DEDA1C7E0B8E0016D422 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				BB97CDDE1F1E4E530033C2A5 /* Fonts */,
 				BBE787261C99954600E9E0D7 /* Settings.bundle */,
+				BB97CDDE1F1E4E530033C2A5 /* Fonts */,
 				BB37DEDB1C7E0B8E0016D422 /* Localizable.strings */,
 			);
 			path = Resources;
@@ -1116,7 +1114,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Super Gluu.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 9;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FLRS8NH8Y9;
 				ENABLE_BITCODE = NO;
@@ -1298,7 +1296,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Super Gluu.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 9;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FLRS8NH8Y9;
 				ENABLE_BITCODE = NO;
@@ -1334,7 +1332,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Super Gluu.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 9;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FLRS8NH8Y9;
 				ENABLE_BITCODE = NO;
