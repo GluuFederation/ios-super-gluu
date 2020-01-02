@@ -52,7 +52,6 @@
 		BB58C18D1EDDB32800FEEC78 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9B659E1CB7C59800784AEF /* AdSupport.framework */; };
 		BB58C18E1EDDB32800FEEC78 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9B65A01CB7C5A300784AEF /* QuartzCore.framework */; };
 		BB58C18F1EDDB32800FEEC78 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB37DF411C7E0CBC0016D422 /* CoreData.framework */; };
-		BB58C1901EDDB32800FEEC78 /* Pods_Super_Gluu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA0B4AB7F1B002A0FF2049D /* Pods_Super_Gluu.framework */; };
 		BB58C1941EDDB32800FEEC78 /* www.gluu.org.cer in Resources */ = {isa = PBXBuildFile; fileRef = BBEC91FF1E293179000D522F /* www.gluu.org.cer */; };
 		BB58C19C1EDDB32800FEEC78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB37DEDB1C7E0B8E0016D422 /* Localizable.strings */; };
 		BB58C1A11EDDB32800FEEC78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB37DE631C7E08320016D422 /* Assets.xcassets */; };
@@ -90,7 +89,6 @@
 		BBDE9B931DA788C1003B6673 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBDE9B921DA788C1003B6673 /* CoreVideo.framework */; };
 		BBE787271C99954600E9E0D7 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BBE787261C99954600E9E0D7 /* Settings.bundle */; };
 		BBEC92001E293179000D522F /* www.gluu.org.cer in Resources */ = {isa = PBXBuildFile; fileRef = BBEC91FF1E293179000D522F /* www.gluu.org.cer */; };
-		C3F0A0B51B9FA04756D6CF64 /* Pods_Super_Gluu__ad_free_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58B47C39617C4CC79EB94B57 /* Pods_Super_Gluu__ad_free_.framework */; };
 		C828ACDC21895CDF006EEF1D /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C828ACDB21895CDE006EEF1D /* AppInfo.swift */; };
 		C82967621FE9C2C1008FEBE8 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82967611FE9C2C1008FEBE8 /* WebViewController.swift */; };
 		C83123012191466500C6963B /* PAPasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83123002191466500C6963B /* PAPasscodeViewController.swift */; };
@@ -182,8 +180,6 @@
 		26F43F0622DE8FB9003168AC /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		26F43F0722DE90AA003168AC /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4516151003C18420B94BE1ED /* Pods-Super Gluu - Ad Free.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Super Gluu - Ad Free.release.xcconfig"; path = "Pods/Target Support Files/Pods-Super Gluu - Ad Free/Pods-Super Gluu - Ad Free.release.xcconfig"; sourceTree = "<group>"; };
-		58B47C39617C4CC79EB94B57 /* Pods_Super_Gluu__ad_free_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Super_Gluu__ad_free_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BA0B4AB7F1B002A0FF2049D /* Pods_Super_Gluu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Super_Gluu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EB98658935DC37AA97BA494 /* Pods-Super Gluu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Super Gluu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Super Gluu/Pods-Super Gluu.debug.xcconfig"; sourceTree = "<group>"; };
 		A2C1F7760B8ADC2A6085B78A /* Pods-Super Gluu (ad free).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Super Gluu (ad free).release.xcconfig"; path = "Pods/Target Support Files/Pods-Super Gluu (ad free)/Pods-Super Gluu (ad free).release.xcconfig"; sourceTree = "<group>"; };
 		B84F8928A16117787C96522F /* Pods-Super Gluu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Super Gluu.release.xcconfig"; path = "Pods/Target Support Files/Pods-Super Gluu/Pods-Super Gluu.release.xcconfig"; sourceTree = "<group>"; };
@@ -268,7 +264,7 @@
 		C8B402B51FE9F28C00202A4B /* LaunchSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchSetupViewController.swift; sourceTree = "<group>"; };
 		C8F0E2DB1FD21C3800FF9342 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Color+Extension.swift"; path = "Extensions/Color+Extension.swift"; sourceTree = "<group>"; };
 		C8F0E2E11FD227CE00FF9342 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Settings/SettingsViewController.swift; sourceTree = "<group>"; };
-		F9F48E163E0B27CBECE9164F /* Pods_Super_Gluu___Ad_Free.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Super_Gluu___Ad_Free.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9F48E163E0B27CBECE9164F /* Pods_Super_Gluu___Ad_Free.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Super_Gluu___Ad_Free.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,8 +331,6 @@
 				BB58C18D1EDDB32800FEEC78 /* AdSupport.framework in Frameworks */,
 				BB58C18E1EDDB32800FEEC78 /* QuartzCore.framework in Frameworks */,
 				BB58C18F1EDDB32800FEEC78 /* CoreData.framework in Frameworks */,
-				BB58C1901EDDB32800FEEC78 /* Pods_Super_Gluu.framework in Frameworks */,
-				C3F0A0B51B9FA04756D6CF64 /* Pods_Super_Gluu__ad_free_.framework in Frameworks */,
 				6E84DA101B88BBA743C31E97 /* Pods_Super_Gluu___Ad_Free.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,8 +361,6 @@
 				BBFCB3091C98164F00F66417 /* CoreTelephony.framework */,
 				BBB7C0F71C88933100833B12 /* CoreLocation.framework */,
 				BB37DF411C7E0CBC0016D422 /* CoreData.framework */,
-				5BA0B4AB7F1B002A0FF2049D /* Pods_Super_Gluu.framework */,
-				58B47C39617C4CC79EB94B57 /* Pods_Super_Gluu__ad_free_.framework */,
 				F9F48E163E0B27CBECE9164F /* Pods_Super_Gluu___Ad_Free.framework */,
 			);
 			name = Frameworks;
@@ -858,7 +850,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Super Gluu/Pods-Super Gluu-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Super Gluu/Pods-Super Gluu-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
 				"${BUILT_PRODUCTS_DIR}/NHNetworkTime/NHNetworkTime.framework",
@@ -883,7 +875,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Super Gluu/Pods-Super Gluu-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Super Gluu/Pods-Super Gluu-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		62C9AC37CB2BC89A10FB685F /* [CP] Check Pods Manifest.lock */ = {
