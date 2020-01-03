@@ -27,6 +27,7 @@ struct GluuConstants {
     static let TERMS_OF_SERVICE = "https://gluu.org/docs/supergluu/user-guide/"
     
     // Google Ads
+	static let GOOGLE_AD_ID = "ca-app-pub-3326465223655655~8301521230"
     static let AD_UNIT_ID_BANNER = "ca-app-pub-3326465223655655/9778254436"
     static let AD_UNIT_ID_INTERSTITIAL = "ca-app-pub-3326465223655655/1731023230"
     

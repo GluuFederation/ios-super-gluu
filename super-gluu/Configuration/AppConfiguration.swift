@@ -15,6 +15,4 @@ struct AppConfiguration {
     static let systemLogIcon = UIImage(named: "icon_gluu_logo_log_details") ?? UIImage()
     static let systemLogRedIcon = UIImage(named: "icon_gluu_logo_log_details_failed")  ?? UIImage()
     static let systemColor = UIColor.Gluu.green
-    
-    static let googleAdsId = "ca-app-pub-3326465223655655~8301521230"
 }

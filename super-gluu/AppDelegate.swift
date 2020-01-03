@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         setupAppearance()
 
-        GADMobileAds.configure(withApplicationID: AppConfiguration.googleAdsId)
+		GADMobileAds.configure(withApplicationID: GluuConstants.GOOGLE_AD_ID)
 
         setupSwiftyStoreKit()
      
@@ -171,19 +171,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      
     }
 
-
-    func applicationDidEnterBackground(_ application: UIApplication) {
-     
-//        rootVC.transitionToLandingNavigationViewController()
-
-    }
-
     func applicationWillEnterForeground(_ application: UIApplication) {
 
         // always update ad status when the user comes into the app
         AdHandler.shared.refreshAdStatus()
 
-//        rootVC.transitionToLandingNavigationViewController()
         rootVC.updateDisplay(nextState: RootState.security)
     }
 

@@ -30,4 +30,5 @@ extension UIColor {
         static let tableBackground = UIColor(red: 247, green: 247, blue: 247)
 
     }
+	
 }
