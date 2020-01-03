@@ -93,7 +93,7 @@ extension LAContext {
         let reason = LocalString.Identify_Yourself.localized
         
         context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) {
-            [unowned self] success, authenticationError in
+            success, authenticationError in
             
             DispatchQueue.main.async {
                 if success {

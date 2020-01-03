@@ -76,8 +76,6 @@ class InformationViewController: BaseViewController, UIScrollViewDelegate {
     }
 
     @objc func showEditActionSheet() {
-        
-
 
         let actionSheet = UIAlertController(title: LocalString.Info_Change_Name.localized,
                                             message: LocalString.Info_Change_Name_Question.localized,
@@ -117,11 +115,14 @@ class InformationViewController: BaseViewController, UIScrollViewDelegate {
     }
     
     func keyHandleString(token: TokenEntity) -> String {
-        let firstSix = token.keyHandle.substring(to: 6)
-        let fromChar = token.keyHandle.count - 6
-        let lastSix = token.keyHandle.substring(from: fromChar)
+		guard let keyHandle = token.keyHandle else {
+			return ""
+		}
+		
+		let prefixStr = String(keyHandle.prefix(6))
+		let suffixStr = String(keyHandle.suffix(6))
         
-        return firstSix + "..." + lastSix
+        return prefixStr + "..." + suffixStr
     }
 
     func convertPairingTime(_ time: String?) -> String? {
@@ -146,23 +147,6 @@ class InformationViewController: BaseViewController, UIScrollViewDelegate {
             self.dismiss(animated: true)
         }
         
-        /*
-        let alert = SCLAlertView(autoDismiss: false, horizontalButtons: true)
-        
-        alert.addButton(AlertConstants.yes, backgroundColor: .red, textColor: .white) {
-            
-            self.deleteKey()
-            alert.hideView()
-        }
-        
-        alert.showCustom(AlertConstants.delete,
-                         subTitle: LocalString.Info_Delete_Key.localized,
-                         color: AppConfiguration.systemColor,
-                         closeButtonTitle: AlertConstants.no,
-                         circleIconImage: UIImage(named: "icon_trashcan_large")!)
-        
-        */
-        
     }
     
     func showKeyRenameAlert() {
@@ -174,71 +158,6 @@ class InformationViewController: BaseViewController, UIScrollViewDelegate {
             self.didEditToken?()
             self.setupInformation()
         }
-        
-        /*
-        let alert = SCLAlertView(autoDismiss: false, closeButtonColor: .red, horizontalButtons: true)
-        
-        let textField = alert.addTextField(LocalString.Info_Enter_Name.localized)
-        
-        alert.addButton(LocalString.Save.localized) {
-            
-//            textField.endEditing(true)
-            
-            if let newName = textField.text {
-                
-                print("Text value: \(newName)")
-                
-                if DataStoreManager.sharedInstance().isUniqueTokenName(newName) {
-                    DataStoreManager.sharedInstance().setTokenEntitiesNameByID(token.id, userName: token.userName, newName: newName)
-                    token.keyName = newName
-                    self.setupInformation()
-                    alert.hideView()
-                } else {
-                    
-                    SCLAlertView().showCustom(LocalString.Info.localized,
-                                     subTitle: LocalString.Info_Duplicate_Name.localized,
-                                     color: AppConfiguration.systemColor,
-                                     closeButtonTitle: LocalString.Close.localized,
-                                     circleIconImage: AppConfiguration.systemAlertIcon)
-                }
-            }
-        }
-        
-        alert.showCustom(LocalString.Info_Change_Name.localized,
-                         subTitle: LocalString.Info_Enter_New_Name.localized,
-                         color: AppConfiguration.systemColor,
-                         closeButtonTitle: LocalString.Cancel.localized,
-                         circleIconImage: UIImage(named: "icon_pencil"))
-        
-        */
-    }
-
-    @objc
-    func deleteKey() {
-        
-        /*
-        guard let token = token else { return }
-        
-        DataStoreManager.sharedInstance().deleteTokenEntities(byID: token.application, userName: token.userName)
-
-        dismiss(animated: true)
-         */
-    }
-
-    func generateAttrStrings(_ name: String?, value: String?) -> NSAttributedString? {
-
-        let wholeString = "\(name ?? "") : \(value ?? "")"
-        let attrString = NSMutableAttributedString(string: wholeString)
-
-        let rangeName: NSRange = (wholeString as NSString).range(of: name ?? "")
-        let rangeDots: NSRange = (wholeString as NSString).range(of: ":")
-        let rangeValue: NSRange = (wholeString as NSString).range(of: value ?? "")
-
-        attrString.addAttribute(.foregroundColor, value: UIColor.black, range: rangeName)
-        attrString.addAttribute(.foregroundColor, value: AppConfiguration.systemColor, range: rangeDots)
-        attrString.addAttribute(.foregroundColor, value: UIColor.gray, range: rangeValue)
-
-        return attrString
     }
 
 }

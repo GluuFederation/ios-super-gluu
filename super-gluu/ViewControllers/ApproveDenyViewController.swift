@@ -96,9 +96,6 @@ class ApproveDenyViewController: UIViewController {
         if info!.created != nil {
             createdTimeLabel.text = info!.created.getTime()
             createdDateLabel.text = info!.created.getDate()
-            
-            let createdAt = info!.created.getNSDate()
-            
         }
         
         if info!.locationIP != nil {

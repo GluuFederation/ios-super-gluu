@@ -51,9 +51,7 @@ class SuperGluuBannerView: UIView, GADInterstitialDelegate {
 
                 let screenWidth: CGFloat = UIScreen.main.bounds.size.width
                 let screenHeight: CGFloat? = rootVC?.view.bounds.size.height
-
-                let adHeight = adSize.size.height
-
+				
                 let adCenterX: CGFloat = screenWidth / 2
                 let adCenterY: CGFloat = (screenHeight ?? 0.0) / 2 //- (adHeight / 2);
 

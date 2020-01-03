@@ -259,7 +259,7 @@ class LogsViewController: BaseViewController, UITableViewDataSource, UITableView
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let logVC = storyboard.instantiateViewController(withIdentifier: "LogDetailViewController") as! LogDetailViewController
         
-        let userInfo = logsArray[index] as? UserLoginInfo
+        let userInfo = logsArray[index] as UserLoginInfo
         logVC.userInfo = userInfo
         navigationController?.pushViewController(logVC, animated: true)
     }
@@ -268,10 +268,11 @@ class LogsViewController: BaseViewController, UITableViewDataSource, UITableView
         let selectedCells = logsTableView.indexPathsForSelectedRows
         var updatedLogsArray: [AnyHashable] = []
         for indexParh: IndexPath? in selectedCells ?? [] {
-            let log = logsArray[indexParh?.row ?? 0] as? UserLoginInfo
-            if let aLog = log {
-                updatedLogsArray.append(aLog)
-            }
+            let log = logsArray[indexParh?.row ?? 0] as UserLoginInfo
+//            if let aLog = log {
+//                updatedLogsArray.append(aLog)
+//            }
+			updatedLogsArray.append(log)
         }
 
         return updatedLogsArray
