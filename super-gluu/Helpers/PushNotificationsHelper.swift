@@ -10,11 +10,16 @@ import UIKit
 import ox_push3
 
 
+
+enum PushAction {
+    case approve
+    case decline
+    case none
+}
+
 class PushHelper: NSObject {
     
     static let shared = PushHelper()
-    
-    
     
     var lastPush: PushNoti? {
 
@@ -132,19 +137,3 @@ struct PushNoti {
     }
 }
 
-
-enum PushAction {
-    case approve
-    case decline
-    case none
-}
-
-/*
- 
- 
- 
- 
- 
- 
- 
-*/

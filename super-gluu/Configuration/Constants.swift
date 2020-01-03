@@ -89,7 +89,7 @@ struct GluuConstants {
     
     static let NOTIFICATION_SHOW_FULLSCREEN_AD = "NOTIFICATION_SHOW_FULLSCREEN_AD"
     
-    static let NOTIFICATION_ERROR = "ERRROR"
+    static let NOTIFICATION_ERROR = "ERROR"
     
     static let INIT_SECURE_CLICK_NOTIFICATION = "INIT_SECURE_CLICK_NOTIFICATION"
     static let DID_DISCONNECT_PERIPHERAL = "didDisconnectPeripheral"
