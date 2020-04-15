@@ -34,7 +34,6 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
     
     var scanJsonDictionary = [AnyHashable: Any]()
 
-    var isSecureClick = false
     var isEnroll = false
     var isShowingQRReader = false
     
@@ -62,17 +61,14 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
         
         initNotificationCenterObservers()
         setupDisplay()
-        setupAdHandling()
+//        setupAdHandling()
         oxPushManager = OXPushManager()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        let secureClickEnable: Bool = UserDefaults.standard.bool(forKey: GluuConstants.SECURE_CLICK_ENABLED)
-        isSecureClick = secureClickEnable
-        
-        reloadFullPageAd()
+//        reloadFullPageAd()
     }
     
     override func viewDidAppear(_ animated: Bool) {
