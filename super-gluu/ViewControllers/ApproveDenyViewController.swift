@@ -32,7 +32,6 @@ class ApproveDenyViewController: UIViewController {
     @IBOutlet var titleLabels: [UILabel]!
     
     
-    
     var userInfo: UserLoginInfo?
     
     private var alertView: SCLAlertView?

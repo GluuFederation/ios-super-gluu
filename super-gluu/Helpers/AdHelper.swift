@@ -13,7 +13,8 @@ class AdHandler: NSObject {
     
     static let shared = AdHandler()
     
-    var shouldShowAds = true
+	// defaults to false now
+    var shouldShowAds = false
     
     func refreshAdStatus() {
         // if the user has a licensed key, don't show ads
@@ -27,7 +28,7 @@ class AdHandler: NSObject {
             NotificationCenter.default.post(name: Notification.Name(GluuConstants.NOTIFICATION_AD_FREE), object: nil)
         
         } else {
-            shouldShowAds = true
+            shouldShowAds = false  // true
             NotificationCenter.default.post(name: Notification.Name(GluuConstants.NOTIFICATION_AD_NOT_FREE), object: nil)
             
 //            PurchaseHandler.shared.hasValidSubscription(completion: { (hasSubscription) in

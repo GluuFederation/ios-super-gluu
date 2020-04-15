@@ -34,13 +34,11 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
     
     var scanJsonDictionary = [AnyHashable: Any]()
 
-//    var scanner: PeripheralScanner?
     var isSecureClick = false
     var isEnroll = false
     var isShowingQRReader = false
     
     var oxPushManager: OXPushManager?
-//    var alert: UIAlertController?
     var bannerView: SuperGluuBannerView?
     
     // Good practice: create the reader lazily to avoid cpu overload during the
@@ -136,17 +134,6 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
         AdHandler.shared.refreshAdStatus()
     }
     
-//    @objc
-//    func initSecureClickScanner(_ notification: Notification) {
-//        let valueData = notification.object as? Data
-//        let scanner = PeripheralScanner()
-//        scanner.valueForWrite = valueData
-//        scanner.isEnroll = isEnroll
-//        scanner.start()
-//
-//        showAlertView(withTitle: "SecureClick", andMessage: "Short click on device button")
-//    }
-    
     func initNotificationCenterObservers() {
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.showFullScreenAd), name: noti(GluuConstants.NOTIFICATION_SHOW_FULLSCREEN_AD), object: nil)
@@ -154,25 +141,11 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
         NotificationCenter.default.addObserver(self, selector: #selector(self.notificationRecieved(_:)), name: noti(GluuConstants.NOTIFICATION_PUSH_RECEIVED), object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.notificationRecieved(_:)), name: noti(GluuConstants.NOTIFICATION_PUSH_TIMEOVER), object: nil)
-        
-//        NotificationCenter.default.addObserver(self, selector: #selector(self.initSecureClickScanner(_:)), name: noti(GluuConstants.INIT_SECURE_CLICK_NOTIFICATION), object: nil)
-//
-//        NotificationCenter.default.addObserver(self, selector: #selector(self.notificationDidDisconnecPeritheralRecieved(_:)), name: noti(GluuConstants.DID_DISCONNECT_PERIPHERAL), object: nil)
     }
-    
-//    @objc
-//    func notificationDidDisconnecPeritheralRecieved(_ notification: Notification?) {
-//        scanner?.scanning = false
-//    }
     
     @objc
     func notificationRecieved(_ notification: Notification?) {
-        
-//        let step = notification?.userInfo?["oneStep"] as? String
-//        let oneStep = Bool(step ?? "") ?? false
-//        var message = ""
-        
-//        let localSuccess = LocalString.Success.localized
+
         let localFail = LocalString.Oops.localized
         
         guard let name = notification?.name else {
@@ -292,7 +265,6 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
             let jsonDictionary = try? JSONSerialization.jsonObject(with: encodedData, options: []) as? [AnyHashable : Any] else {
                 
                 self.showAlertView(withTitle: nil, andMessage: LocalString.Home_QR_Not_Recognized.localized)
-//                self.showAlertView(withTitle: "Unrecognized QR Code", andMessage: "The QR code scanned wasn't recognized. Please make sure it is from Gluu.")
 
                 navigationController?.popViewController(animated: true)
                 
