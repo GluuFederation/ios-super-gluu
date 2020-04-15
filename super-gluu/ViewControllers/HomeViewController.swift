@@ -61,7 +61,7 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
         
         initNotificationCenterObservers()
         setupDisplay()
-//        setupAdHandling()
+        setupAdHandling()
         oxPushManager = OXPushManager()
     }
     
@@ -80,15 +80,8 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
     // MARK: - View Setup
     
     func setupDisplay() {
-        
-        removeAdsView.layer.shadowColor = UIColor.black.cgColor
-        removeAdsView.layer.shadowRadius = 3
-        removeAdsView.layer.shadowOffset = CGSize(width: 0, height: 1)
-        removeAdsView.layer.shadowOpacity = 0.3
-        removeAdsView.layer.cornerRadius = GluuConstants.CORNER_RADIUS
-        
-        removeAdsButton.layer.cornerRadius = GluuConstants.CORNER_RADIUS
-        removeAdsButton.setTitle(LocalString.Home_Remove_Ads.localized, for: .normal)
+		
+		
         
         let sel: Selector = #selector(self.goToSettings)
         let menuButton = UIBarButtonItem(image: UIImage(named: "icon_menu"), style: .plain, target: self, action: sel)
@@ -118,22 +111,36 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
         
     }
     
+	
     func setupAdHandling() {
+		
+		removeAdsView.isHidden = true
         
+		/*
+		removeAdsView.layer.shadowColor = UIColor.black.cgColor
+		removeAdsView.layer.shadowRadius = 3
+		removeAdsView.layer.shadowOffset = CGSize(width: 0, height: 1)
+		removeAdsView.layer.shadowOpacity = 0.3
+		removeAdsView.layer.cornerRadius = GluuConstants.CORNER_RADIUS
+		
+		removeAdsButton.layer.cornerRadius = GluuConstants.CORNER_RADIUS
+		removeAdsButton.setTitle(LocalString.Home_Remove_Ads.localized, for: .normal)
+	
         NotificationCenter.default.addObserver(self, selector: #selector(self.hideBannerAd), name: noti(GluuConstants.NOTIFICATION_AD_FREE), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.showBannerAd), name: noti(GluuConstants.NOTIFICATION_AD_NOT_FREE), object: nil)
-        
+	    NotificationCenter.default.addObserver(self, selector: #selector(self.showFullScreenAd), name: noti(GluuConstants.NOTIFICATION_SHOW_FULLSCREEN_AD), object: nil)
+	
         bannerView = SuperGluuBannerView()
         
         bannerView?.createAndLoadInterstitial()
         
         AdHandler.shared.refreshAdStatus()
+        */
     }
+	
     
     func initNotificationCenterObservers() {
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(self.showFullScreenAd), name: noti(GluuConstants.NOTIFICATION_SHOW_FULLSCREEN_AD), object: nil)
-        
+                
         NotificationCenter.default.addObserver(self, selector: #selector(self.notificationRecieved(_:)), name: noti(GluuConstants.NOTIFICATION_PUSH_RECEIVED), object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.notificationRecieved(_:)), name: noti(GluuConstants.NOTIFICATION_PUSH_TIMEOVER), object: nil)
@@ -352,6 +359,7 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
                          animationStyle: SCLAnimationStyle.topToBottom)
     }
     
+	/*
     // MARK: - Ad Handling:
     @objc func showBannerAd(_ notification: Notification) {
         
@@ -389,6 +397,7 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
         
         bannerView?.createAndLoadInterstitial()
     }
+	*/
     
     func updateStatus(_ status: String?) {
         if status != nil {
