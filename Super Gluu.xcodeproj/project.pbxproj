@@ -21,7 +21,7 @@
 		26E1DCEE21B9F40700F8C843 /* TouchIDAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E1DCED21B9F40700F8C843 /* TouchIDAuth.swift */; };
 		26F43EF922DE406B003168AC /* LocalizedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F43EF822DE406B003168AC /* LocalizedButton.swift */; };
 		26F43EFB22DE4355003168AC /* LocalizedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F43EFA22DE4355003168AC /* LocalizedLabel.swift */; };
-		6A858E7909FD7D0E999EE1BC /* Pods_Super_Gluu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BA0B4AB7F1B002A0FF2049D /* Pods_Super_Gluu.framework */; };
+		6A858E7909FD7D0E999EE1BC /* (null) in Frameworks */ = {isa = PBXBuildFile; };
 		6E84DA101B88BBA743C31E97 /* Pods_Super_Gluu___Ad_Free.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F48E163E0B27CBECE9164F /* Pods_Super_Gluu___Ad_Free.framework */; };
 		BB13D8121EE8413A00F3C41F /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13D8111EE8413A00F3C41F /* String+Extension.swift */; };
 		BB37DE561C7E08320016D422 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB37DE551C7E08320016D422 /* main.m */; };
@@ -264,7 +264,7 @@
 		C8B402B51FE9F28C00202A4B /* LaunchSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchSetupViewController.swift; sourceTree = "<group>"; };
 		C8F0E2DB1FD21C3800FF9342 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Color+Extension.swift"; path = "Extensions/Color+Extension.swift"; sourceTree = "<group>"; };
 		C8F0E2E11FD227CE00FF9342 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Settings/SettingsViewController.swift; sourceTree = "<group>"; };
-		F9F48E163E0B27CBECE9164F /* Pods_Super_Gluu___Ad_Free.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Super_Gluu___Ad_Free.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9F48E163E0B27CBECE9164F /* Pods_Super_Gluu___Ad_Free.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Super_Gluu___Ad_Free.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,7 +290,7 @@
 				BBDE9B801DA78835003B6673 /* AdSupport.framework in Frameworks */,
 				BB9B65A11CB7C5A300784AEF /* QuartzCore.framework in Frameworks */,
 				BB37DF421C7E0CBC0016D422 /* CoreData.framework in Frameworks */,
-				6A858E7909FD7D0E999EE1BC /* Pods_Super_Gluu.framework in Frameworks */,
+				6A858E7909FD7D0E999EE1BC /* (null) in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1106,7 +1106,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Super Gluu.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FLRS8NH8Y9;
 				ENABLE_BITCODE = NO;
@@ -1288,7 +1288,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Super Gluu.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FLRS8NH8Y9;
 				ENABLE_BITCODE = NO;
@@ -1324,7 +1324,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Super Gluu.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 9;
+				CURRENT_PROJECT_VERSION = 10;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = FLRS8NH8Y9;
 				ENABLE_BITCODE = NO;
