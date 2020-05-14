@@ -22,7 +22,6 @@
 		26F43EF922DE406B003168AC /* LocalizedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F43EF822DE406B003168AC /* LocalizedButton.swift */; };
 		26F43EFB22DE4355003168AC /* LocalizedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F43EFA22DE4355003168AC /* LocalizedLabel.swift */; };
 		6A858E7909FD7D0E999EE1BC /* (null) in Frameworks */ = {isa = PBXBuildFile; };
-		6E84DA101B88BBA743C31E97 /* Pods_Super_Gluu___Ad_Free.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F48E163E0B27CBECE9164F /* Pods_Super_Gluu___Ad_Free.framework */; };
 		BB13D8121EE8413A00F3C41F /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13D8111EE8413A00F3C41F /* String+Extension.swift */; };
 		BB37DE561C7E08320016D422 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB37DE551C7E08320016D422 /* main.m */; };
 		BB37DE641C7E08320016D422 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB37DE631C7E08320016D422 /* Assets.xcassets */; };
@@ -31,48 +30,16 @@
 		BB37DF241C7E0B8E0016D422 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB37DEDB1C7E0B8E0016D422 /* Localizable.strings */; };
 		BB37DF421C7E0CBC0016D422 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB37DF411C7E0CBC0016D422 /* CoreData.framework */; };
 		BB50AE1C1E5F0978003AEC78 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB50AE1B1E5F0978003AEC78 /* LocalAuthentication.framework */; };
-		BB58C1711EDDB32800FEEC78 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB79FA371E7A8B6400AEAE58 /* Data+Extension.swift */; };
-		BB58C1731EDDB32800FEEC78 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB37DE551C7E08320016D422 /* main.m */; };
-		BB58C17D1EDDB32800FEEC78 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBE83B9D1E69D1DD0099F83A /* CoreBluetooth.framework */; };
-		BB58C17E1EDDB32800FEEC78 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB50AE1B1E5F0978003AEC78 /* LocalAuthentication.framework */; };
-		BB58C17F1EDDB32800FEEC78 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBDE9B921DA788C1003B6673 /* CoreVideo.framework */; };
-		BB58C1801EDDB32800FEEC78 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BBDE9B901DA788B8003B6673 /* libz.tbd */; };
-		BB58C1811EDDB32800FEEC78 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BBDE9B8E1DA788B0003B6673 /* libsqlite3.tbd */; };
-		BB58C1821EDDB32800FEEC78 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBDE9B8C1DA788A3003B6673 /* AVFoundation.framework */; };
-		BB58C1831EDDB32800FEEC78 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBDE9B8A1DA78895003B6673 /* CoreMedia.framework */; };
-		BB58C1841EDDB32800FEEC78 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7927E11ED4837400414EAC /* StoreKit.framework */; };
-		BB58C1851EDDB32800FEEC78 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBDE9B881DA7888A003B6673 /* MediaPlayer.framework */; };
-		BB58C1861EDDB32800FEEC78 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9B65AA1CB7C5E400784AEF /* CoreMotion.framework */; };
-		BB58C1871EDDB32800FEEC78 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9B65A81CB7C5DA00784AEF /* OpenGLES.framework */; };
-		BB58C1881EDDB32800FEEC78 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9B65A61CB7C5D100784AEF /* AudioToolbox.framework */; };
-		BB58C1891EDDB32800FEEC78 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB7C0F71C88933100833B12 /* CoreLocation.framework */; };
-		BB58C18A1EDDB32800FEEC78 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBFCB3091C98164F00F66417 /* CoreTelephony.framework */; };
-		BB58C18B1EDDB32800FEEC78 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9B65A41CB7C5B900784AEF /* SystemConfiguration.framework */; };
-		BB58C18C1EDDB32800FEEC78 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9B65A21CB7C5AE00784AEF /* CoreImage.framework */; };
-		BB58C18D1EDDB32800FEEC78 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9B659E1CB7C59800784AEF /* AdSupport.framework */; };
-		BB58C18E1EDDB32800FEEC78 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9B65A01CB7C5A300784AEF /* QuartzCore.framework */; };
-		BB58C18F1EDDB32800FEEC78 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB37DF411C7E0CBC0016D422 /* CoreData.framework */; };
-		BB58C1941EDDB32800FEEC78 /* www.gluu.org.cer in Resources */ = {isa = PBXBuildFile; fileRef = BBEC91FF1E293179000D522F /* www.gluu.org.cer */; };
-		BB58C19C1EDDB32800FEEC78 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB37DEDB1C7E0B8E0016D422 /* Localizable.strings */; };
-		BB58C1A11EDDB32800FEEC78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB37DE631C7E08320016D422 /* Assets.xcassets */; };
-		BB58C1A91EDDB32800FEEC78 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BBE787261C99954600E9E0D7 /* Settings.bundle */; };
 		BB6041691F978E540051F38D /* PinCodeDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = BB6041681F978DCB0051F38D /* PinCodeDelegate.h */; };
 		BB7927E21ED4837400414EAC /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7927E11ED4837400414EAC /* StoreKit.framework */; };
 		BB79FA381E7A8B6400AEAE58 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB79FA371E7A8B6400AEAE58 /* Data+Extension.swift */; };
 		BB97CDE41F1E4FB90033C2A5 /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB97CDDF1F1E4FB90033C2A5 /* ProximaNova-Bold.otf */; };
-		BB97CDE51F1E4FB90033C2A5 /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB97CDDF1F1E4FB90033C2A5 /* ProximaNova-Bold.otf */; };
 		BB97CDE61F1E4FB90033C2A5 /* ProximaNova-Extrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB97CDE01F1E4FB90033C2A5 /* ProximaNova-Extrabold.otf */; };
-		BB97CDE71F1E4FB90033C2A5 /* ProximaNova-Extrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB97CDE01F1E4FB90033C2A5 /* ProximaNova-Extrabold.otf */; };
 		BB97CDE81F1E4FB90033C2A5 /* ProximaNova-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB97CDE11F1E4FB90033C2A5 /* ProximaNova-Light.otf */; };
-		BB97CDE91F1E4FB90033C2A5 /* ProximaNova-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB97CDE11F1E4FB90033C2A5 /* ProximaNova-Light.otf */; };
 		BB97CDEA1F1E4FB90033C2A5 /* ProximaNova-Reg.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB97CDE21F1E4FB90033C2A5 /* ProximaNova-Reg.otf */; };
-		BB97CDEB1F1E4FB90033C2A5 /* ProximaNova-Reg.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB97CDE21F1E4FB90033C2A5 /* ProximaNova-Reg.otf */; };
 		BB97CDEC1F1E4FB90033C2A5 /* ProximaNova-Sbold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB97CDE31F1E4FB90033C2A5 /* ProximaNova-Sbold.otf */; };
-		BB97CDED1F1E4FB90033C2A5 /* ProximaNova-Sbold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB97CDE31F1E4FB90033C2A5 /* ProximaNova-Sbold.otf */; };
 		BB9B65A11CB7C5A300784AEF /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9B65A01CB7C5A300784AEF /* QuartzCore.framework */; };
-		BBB511491EF2E5B700E19D8E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB37DE681C7E08320016D422 /* Info.plist */; };
 		BBB5114B1EF2EF9500E19D8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBB5114A1EF2EF9500E19D8E /* Main.storyboard */; };
-		BBB5114C1EF2EF9500E19D8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBB5114A1EF2EF9500E19D8E /* Main.storyboard */; };
 		BBDE9B801DA78835003B6673 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9B659E1CB7C59800784AEF /* AdSupport.framework */; };
 		BBDE9B811DA78847003B6673 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9B65A21CB7C5AE00784AEF /* CoreImage.framework */; };
 		BBDE9B821DA78851003B6673 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9B65A41CB7C5B900784AEF /* SystemConfiguration.framework */; };
@@ -93,20 +60,15 @@
 		C82967621FE9C2C1008FEBE8 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82967611FE9C2C1008FEBE8 /* WebViewController.swift */; };
 		C83123012191466500C6963B /* PAPasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83123002191466500C6963B /* PAPasscodeViewController.swift */; };
 		C83D2B051FE2F18B00F9455E /* SecurityPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83D2B041FE2F18B00F9455E /* SecurityPromptViewController.swift */; };
-		C83D2B061FE2F18B00F9455E /* SecurityPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83D2B041FE2F18B00F9455E /* SecurityPromptViewController.swift */; };
 		C84157061FD9F695008BCF0B /* TouchIdSettingsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84157051FD9F695008BCF0B /* TouchIdSettingsDetailViewController.swift */; };
-		C84157071FD9F695008BCF0B /* TouchIdSettingsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84157051FD9F695008BCF0B /* TouchIdSettingsDetailViewController.swift */; };
 		C84157091FDA0226008BCF0B /* SingleCellSettingsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84157081FDA0226008BCF0B /* SingleCellSettingsDetailViewController.swift */; };
-		C841570A1FDA0226008BCF0B /* SingleCellSettingsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84157081FDA0226008BCF0B /* SingleCellSettingsDetailViewController.swift */; };
 		C8419627201A4F05005A4ACC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8419626201A4F05005A4ACC /* LaunchScreen.storyboard */; };
 		C8494D0B1FD5E67600CD5FA8 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8494D0A1FD5E67600CD5FA8 /* SettingsTableViewCell.swift */; };
 		C8494D0D1FD5FCB800CD5FA8 /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8494D0C1FD5FCB800CD5FA8 /* Font+Extension.swift */; };
-		C858D67820E37930000E449E /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8494D0A1FD5E67600CD5FA8 /* SettingsTableViewCell.swift */; };
 		C8643FBE217008AA000D771A /* NSDate+NVTimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8643FBD217008AA000D771A /* NSDate+NVTimeAgo.swift */; };
 		C86A3CA0215495D900DDBA6F /* ApproveDenyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86A3C9F215495D700DDBA6F /* ApproveDenyViewController.swift */; };
 		C86B05A72076A037008875D3 /* SubscriptionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86B05A62076A037008875D3 /* SubscriptionDetailsViewController.swift */; };
 		C86B05A92076A9CA008875D3 /* UIButton+SuperGluu.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86B05A82076A9CA008875D3 /* UIButton+SuperGluu.swift */; };
-		C86B1351215D89F400961DE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C872CB61215B9EA900735A3F /* AppDelegate.swift */; };
 		C872CB4D215AB53400735A3F /* KeysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C872CB4B215AB53000735A3F /* KeysViewController.swift */; };
 		C872CB4E215AB53400735A3F /* LogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C872CB4C215AB53200735A3F /* LogsViewController.swift */; };
 		C872CB50215ABF1900735A3F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C872CB4F215ABF1900735A3F /* BaseViewController.swift */; };
@@ -126,9 +88,7 @@
 		C887B3F920DC4C9E00D99A21 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C887B3F820DC4C9E00D99A21 /* LandingViewController.swift */; };
 		C8B402B61FE9F28C00202A4B /* LaunchSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B402B51FE9F28C00202A4B /* LaunchSetupViewController.swift */; };
 		C8F0E2DC1FD21C3800FF9342 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F0E2DB1FD21C3800FF9342 /* Color+Extension.swift */; };
-		C8F0E2DD1FD21C3800FF9342 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F0E2DB1FD21C3800FF9342 /* Color+Extension.swift */; };
 		C8F0E2E21FD227CE00FF9342 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F0E2E11FD227CE00FF9342 /* SettingsViewController.swift */; };
-		C8F0E2E31FD227CE00FF9342 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F0E2E11FD227CE00FF9342 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -198,9 +158,6 @@
 		BB37DEDE1C7E0B8E0016D422 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BB37DF411C7E0CBC0016D422 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		BB50AE1B1E5F0978003AEC78 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
-		BB58C1B11EDDB32800FEEC78 /* Super Gluu - Ad Free.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Super Gluu - Ad Free.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BB58C1B21EDDB32E00FEEC78 /* Super Gluu (ad free)-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Super Gluu (ad free)-Info.plist"; path = "/Users/nazaryavornytskyy/super-gluu/IOS/Super Gluu (ad free)-Info.plist"; sourceTree = "<absolute>"; };
-		BB58C1B31EDDB36600FEEC78 /* Super Gluu Ad free.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Super Gluu Ad free.entitlements"; sourceTree = "<group>"; };
 		BB6041681F978DCB0051F38D /* PinCodeDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PinCodeDelegate.h; sourceTree = "<group>"; };
 		BB7927E11ED4837400414EAC /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		BB79FA371E7A8B6400AEAE58 /* Data+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Data+Extension.swift"; path = "Extensions/Data+Extension.swift"; sourceTree = "<group>"; };
@@ -308,33 +265,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BB58C17C1EDDB32800FEEC78 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BB58C17D1EDDB32800FEEC78 /* CoreBluetooth.framework in Frameworks */,
-				BB58C17E1EDDB32800FEEC78 /* LocalAuthentication.framework in Frameworks */,
-				BB58C17F1EDDB32800FEEC78 /* CoreVideo.framework in Frameworks */,
-				BB58C1801EDDB32800FEEC78 /* libz.tbd in Frameworks */,
-				BB58C1811EDDB32800FEEC78 /* libsqlite3.tbd in Frameworks */,
-				BB58C1821EDDB32800FEEC78 /* AVFoundation.framework in Frameworks */,
-				BB58C1831EDDB32800FEEC78 /* CoreMedia.framework in Frameworks */,
-				BB58C1841EDDB32800FEEC78 /* StoreKit.framework in Frameworks */,
-				BB58C1851EDDB32800FEEC78 /* MediaPlayer.framework in Frameworks */,
-				BB58C1861EDDB32800FEEC78 /* CoreMotion.framework in Frameworks */,
-				BB58C1871EDDB32800FEEC78 /* OpenGLES.framework in Frameworks */,
-				BB58C1881EDDB32800FEEC78 /* AudioToolbox.framework in Frameworks */,
-				BB58C1891EDDB32800FEEC78 /* CoreLocation.framework in Frameworks */,
-				BB58C18A1EDDB32800FEEC78 /* CoreTelephony.framework in Frameworks */,
-				BB58C18B1EDDB32800FEEC78 /* SystemConfiguration.framework in Frameworks */,
-				BB58C18C1EDDB32800FEEC78 /* CoreImage.framework in Frameworks */,
-				BB58C18D1EDDB32800FEEC78 /* AdSupport.framework in Frameworks */,
-				BB58C18E1EDDB32800FEEC78 /* QuartzCore.framework in Frameworks */,
-				BB58C18F1EDDB32800FEEC78 /* CoreData.framework in Frameworks */,
-				6E84DA101B88BBA743C31E97 /* Pods_Super_Gluu___Ad_Free.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -408,7 +338,6 @@
 			isa = PBXGroup;
 			children = (
 				C828ACDB21895CDE006EEF1D /* AppInfo.swift */,
-				BB58C1B31EDDB36600FEEC78 /* Super Gluu Ad free.entitlements */,
 				BBEC91F21E28CE25000D522F /* Super Gluu.entitlements */,
 				BB37DE531C7E08320016D422 /* super-gluu */,
 				BB37DE701C7E08320016D422 /* super-gluuTests */,
@@ -425,7 +354,6 @@
 				BB37DE511C7E08320016D422 /* Super Gluu.app */,
 				BB37DE6D1C7E08320016D422 /* Super Gluu.xctest */,
 				BB37DE781C7E08320016D422 /* Super Gluu.xctest */,
-				BB58C1B11EDDB32800FEEC78 /* Super Gluu - Ad Free.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -442,7 +370,6 @@
 				BB9B65AF1CBCDA8400784AEF /* Configuration */,
 				BB37DEF61C7E0B8E0016D422 /* Vendors */,
 				C89E1EF9215D88EE00355756 /* Storyboards */,
-				BB58C1B21EDDB32E00FEEC78 /* Super Gluu (ad free)-Info.plist */,
 				BB37DE541C7E08320016D422 /* Supporting Files */,
 			);
 			path = "super-gluu";
@@ -683,24 +610,6 @@
 			productReference = BB37DE781C7E08320016D422 /* Super Gluu.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		BB58C15E1EDDB32800FEEC78 /* Super Gluu - Ad Free */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BB58C1AE1EDDB32800FEEC78 /* Build configuration list for PBXNativeTarget "Super Gluu - Ad Free" */;
-			buildPhases = (
-				BB58C15F1EDDB32800FEEC78 /* [CP] Check Pods Manifest.lock */,
-				BB58C1601EDDB32800FEEC78 /* Sources */,
-				BB58C17C1EDDB32800FEEC78 /* Frameworks */,
-				BB58C1911EDDB32800FEEC78 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Super Gluu - Ad Free";
-			productName = "super-gluu";
-			productReference = BB58C1B11EDDB32800FEEC78 /* Super Gluu - Ad Free.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -741,17 +650,6 @@
 						CreatedOnToolsVersion = 7.2.1;
 						TestTargetID = BB37DE501C7E08320016D422;
 					};
-					BB58C15E1EDDB32800FEEC78 = {
-						DevelopmentTeam = FLRS8NH8Y9;
-						SystemCapabilities = {
-							com.apple.InAppPurchase = {
-								enabled = 1;
-							};
-							com.apple.Push = {
-								enabled = 1;
-							};
-						};
-					};
 				};
 			};
 			buildConfigurationList = BB37DE4C1C7E08320016D422 /* Build configuration list for PBXProject "Super Gluu" */;
@@ -783,7 +681,6 @@
 				BB37DE501C7E08320016D422 /* Super Gluu */,
 				BB37DE6C1C7E08320016D422 /* Super GluuTests */,
 				BB37DE771C7E08320016D422 /* Super GluuUITests */,
-				BB58C15E1EDDB32800FEEC78 /* Super Gluu - Ad Free */,
 			);
 		};
 /* End PBXProject section */
@@ -820,24 +717,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB58C1911EDDB32800FEEC78 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BB58C1941EDDB32800FEEC78 /* www.gluu.org.cer in Resources */,
-				BBB5114C1EF2EF9500E19D8E /* Main.storyboard in Resources */,
-				BB97CDEB1F1E4FB90033C2A5 /* ProximaNova-Reg.otf in Resources */,
-				BB58C19C1EDDB32800FEEC78 /* Localizable.strings in Resources */,
-				BB97CDE71F1E4FB90033C2A5 /* ProximaNova-Extrabold.otf in Resources */,
-				BB97CDE91F1E4FB90033C2A5 /* ProximaNova-Light.otf in Resources */,
-				BB58C1A11EDDB32800FEEC78 /* Assets.xcassets in Resources */,
-				BBB511491EF2E5B700E19D8E /* Info.plist in Resources */,
-				BB97CDE51F1E4FB90033C2A5 /* ProximaNova-Bold.otf in Resources */,
-				BB97CDED1F1E4FB90033C2A5 /* ProximaNova-Sbold.otf in Resources */,
-				BB58C1A91EDDB32800FEEC78 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -890,24 +769,6 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Super Gluu-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BB58C15F1EDDB32800FEEC78 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Super Gluu - Ad Free-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -999,22 +860,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB37DE7D1C7E08320016D422 /* super_gluuUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BB58C1601EDDB32800FEEC78 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C8F0E2E31FD227CE00FF9342 /* SettingsViewController.swift in Sources */,
-				C84157071FD9F695008BCF0B /* TouchIdSettingsDetailViewController.swift in Sources */,
-				C858D67820E37930000E449E /* SettingsTableViewCell.swift in Sources */,
-				C86B1351215D89F400961DE5 /* AppDelegate.swift in Sources */,
-				C841570A1FDA0226008BCF0B /* SingleCellSettingsDetailViewController.swift in Sources */,
-				BB58C1711EDDB32800FEEC78 /* Data+Extension.swift in Sources */,
-				BB58C1731EDDB32800FEEC78 /* main.m in Sources */,
-				C8F0E2DD1FD21C3800FF9342 /* Color+Extension.swift in Sources */,
-				C83D2B061FE2F18B00F9455E /* SecurityPromptViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1154,45 +999,6 @@
 				PRODUCT_NAME = "Super Gluu";
 				TEST_TARGET_NAME = "super-gluu";
 				USES_XCTRUNNER = YES;
-			};
-			name = Testing;
-		};
-		26F43EF722DD3A02003168AC /* Testing */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0B55BCA65943206E2613A68D /* Pods-Super Gluu - Ad Free.testing.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "Super Gluu Ad free.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = FLRS8NH8Y9;
-				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/soulfoodz/Dropbox/Clients/Super_Gluu/super-gluu/IOS/super-gluu/PrefixHeader.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"COCOAPODS=1",
-					"ADFREE=1",
-				);
-				INFOPLIST_FILE = "$(SRCROOT)/Super Gluu (ad free)-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MACH_O_TYPE = mh_execute;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ios.gluu.ad.free;
-				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "super-gluu/Super Gluu-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Testing;
 		};
@@ -1401,85 +1207,6 @@
 			};
 			name = Release;
 		};
-		BB58C1AF1EDDB32800FEEC78 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 244ED1E8112E194E698C753B /* Pods-Super Gluu - Ad Free.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "Super Gluu Ad free.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = FLRS8NH8Y9;
-				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/soulfoodz/Dropbox/Clients/Super_Gluu/super-gluu/IOS/super-gluu/PrefixHeader.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"COCOAPODS=1",
-					"ADFREE=1",
-				);
-				INFOPLIST_FILE = "$(SRCROOT)/Super Gluu (ad free)-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MACH_O_TYPE = mh_execute;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ios.gluu.ad.free;
-				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "super-gluu/Super Gluu-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		BB58C1B01EDDB32800FEEC78 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4516151003C18420B94BE1ED /* Pods-Super Gluu - Ad Free.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "Super Gluu Ad free.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = FLRS8NH8Y9;
-				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/soulfoodz/Dropbox/Clients/Super_Gluu/super-gluu/IOS/super-gluu/PrefixHeader.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-					"COCOAPODS=1",
-					"ADFREE=1",
-				);
-				INFOPLIST_FILE = "$(SRCROOT)/Super Gluu (ad free)-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MACH_O_TYPE = mh_execute;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ios.gluu.ad.free;
-				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "super-gluu/Super Gluu-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1519,16 +1246,6 @@
 				BB37DE881C7E08320016D422 /* Debug */,
 				BB37DE891C7E08320016D422 /* Release */,
 				26F43EF622DD3A02003168AC /* Testing */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BB58C1AE1EDDB32800FEEC78 /* Build configuration list for PBXNativeTarget "Super Gluu - Ad Free" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BB58C1AF1EDDB32800FEEC78 /* Debug */,
-				BB58C1B01EDDB32800FEEC78 /* Release */,
-				26F43EF722DD3A02003168AC /* Testing */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
