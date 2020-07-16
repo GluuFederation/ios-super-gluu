@@ -288,7 +288,7 @@ class KeyHandler: NSObject {
     
     func deleteToken(token: TokenEntity, tokenDeleted: @escaping ()->Void) {
         
-        DataStoreManager.sharedInstance().deleteTokenEntities(byID: token.application, userName: token.userName)
+		DataStoreManager.sharedInstance()?.deleteTokenEntity(forApplication: token.application, userName: token.userName)
         
         // check in mainViewController for matching code. we use the token issuer combined with the username
         let keyId = token.application ?? "" + (token.userName ?? "")
@@ -314,9 +314,9 @@ class KeyHandler: NSObject {
 
             if DataStoreManager.sharedInstance().isUniqueTokenName(newName) {
                 
-                DataStoreManager.sharedInstance().setTokenEntitiesNameByID(token.id, userName: token.userName, newName: newName)
-                token.keyName = newName
-//                self.loadKeyHandlesFromDatabase()
+				DataStoreManager.sharedInstance()?.editTokenName(token, name: newName)
+//                token.keyName = newName
+                
                 didEdit()
                 alert.hideView()
                 

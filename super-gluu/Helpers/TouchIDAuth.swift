@@ -66,16 +66,17 @@ extension LAContext {
             }
             
         } else {
-            
+         
+			var canEval = false
             // check to see if they need to enter their passcode
             // due to touchId attempts failing too many times
             if error?.code == -8 {
                 context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: LocalString.Enable_TouchID.localized, reply: { (success, error) in
-                    return success
+                    canEval = true
                 })
-            } else {
-                return false
             }
+			
+			return canEval
         }
         
         return false

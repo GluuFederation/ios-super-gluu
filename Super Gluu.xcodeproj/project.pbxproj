@@ -19,9 +19,11 @@
 		26E1DCEB21B9F3F500F8C843 /* PushNotificationsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E1DCE521B9F3F300F8C843 /* PushNotificationsHelper.swift */; };
 		26E1DCEC21B9F3F500F8C843 /* PurchaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E1DCE621B9F3F400F8C843 /* PurchaseHandler.swift */; };
 		26E1DCEE21B9F40700F8C843 /* TouchIDAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E1DCED21B9F40700F8C843 /* TouchIDAuth.swift */; };
+		26E32A2724B977DE004B4F06 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E32A2624B977DE004B4F06 /* test.swift */; };
 		26F43EF922DE406B003168AC /* LocalizedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F43EF822DE406B003168AC /* LocalizedButton.swift */; };
 		26F43EFB22DE4355003168AC /* LocalizedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F43EFA22DE4355003168AC /* LocalizedLabel.swift */; };
 		6A858E7909FD7D0E999EE1BC /* (null) in Frameworks */ = {isa = PBXBuildFile; };
+		B15338FF2BF5A9564E88CA07 /* Pods_Super_Gluu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475C93050CA6D13747A471A2 /* Pods_Super_Gluu.framework */; };
 		BB13D8121EE8413A00F3C41F /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB13D8111EE8413A00F3C41F /* String+Extension.swift */; };
 		BB37DE561C7E08320016D422 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB37DE551C7E08320016D422 /* main.m */; };
 		BB37DE641C7E08320016D422 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB37DE631C7E08320016D422 /* Assets.xcassets */; };
@@ -125,6 +127,7 @@
 		26E1DCE521B9F3F300F8C843 /* PushNotificationsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PushNotificationsHelper.swift; path = "super-gluu/Helpers/PushNotificationsHelper.swift"; sourceTree = SOURCE_ROOT; };
 		26E1DCE621B9F3F400F8C843 /* PurchaseHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PurchaseHandler.swift; path = "super-gluu/Helpers/PurchaseHandler.swift"; sourceTree = SOURCE_ROOT; };
 		26E1DCED21B9F40700F8C843 /* TouchIDAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TouchIDAuth.swift; path = "super-gluu/Helpers/TouchIDAuth.swift"; sourceTree = SOURCE_ROOT; };
+		26E32A2624B977DE004B4F06 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		26F43EF822DE406B003168AC /* LocalizedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedButton.swift; sourceTree = "<group>"; };
 		26F43EFA22DE4355003168AC /* LocalizedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedLabel.swift; sourceTree = "<group>"; };
 		26F43EFC22DE5643003168AC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -140,6 +143,7 @@
 		26F43F0622DE8FB9003168AC /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		26F43F0722DE90AA003168AC /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4516151003C18420B94BE1ED /* Pods-Super Gluu - Ad Free.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Super Gluu - Ad Free.release.xcconfig"; path = "Pods/Target Support Files/Pods-Super Gluu - Ad Free/Pods-Super Gluu - Ad Free.release.xcconfig"; sourceTree = "<group>"; };
+		475C93050CA6D13747A471A2 /* Pods_Super_Gluu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Super_Gluu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EB98658935DC37AA97BA494 /* Pods-Super Gluu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Super Gluu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Super Gluu/Pods-Super Gluu.debug.xcconfig"; sourceTree = "<group>"; };
 		A2C1F7760B8ADC2A6085B78A /* Pods-Super Gluu (ad free).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Super Gluu (ad free).release.xcconfig"; path = "Pods/Target Support Files/Pods-Super Gluu (ad free)/Pods-Super Gluu (ad free).release.xcconfig"; sourceTree = "<group>"; };
 		B84F8928A16117787C96522F /* Pods-Super Gluu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Super Gluu.release.xcconfig"; path = "Pods/Target Support Files/Pods-Super Gluu/Pods-Super Gluu.release.xcconfig"; sourceTree = "<group>"; };
@@ -248,6 +252,7 @@
 				BB9B65A11CB7C5A300784AEF /* QuartzCore.framework in Frameworks */,
 				BB37DF421C7E0CBC0016D422 /* CoreData.framework in Frameworks */,
 				6A858E7909FD7D0E999EE1BC /* (null) in Frameworks */,
+				B15338FF2BF5A9564E88CA07 /* Pods_Super_Gluu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +297,7 @@
 				BBB7C0F71C88933100833B12 /* CoreLocation.framework */,
 				BB37DF411C7E0CBC0016D422 /* CoreData.framework */,
 				F9F48E163E0B27CBECE9164F /* Pods_Super_Gluu___Ad_Free.framework */,
+				475C93050CA6D13747A471A2 /* Pods_Super_Gluu.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -509,6 +515,7 @@
 			isa = PBXGroup;
 			children = (
 				C872CB5F215B9ADE00735A3F /* SuperGluuBannerView.swift */,
+				26E32A2624B977DE004B4F06 /* test.swift */,
 				26A5F3BA22F39B4E002038DF /* CircularProgressBar.swift */,
 				BB37DF0C1C7E0B8E0016D422 /* TableViewCells */,
 				26F43EF822DE406B003168AC /* LocalizedButton.swift */,
@@ -837,6 +844,7 @@
 				C84157061FD9F695008BCF0B /* TouchIdSettingsDetailViewController.swift in Sources */,
 				C872CB59215AF32F00735A3F /* HomeViewController.swift in Sources */,
 				C87B2115215EC967004A997A /* KeyHandleCell.swift in Sources */,
+				26E32A2724B977DE004B4F06 /* test.swift in Sources */,
 				C872CB5B215B49CD00735A3F /* UIViewController+SuperGluu.swift in Sources */,
 				C8B402B61FE9F28C00202A4B /* LaunchSetupViewController.swift in Sources */,
 				26F43EFB22DE4355003168AC /* LocalizedLabel.swift in Sources */,

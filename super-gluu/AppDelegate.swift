@@ -94,7 +94,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           let action1 = UNNotificationAction(identifier: GluuConstants.NotificationActionApprove,
                                              title: LocalString.Approve.localized,
                                              options: [.foreground])
-          
+           
           let action2 = UNNotificationAction(identifier: GluuConstants.NotificationActionDeny,
                                              title: LocalString.Deny.localized,
                                              options: [.foreground, .destructive])
@@ -123,6 +123,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     return
                 case .provisional:
                     return
+				case .ephemeral:
+					return
                 }
             }
         })

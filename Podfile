@@ -5,7 +5,7 @@ platform :ios, '8.0'
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-#target "Super Gluu", "Super Gluu - Ad Free" do
+#target "Super Gluu" do
 
 def project_pods
     pod 'AFNetworking', '~> 2.5'
@@ -16,16 +16,12 @@ def project_pods
     pod 'SwiftyStoreKit', '~> 0.11'
     pod 'QRCodeReader.swift', '~> 9.0.1'
     
-    pod 'ox-push3', :git => 'https://github.com/soulfoodz/GluuOxPush.git'
+    pod 'ox-push3', :git => 'https://github.com/GluuFederation/oxPush-iOS.git'
 
 end
 
 target 'Super Gluu' do
     project_pods
-end
- 
-target 'Super Gluu - Ad Free' do
-#    project_pods
 end
 
 #end

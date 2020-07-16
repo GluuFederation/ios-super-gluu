@@ -65,8 +65,8 @@ enum OxRequestType: String {
                 case .authenticate: requestType = OxRequestType.authenticate
                 }
             }
-            
-            self.showAlert(requestType: requestType, isApproval: !isDecline, didSucceed: result != nil)
+			
+			self.showAlert(requestType: requestType, isApproval: !isDecline, didSucceed: result != nil, error: error)
             
             NotificationCenter.default.post(name: Notification.Name(GluuConstants.NOTIFICATION_SHOW_FULLSCREEN_AD), object: nil)
             
@@ -78,13 +78,22 @@ enum OxRequestType: String {
         }
     }
     
-    fileprivate func showAlert(requestType: OxRequestType?, isApproval: Bool, didSucceed: Bool) {
+	fileprivate func showAlert(requestType: OxRequestType?, isApproval: Bool, didSucceed: Bool, error: Error? = nil) {
         guard let reqType = requestType else {
             return
         }
         
         let localSuccess = LocalString.Success.localized
         let localFail = LocalString.Oops.localized
+		
+		// this is a quick fix error display
+		// currently, the only error thrown is one where the user doesn't
+		// have a token on the device for the application being accessed
+		
+		if let errorDescription = error?.localizedDescription {
+			showAlertView(withTitle: localFail, andMessage: errorDescription)
+			return
+		}
         
         switch reqType {
         case .enroll:

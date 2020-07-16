@@ -18,7 +18,9 @@ class ApproveDenyViewController: UIViewController {
     @IBOutlet var circularProgressBar: CircularProgressBar!
     @IBOutlet var approveButton: UIButton!
     @IBOutlet var denyButton: UIButton!
-    
+    @IBOutlet var approveLabel: UILabel!
+    @IBOutlet var denyLabel: UILabel!
+	
     //Info
     @IBOutlet var serverNameLabel: UILabel!
     @IBOutlet var serverUrlLabel: UILabel!
@@ -58,9 +60,8 @@ class ApproveDenyViewController: UIViewController {
         cityNameLabel.textColor = UIColor.Gluu.lightGreyText
         createdDateLabel.textColor = UIColor.Gluu.lightGreyText
         
-        approveButton.setTitle(LocalString.Approve.localized, for: .normal)
-        
-        denyButton.setTitle(LocalString.Deny.localized, for: .normal)
+		approveLabel.text = LocalString.Approve.localized
+        denyLabel.text = LocalString.Deny.localized
         
         serverUrlLabel.textColor = UIColor.Gluu.green
     }
