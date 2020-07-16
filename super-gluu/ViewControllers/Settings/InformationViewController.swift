@@ -153,7 +153,7 @@ class InformationViewController: BaseViewController, UIScrollViewDelegate {
         
         guard let token = token else { return }
         
-        KeyHandler().editKeyToken(token: token) {
+        KeyHandler().editTokenName(token) {
             
             self.didEditToken?()
             self.setupInformation()

@@ -123,8 +123,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     return
                 case .provisional:
                     return
-				case .ephemeral:
-					return
+				default: return
                 }
             }
         })
