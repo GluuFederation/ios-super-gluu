@@ -26,11 +26,9 @@ class LogDetailViewController: UIViewController {
     @IBOutlet var logoImageView: UIImageView!
     @IBOutlet var titleLabels: [UILabel]!
     
-    
     var userInfo: UserLoginInfo?
     
     private var alertView: SCLAlertView?
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -146,7 +144,8 @@ class LogDetailViewController: UIViewController {
                 self.deleteLog(self.userInfo!)
             }
             
-            alert.dismiss(animated: true, completion: nil)
+			alert.hideView()
+			self.navigationController?.popViewController(animated: true)
         })
         
         alert.showCustom(AlertConstants.delete,
@@ -160,8 +159,7 @@ class LogDetailViewController: UIViewController {
     func deleteLog(_ log: UserLoginInfo?) {
         // Eric
         DataStoreManager.sharedInstance().deleteLog(log)
-        
-        navigationController?.popViewController(animated: true)
+                
     }
     
 }

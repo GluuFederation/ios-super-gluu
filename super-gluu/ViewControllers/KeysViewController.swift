@@ -51,8 +51,10 @@ class KeysViewController: BaseViewController, UITableViewDataSource, UITableView
 
     func loadKeyHandlesFromDatabase() {
 
-        if let tokenEnts = DataStoreManager.sharedInstance().getTokenEntities() as? [TokenEntity] {
-            keyHandleArray = tokenEnts
+		keyHandleArray = [TokenEntity]()
+        
+		if let tokens = DataStoreManager.sharedInstance()?.keys() as? [TokenEntity] {
+            keyHandleArray = tokens
             keyHandleTableView.reloadData()
         }
 
@@ -182,13 +184,13 @@ class KeyHandler: NSObject {
     
     func deleteToken(token: TokenEntity, tokenDeleted: @escaping ()->Void) {
         
-		DataStoreManager.sharedInstance()?.deleteTokenEntity(forApplication: token.application, userName: token.userName)
-        
         // check in mainViewController for matching code. we use the token issuer combined with the username
         let keyId = token.application ?? "" + (token.userName ?? "")
         
         // whether the key is licensed or not, call remove to be sure
         GluuUserDefaults.removeLicensedKey(keyId)
+		
+		DataStoreManager.sharedInstance()?.delete(token)
         
         tokenDeleted()
     }
@@ -208,7 +210,7 @@ class KeyHandler: NSObject {
 
             if DataStoreManager.sharedInstance().isUniqueTokenName(newName) {
                 
-				DataStoreManager.sharedInstance()?.editTokenName(token, name: newName)
+				DataStoreManager.sharedInstance()?.editToken(token, name: newName)
                 
                 didEdit()
                 alert.hideView()

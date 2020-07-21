@@ -11,11 +11,7 @@ import ox_push3
 
 class LogsViewController: BaseViewController, UITableViewDataSource, UITableViewDelegate, SWTableViewCellDelegate {
     
-//    @IBOutlet var topView: UIView!
-//    @IBOutlet var topIconView: UIImageView!
     @IBOutlet var logsTableView: UITableView!
-//    @IBOutlet var editLogsButton: UIButton!
-//    @IBOutlet var cancelButton: UIButton!
     @IBOutlet var noLogsLabel: UILabel!
     @IBOutlet var contentView: UIView!
     @IBOutlet var selectAllButton: UIButton!
@@ -55,132 +51,37 @@ class LogsViewController: BaseViewController, UITableViewDataSource, UITableView
         tabBarController?.selectedIndex = 0
     }
 
-    func getLogs() {
+    func updateLogs() {
         logsArray = [UserLoginInfo]()
-        logsArray = DataStoreManager.sharedInstance().getUserLoginInfo() as! [UserLoginInfo]
+		if let arry = DataStoreManager.sharedInstance()?.userLogs() as? [UserLoginInfo] {
+			logsArray = arry
+		}
 
         logsTableView.reloadData()
-
     }
 
-    func deleteLog(_ log: UserLoginInfo?) {
+    func deleteLog(_ log: UserLoginInfo) {
         // eric
+		print(log)
         DataStoreManager.sharedInstance().deleteLog(log)
         updateLogs()
     }
 
-    func deleteLogs(_ logs: [Any]?) {
-        // eric
-        DataStoreManager.sharedInstance().deleteLogs(logs)
-        updateLogs()
-        selectAllView.isHidden = true
-    }
-
-    func updateLogs() {
-        getLogs()
-        logsTableView.setEditing(false, animated: true)
-    }
-
-    @IBAction func editCleanLogs(_ sender: Any) {
-        /*
-        if editLogsButton.tag == 1 {
-            //Editing table
-            logsTableView.setEditing(true, animated: true)
-            cancelButton.isHidden = false
-            editLogsButton.tag = 2
-            editLogsButton.setTitle("Delete", for: .normal)
-            selectAllView.isHidden = false
-        } else {
-            //Deleting logs
-            var logsForDeleteArray = getLogsForDelete()
-            if logsForDeleteArray?.count == 0 {
-                showNoLogsToDeleteAlert()
-            } else {
-                deleteLogsAlert(nil, array: logsForDeleteArray)
-            }
-            editLogsButton.tag = 1
-        }
- */
-    }
-
-    @IBAction func cancelEditLogs(_ sender: Any) {
-        /*
-        cancelButton.isHidden = true
-        logsTableView.setEditing(false, animated: true)
-        editLogsButton.tag = 1
-        updateButtons()
-        selectAllView.isHidden = true
-        deselectAllLogs()
- */
-    }
-
-    // ** Local Text
-    @IBAction func selectAllClick(_ sender: Any) {
-        let tag = Int((sender as? UIButton)?.tag ?? 0)
-        if tag == 1 {
-            //select all
-            selectAllLogs(true)
-            selectAllButton.tag = 2
-            selectAllButton.setTitle(LocalString.Unselect_All.localized, for: .normal)
-        } else {
-            //deselect all
-            deselectAllLogs()
-        }
-    }
-
-    func deselectAllLogs() {
-        selectAllLogs(false)
-        selectAllButton.tag = 1
-        selectAllButton.setTitle(LocalString.Select_All.localized, for: .normal)
-    }
-
-    
-    func selectAllLogs(_ isSelect: Bool) {
-        /*
-        for i in 0..<logsTableView.numberOfSections {
-            for j in 0..<logsTableView.numberOfRows(inSection: i) {
-                let ints = [i, j]
-                let indexPath = IndexPath(indexes: &ints, length: 2)
-                if isSelect {
-                    logsTableView.selectRow(at: indexPath, animated: true, scrollPosition: .none)
-                } else {
-                    logsTableView.deselectRow(at: indexPath, animated: true)
-                }
-                //Here is your code
-            }
-        }
-         */
-    }
- 
-
-    func updateButtons() {
-        /*
-        let title = editLogsButton.tag == 2 ? "Delete" : "Edit"
-        editLogsButton.setTitle(title, for: .normal)
- */
-    }
-
-    func deleteLogsAlert(_ log: UserLoginInfo?, array logs: [Any]?) {
+    func showDeleteLogAlert(log: UserLoginInfo) {
         let alert = SCLAlertView(autoDismiss: false, horizontalButtons: true)
-        
+        print(log)
         alert.addButton(AlertConstants.yes, backgroundColor: .red) {
             print("YES clicked")
-            
-            if log != nil {
-                self.deleteLog(log)
-            } else if logs != nil || (logs?.count ?? 0) > 0 {
-                self.deleteLogs(logs)
-            } else {
-                return
-            }
+			
+			self.deleteLog(log)
             
             alert.hideView()
         }
         
-        let subText = logs != nil || (logs?.count ?? 0) > 0 ? LocalString.Clear_Logs.localized : LocalString.Clear_Log.localized
+		let subtext = LocalString.Clear_Log.localized
         
         alert.showCustom(AlertConstants.delete,
-                         subTitle: subText,
+                         subTitle: subtext,
                          color: AppConfiguration.systemColor,
                          closeButtonTitle: AlertConstants.no,
                          circleIconImage: UIImage(named: "icon_trashcan_large")!)
@@ -218,7 +119,7 @@ class LogsViewController: BaseViewController, UITableViewDataSource, UITableView
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if logsTableView.isEditing != true {
-            showLogDetail(indexPath.row)
+			showLogDetail(logsArray[indexPath.row])
         }
     }
 
@@ -233,48 +134,40 @@ class LogsViewController: BaseViewController, UITableViewDataSource, UITableView
         deleteButton.backgroundColor = UIColor(red: 1.0, green: 0.231, blue: 0.188, alpha: 1.0)
         
         return [viewButton, deleteButton]
-
     }
 
     func swipeableTableViewCell(_ cell: SWTableViewCell?, didTriggerLeftUtilityButtonWith index: Int) {
     }
 
     func swipeableTableViewCell(_ cell: SWTableViewCell?, didTriggerRightUtilityButtonWith index: Int) {
+		
+		guard
+			let cell = cell,
+			let ip = self.logsTableView.indexPath(for: cell),
+			ip.row < logsArray.count else { return }
+		
+		let log = logsArray[ip.row]
+		
         switch index {
             case 0:
                 print("More button was pressed")
-                showLogDetail(Int(cell?.tag ?? 0))
+                showLogDetail(log)
             case 1:
                 // Delete button was pressed
                 print("Delete button was pressed")
-                let log = logsArray[cell?.tag ?? 0] as? UserLoginInfo
-                deleteLogsAlert(log, array: nil)
+				
+				showDeleteLogAlert(log: log)
             default:
                 break
         }
     }
 
     //------------------ END --------------------------------
-    func showLogDetail(_ index: Int) {
+	func showLogDetail(_ log: UserLoginInfo) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let logVC = storyboard.instantiateViewController(withIdentifier: "LogDetailViewController") as! LogDetailViewController
         
-        let userInfo = logsArray[index] as UserLoginInfo
-        logVC.userInfo = userInfo
+        logVC.userInfo = log
         navigationController?.pushViewController(logVC, animated: true)
-    }
-
-    func getLogsForDelete() -> [AnyHashable]? {
-        let selectedCells = logsTableView.indexPathsForSelectedRows
-        var updatedLogsArray: [AnyHashable] = []
-        for indexParh: IndexPath? in selectedCells ?? [] {
-            let log = logsArray[indexParh?.row ?? 0] as UserLoginInfo
-//            if let aLog = log {
-//                updatedLogsArray.append(aLog)
-//            }
-			updatedLogsArray.append(log)
-        }
-
-        return updatedLogsArray
     }
 }
