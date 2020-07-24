@@ -28,7 +28,7 @@ enum SettingsTableSections {
             // Don't show touch auth if user's device doesn't have it
             // Removing SSL for time being
 //            let touchAuth = TouchIDAuth()
-            var securityArray: [SettingsTableItem] = [.pinCodes]
+          var securityArray: [SettingsTableItem] = [.pinCodes, .ssl]
             
             switch LAContext().biometricType {
             case .faceID:

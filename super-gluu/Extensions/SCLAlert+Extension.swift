@@ -96,7 +96,7 @@ enum AlertButtonStyle {
 
 extension SCLAlertView {
     
-    convenience init(autoDismiss: Bool = false, showCloseButton: Bool = true, closeButtonColor: UIColor = AppConfiguration.systemColor, horizontalButtons: Bool = true) {
+  convenience init(autoDismiss: Bool = false, showCloseButton: Bool = true, closeButtonColor: UIColor = AppConfiguration.systemColor, horizontalButtons: Bool = true, hideWhenBackgroundViewIsTapped: Bool = true) {
 
         let bgColor = UIColor.white
         let titleFont = UIFont(name: "ProximaNova-Semibold", size: 20)
@@ -113,7 +113,7 @@ extension SCLAlertView {
                                                     showCloseButton: showCloseButton,
                                                     showCircularIcon: true,
                                                     shouldAutoDismiss: autoDismiss,
-                                                    hideWhenBackgroundViewIsTapped: true,
+                                                    hideWhenBackgroundViewIsTapped: hideWhenBackgroundViewIsTapped,
                                                     contentViewColor: bgColor,
                                                     titleColor: titleColor,
                                                     subTitleColor: subtitleColor,

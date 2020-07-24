@@ -12,7 +12,7 @@ import Foundation
 @objc class GluuUserDefaults: NSObject {
     
     class func userPin() -> String? {
-        return UserDefaults.standard.string(forKey: GluuConstants.PIN_CODE)
+        UserDefaults.standard.string(forKey: GluuConstants.PIN_CODE)
     }
     
     class func setUserPin(newPin: String) {
@@ -30,11 +30,11 @@ import Foundation
     }
     
     class func hasBioAuthEnabled() -> Bool {
-        return UserDefaults.standard.bool(forKey: GluuConstants.TOUCH_ID_ENABLED)
+        UserDefaults.standard.bool(forKey: GluuConstants.TOUCH_ID_ENABLED)
     }
     
     class func isSSLEnabled() -> Bool {
-        return UserDefaults.standard.bool(forKey: GluuConstants.SSL_ENABLED)
+        UserDefaults.standard.bool(forKey: GluuConstants.SSL_ENABLED)
     }
     
     class func setSSLEnabled(isEnabled: Bool) {
@@ -42,7 +42,7 @@ import Foundation
     }
     
     class func isFirstLoad() -> Bool {
-        return UserDefaults.standard.bool(forKey: GluuConstants.IS_FIRST_LOAD)
+        UserDefaults.standard.bool(forKey: GluuConstants.IS_FIRST_LOAD)
     }
     
     class func setFirstLoad() {
@@ -62,11 +62,11 @@ import Foundation
     }
     
     class func subscriptionExpirationDate() -> Date? {
-        return UserDefaults.standard.value(forKey: GluuConstants.SUBSCRIPTION_EXPIRY_DATE) as? Date
+        UserDefaults.standard.value(forKey: GluuConstants.SUBSCRIPTION_EXPIRY_DATE) as? Date
     }
     
     class func licensedKeys() -> [String]? {
-        return UserDefaults.standard.array(forKey: GluuConstants.LICENSED_KEYS) as? [String]
+        UserDefaults.standard.array(forKey: GluuConstants.LICENSED_KEYS) as? [String]
     }
     
     class func saveLicensedKey(_ key: String) {
