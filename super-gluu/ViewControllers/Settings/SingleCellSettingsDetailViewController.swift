@@ -11,6 +11,14 @@ import LocalAuthentication
 
 final class SingleCellSettingsDetailViewController: UITableViewController {
     
+    private enum Strings {
+        
+        static let title = "Admin Testing Only"
+        static let message = "This feature is just for admin testing proposes. Are an admin needing enable it?"
+        static let okButton = "Yes"
+        static let cancelButton = "No"
+    }
+    
     enum Display {
         
         case touchId
@@ -151,13 +159,14 @@ final class SingleCellSettingsDetailViewController: UITableViewController {
     }
     
     private func showAdmitAlertForSSL() {
+        // Nazar - at the momnet we use English strings
         showAlert(
-            title: "Admin Testing Only",
-            message: "This feature is just for admin testing proposes. Are an admin needing enable it?",
-            buttonOk: "Yes",
+            title: Strings.title,
+            message: Strings.message,
+            buttonOk: Strings.okButton,
             buttonOkHandler: { [weak self] in
                 self?.enableSSL(enabled: true)
-        }, buttonCancel: "No",
+            }, buttonCancel: Strings.cancelButton,
            buttonCancelHandler: { [weak self] in
             self?.enableSSL(enabled: false)
         })
