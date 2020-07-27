@@ -18,8 +18,8 @@ enum OxRequestType: String {
     
     func localizedString() -> String {
         switch self {
-            case .authenticate: return LocalString.Authentication.localized
-            case .enroll: return LocalString.Registration.localized
+        case .authenticate: return LocalString.Authentication.localized
+        case .enroll: return LocalString.Registration.localized
         }
     }
     
@@ -130,13 +130,13 @@ enum OxRequestType: String {
     
     
     func showAlertView(withTitle title: String?, andMessage message: String?, withCloseButton: Bool = true) {
-        let alert = SCLAlertView(autoDismiss: true, horizontalButtons: false)
+        let alert = SCLAlertView(autoDismiss: false, horizontalButtons: false)
         
         alert.showCustom(title ?? "",
                          subTitle: message ?? "",
                          color: AppConfiguration.systemColor,
                          closeButtonTitle: LocalString.Ok.localized,
-                         timeout: alert.dismissTimeout(),
+                         timeout: nil,
                          circleIconImage: AppConfiguration.systemAlertIcon,
                          animationStyle: SCLAnimationStyle.topToBottom)
     }
