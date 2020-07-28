@@ -69,6 +69,7 @@ class HomeViewController: BaseViewController, ApproveDenyDelegate, QRCodeReaderV
         super.viewWillAppear(animated)
         
 //        reloadFullPageAd()
+				
     }
     
     override func viewDidAppear(_ animated: Bool) {

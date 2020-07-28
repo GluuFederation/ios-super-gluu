@@ -64,11 +64,11 @@ class PushHelper: NSObject {
         // ads should not display, regardless of other unlicensed keys the user has
         
         if isLicensed == true {
-            print("Saving Licensed Key")
+//            print("Saving Licensed Key")
             GluuUserDefaults.saveLicensedKey(keyIssuer)
             AdHandler.shared.refreshAdStatus()
         } else {
-            print("Removing Licensed Key")
+//            print("Removing Licensed Key")
             GluuUserDefaults.removeLicensedKey(keyIssuer)
             AdHandler.shared.refreshAdStatus()
         }

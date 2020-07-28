@@ -10,6 +10,7 @@ import GoogleMobileAds
 import UIKit
 import UserNotifications
 import ox_push3
+import SCLAlertView
 
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -187,8 +188,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if appIsLocked() == false && coverWindow != nil && !isHidingLockScreen {
             hideLockedScreen()
         }
+		
+		checkForNewerVersion()
  
     }
+	
+	func checkForNewerVersion() {
+		
+		guard let version = AppInfo()?.version else { return }
+		
+		let noDotsVersion = version.replacingOccurrences(of: ".", with: "")
+		
+		guard let currentVersion = Int(noDotsVersion) else { return }
+
+		let badVersion = Int(3405)
+		
+		if badVersion > currentVersion {
+
+			let alert = SCLAlertView(showCloseButton: true, horizontalButtons: false)
+		   
+		   alert.showCustom("Please update Super Gluu",
+							subTitle: "There is a new version of Super Gluu available for download. Please update to prevent any issues.",
+							color: AppConfiguration.systemColor,
+							closeButtonTitle: LocalString.Ok.localized,
+							circleIconImage: AppConfiguration.systemAlertIcon,
+							animationStyle: SCLAnimationStyle.topToBottom)
+		}
+		
+	}
     
     func showLockedScreen() {
         coverVC = LandingViewController.fromStoryboard("Landing")

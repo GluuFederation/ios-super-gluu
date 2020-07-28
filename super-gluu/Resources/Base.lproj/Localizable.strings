@@ -25,7 +25,7 @@
 "Home_Decline_Failed"       = "Decline failed";
 "Home_Authenticating"       = "Authenticating...";
 "Home_Registering"          = "Registering...";
-"Home_Auth_Failed"          = "Authentication failed. Try again. ";
+"Home_Auth_Failed"          = "Authentication failed. Try again.";
 "Home_Auth_Declined"        = "Authentication declined";
 "Home_Expired_Push"         = "Your push notification has expired";
 
