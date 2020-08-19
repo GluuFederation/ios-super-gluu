@@ -12,15 +12,15 @@ import SCLAlertView
 
 class InformationViewController: BaseViewController, UIScrollViewDelegate {
     
-    @IBOutlet var userNameValueLabel: UILabel!
-    @IBOutlet var createdValueLabel: UILabel!
-    @IBOutlet var applicationValueLabel: UILabel!
-    @IBOutlet var keyHandleValueLabel: UILabel!
+    @IBOutlet private weak var userNameValueLabel: UILabel!
+    @IBOutlet private weak var createdValueLabel: UILabel!
+    @IBOutlet private weak var applicationValueLabel: UILabel!
+    @IBOutlet private weak var keyHandleValueLabel: UILabel!
     
-    @IBOutlet var userNameTitleLabel: UILabel!
-    @IBOutlet var createdTitleLabel: UILabel!
-    @IBOutlet var applicationTitleLabel: UILabel!
-    @IBOutlet var keyHandleTitleLabel: UILabel!
+    @IBOutlet private weak var userNameTitleLabel: UILabel!
+    @IBOutlet private weak var createdTitleLabel: UILabel!
+    @IBOutlet private weak var applicationTitleLabel: UILabel!
+    @IBOutlet private weak var keyHandleTitleLabel: UILabel!
     
     @IBOutlet var valueLabels: [UILabel]!
     @IBOutlet var separators: [UIView]!
@@ -35,11 +35,9 @@ class InformationViewController: BaseViewController, UIScrollViewDelegate {
         
         setupView()
         setupInformation()
-
     }
 
     func setupView() {
-
         userNameTitleLabel.text = LocalString.Log_Key_Username.localized
         createdTitleLabel.text = LocalString.Log_Key_Created.localized
         keyHandleTitleLabel.text = LocalString.Log_Key_Key_Handle.localized
@@ -63,20 +61,16 @@ class InformationViewController: BaseViewController, UIScrollViewDelegate {
         })
 
         navigationItem.rightBarButtonItem = editBBI()
-
     }
 
     // ** Local Text
     func editBBI() -> UIBarButtonItem? {
-
         let editSel: Selector = #selector(InformationViewController.showEditActionSheet)
 
         return UIBarButtonItem(title: LocalString.Edit.localized, style: .plain, target: self, action: editSel)
-
     }
 
     @objc func showEditActionSheet() {
-
         let actionSheet = UIAlertController(title: LocalString.Info_Change_Name.localized,
                                             message: LocalString.Info_Change_Name_Question.localized,
                                             preferredStyle: .actionSheet)
@@ -115,12 +109,12 @@ class InformationViewController: BaseViewController, UIScrollViewDelegate {
     }
     
     func keyHandleString(token: TokenEntity) -> String {
-		guard let keyHandle = token.keyHandle else {
-			return ""
-		}
-		
-		let prefixStr = String(keyHandle.prefix(6))
-		let suffixStr = String(keyHandle.suffix(6))
+        guard let keyHandle = token.keyHandle else {
+            return ""
+        }
+        
+        let prefixStr = String(keyHandle.prefix(6))
+        let suffixStr = String(keyHandle.suffix(6))
         
         return prefixStr + "..." + suffixStr
     }
@@ -130,34 +124,33 @@ class InformationViewController: BaseViewController, UIScrollViewDelegate {
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss ZZZZ"
         let date: Date? = formatter.date(from: time ?? "")
         formatter.dateFormat = " MMM dd, yyyy hh:mm:ss"
+        
         if let aDate = date {
             return formatter.string(from: aDate)
         }
+        
         return nil
     }
 
-    @objc
-    func showDeleteAlert() {
+    @objc func showDeleteAlert() {
+      guard let token = token else {
+          return
+      }
         
-        guard let token = token else { return }
-        
-        KeyHandler().confirmDelete(token: token) {
-            
-            self.didEditToken?()
-            self.dismiss(animated: true)
-        }
-        
+      KeyHandler().confirmDelete(token: token) {
+          self.didEditToken?()
+          self.navigationController?.popViewController(animated: true)
+      }
     }
     
     func showKeyRenameAlert() {
-        
-        guard let token = token else { return }
+        guard let token = token else {
+            return
+        }
         
         KeyHandler().editTokenName(token) {
-            
             self.didEditToken?()
             self.setupInformation()
         }
     }
-
 }

@@ -62,7 +62,7 @@ class KeysViewController: BaseViewController, UITableViewDataSource, UITableView
 
 // MARK: - UITableview Delegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return keyHandleArray.count
+        keyHandleArray.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
