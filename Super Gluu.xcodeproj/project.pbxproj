@@ -218,7 +218,7 @@
 		C872CB5A215B49CD00735A3F /* UIViewController+SuperGluu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIViewController+SuperGluu.swift"; path = "Extensions/UIViewController+SuperGluu.swift"; sourceTree = "<group>"; };
 		C872CB5D215B51B100735A3F /* AproveDenyDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AproveDenyDelegate.swift; sourceTree = "<group>"; };
 		C872CB5F215B9ADE00735A3F /* SuperGluuBannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SuperGluuBannerView.swift; path = ../Views/SuperGluuBannerView.swift; sourceTree = "<group>"; };
-		C872CB61215B9EA900735A3F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 5; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C872CB61215B9EA900735A3F /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C872CB63215BB4BE00735A3F /* PinCodeSettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PinCodeSettingsTableViewController.swift; path = Settings/PinCodeSettingsTableViewController.swift; sourceTree = "<group>"; };
 		C8735EAC2001D07E00722BD5 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		C87B2114215EC967004A997A /* KeyHandleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyHandleCell.swift; path = ../../Views/TableViewCells/KeyHandleCell.swift; sourceTree = "<group>"; };
@@ -634,7 +634,7 @@
 				TargetAttributes = {
 					BB37DE501C7E08320016D422 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = FLRS8NH8Y9;
+						DevelopmentTeam = KJ28B2V87Y;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -977,7 +977,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 10;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = FLRS8NH8Y9;
+				DEVELOPMENT_TEAM = KJ28B2V87Y;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -990,7 +990,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MACH_O_TYPE = mh_execute;
 				MARKETING_VERSION = 34.0.5;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ios.gluu.beta;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios.oAuth.beta;
 				PRODUCT_NAME = "Super Gluu";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1124,7 +1124,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 10;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = FLRS8NH8Y9;
+				DEVELOPMENT_TEAM = KJ28B2V87Y;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1137,7 +1137,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MACH_O_TYPE = mh_execute;
 				MARKETING_VERSION = 34.0.5;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ios.gluu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios.oAuth;
 				PRODUCT_NAME = "Super Gluu";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1161,7 +1161,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 10;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = FLRS8NH8Y9;
+				DEVELOPMENT_TEAM = KJ28B2V87Y;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1174,7 +1174,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MACH_O_TYPE = mh_execute;
 				MARKETING_VERSION = 34.0.5;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ios.gluu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ios.oAuth;
 				PRODUCT_NAME = "Super Gluu";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

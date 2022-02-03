@@ -41,8 +41,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         setupAppearance()
 
-		GADMobileAds.configure(withApplicationID: GluuConstants.GOOGLE_AD_ID)
-
         setupSwiftyStoreKit()
      
         setupRootViewController()
@@ -249,6 +247,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func setupAppearance() {
 
         UINavigationBar.appearance().barTintColor = AppConfiguration.systemColor
+        UINavigationBar.appearance().backgroundColor = AppConfiguration.systemColor
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().isOpaque = true
         UINavigationBar.appearance().shadowImage = UIImage()
@@ -265,6 +264,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().backIndicatorImage = backImage
         UINavigationBar.appearance().backIndicatorTransitionMaskImage = backImage
 
+        if #available(iOS 15, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithOpaqueBackground()
+            appearance.backgroundColor = AppConfiguration.systemColor
+            UINavigationBar.appearance().standardAppearance = appearance
+            UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        }
     }
 }
 

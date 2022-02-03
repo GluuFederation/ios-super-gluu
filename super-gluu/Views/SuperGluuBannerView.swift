@@ -78,7 +78,7 @@ class SuperGluuBannerView: UIView, GADInterstitialDelegate {
         interstitial?.delegate = nil
         let newInterstitial = GADInterstitial(adUnitID: GluuConstants.AD_UNIT_ID_INTERSTITIAL)
         let request = GADRequest()
-        request.testDevices = [kGADSimulatorID]
+//        request.testDevices = [kGADSimulatorID]
         newInterstitial.load(request)
         interstitial = newInterstitial
         interstitial?.delegate = self
