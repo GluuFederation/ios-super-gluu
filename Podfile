@@ -16,7 +16,8 @@ def project_pods
     pod 'SwiftyStoreKit', '~> 0.11'
     pod 'QRCodeReader.swift', '~> 9.0.1'
     
-    pod 'ox-push3', :git => 'https://github.com/GluuFederation/oxPush-iOS.git'
+    pod 'ox-push3', :path => '~/oxPush-iOS'
+#:git => 'https://github.com/GluuFederation/oxPush-iOS.git'
 
 end
 
